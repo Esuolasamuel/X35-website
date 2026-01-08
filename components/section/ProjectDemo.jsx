@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Arrow from '../../public/icons/arrow-right.svg';
 import Link from "next/link";
 
 
@@ -26,7 +25,7 @@ export default function ProjectDemo({projects}) {
                         <Link href="/Projects" className="font-body font-bold flex items-center gap-3 text-[15] pr-0.5">View all Projects 
                             <span  className=" rounded-full p-2.5 bg-[#FFD700] hover:bg-[#E2C007]">
                                 <Image
-                                src={Arrow}
+                                src="/icons/arrow-right.svg"
                                 width={14}
                                 height={16}
                                 alt="arrow right"
