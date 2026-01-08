@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero({
   ImageSrc="",
   title ="",
-  height = "h-[75vh]",
+  height = "h-[50vh] md:h-[75vh]",
 }) {
   if (!ImageSrc || !title) return null;
 
@@ -13,20 +13,22 @@ export default function Hero({
       className={`relative w-full ${height} overflow-hidden`}
     >
       {/* Background Image */}
-      <Image
-        src={ImageSrc}
-        alt={title}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <div className="absolute inset-0">
+        <Image
+          src={ImageSrc}
+          alt={title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
 
       {/* Overlay */}
       <div aria-hidden className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center px-6">
+      <div className="absolute inset-0 flex items-center justify-center px-4 md:px-6">
         <span className="relative inline-block">
           <h1 className="text-white  text-center font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           {title}

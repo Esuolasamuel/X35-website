@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ImageGrid({ images = [], backgroundColor  }) {
   return (
-    <section className={`w-full xl:p-32 lg:p-24 md:p-16 p-8 ${backgroundColor}`}>
+    <section className={`w-full xl:p-32 lg:p-24 md:p-16 p-4 ${backgroundColor}`}>
       <div className="mx-auto max-w-8xl">
          <div className="grid md:grid-cols-2 gap-8">
         {images.map((i, index) => (

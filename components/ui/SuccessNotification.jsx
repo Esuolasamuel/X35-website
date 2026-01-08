@@ -5,7 +5,7 @@ export default function SuccessNotification({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="relative bg-white rounded-[20px] p-6 shadow-xl border border-gray-100 flex flex-col items-center text-center">
+    <div className="relative bg-white rounded-[20px] p-0 md:p-6 shadow-xl border border-gray-100 flex flex-col items-center text-center">
       <button onClick={onClose} className="absolute top-3 right-3 text-gray-400">
         <X size={18} />
       </button>

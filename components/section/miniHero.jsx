@@ -3,7 +3,7 @@ import Image from 'next/image';
 const MiniHero = ({ title, ImageSrc, description }) => {
     return (
         /* Added 'group' to trigger the hover effect for the whole section */
-        <section className="xl:p-32 lg:p-24 md:p-16 p-8 bg-[#E3CEDE] group">
+        <section className="xl:p-32 lg:p-24 md:p-16 p-0 bg-[#E3CEDE] group">
             <div className="mx-auto max-w-500 flex flex-col text-center items-center justify-center gap-18">
                 
                 {/* TEXT SECTION */}

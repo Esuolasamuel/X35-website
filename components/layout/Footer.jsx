@@ -5,8 +5,8 @@ import linkedin from "@/public/images/Linkedin.svg"
 
 export default function Footer() {
     return (
-        <footer className="bg-[#11111f] text-white/70 py-20 px-30">
-            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 border-b-[0.5px] border-white/20 pb-12">
+        <footer className="bg-[#11111f] text-white/70 py-4 md:py-20 px-4 md:px-30">
+            <div className="max-w-7xl mx-auto px-0 sm:px-6 grid md:grid-cols-4 gap-10 border-b-[0.5px] border-white/20 pb-12">
                 <div>
                     <div className="font-bold text-white mb-7">
                         <Image
@@ -52,7 +52,7 @@ export default function Footer() {
                     </p>
                 </div>
             </div>
-            <div className="text-center text-xs text-white/40 py-14 px-16">
+            <div className="text-center text-xs text-white/40 py-4 md:py-14 px-4 md:px-16">
                 © 2025 XS Projects. All Rights Reserved.
             </div>
         </footer>

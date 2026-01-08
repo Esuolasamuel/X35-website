@@ -7,18 +7,18 @@ import Link from "next/link";
 
 export default function ProjectDemo({projects}) {
     return (
-        <section className="xl:p-32 lg:p-24 md:p-16 p-8 bg-white">
+        <section className="xl:p-24 lg:p-24 md:p-16 py-4 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <h2 className="text-4xl flex justify-center text-[#0c0c1c] font-bold font-heading leading-12 mb-10">Our Latest Projects</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                     {projects.map((p) => (
-                        <div key={p.title} className="group">
-                            <div className="relative h-64 rounded-xl overflow-hidden">
+                        <Link href={`/Projects/${p.title.toLowerCase()}`} key={p.title} className="group block">
+                            <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
                                 <Image src={p.img} alt={p.title} fill className="object-cover group-hover:scale-105 transition" />
                             </div>
                             <h3 className="mt-4 font-body font-bold">{p.title}</h3>
                             <p className="text-sm font-body text-neutral-500">{p.type}</p>
-                        </div>
+                        </Link>
                     ))}
                 </div>
                 <div className="mt-12 text-center">

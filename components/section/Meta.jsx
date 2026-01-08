@@ -12,7 +12,7 @@ const Meta = ({
         ${backgroundColor}
         lg:p-32
         md:p-12
-        p-8
+        p-6
         min-h-fit
         lg:h-157
         flex

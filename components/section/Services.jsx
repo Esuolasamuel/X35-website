@@ -55,7 +55,7 @@ export default function Services({ items }) { // Remove the default here to hand
   return (
     <section
       id="services"
-      className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-8 md:p-16 lg:p-24 xl:p-32"
+      className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white py-4 md:p-16 lg:p-24 xl:p-24"
     >
       <div className="mx-auto max-w-7xl grid gap-y-12 md:grid-cols-2 items-center px-6">
         {/* ---------------- LEFT ---------------- */}

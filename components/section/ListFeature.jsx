@@ -16,7 +16,7 @@ const ListFeature = ({
 }) => {
     return (
         /* Added 'group' to the section to trigger the image zoom */
-        <section className={`${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-8 group`}>
+        <section className={`${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-4 group`}>
             <div className={`mx-auto max-w-500 flex flex-col lg:${flex} items-center gap-14 lg:gap-16`}>
                 
                 {/* LEFT TEXT SECTION */}

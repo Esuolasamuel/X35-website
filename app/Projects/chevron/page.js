@@ -11,7 +11,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function ChevronPage() {
 
   return (
-    <>
+    <div className="px-0 sm:px-6 md:px-8 lg:px-16 xl:px-32">
       <Hero
         ImageSrc="/images/chevronHero.png"
         title="Chevron"
@@ -140,7 +140,7 @@ export default function ChevronPage() {
           title: "Oga Dentist",
           image: "/images/projects/Frame-6.png",
         },
-      ]}/>  
-      </>
+      ]}/>
+    </div>
   );
 }

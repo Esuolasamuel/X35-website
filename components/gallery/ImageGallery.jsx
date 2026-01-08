@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function ImageGallery({ images = [], backgroundColor = "bg-white"}) {
   return (
-    <section className={`w-full ${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-8`}>
+    <section className={`w-full ${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-4`}>
       <div className="mx-auto max-w-8xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {images.map((image, index) => (
             <div
               key={index}
               /* Added 'group' for hover tracking and 'shadow-sm' for depth */
-              className={`relative w-full h-100 md:h-145.5 overflow-hidden rounded-2xl group shadow-sm ${
+              className={`relative w-full h-64 md:h-100 lg:h-145.5 overflow-hidden rounded-2xl group shadow-sm ${
                 image.colspan ? "md:col-span-2" : ""
               }`}
             >

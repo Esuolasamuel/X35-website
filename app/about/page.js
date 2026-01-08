@@ -9,7 +9,7 @@ import Values from "@/components/section/Values";
 
 export default function AboutPage() {
     return (
-        <>
+        <div className="px-0 sm:px-6 md:px-8 lg:px-16 xl:px-32">
             <AboutHero />
             <WhoWeAre />
             <ImageGrid
@@ -28,13 +28,13 @@ export default function AboutPage() {
                 aspect: "aspect-508/582"
              }] }
              aspect=""/>
-            <Values 
+            <Values
             values = {[
             { title: "Customer Satisfaction", desc: "We have honed the art of delighting customers at every turn.", img: "/images/profile.svg" },
             { title: "Integrity", desc: "We always do our best to be sincere, faithful and truthful in appearance, speech and actions.", img: "/images/integrity.svg" },
             { title: "Commitment", desc: "Whatsoever we find worth doing, we do with all our heart.", img: "/images/star.svg" },
             ]}
             />
-        </>
+        </div>
     );
 }

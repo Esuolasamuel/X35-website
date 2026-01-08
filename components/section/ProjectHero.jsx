@@ -1,6 +1,6 @@
 const ProjectHero = () => {
   return (
-    <section className="xl:p-32 lg:p-24 md:p-16 p-8 text-center">
+    <section className="xl:p-24 lg:p-24 md:p-16 pt-24 pb-4 text-center">
       <h1 className="text-5xl md:text-6xl mx-auto max-w-xl font-heading font-bold leading-tight">
         The Work That{" "}
           <span className="relative inline-block"> 

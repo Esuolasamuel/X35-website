@@ -10,7 +10,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 
 export default function AdrinoPage() {
   return (
-    <>
+    <div className="px-0 sm:px-6 md:px-8 lg:px-16 xl:px-32">
       <Hero
         ImageSrc="/images/adinoHero.png"
         title="Adino Capital Ltd"
@@ -121,6 +121,6 @@ export default function AdrinoPage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>
-      </>
+    </div>
   );
 }
