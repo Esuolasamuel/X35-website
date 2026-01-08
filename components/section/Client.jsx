@@ -1,18 +1,12 @@
 import Image from "next/image";
-import oga from "@/public/icons/ogadentist.svg"
-import solakat from "@/public/icons/solakat.svg"
-import Nolt from "@/public/icons/nolt-1.svg"
-import thebrook from "@/public/icons/thebrook.svg"
-import sunplanet from "@/public/icons/sun-planet-co.svg"
-import chevron from "@/public/icons/chevron.svg"
 
 const logos = [
-    { src: thebrook, alt: "The Brook Finance" },
-    { src: chevron, alt: "Chevron" },
-    { src: oga, alt: "Oga Dentist" },
-    { src: sunplanet, alt: "Sun Planet Co" },  
-    { src: Nolt, alt: "Nolt" },
-    { src: solakat, alt: "Solakat" }
+    { src: "/icons/thebrook.svg", alt: "The Brook Finance" },
+    { src: "/icons/chevron.svg", alt: "Chevron" },
+    { src: "/icons/ogadentist.svg", alt: "Oga Dentist" },
+    { src: "/icons/sun-planet-co.svg", alt: "Sun Planet Co" },  
+    { src: "/icons/nolt-1.svg", alt: "Nolt" },
+    { src: "/icons/solakat.svg", alt: "Solakat" }
 ];
 
 export default function Clients() {

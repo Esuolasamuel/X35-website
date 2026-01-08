@@ -6,7 +6,7 @@ import { Toaster } from "sonner";
 import Head from "./head";
 import Image from "next/image";
 import Link from "next/link";
-import whatsapp from "../public/icons/whatsapp.svg";
+
 
 
 const montserrat = localFont({
@@ -124,7 +124,7 @@ export default function RootLayout({
           aria-label="Contact us on WhatsApp"
         >
           <Image
-            src={whatsapp}
+            src="/icons/whatsapp.svg"
             alt="WhatsApp"
             width={24}
             height={24}
