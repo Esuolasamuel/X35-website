@@ -34,7 +34,7 @@ export default function Hero({
           {title}
         </h1>
         </span>
-        <span className="absolute left-0 -bottom-2 h-[98.6] bg-no-repeat w-full bg-[url(@/public/images/Fill-4.svg)] -z-10" />
+        <span className="absolute left-0 -bottom-2 h-[98.6] bg-no-repeat w-full bg-[url(/images/Fill-4.svg)] -z-10" />
       </div>
       
     </section>

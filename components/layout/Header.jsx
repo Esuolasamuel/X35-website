@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import logo from "@/public/images/logo.svg";
+
 
 import Modal from "@/components/ui/Modal";
 import ContactForm from "../forms/ContactForm";
@@ -59,7 +59,7 @@ export default function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <Link href="/">
-            <Image src={logo} alt="X35 Logo" width={60} height={60} />
+            <Image src="/images/logo.svg" alt="X35 Logo" width={60} height={60} />
           </Link>
 
           {/* Desktop Nav */}
