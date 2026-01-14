@@ -1,5 +1,5 @@
+import RootLayout from "@/app/layout";
 import ImageGallery from "@/components/gallery/ImageGallery";
-import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -12,7 +12,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function ChevronPage() {
 
   return (
-    <MainLayout>
+    <>
       <Hero
         ImageSrc="/images/chevronHero.png"
         title="Chevron"
@@ -141,6 +141,6 @@ export default function ChevronPage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>  
-      </MainLayout>
+      </>
   );
 }

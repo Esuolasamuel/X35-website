@@ -1,4 +1,3 @@
-import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -11,7 +10,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function RobPlacePage() {
 
   return (
-    <MainLayout>
+    <>
       <Hero
         ImageSrc="/images/robplaceHero.png"
         title="Rob’s Place"
@@ -90,10 +89,10 @@ export default function RobPlacePage() {
             summary="Every phase followed strict safety and engineering protocols <Br/> This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."
             title="Systematic Demolition and Execution"
             backgroundColor="bg-[#dfc0ab]"
+            aspect="aspect-615/722"
             lists={[
             { paragraph: "Only non-structural partitions were removed"},
             { paragraph: "Reinforcement was applied where needed" },
-            aspect="aspect-615/722"
           ]}
         />
         <FullImageSection
@@ -149,6 +148,6 @@ export default function RobPlacePage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>  
-      </MainLayout>
+      </>
   );
 }

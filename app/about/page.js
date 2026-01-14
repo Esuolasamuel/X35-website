@@ -1,8 +1,8 @@
 import AboutHero from "@/components/section/AboutHero";
 import WhoWeAre from "@/components/section/WhoWeAre";
-import ImageGrid from "@/components/section/ImageGridSection";
 import VisionMission from "@/components/section/VisionMission";
 import Values from "@/components/section/Values";
+import ImageGrid from "@/components/section/ImageGrid";
 
 
 

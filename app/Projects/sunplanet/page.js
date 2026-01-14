@@ -1,5 +1,4 @@
 import ImageGallery from "@/components/gallery/ImageGallery";
-import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -12,7 +11,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function SunplanetPage() {
 
   return (
-    <MainLayout>
+    <>
       <Hero
         ImageSrc="/images/sunplanetHero.jpg"
         title="Sun Planet Co"
@@ -126,6 +125,6 @@ export default function SunplanetPage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>  
-      </MainLayout>
+      </>
   );
 }

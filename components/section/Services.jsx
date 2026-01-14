@@ -1,24 +1,45 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-/* ... DEFAULT_ITEMS definition remains the same ... */
-
-export default function Services({ items }) { // Remove the default here to handle it below
+export default function Services({ items }) {
   const INTERVAL = 4000;
   const STEP_TIME = 50;
 
-  // 1. Define safeItems first using a fallback
-  const safeItems = items?.length ? items : DEFAULT_ITEMS;
+  // Memoized normalization (eslint-safe)
+  const safeItems = useMemo(
+    () => (Array.isArray(items) ? items : []),
+    [items]
+  );
 
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
-  const startTimeRef = useRef(Date.now());
+  const startTimeRef = useRef(null);
+
+  // Initialize ref safely (no impure initializer)
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+  }, []);
+
+  const triggerFade = useCallback(() => {
+    setVisible(false);
+    requestAnimationFrame(() => setVisible(true));
+  }, []);
+
+  const handleSelect = useCallback(
+    (i) => {
+      startTimeRef.current = Date.now();
+      setIndex(i);
+      setProgress(0);
+      triggerFade();
+    },
+    [triggerFade]
+  );
 
   useEffect(() => {
-    if (!safeItems.length) return;
+    if (safeItems.length === 0) return;
 
     const timer = setInterval(() => {
       const elapsed = Date.now() - startTimeRef.current;
@@ -34,23 +55,13 @@ export default function Services({ items }) { // Remove the default here to hand
     }, STEP_TIME);
 
     return () => clearInterval(timer);
-  }, [INTERVAL, STEP_TIME, safeItems.length]);
-
-  function triggerFade() {
-    setVisible(false);
-    requestAnimationFrame(() => setVisible(true));
-  }
-
-  function handleSelect(i) {
-    startTimeRef.current = Date.now();
-    setIndex(i);
-    setProgress(0);
-    triggerFade();
-  }
+  }, [INTERVAL, STEP_TIME, safeItems.length, triggerFade]);
 
   const item = useMemo(() => {
     return safeItems[index] ?? safeItems[0];
   }, [index, safeItems]);
+
+  if (!item) return null;
 
   return (
     <section
@@ -58,7 +69,7 @@ export default function Services({ items }) { // Remove the default here to hand
       className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white py-4 md:p-16 lg:p-24 xl:p-24"
     >
       <div className="mx-auto max-w-7xl grid gap-y-12 md:grid-cols-2 items-center px-6">
-        {/* ---------------- LEFT ---------------- */}
+        {/* LEFT */}
         <div className="max-w-md">
           <h2 className="mb-6 text-4xl md:text-5xl font-heading font-bold">
             Our Services
@@ -74,9 +85,11 @@ export default function Services({ items }) { // Remove the default here to hand
               <li key={it.title}>
                 <button
                   onClick={() => handleSelect(i)}
-                  aria-current={i === index}
+                  aria-current={i === index ? "true" : undefined}
                   className={`w-full text-left transition ${
-                    i === index ? "text-white" : "text-white/60 hover:text-white/90"
+                    i === index
+                      ? "text-white"
+                      : "text-white/60 hover:text-white/90"
                   }`}
                 >
                   <span className="text-[17px] font-medium tracking-[-0.02em]">
@@ -97,18 +110,9 @@ export default function Services({ items }) { // Remove the default here to hand
           </ul>
         </div>
 
-        {/* ---------------- RIGHT ---------------- */}
+        {/* RIGHT */}
         <div className="flex justify-center md:justify-end">
-          <div
-            className="
-              relative
-              w-full max-w-[615px]
-              h-[400px] md:h-[594px]
-              overflow-hidden
-              rounded-2xl
-              group
-            "
-          >
+          <div className="relative w-full max-w-153.75 h-100 md:h-148.5 overflow-hidden rounded-2xl group">
             <Image
               key={item.img}
               src={item.img}
@@ -116,18 +120,9 @@ export default function Services({ items }) { // Remove the default here to hand
               fill
               priority
               sizes="(max-width: 768px) 100vw, 615px"
-              className={`
-                object-cover
-                rounded-2xl
-                shadow-xl
-                transition-all
-                duration-700
-                ease-in-out
-                group-hover:scale-110
-              `}
+              className="object-cover rounded-2xl shadow-xl transition-all duration-700 ease-in-out group-hover:scale-110"
               style={{ opacity: visible ? 1 : 0 }}
             />
-            {/* Architectural Dark Overlay */}
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500 pointer-events-none" />
           </div>
         </div>

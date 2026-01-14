@@ -1,5 +1,5 @@
+import RootLayout from "@/app/layout";
 import ImageGallery from "@/components/gallery/ImageGallery";
-import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -11,7 +11,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 
 export default function AdrinoPage() {
   return (
-    <MainLayout>
+    <>
       <Hero
         ImageSrc="/images/adinoHero.png"
         title="Adino Capital Ltd"
@@ -122,6 +122,6 @@ export default function AdrinoPage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>
-      </MainLayout>
+      </>
   );
 }
