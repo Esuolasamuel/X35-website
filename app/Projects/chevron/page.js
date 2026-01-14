@@ -1,4 +1,5 @@
 import ImageGallery from "@/components/gallery/ImageGallery";
+import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -11,7 +12,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function ChevronPage() {
 
   return (
-    <div className="px-0 sm:px-6 md:px-8 lg:px-16 xl:px-32">
+    <MainLayout>
       <Hero
         ImageSrc="/images/chevronHero.png"
         title="Chevron"
@@ -44,8 +45,8 @@ export default function ChevronPage() {
           title="chevron deep interior"
         />
         <Narrative
-        backgroundColor="bg-[#11111F]"
-        textColor="text-white/80"
+        BackgroundColor="bg-[#11111F]"
+        TextColor="text-white"
         title="adino narrative image"
          description={[
             {
@@ -61,53 +62,52 @@ export default function ChevronPage() {
                 "The project also included the creation of a new 11-man conference room, designed with advanced AV infrastructure, custom joinery, optimal sightlines, and a modern material palette."
             },
           ]}
-        ImageSrc="/images/chevronNarrative.jpg"
+        ImageSrc="/images/chevronNarrative.png"
         />
+        <Feature
+        ImageSrc="/images/chevronFeature.png"
+        description={[
+            {
+              paragraph:
+                "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions."
+            }, 
+            {
+              paragraph:
+                "Through this redevelopment, X35 Projects delivered a workspace that blends functionality, aesthetics, and technical precision—reflecting our commitment to quality, innovation, and client-focused design solutions."
+            }, 
+          ]}
+        title="Delivering a Functional and Refined Collaborative Space"
+        /> 
         <ImageGallery
           BackgroundColor="bg-[#EAF1FF]"
           images={[
             {
-              ImageSrc: "/images/chevronImageSplit-1.jpg",
-              alt: " kitchen area Interior 1",
-              height: "594",
-              width: "615"
-            },
+            ImageSrc: "/images/chevronImageSplit-1.png",
+            alt: " kitchen area Interior 1",
+            height: "594",
+            width: "615"
+          },
             {
-              ImageSrc: "/images/chevronImageSplit-2.png",
-              alt: " kitchen area Interior 2",
-              height: "594",
-              width: "615",
-              colspan: "col-span-2"
-            },
+            ImageSrc: "/images/chevronImageSplit-2.png",
+            alt: " kitchen area Interior 2",
+            height: "594",
+            width: "615",
+            colspan: "col-span-2"
+          },
             {
-              ImageSrc: "/images/chevronImageSplit-3.png",
-              alt: " kitchen area Interior 2",
-              height: "594",
-              width: "615",
-              colspan: "col-span-2"
-            },
+            ImageSrc: "/images/chevronImageSplit-3.png",
+            alt: " kitchen area Interior 2",
+            height: "594",
+            width: "615",
+            colspan: "col-span-2"
+          },
             {
-              ImageSrc: "/images/chevronImageSplit-4.png",
-              alt: " kitchen area Interior 2",
-              height: "594",
-              width: "615",
-            },
-          ]}/> 
-          <Feature
-          ImageSrc="/images/chevronFeature.png"
-          description={[
-              {
-                paragraph:
-                  "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions."
-              }, 
-              {
-                paragraph:
-                  "Through this redevelopment, X35 Projects delivered a workspace that blends functionality, aesthetics, and technical precision—reflecting our commitment to quality, innovation, and client-focused design solutions."
-              }, 
-            ]}
-          title="Delivering a Functional and Refined Collaborative Space"
-          backgroundColor="bg-[#e3cede]"
-          /> 
+            ImageSrc: "/images/chevronImageSplit-4.png",
+            alt: " kitchen area Interior 2",
+            height: "594",
+            width: "615",
+          },
+        ]}/> 
       <RelatedProjects
       const projects = {[
         {
@@ -140,7 +140,7 @@ export default function ChevronPage() {
           title: "Oga Dentist",
           image: "/images/projects/Frame-6.png",
         },
-      ]}/>
-    </div>
+      ]}/>  
+      </MainLayout>
   );
 }

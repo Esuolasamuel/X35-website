@@ -17,39 +17,12 @@ const x35Content = () => {
             { title: "Rob's Place", type: "Residential", img: "/images/ourProject-2.jpg" },
             { title: "Chevron", type: "Commercial", img: "/images/ourProject-3.png"},
             ]} />
-          <Services
-          items={[
-            {
-              title: "Architectural Design",
-              img: "/images/architecture.png" // Path to an image in your public folder
-            },
-            {
-              title: "Interior Planning",
-              img: "/images/interior-design.jpg"
-            },
-            {
-              title: "Renovation",
-              img: "/images/renovation.jpg"
-            },
-            {
-              title: "Construction",
-              img: "/images/construction.png"
-            },
-            {
-              title: "Project Management",
-              img: "/images/project-management.png"
-            },
-            {
-              title: "Turnkey Project Consultant",
-              img: "/images/turnkey-project-consultant.png"
-            }
-          ]} />
+          <Services />
           <Testimonials />
           <CTA
           title="Your vision deserves an architect with purpose. Have you been x35ied?"
           text="Contact us"
           paragraph=""
-          id="contact-us"
            />
         </>
   )

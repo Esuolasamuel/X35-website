@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 
-import Modal from "@/components/ui/Modal";
+// import Modal from "@/components/ui/Modal";
 import ContactForm from "../forms/ContactForm";
 import SuccessNotification from "../ui/SuccessNotification";
 import ComingSoonModal from "../ui/ComingSoonModal";
@@ -116,7 +116,7 @@ export default function Header() {
 
       {/* --- SUCCESS NOTIFICATION (Top Center) --- */}
       {showSuccess && (
-        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-full max-w-[400px] px-4 animate-in fade-in slide-in-from-top-4 duration-500">
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-100 w-full max-w-100 px-4 animate-in fade-in slide-in-from-top-4 duration-500">
           <SuccessNotification 
             isOpen={true} 
             onClose={() => setShowSuccess(false)} 
@@ -126,7 +126,7 @@ export default function Header() {
 
       {/* --- CONTACT FORM MODAL --- */}
       {isContactOpen && (
-        <div className="fixed inset-0 z-[90] flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-90 flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm">
           <div className="relative w-full max-w-md bg-white rounded-2xl p-0 md:p-8 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}

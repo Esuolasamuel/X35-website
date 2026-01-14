@@ -1,4 +1,5 @@
 import ImageGallery from "@/components/gallery/ImageGallery";
+import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -11,7 +12,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function SunplanetPage() {
 
   return (
-    <>
+    <MainLayout>
       <Hero
         ImageSrc="/images/sunplanetHero.jpg"
         title="Sun Planet Co"
@@ -49,8 +50,6 @@ export default function SunplanetPage() {
         />
         <Feature
         backgroundColor="bg-[#11111F]"
-        textColor="text-white/80"
-        headerColor="text-white"
         ImageSrc="/images/sunplanetFeature.jpg"
         description={[
             {
@@ -91,7 +90,7 @@ export default function SunplanetPage() {
           },
         ]}/> 
       <MiniHero
-        ImageSrc="/images/sunplanetMiniHero.jpg"
+        ImageSrc="/images/sunplanetMiniHero-1.jpg"
         title="A Refined and Strategic Residential Development"
         description="Overall, the collaboration with Sun Planet Co resulted in a residential development that is not only architecturally refined but also commercially strategic—delivering value, efficiency, and long-term ROI for both stakeholders."/>
       <RelatedProjects
@@ -127,6 +126,6 @@ export default function SunplanetPage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>  
-      </>
+      </MainLayout>
   );
 }

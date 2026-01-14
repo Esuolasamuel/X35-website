@@ -1,7 +1,8 @@
+import ImageGallery from "@/components/gallery/ImageGallery";
+import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
-import ImageGrid from "@/components/section/ImageGrid";
 import Meta from "@/components/section/Meta";
 import Narrative from "@/components/section/Narrative";
 import RelatedProjects from "@/components/section/RelatedProjects";
@@ -10,7 +11,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 
 export default function AdrinoPage() {
   return (
-    <div className="px-0 sm:px-6 md:px-8 lg:px-16 xl:px-32">
+    <MainLayout>
       <Hero
         ImageSrc="/images/adinoHero.png"
         title="Adino Capital Ltd"
@@ -43,8 +44,8 @@ export default function AdrinoPage() {
           title="adino interior"
         />
         <Narrative
-        backgroundColor="bg-[#11111f]"
-        textColor="text-white"
+        BackgroundColor="bg-[#11111F]"
+        TextColor="text-white"
         title="adino narrative image"
          description={[
             {
@@ -72,8 +73,8 @@ export default function AdrinoPage() {
             }, 
           ]}
         /> 
-        <ImageGrid
-          backgroundColor="bg-[#e3cede]"
+        <ImageGallery
+          BackgroundColor="bg-[#EAF1FF]"
           images={[
             {
             ImageSrc: "/images/adinoImageSplit-1.png",
@@ -121,6 +122,6 @@ export default function AdrinoPage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>
-    </div>
+      </MainLayout>
   );
 }

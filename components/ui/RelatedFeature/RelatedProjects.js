@@ -39,7 +39,7 @@ export default function RelatedProjects({
             <Link
               key={project.id}
               href={project.href}
-              className="group relative h-48 md:h-65 overflow-hidden rounded-2xl"
+              className="group relative h-65 overflow-hidden rounded-2xl"
             >
               <Image
                 src={project.image}

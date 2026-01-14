@@ -1,3 +1,4 @@
+import RootLayout from "@/app/layout";
 import ImageGallery from "@/components/gallery/ImageGallery";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
@@ -49,8 +50,6 @@ export default function TheBrooksPage() {
         />
         <Feature
         ImageSrc="/images/brooksFeature-1.jpg"
-        textColor="text-white/80"
-        headerColor="text-white"
         description={[
             {
               paragraph:

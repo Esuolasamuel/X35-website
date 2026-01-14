@@ -2,12 +2,6 @@ import localFont from "next/font/local"
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import { Toaster } from "sonner";
-import Head from "./head";
-import Image from "next/image";
-import Link from "next/link";
-
-
 
 const montserrat = localFont({
   src: [
@@ -105,33 +99,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${fraunces.variable} antialiased`}>
         <body>
-         <Head/>
           <Header/>
-          <main>{children}</main>
-          {/* Toast container */}
-         <Toaster
-          position="top-center"
-          richColors
-          closeButton
-        />
-
-        {/* WhatsApp Widget */}
-        <Link
-          href="https://wa.me/2348029420580"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 rounded-full p-3 shadow-lg transition-colors"
-          aria-label="Contact us on WhatsApp"
-        >
-          <Image
-            src="/icons/whatsapp.svg"
-            alt="WhatsApp"
-            width={24}
-            height={24}
-            className="w-6 h-6"
-          />
-        </Link>
-
+          {children}
           <Footer/>
         </body>
     </html>

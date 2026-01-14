@@ -1,3 +1,4 @@
+import MainLayout from "@/components/layout/MainLayout";
 import Feature from "@/components/section/Feature";
 import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
@@ -10,7 +11,7 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 export default function RobPlacePage() {
 
   return (
-    <>
+    <MainLayout>
       <Hero
         ImageSrc="/images/robplaceHero.png"
         title="Rob’s Place"
@@ -56,8 +57,6 @@ export default function RobPlacePage() {
           ]}
         title="Understanding the Client’s Fears and Challenges"
         backgroundColor="bg-[#11111f]"
-        textColor="text-white/80"
-        headerColor="text-white"
         /> 
         <FullImageSection
           ImageSrc="/images/robplaceFullImage-2.png"
@@ -78,9 +77,9 @@ export default function RobPlacePage() {
                 "Upgrading flooring, ceilings, and wall treatments for a cohesive minimalist feel.",
             },
           ]}
+          flex="flex-row-reverse"
           aspect="aspect-615/803"
-          orderL="order-2"
-          orderR="order-1"        />
+        />
         <FullImageSection
           ImageSrc="/images/robplaceFullImage-3.png"
           title="rob place interior"
@@ -91,10 +90,10 @@ export default function RobPlacePage() {
             summary="Every phase followed strict safety and engineering protocols <Br/> This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."
             title="Systematic Demolition and Execution"
             backgroundColor="bg-[#dfc0ab]"
-            aspect="aspect-615/722"
             lists={[
             { paragraph: "Only non-structural partitions were removed"},
             { paragraph: "Reinforcement was applied where needed" },
+            aspect="aspect-615/722"
           ]}
         />
         <FullImageSection
@@ -150,6 +149,6 @@ export default function RobPlacePage() {
           image: "/images/projects/Frame-6.png",
         },
       ]}/>  
-      </>
+      </MainLayout>
   );
 }

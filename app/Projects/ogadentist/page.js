@@ -62,8 +62,6 @@ export default function OgaDentistPage() {
                 "A clean, modern, and future-ready healthcare environment"
             },
           ]}
-          textColor="text-white/80"
-          headerColor="text-white"
         />
         <FullImageSection
           ImageSrc="/images/ogadentistFullImage-2.png"
