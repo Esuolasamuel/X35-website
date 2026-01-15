@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "@/assets/images/logo.svg";
-import linkedin from "@/assets/images/linkedin.svg";
-import instagram from "@/assets/images/instagram.svg";
+import linkedin from "@/assets/icons/linkedin.svg";
+import instagram from "@/assets/icons/instagram.svg";
 
 
 export default function Footer() {
