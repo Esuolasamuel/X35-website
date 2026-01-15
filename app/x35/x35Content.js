@@ -6,9 +6,9 @@ import Services from "@/components/section/Services";
 import Testimonials from "@/components/section/Testimonials";
 
 // Import images statically from the public folder
-import brookImg from "@/public/images/ourProject-1.jpg";
-import robImg from "@/public/images/ourProject-2.jpg";
-import chevronImg from "@/public/images/ourProject-3.png"
+import brookImg from "@/assets/images/ourProject-1.jpg";
+import robImg from "@/assets/images/ourProject-2.jpg";
+import chevronImg from "@/assets/images/ourProject-3.png"
 
 const x35Content = () => {
   // Define projects outside JSX

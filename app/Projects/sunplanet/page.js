@@ -7,21 +7,21 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import local images from public
-import heroImg from "@/public/images/sunplanetHero.jpg";
-import fullImg from "@/public/images/sunplanetFullImage.jpg";
-import featureImg from "@/public/images/sunplanetFeature.jpg";
-import gallery1 from "@/public/images/sunplanetImageSplit-1.jpg";
-import gallery2 from "@/public/images/sunplanetImageSplit-2.jpg";
-import gallery3 from "@/public/images/sunplanetImageSplit-3.jpg";
-import gallery4 from "@/public/images/sunplanetImageSplit-4.jpg";
-import miniHeroImg from "@/public/images/sunplanetMiniHero-1.jpg";
+import heroImg from "@/assets/images/sunplanetHero.jpg";
+import fullImg from "@/assets/images/sunplanetFullImage.jpg";
+import featureImg from "@/assets/images/sunplanetFeature.jpg";
+import gallery1 from "@/assets/images/sunplanetImageSplit-1.jpg";
+import gallery2 from "@/assets/images/sunplanetImageSplit-2.jpg";
+import gallery3 from "@/assets/images/sunplanetImageSplit-3.jpg";
+import gallery4 from "@/assets/images/sunplanetImageSplit-4.jpg";
+import miniHeroImg from "@/assets/images/sunplanetMiniHero-1.jpg";
 
-import proj1 from "@/public/images/projects/Frame-1.png";
-import proj2 from "@/public/images/projects/Frame-4.png";
-import proj3 from "@/public/images/projects/Frame-3.png";
-import proj4 from "@/public/images/projects/Frame-2.png";
-import proj5 from "@/public/images/projects/Frame-5.png";
-import proj6 from "@/public/images/projects/Frame-6.png";
+import proj1 from "@/assets/images/projects/Frame-1.png";
+import proj2 from "@/assets/images/projects/Frame-4.png";
+import proj3 from "@/assets/images/projects/Frame-3.png";
+import proj4 from "@/assets/images/projects/Frame-2.png";
+import proj5 from "@/assets/images/projects/Frame-5.png";
+import proj6 from "@/assets/images/projects/Frame-6.png";
 
 export default function SunplanetPage() {
   const projects = [

@@ -2,7 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import {arrow} from"@/public/icons/arrow-right.svg"
+import arrowrigth from"@/assets/icons/arrow-right.svg";
 
 
 
@@ -65,7 +65,7 @@ export default function ProjectDemo({ projects }) {
             View all Projects
             <span className="rounded-full p-2.5 bg-[#FFD700] hover:bg-[#E2C007] transition">
               <Image
-                src= {arrow}
+                src= {arrowrigth}
                 width={14}
                 height={16}
                 alt="arrow right"

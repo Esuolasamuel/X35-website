@@ -5,14 +5,14 @@ import Values from "@/components/section/Values";
 import ImageGrid from "@/components/section/ImageGrid";
 
 // Static imports for all images
-import aboutImg1 from "@/public/images/aboutImageSplit-1.png";
-import aboutImg2 from "@/public/images/aboutImageSplit-2.png";
-import aboutImg3 from "@/public/images/aboutImageSplit-3.png";
-import aboutImg4 from "@/public/images/aboutImageSplit-4.png";
+import aboutImg1 from "@/assets/images/aboutImageSplit-1.png";
+import aboutImg2 from "@/assets/images/aboutImageSplit-2.png";
+import aboutImg3 from "@/assets/images/aboutImageSplit-3.png";
+import aboutImg4 from "@/assets/images/aboutImageSplit-4.png";
 
-import profileIcon from "@/public/images/profile.svg";
-import integrityIcon from "@/public/images/integrity.svg";
-import starIcon from "@/public/images/star.svg";
+import profileIcon from "@/assets/images/profile.svg";
+import integrityIcon from "@/assets/images/integrity.svg";
+import starIcon from "@/assets/images/star.svg";
 
 export default function AboutPage() {
   return (

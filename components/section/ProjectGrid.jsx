@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 // ✅ Static image imports
-import brooksImg from "@/public/images/brooks.jpg";
-import ogaDentistImg from "@/public/images/ogadentist.jpg";
-import robsPlaceImg from "@/public/images/robsplace.jpg";
-import chevronImg from "@/public/images/chevron.png";
-import sunplanetImg from "@/public/images/sunplanetco.jpg";
-import adinoImg from "@/public/images/adino.png";
+import brooksImg from "@/assets/images/brooks.jpg";
+import ogaDentistImg from "@/assets/images/ogadentist.jpg";
+import robsPlaceImg from "@/assets/images/robsplace.jpg";
+import chevronImg from "@/assets/images/chevron.png";
+import sunplanetImg from "@/assets/images/sunplanetco.jpg";
+import adinoImg from "@/assets/images/adino.png";
 
 const projects = [
   {

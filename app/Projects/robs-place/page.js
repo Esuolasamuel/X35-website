@@ -6,23 +6,23 @@ import ListFeature from "@/components/section/ListFeature";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import local images from public
-import heroImg from "@/public/images/robplaceHero.png";
-import full1 from "@/public/images/robplaceFullImage-1.png";
-import full2 from "@/public/images/robplaceFullImage-2.png";
-import full3 from "@/public/images/robplaceFullImage-3.png";
-import full4 from "@/public/images/robplaceFullImage-4.png";
+import heroImg from "@/assets/images/robplaceHero.png";
+import full1 from "@/assets/images/robplaceFullImage-1.png";
+import full2 from "@/assets/images/robplaceFullImage-2.png";
+import full3 from "@/assets/images/robplaceFullImage-3.png";
+import full4 from "@/assets/images/robplaceFullImage-4.png";
 
-import feature1 from "@/public/images/robplaceFeature-1.png";
-import feature2 from "@/public/images/robplaceFeature-2.png";
-import feature3 from "@/public/images/robplaceFeature-3.png";
-import feature4 from "@/public/images/robplaceFeature-4.png";
+import feature1 from "@/assets/images/robplaceFeature-1.png";
+import feature2 from "@/assets/images/robplaceFeature-2.png";
+import feature3 from "@/assets/images/robplaceFeature-3.png";
+import feature4 from "@/assets/images/robplaceFeature-4.png";
 
-import proj1 from "@/public/images/projects/Frame-1.png";
-import proj2 from "@/public/images/projects/Frame-4.png";
-import proj3 from "@/public/images/projects/Frame-3.png";
-import proj4 from "@/public/images/projects/Frame-2.png";
-import proj5 from "@/public/images/projects/Frame-5.png";
-import proj6 from "@/public/images/projects/Frame-6.png";
+import proj1 from "@/assets/images/projects/Frame-1.png";
+import proj2 from "@/assets/images/projects/Frame-4.png";
+import proj3 from "@/assets/images/projects/Frame-3.png";
+import proj4 from "@/assets/images/projects/Frame-2.png";
+import proj5 from "@/assets/images/projects/Frame-5.png";
+import proj6 from "@/assets/images/projects/Frame-6.png";
 
 export default function RobPlacePage() {
 

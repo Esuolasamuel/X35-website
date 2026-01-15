@@ -7,20 +7,20 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import local images from public folder
-import chevronHero from "@/public/images/chevronHero.png";
-import chevronFull from "@/public/images/chevronFullImage.png";
-import chevronNarrative from "@/public/images/chevronNarrative.png";
-import chevronFeature from "@/public/images/chevronFeature.png";
-import chevronSplit1 from "@/public/images/chevronImageSplit-1.png";
-import chevronSplit2 from "@/public/images/chevronImageSplit-2.png";
-import chevronSplit3 from "@/public/images/chevronImageSplit-3.png";
-import chevronSplit4 from "@/public/images/chevronImageSplit-4.png";
-import project1 from "@/public/images/projects/Frame-1.png";
-import project2 from "@/public/images/projects/Frame-4.png";
-import project3 from "@/public/images/projects/Frame-3.png";
-import project4 from "@/public/images/projects/Frame-2.png";
-import project5 from "@/public/images/projects/Frame-5.png";
-import project6 from "@/public/images/projects/Frame-6.png";
+import chevronHero from "@/assets/images/chevronHero.png";
+import chevronFull from "@/assets/images/chevronFullImage.png";
+import chevronNarrative from "@/assets/images/chevronNarrative.png";
+import chevronFeature from "@/assets/images/chevronFeature.png";
+import chevronSplit1 from "@/assets/images/chevronImageSplit-1.png";
+import chevronSplit2 from "@/assets/images/chevronImageSplit-2.png";
+import chevronSplit3 from "@/assets/images/chevronImageSplit-3.png";
+import chevronSplit4 from "@/assets/images/chevronImageSplit-4.png";
+import project1 from "@/assets/images/projects/Frame-1.png";
+import project2 from "@/assets/images/projects/Frame-4.png";
+import project3 from "@/assets/images/projects/Frame-3.png";
+import project4 from "@/assets/images/projects/Frame-2.png";
+import project5 from "@/assets/images/projects/Frame-5.png";
+import project6 from "@/assets/images/projects/Frame-6.png";
 
 export default function ChevronPage() {
 

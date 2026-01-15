@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // ✅ Static import
-import highlightSvg from "@/public/images/Fill-4.svg";
+import highlightSvg from "@/assets/images/Fill-4.svg";
 
 const ProjectHero = () => {
   return (

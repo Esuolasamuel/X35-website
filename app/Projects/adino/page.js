@@ -8,19 +8,19 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import images from public folder (optional, safer)
-import adinoHero from "@/public/images/adinoHero.png";
-import adinoFull1 from "@/public/images/adinoFullImage-1.png";
-import adinoFull2 from "@/public/images/adinoFullImage-2.png";
-import adinoNarrative from "@/public/images/adinoNarrative.png";
-import adinoFeature from "@/public/images/adinoFeature.png";
-import adinoSplit1 from "@/public/images/adinoImageSplit-1.png";
-import adinoSplit2 from "@/public/images/adinoImageSplit-2.png";
-import projectChevron from "@/public/images/projects/Frame-1.png";
-import projectRob from "@/public/images/projects/Frame-4.png";
-import projectAdrino from "@/public/images/projects/Frame-3.png";
-import projectSunplant from "@/public/images/projects/Frame-2.png";
-import projectBrooks from "@/public/images/projects/Frame-5.png";
-import projectOgaDentist from "@/public/images/projects/Frame-6.png";
+import adinoHero from "@/assets/images/adinoHero.png";
+import adinoFull1 from "@/assets/images/adinoFullImage-1.png";
+import adinoFull2 from "@/assets/images/adinoFullImage-2.png";
+import adinoNarrative from "@/assets/images/adinoNarrative.png";
+import adinoFeature from "@/assets/images/adinoFeature.png";
+import adinoSplit1 from "@/assets/images/adinoImageSplit-1.png";
+import adinoSplit2 from "@/assets/images/adinoImageSplit-2.png";
+import projectChevron from "@/assets/images/projects/Frame-1.png";
+import projectRob from "@/assets/images/projects/Frame-4.png";
+import projectAdrino from "@/assets/images/projects/Frame-3.png";
+import projectSunplant from "@/assets/images/projects/Frame-2.png";
+import projectBrooks from "@/assets/images/projects/Frame-5.png";
+import projectOgaDentist from "@/assets/images/projects/Frame-6.png";
 
 export default function AdrinoPage() {
   const projects = [
