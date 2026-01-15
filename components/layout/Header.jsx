@@ -12,6 +12,7 @@ import ContactForm from "../forms/ContactForm";
 import SuccessNotification from "../ui/SuccessNotification";
 import ComingSoonModal from "../ui/ComingSoonModal";
 import NotifyModal from "../ui/NotifyModal";
+import Logo from "@/assets/images/logo.svg";
 
 
 export default function Header() {
@@ -59,7 +60,7 @@ export default function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <Link href="/">
-            <Image src="/images/logo.svg" alt="X35 Logo" width={60} height={60} />
+            <Image src={Logo} alt="X35 Logo" width={60} height={60} />
           </Link>
 
           {/* Desktop Nav */}

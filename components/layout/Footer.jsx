@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Logo from "@/assets/images/logo.svg";
+import linkedin from "@/assets/images/linkedin.svg";
+import instagram from "@/assets/images/instagram.svg";
 
 
 export default function Footer() {
@@ -8,8 +11,8 @@ export default function Footer() {
                 <div>
                     <div className="font-bold text-white mb-7">
                         <Image
-                        src="/images/logo.svg"
-                        alt=""
+                        src={Logo}
+                        alt="x35 Logo"
                         width={40}
                         height={40}
                         />
@@ -36,13 +39,13 @@ export default function Footer() {
                     <h4 className="text-white/60 text-sm font-body font-semibold mb-7 hover:cursor-pointer">Follow Us</h4>
                     <p className="text-sm flex gap-6 hover:cursor-pointer ">
                         <Image
-                        src="/images/Linkedin.svg"
+                        src={linkedin}
                         alt="linkedin logo"
                         width={32}
                         height={32}
                         />
                         <Image
-                        src="/images/instagram.svg"
+                        src={instagram}
                         alt="instagram logo"
                         width={32}
                         height={32}

@@ -121,7 +121,7 @@ export default function Services() {
                 </button>
 
                 {i === index && (
-                  <div className="mt-2 h-[0.4rem] w-full bg-white/10 rounded-full overflow-hidden">
+                  <div className="mt-2 h-[0.05rem] w-full bg-white/10 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
@@ -134,16 +134,15 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-2xl overflow-hidden">
+        <div className="relative rounded-2xl overflow-hidden aspect-615/594">
           <Image
             key={item.title}
             src={item.img}
             alt={item.title}
-            width={615}
-            height={594}
+            fill
             priority
             className="
-              w-full h-auto object-cover rounded-2xl shadow-xl
+              object-cover rounded-2xl shadow-xl
               transition-opacity duration-700 ease-in-out
             "
             style={{ opacity: visible ? 1 : 0 }}
