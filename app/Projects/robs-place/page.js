@@ -17,22 +17,22 @@ import feature2 from "@/assets/images/robplaceFeature-2.png";
 import feature3 from "@/assets/images/robplaceFeature-3.png";
 import feature4 from "@/assets/images/robplaceFeature-4.png";
 
-import proj1 from "@/assets/images/projects/Frame-1.png";
-import proj2 from "@/assets/images/projects/Frame-4.png";
-import proj3 from "@/assets/images/projects/Frame-3.png";
-import proj4 from "@/assets/images/projects/Frame-2.png";
-import proj5 from "@/assets/images/projects/Frame-5.png";
-import proj6 from "@/assets/images/projects/Frame-6.png";
+import projectChevron from "@/assets/images/chevron.png";
+import projectRob from "@/assets/images/robsplace.jpg";
+import projectAdino from "@/assets/images/adino.png";
+import projectSunplant from "@/assets/images/sunplanetco.jpg";
+import projectBrooks from "@/assets/images/brooks.jpg";
+import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 
 export default function RobPlacePage() {
 
   const projects = [
-    { id: "chevron", title: "Chevron", image: proj1 },
-    { id: "rob", title: "Rob’s Place", image: proj2 },
-    { id: "adino", title: "RobPlace HQ", image: proj3 },
-    { id: "sunplant", title: "Sun Planet Co", image: proj4 },
-    { id: "brooks", title: "The Brook Finance Ltd", image: proj5 },
-    { id: "ogedentist", title: "Oga Dentist", image: proj6 },
+    { id: "chevron", title: "Chevron", image: projectChevron },
+    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "adino", title: "Adrino HQ", image: projectAdino },
+    { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
+    { id: "brooks", title: "The Brook Finance Ltd", image: projectBrooks },
+    { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 
   return (

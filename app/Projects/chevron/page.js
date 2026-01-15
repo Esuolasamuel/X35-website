@@ -9,28 +9,28 @@ import RelatedProjects from "@/components/section/RelatedProjects";
 // Import local images from public folder
 import chevronHero from "@/assets/images/chevronHero.png";
 import chevronFull from "@/assets/images/chevronFullImage.png";
-import chevronNarrative from "@/assets/images/chevronNarrative.png";
+import chevronNarrative from "@/assets/images/chevronNarrative.jpg";
 import chevronFeature from "@/assets/images/chevronFeature.png";
-import chevronSplit1 from "@/assets/images/chevronImageSplit-1.png";
+import chevronSplit1 from "@/assets/images/chevronImageSplit-1.jpg";
 import chevronSplit2 from "@/assets/images/chevronImageSplit-2.png";
 import chevronSplit3 from "@/assets/images/chevronImageSplit-3.png";
 import chevronSplit4 from "@/assets/images/chevronImageSplit-4.png";
-import project1 from "@/assets/images/projects/Frame-1.png";
-import project2 from "@/assets/images/projects/Frame-4.png";
-import project3 from "@/assets/images/projects/Frame-3.png";
-import project4 from "@/assets/images/projects/Frame-2.png";
-import project5 from "@/assets/images/projects/Frame-5.png";
-import project6 from "@/assets/images/projects/Frame-6.png";
+import projectChevron from "@/assets/images/chevron.png";
+import projectRob from "@/assets/images/robsplace.jpg";
+import projectAdino from "@/assets/images/adino.png";
+import projectSunplant from "@/assets/images/sunplanetco.jpg";
+import projectBrooks from "@/assets/images/brooks.jpg";
+import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 
 export default function ChevronPage() {
 
   const projects = [
-    { id: "chevron", title: "Chevron", image: project1 },
-    { id: "rob", title: "Rob’s Place", image: project2 },
-    { id: "adino", title: "Adrino HQ", image: project3 },
-    { id: "sunplant", title: "Sun Planet Co", image: project4 },
-    { id: "brooks", title: "The Brook Finance Ltd", image: project5 },
-    { id: "ogedentist", title: "Oga Dentist", image: project6 },
+    { id: "chevron", title: "Chevron", image: projectChevron },
+    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "adino", title: "Adrino HQ", image: projectAdino },
+    { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
+    { id: "brooks", title: "The Brook Finance Ltd", image: projectBrooks },
+    { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 
   return (

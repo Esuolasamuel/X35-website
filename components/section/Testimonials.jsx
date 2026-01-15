@@ -1,20 +1,22 @@
 import Image from "next/image";
 
+import customer from "@/assets/images/Frame-54.png";
+
 const testimonials = [
 {
 text: "A perfect blend of creativity and craftsmanship. The final result speaks for itself.",
 author: "The Brooke Finance Ltd",
-img: "/images/an-architect-working-on-blueprints-in-a-modern-off-2025-03-18-17-40-24-utc-1.png"
+img: customer,
 },
 {
 text: "They brought our ideas to life with elegance and precision an outstanding team.",
 author: "Mr Rob",
-img: "/images/an-architect-working-on-blueprints-in-a-modern-off-2025-03-18-17-40-24-utc-1.png"
+img: customer,
 },
 {
 text: "Their attention to detail and ability to understand our needs made the entire process smooth and enjoyable.",
 author: "Chevron",
-img: "/images/an-architect-working-on-blueprints-in-a-modern-off-2025-03-18-17-40-24-utc-1.png"
+img: customer,
 },
 ];
 

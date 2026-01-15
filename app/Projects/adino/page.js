@@ -15,18 +15,18 @@ import adinoNarrative from "@/assets/images/adinoNarrative.png";
 import adinoFeature from "@/assets/images/adinoFeature.png";
 import adinoSplit1 from "@/assets/images/adinoImageSplit-1.png";
 import adinoSplit2 from "@/assets/images/adinoImageSplit-2.png";
-import projectChevron from "@/assets/images/projects/Frame-1.png";
-import projectRob from "@/assets/images/projects/Frame-4.png";
-import projectAdrino from "@/assets/images/projects/Frame-3.png";
-import projectSunplant from "@/assets/images/projects/Frame-2.png";
-import projectBrooks from "@/assets/images/projects/Frame-5.png";
-import projectOgaDentist from "@/assets/images/projects/Frame-6.png";
+import projectChevron from "@/assets/images/chevron.png";
+import projectRob from "@/assets/images/robsplace.jpg";
+import projectAdino from "@/assets/images/adino.png";
+import projectSunplant from "@/assets/images/sunplanetco.jpg";
+import projectBrooks from "@/assets/images/brooks.jpg";
+import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 
 export default function AdrinoPage() {
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
     { id: "rob", title: "Rob’s Place", image: projectRob },
-    { id: "adino", title: "Adrino HQ", image: projectAdrino },
+    { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brooks", title: "The Brook Finance Ltd", image: projectBrooks },
     { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },

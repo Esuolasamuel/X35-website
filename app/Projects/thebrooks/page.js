@@ -1,28 +1,49 @@
-import HeroSection from "@/components/section/Hero";
+import Image from "next/image";
+import Hero from "@/components/section/Hero";
 import Meta from "@/components/section/Meta";
 import FullImageSection from "@/components/section/FullImageSection";
+import Narrative from "@/components/section/Narrative";
 import Feature from "@/components/section/Feature";
 import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
+// Import images from public folder (optional, safer)
+import thebrooksHero from "@/assets/images/brooksHero.png";
+import brooksFull1 from "@/assets/images/bg-3.png";
+import brooksFull2 from "@/assets/images/brooksFullImage-2.jpg";
+// import brooksNarrative from "@/assets/images/brooksFeature-1.jpg";
+import brooksFeature1 from "@/assets/images/brooksFeature-1.jpg";
+import brooksFeature2 from "@/assets/images/brooksFeature-2.jpg";
+import brooksFeature3 from "@/assets/images/brooksFeature-3.jpg";
+import brooksFeature4 from "@/assets/images/brooksFeature-4.jpg";
+import brooksSplit1 from "@/assets/images/brooksImageSplit-1.jpg";
+import brooksSplit2 from "@/assets/images/brooksImageSplit-2.jpg";
+import brooksSplit3 from "@/assets/images/brooksImageSplit-3.jpg";
+import brooksSplit4 from "@/assets/images/brooksImageSplit-4.jpg";
+import brooksSplit5 from "@/assets/images/brooksImageSplit-5.jpg";
+import brooksSplit6 from "@/assets/images/brooksImageSplit-6.jpg";
+import brooksSplit7 from "@/assets/images/brooksImageSplit-7.jpg";
+import brooksSplit8 from "@/assets/images/brooksImageSplit-8.jpg";
+import projectChevron from "@/assets/images/chevron.png";
+import projectRob from "@/assets/images/robsplace.jpg";
+import projectAdino from "@/assets/images/adino.png";
+import projectSunplant from "@/assets/images/sunplanetco.jpg";
+import projectBrooks from "@/assets/images/brooks.jpg";
+import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+
 export default function TheBrooksPage() {
-  // Define projects outside JSX
   const projects = [
-    { id: "chevron", title: "Chevron", image: "/images/projects/Frame-1.png" },
-    { id: "rob", title: "Rob’s Place", image: "/images/projects/Frame-4.png" },
-    { id: "adino", title: "Adrino HQ", image: "/images/projects/Frame-3.png" },
-    { id: "sunplant", title: "Sun Planet Co", image: "/images/projects/Frame-2.png" },
-    { id: "brooks", title: "The Brook Finance Ltd", image: "/images/projects/Frame-5.png" },
-    { id: "ogedentist", title: "Oga Dentist", image: "/images/projects/Frame-6.png" },
+    { id: "chevron", title: "Chevron", image: projectChevron },
+    { id: "rob", title: "Rob's Place", image: projectRob },
+    { id: "adino", title: "Adrino HQ", image: projectAdino },
+    { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
+    { id: "brooks", title: "The Brook Finance Ltd", image: projectBrooks },
+    { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 
   return (
     <>
-      <HeroSection
-        ImageSrc="/images/thebrooksHero.png"
-        title="The Brooks Finances"
-        height="h-[90vh]"
-      />
+      <Hero ImageSrc={thebrooksHero} title="The Brooks Finances" height="h-[90vh]" />
 
       <Meta
         title="Transforming a Financial Workplace into a Modern, Human-Centric Environment"
@@ -51,10 +72,10 @@ export default function TheBrooksPage() {
         backgroundColor="bg-[#e5f1e7]"
       />
 
-      <FullImageSection ImageSrc="/images/bg-3.png" title="brooks interior" />
+      <FullImageSection ImageSrc={brooksFull1} title="brooks interior" />
 
       <Feature
-        ImageSrc="/images/brooksFeature-1.jpg"
+        ImageSrc={brooksFeature1}
         description={[
           {
             paragraph:
@@ -66,11 +87,11 @@ export default function TheBrooksPage() {
           },
           {
             paragraph:
-              "This project presented an opportunity to design and execute a unified workspace that seamlessly integrates the company’s subsidiaries — including its loan and finance division, asset management team, and stockbroking arm — within one cohesive environment. The design strategically balances private and shared facilities, enabling each unit to operate efficiently while fostering collaboration, transparency, and organizational synergy.",
+              "This project presented an opportunity to design and execute a unified workspace that seamlessly integrates the company's subsidiaries — including its loan and finance division, asset management team, and stockbroking arm — within one cohesive environment. The design strategically balances private and shared facilities, enabling each unit to operate efficiently while fostering collaboration, transparency, and organizational synergy.",
           },
           {
             paragraph:
-              "The result is a functional, inspiring environment that maximizes space, supports productivity, enhances collaboration, fosters teamwork and embodies The Brook Finance’s professional identity.",
+              "The result is a functional, inspiring environment that maximizes space, supports productivity, enhances collaboration, fosters teamwork and embodies The Brook Finance's professional identity.",
           },
         ]}
         title="Unified Workspace Design Enhancing Collaboration, Productivity, and Brand Identity for The Brook Finance"
@@ -82,42 +103,40 @@ export default function TheBrooksPage() {
       <ImageGallery
         BackgroundColor="bg-[#EAF1FF]"
         images={[
-          { ImageSrc: "/images/brooksImageSplit-1.jpg", alt: "Interior 1", aspect: "aspect-460/582" },
-          { ImageSrc: "/images/brooksImageSplit-2.jpg", alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
-          { ImageSrc: "/images/brooksImageSplit-3.jpg", alt: "Interior 3", aspect: "aspect-732/582", colspan: "col-span-2" },
-          { ImageSrc: "/images/brooksImageSplit-4.jpg", alt: "Interior 4", aspect: "aspect-460/910" },
+          { ImageSrc: brooksSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
+          { ImageSrc: brooksSplit2, alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
+          { ImageSrc: brooksSplit3, alt: "Interior 3", aspect: "aspect-732/582", colspan: "col-span-2" },
+          { ImageSrc: brooksSplit4, alt: "Interior 4", aspect: "aspect-460/910" },
         ]}
       />
 
       <Feature
-        ImageSrc="/images/brooksFeature-2.jpg"
+        ImageSrc={brooksFeature2}
+        title="Design Language and Material Strategy"
         description={[
           {
             paragraph:
-              "The design embraces a palette of neutral tones, warm timber accents, and subtle green highlights, reflecting stability and growth values central to Brook Finance’s corporate identity. Natural light plays a vital role, complemented by energy-efficient linear lighting that defines work zones with precision.",
+              "The design embraces a palette of neutral tones, warm timber accents, and subtle green highlights, reflecting stability and growth values central to Brook Finance's corporate identity. Natural light plays a vital role, complemented by energy-efficient linear lighting that defines work zones with precision.",
           },
           {
             paragraph:
               "Materials were selected not only for aesthetics but also for durability and acoustic performance. Soft carpet tiles provide sound absorption within open work areas, while high-quality laminate finishes and glass partitions ensure transparency and modern sophistication. Every joinery detail was carefully executed to achieve a seamless, enduring finish.",
           },
         ]}
-        title="Design Language and Material Strategy"
-        aspect="aspect-615/594"
-        backgroundColor="bg-[#d1ebe8]"
       />
 
       <ImageGallery
         BackgroundColor="bg-[#EAF1FF]"
         images={[
-          { ImageSrc: "/images/brooksImageSplit-5.jpg", alt: "Interior 5", aspect: "aspect-460/582" },
-          { ImageSrc: "/images/brooksImageSplit-6.jpg", alt: "Interior 6", aspect: "aspect-722/582", colspan: "col-span-2" },
-          { ImageSrc: "/images/brooksImageSplit-7.jpg", alt: "Interior 7", aspect: "aspect-722/582", colspan: "col-span-2" },
-          { ImageSrc: "/images/brooksImageSplit-8.jpg", alt: "Interior 8", aspect: "aspect-460/582" },
+          { ImageSrc: brooksSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
+          { ImageSrc: brooksSplit6, alt: "Interior 6", aspect: "aspect-722/582", colspan: "col-span-2" },
+          { ImageSrc: brooksSplit7, alt: "Interior 7", aspect: "aspect-722/582", colspan: "col-span-2" },
+          { ImageSrc: brooksSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
         ]}
       />
 
       <Feature
-        ImageSrc="/images/brooksFeature-3.jpg"
+        ImageSrc={brooksFeature3}
         description={[
           {
             paragraph:
@@ -135,10 +154,10 @@ export default function TheBrooksPage() {
         backgroundColor="bg-[#dfc0ab]"
       />
 
-      <FullImageSection ImageSrc="/images/brooksFullImage-2.jpg" title="brooks full view" />
+      <FullImageSection ImageSrc={brooksFull2} title="brooks full view" />
 
       <Feature
-        ImageSrc="/images/brooksFeature-4.jpg"
+        ImageSrc={brooksFeature4}
         description={[
           {
             paragraph:
@@ -149,9 +168,6 @@ export default function TheBrooksPage() {
               "Whether you’re a developer seeking reliable turnkey execution or a corporate tenant planning your next workspace transformation, X35 Projects brings vision, craftsmanship, and intelligent design to every project.",
           },
         ]}
-        title="Delivering Confidence Through Design"
-        aspect="aspect-615/594"
-        backgroundColor="bg-[#e3cede]"
       />
 
       <RelatedProjects projects={projects} />

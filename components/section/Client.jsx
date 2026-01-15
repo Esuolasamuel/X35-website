@@ -1,12 +1,19 @@
 import Image from "next/image";
 
+import brooks from "@/assets/icons/thebrook.svg";
+import chevron from "@/assets/icons/chevron.svg";
+import oga from "@/assets/icons/ogadentist.svg";
+import sun from "@/assets/icons/sun-planet-co.svg";
+import nolt from "@/assets/icons/nolt-1.svg";
+import solakat from "@/assets/icons/solakat.svg";
+
 const logos = [
-    { src: "/icons/thebrook.svg", alt: "The Brook Finance" },
-    { src: "/icons/chevron.svg", alt: "Chevron" },
-    { src: "/icons/ogadentist.svg", alt: "Oga Dentist" },
-    { src: "/icons/sun-planet-co.svg", alt: "Sun Planet Co" },  
-    { src: "/icons/nolt-1.svg", alt: "Nolt" },
-    { src: "/icons/solakat.svg", alt: "Solakat" }
+    { src: brooks, alt: "The Brook Finance" },
+    { src: chevron, alt: "Chevron" },
+    { src: oga, alt: "Oga Dentist" },
+    { src: sun, alt: "Sun Planet Co" },  
+    { src: nolt, alt: "Nolt" },
+    { src: solakat, alt: "Solakat" }
 ];
 
 export default function Clients() {

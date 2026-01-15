@@ -6,12 +6,12 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 /* ------------------------------------------------
    STATIC IMAGE IMPORTS
 ------------------------------------------------ */
-import architectureImg from "@/assets/images/our-services/IMG_0525-4.png";
-import interiorImg from "@/assets/images/our-services/Frame-1991426068.png";
-import renovationImg from "@/assets/images/our-services/Frame-1991426069.png";
-import constructionImg from "@/assets/images/our-services/CUNSTRUCTION.png";
-import projectMgtImg from "@/assets/images/our-services/Frame-1991426070.png";
-import turnkeyImg from "@/assets/images/our-services/Frame-1991426072.png";
+import architectureImg from "@/assets/images/architecture.png";
+import interiorImg from "@/assets/images/interior-design.jpg";
+import renovationImg from "@/assets/images/renovation.jpg";
+import constructionImg from "@/assets/images/construction.png";
+import projectMgtImg from "@/assets/images/project-management.png";
+import turnkeyImg from "@/assets/images/turnkey-project-consultant.png";
 
 /* ------------------------------------------------
    SERVICES DATA
