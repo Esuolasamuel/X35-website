@@ -66,6 +66,8 @@ export default function RobPlacePage() {
           { paragraph: "Our role was not only technical but also reassurance-driven. Through structural assessments, transparent communication, and detailed planning, we helped the client understand exactly which elements were safe to modify and how the integrity of the building would be preserved." },
         ]}
         backgroundColor="bg-[#11111f]"
+        textColor = "text-white/80"
+        headerColor = "text-white"
       />
 
       <FullImageSection ImageSrc={full2} title="rob place interior" />

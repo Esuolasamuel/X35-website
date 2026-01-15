@@ -75,6 +75,8 @@ export default function SunplanetPage() {
               "In this engagement, X35 Projects acted as the design and consultancy partner, providing technical oversight, design development, and client advisory throughout the pre-construction and design phases. The physical construction of the development was carried out by a separate contracting firm, while we ensured continuous design compliance and quality alignment with the project vision.",
           },
         ]}
+        textColor = "text-white/80"
+        headerColor = "text-white"
       />
 
       <ImageGallery

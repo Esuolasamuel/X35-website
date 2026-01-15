@@ -69,6 +69,8 @@ export default function OgaDentistPage() {
           { paragraph: "A strong, consistent brand identity" },
           { paragraph: "A clean, modern, and future-ready healthcare environment" },
         ]}
+        textColor = "text-white/80"
+        headerColor = "text-white"
       />
 
       <FullImageSection ImageSrc={full2} title="ogadentist interior" />

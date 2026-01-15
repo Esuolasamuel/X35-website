@@ -59,6 +59,7 @@ export default function AdrinoPage() {
       />
 
       <FullImageSection ImageSrc={adinoFull1} title="adino interior" />
+
       <Narrative
         BackgroundColor="bg-[#11111F]"
         TextColor="text-white"
@@ -74,6 +75,8 @@ export default function AdrinoPage() {
           },
         ]}
         ImageSrc={adinoNarrative}
+        textColor = "text-white/80"
+        headerColor = "text-white"
       />
 
       <FullImageSection ImageSrc={adinoFull2} title="adino interior" />

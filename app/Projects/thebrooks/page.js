@@ -71,7 +71,7 @@ export default function TheBrooksPage() {
         ]}
         backgroundColor="bg-[#e5f1e7]"
       />
-
+      
       <FullImageSection ImageSrc={brooksFull1} title="brooks interior" />
 
       <Feature
@@ -79,26 +79,29 @@ export default function TheBrooksPage() {
         description={[
           {
             paragraph:
-              "Through strategic space planning, the design integrates reception area, open-plan workspaces, private offices, meeting rooms, conference room, board room, lounges and outdoor work spaces.",
+            "Through strategic space planning, the design integrates reception area, open-plan workspaces, private offices, meeting rooms, conference room, board room, lounges and outdoor work spaces.",
           },
           {
             paragraph:
-              "A palette of neutral tones, warm HDF wall cladding, subtle green accents reflecting stability and growth, Wall texts boosting employee morale and productivity, paint patterns reinforcing brand identity while energy-efficient lighting enhances comfort. Durable, acoustically balanced materials and precise detailing ensures longevity and sophistication.",
+            "A palette of neutral tones, warm HDF wall cladding, subtle green accents reflecting stability and growth, Wall texts boosting employee morale and productivity, paint patterns reinforcing brand identity while energy-efficient lighting enhances comfort. Durable, acoustically balanced materials and precise detailing ensures longevity and sophistication.",
           },
           {
             paragraph:
-              "This project presented an opportunity to design and execute a unified workspace that seamlessly integrates the company's subsidiaries — including its loan and finance division, asset management team, and stockbroking arm — within one cohesive environment. The design strategically balances private and shared facilities, enabling each unit to operate efficiently while fostering collaboration, transparency, and organizational synergy.",
+            "This project presented an opportunity to design and execute a unified workspace that seamlessly integrates the company's subsidiaries — including its loan and finance division, asset management team, and stockbroking arm — within one cohesive environment. The design strategically balances private and shared facilities, enabling each unit to operate efficiently while fostering collaboration, transparency, and organizational synergy.",
           },
           {
             paragraph:
-              "The result is a functional, inspiring environment that maximizes space, supports productivity, enhances collaboration, fosters teamwork and embodies The Brook Finance's professional identity.",
+            "The result is a functional, inspiring environment that maximizes space, supports productivity, enhances collaboration, fosters teamwork and embodies The Brook Finance's professional identity.",
           },
         ]}
         title="Unified Workspace Design Enhancing Collaboration, Productivity, and Brand Identity for The Brook Finance"
         aspect="aspect-615/910"
         height="910"
         backgroundColor="bg-[#11111f]"
+        textColor = "text-white/80"
+        headerColor = "text-white"
       />
+
 
       <ImageGallery
         BackgroundColor="bg-[#EAF1FF]"

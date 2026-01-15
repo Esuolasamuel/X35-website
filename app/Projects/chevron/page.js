@@ -65,6 +65,8 @@ export default function ChevronPage() {
           { paragraph: "The project also included the creation of a new 11-man conference room, designed with advanced AV infrastructure, custom joinery, optimal sightlines, and a modern material palette." },
         ]}
         ImageSrc={chevronNarrative}
+        textColor = "text-white/80"
+        headerColor = "text-white"
       />
 
       <Feature
