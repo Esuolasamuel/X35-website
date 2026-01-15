@@ -41,7 +41,7 @@ export default function HeroLCP({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative h-[50dvh] md:h-[75dvh] lg:h-dvh min-h-[600px] w-full overflow-hidden">
+    <section className="relative h-[50dvh] md:h-[75dvh] lg:h-dvh min-h-150 w-full overflow-hidden">
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
       -------------------------------- */}
@@ -86,7 +86,7 @@ export default function HeroLCP({ images = [ ], interval = 4000 }) {
         })}
 
       {/* Overlay */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+      <div className="absolute inset-0 z-10 bg-linear-to-t from-black/60 via-black/30 to-transparent" />
 
       {/* Carousel Controls */}
       {images.length > 1 && (
@@ -111,13 +111,13 @@ export default function HeroLCP({ images = [ ], interval = 4000 }) {
       {/* --------------------------------
            HERO CONTENT (IMMEDIATE)
         -------------------------------- */}
-      <div className="absolute z-20 bottom-[70px] md:bottom-[100px] lg:bottom-[130px] left-[15px] md:left-[60px] lg:left-30 w-[682px]">
+      <div className="absolute z-20 bottom-17.5 md:bottom-25 lg:bottom-32.5 left-3.75 md:left-15 lg:left-30 w-170.5">
         <div className="text-white text-left">
           <h1
             className="
               font-heading font-bold drop-shadow-lg
               tracking-[-0.01em]
-              leading-[40px] sm:leading-[50px] md:leading-[60px] lg:leading-[70.4px]
+              leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
               text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
               px-0 py-1
             "

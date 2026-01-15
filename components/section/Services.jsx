@@ -1,104 +1,127 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 
-export default function Services({ items }) {
+/* ------------------------------------------------
+   STATIC IMAGE IMPORTS
+------------------------------------------------ */
+import architectureImg from "@/public/images/our-services/IMG_0525-4.png";
+import interiorImg from "@/public/images/our-services/Frame-1991426068.png";
+import renovationImg from "@/public/images/our-services/Frame-1991426069.png";
+import constructionImg from "@/public/images/our-services/CUNSTRUCTION.png";
+import projectMgtImg from "@/public/images/our-services/Frame-1991426070.png";
+import turnkeyImg from "@/public/images/our-services/Frame-1991426072.png";
+
+/* ------------------------------------------------
+   SERVICES DATA
+------------------------------------------------ */
+const items = [
+  { title: "Architecture", desc: "Peaceful mountain view", img: architectureImg },
+  { title: "Interior Design", desc: "Green forest landscape", img: interiorImg },
+  { title: "Renovation", desc: "Sunny beach vibes", img: renovationImg },
+  { title: "Construction", desc: "Construction excellence", img: constructionImg },
+  { title: "Project Management", desc: "Efficient project delivery", img: projectMgtImg },
+  { title: "Turnkey Project", desc: "End-to-end solutions", img: turnkeyImg },
+];
+
+export default function Services() {
   const INTERVAL = 4000;
   const STEP_TIME = 50;
-
-  // Memoized normalization (eslint-safe)
-  const safeItems = useMemo(
-    () => (Array.isArray(items) ? items : []),
-    [items]
-  );
 
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
+
   const startTimeRef = useRef(null);
 
-  // Initialize ref safely (no impure initializer)
-  useEffect(() => {
-    startTimeRef.current = Date.now();
-  }, []);
+  /* ------------------------------------------------
+     SAFE TIME ACCESSOR (NO IMPURE CALL DURING RENDER)
+  ------------------------------------------------ */
+  const getNow = () => Date.now();
 
+  /* ------------------------------------------------
+     FADE TRANSITION
+  ------------------------------------------------ */
   const triggerFade = useCallback(() => {
     setVisible(false);
     requestAnimationFrame(() => setVisible(true));
   }, []);
 
-  const handleSelect = useCallback(
-    (i) => {
-      startTimeRef.current = Date.now();
-      setIndex(i);
-      setProgress(0);
-      triggerFade();
-    },
-    [triggerFade]
-  );
-
+  /* ------------------------------------------------
+     INITIALIZE TIMER (SAFE)
+  ------------------------------------------------ */
   useEffect(() => {
-    if (safeItems.length === 0) return;
+    startTimeRef.current = getNow();
+  }, []);
+
+  /* ------------------------------------------------
+     TIME-BASED PROGRESS
+  ------------------------------------------------ */
+  useEffect(() => {
+    if (startTimeRef.current == null) return;
 
     const timer = setInterval(() => {
-      const elapsed = Date.now() - startTimeRef.current;
+      const elapsed = getNow() - startTimeRef.current;
       const pct = Math.min((elapsed / INTERVAL) * 100, 100);
 
       setProgress(pct);
 
       if (pct >= 100) {
-        startTimeRef.current = Date.now();
-        setIndex((i) => (i + 1) % safeItems.length);
+        startTimeRef.current = getNow();
+        setIndex((i) => (i + 1) % items.length);
         triggerFade();
       }
     }, STEP_TIME);
 
     return () => clearInterval(timer);
-  }, [INTERVAL, STEP_TIME, safeItems.length, triggerFade]);
+  }, [INTERVAL, STEP_TIME, triggerFade]);
 
-  const item = useMemo(() => {
-    return safeItems[index] ?? safeItems[0];
-  }, [index, safeItems]);
+  /* ------------------------------------------------
+     USER SELECT (DEFERRED TIME UPDATE)
+  ------------------------------------------------ */
+  function handleSelect(i) {
+    queueMicrotask(() => {
+      startTimeRef.current = getNow();
+    });
 
-  if (!item) return null;
+    setIndex(i);
+    setProgress(0);
+    triggerFade();
+  }
+
+  const item = useMemo(() => items[index], [index]);
 
   return (
-    <section
-      id="services"
-      className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white py-4 md:p-16 lg:p-24 xl:p-24"
-    >
-      <div className="mx-auto max-w-7xl grid gap-y-12 md:grid-cols-2 items-center px-6">
+    <section className="py-32 bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-y-12 items-center">
+
         {/* LEFT */}
         <div className="max-w-md">
-          <h2 className="mb-6 text-4xl md:text-5xl font-heading font-bold">
+          <h2 className="text-5xl leading-15 font-heading font-bold mb-6">
             Our Services
           </h2>
 
-          <p className="mb-12 text-lg leading-7 text-white/80">
+          <p className="text-white/80 text-lg leading-7 mb-12">
             With solution-driven designs and precise execution, we help you
             transform your space into a high-performing asset you can truly enjoy.
           </p>
 
           <ul className="space-y-9">
-            {safeItems.map((it, i) => (
+            {items.map((it, i) => (
               <li key={it.title}>
                 <button
                   onClick={() => handleSelect(i)}
-                  aria-current={i === index ? "true" : undefined}
+                  aria-current={i === index}
                   className={`w-full text-left transition ${
-                    i === index
-                      ? "text-white"
-                      : "text-white/60 hover:text-white/90"
+                    i === index ? "text-white" : "text-white/60"
                   }`}
                 >
-                  <span className="text-[17px] font-medium tracking-[-0.02em]">
-                    {it.title}
-                  </span>
+                  <span className="text-lg font-medium">{it.title}</span>
                 </button>
 
                 {i === index && (
-                  <div className="mt-2 h-px w-full bg-white/10 overflow-hidden">
+                  <div className="mt-2 h-[0.4rem] w-full bg-white/10 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
@@ -111,21 +134,22 @@ export default function Services({ items }) {
         </div>
 
         {/* RIGHT */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative w-full max-w-153.75 h-100 md:h-148.5 overflow-hidden rounded-2xl group">
-            <Image
-              key={item.img}
-              src={item.img}
-              alt={item.title}
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 615px"
-              className="object-cover rounded-2xl shadow-xl transition-all duration-700 ease-in-out group-hover:scale-110"
-              style={{ opacity: visible ? 1 : 0 }}
-            />
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500 pointer-events-none" />
-          </div>
+        <div className="relative rounded-2xl overflow-hidden">
+          <Image
+            key={item.title}
+            src={item.img}
+            alt={item.title}
+            width={615}
+            height={594}
+            priority
+            className="
+              w-full h-auto object-cover rounded-2xl shadow-xl
+              transition-opacity duration-700 ease-in-out
+            "
+            style={{ opacity: visible ? 1 : 0 }}
+          />
         </div>
+
       </div>
     </section>
   );

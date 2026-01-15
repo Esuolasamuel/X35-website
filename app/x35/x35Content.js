@@ -1,31 +1,53 @@
-import Clients from "@/components/section/Client"
-import CTA from "@/components/section/CTA"
-import LandingHero from "@/components/section/LandingHero"
-import ProjectDemo from "@/components/section/ProjectDemo"
-import Services from "@/components/section/Services"
-import Testimonials from "@/components/section/Testimonials"
+import Clients from "@/components/section/Client";
+import CTA from "@/components/section/CTA";
+import LandingHero from "@/components/section/LandingHero";
+import ProjectDemo from "@/components/section/ProjectDemo";
+import Services from "@/components/section/Services";
+import Testimonials from "@/components/section/Testimonials";
 
+// Import images statically from the public folder
+import brookImg from "@/public/images/ourProject-1.jpg";
+import robImg from "@/public/images/ourProject-2.jpg";
+import chevronImg from "@/public/images/ourProject-3.png"
 
 const x35Content = () => {
-  return (
-        <>
-          <LandingHero />
-          <Clients />
-          <ProjectDemo
-          const projects ={[
-            { title: "The Brook Finance", type: "Commercial", img: "/images/ourProject-1.jpg" },
-            { title: "Rob's Place", type: "Residential", img: "/images/ourProject-2.jpg" },
-            { title: "Chevron", type: "Commercial", img: "/images/ourProject-3.png"},
-            ]} />
-          <Services />
-          <Testimonials />
-          <CTA
-          title="Your vision deserves an architect with purpose. Have you been x35ied?"
-          text="Contact us"
-          paragraph=""
-           />
-        </>
-  )
-}
+  // Define projects outside JSX
+  const projects =
+  [
+    {
+      title: "The Brook Finance",
+      type: "Commercial",
+      img: brookImg,
+      slug: "thebrooks",
+    },
+    {
+      title: "Rob’s Place",
+      type: "Residential",
+      img: robImg,
+      slug: "robs-place",
+    },
+    {
+      title: "Chevron",
+      type: "Commercial",
+      img: chevronImg,
+      slug: "chevron",
+    },
+  ]
 
-export default x35Content
+  return (
+    <>
+      <LandingHero />
+      <Clients />
+      <ProjectDemo projects={projects} />
+      <Services />
+      <Testimonials />
+      <CTA
+        title="Your vision deserves an architect with purpose. Have you been x35ied?"
+        text="Contact us"
+        paragraph=""
+      />
+    </>
+  );
+};
+
+export default x35Content;

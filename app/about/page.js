@@ -4,37 +4,61 @@ import VisionMission from "@/components/section/VisionMission";
 import Values from "@/components/section/Values";
 import ImageGrid from "@/components/section/ImageGrid";
 
+// Static imports for all images
+import aboutImg1 from "@/public/images/aboutImageSplit-1.png";
+import aboutImg2 from "@/public/images/aboutImageSplit-2.png";
+import aboutImg3 from "@/public/images/aboutImageSplit-3.png";
+import aboutImg4 from "@/public/images/aboutImageSplit-4.png";
 
-
+import profileIcon from "@/public/images/profile.svg";
+import integrityIcon from "@/public/images/integrity.svg";
+import starIcon from "@/public/images/star.svg";
 
 export default function AboutPage() {
-    return (
-        <>
-            <AboutHero />
-            <WhoWeAre />
-            <ImageGrid
-             images = {[{ImageSrc: "/images/aboutImageSplit-1.png",
-                aspect: "aspect-508/582"
-             } , {ImageSrc: "/images/aboutImageSplit-2.png",
-                aspect: "aspect-805/582"
-             },
-            ] }
-             />
-            <VisionMission />
-            <ImageGrid
-             images = {[{ImageSrc: "/images/aboutImageSplit-3.png",
-                aspect: "aspect-805/582"
-             } , {ImageSrc: "/images/aboutImageSplit-4.png",
-                aspect: "aspect-508/582"
-             }] }
-             aspect=""/>
-            <Values 
-            values = {[
-            { title: "Customer Satisfaction", desc: "We have honed the art of delighting customers at every turn.", img: "/images/profile.svg" },
-            { title: "Integrity", desc: "We always do our best to be sincere, faithful and truthful in appearance, speech and actions.", img: "/images/integrity.svg" },
-            { title: "Commitment", desc: "Whatsoever we find worth doing, we do with all our heart.", img: "/images/star.svg" },
-            ]}
-            />
-        </>
-    );
+  return (
+    <>
+      <AboutHero />
+      <WhoWeAre />
+
+      {/* First Image Grid */}
+      <ImageGrid
+        images={[
+          { ImageSrc: aboutImg1, aspect: "aspect-508/582" },
+          { ImageSrc: aboutImg2, aspect: "aspect-805/582" },
+        ]}
+      />
+
+      <VisionMission />
+
+      {/* Second Image Grid */}
+      <ImageGrid
+        images={[
+          { ImageSrc: aboutImg3, aspect: "aspect-805/582" },
+          { ImageSrc: aboutImg4, aspect: "aspect-508/582" },
+        ]}
+        aspect=""
+      />
+
+      {/* Values Section */}
+      <Values
+        values={[
+          {
+            title: "Customer Satisfaction",
+            desc: "We have honed the art of delighting customers at every turn.",
+            img: profileIcon,
+          },
+          {
+            title: "Integrity",
+            desc: "We always do our best to be sincere, faithful and truthful in appearance, speech and actions.",
+            img: integrityIcon,
+          },
+          {
+            title: "Commitment",
+            desc: "Whatsoever we find worth doing, we do with all our heart.",
+            img: starIcon,
+          },
+        ]}
+      />
+    </>
+  );
 }

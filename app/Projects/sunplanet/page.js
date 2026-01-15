@@ -1,130 +1,99 @@
-import ImageGallery from "@/components/gallery/ImageGallery";
-import Feature from "@/components/section/Feature";
-import FullImageSection from "@/components/section/FullImageSection";
 import Hero from "@/components/section/Hero";
-import Meta from "@/components/section/Meta";
 import MiniHero from "@/components/section/miniHero";
+import Meta from "@/components/section/Meta";
+import FullImageSection from "@/components/section/FullImageSection";
+import Feature from "@/components/section/Feature";
+import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
+// Import local images from public
+import heroImg from "@/public/images/sunplanetHero.jpg";
+import fullImg from "@/public/images/sunplanetFullImage.jpg";
+import featureImg from "@/public/images/sunplanetFeature.jpg";
+import gallery1 from "@/public/images/sunplanetImageSplit-1.jpg";
+import gallery2 from "@/public/images/sunplanetImageSplit-2.jpg";
+import gallery3 from "@/public/images/sunplanetImageSplit-3.jpg";
+import gallery4 from "@/public/images/sunplanetImageSplit-4.jpg";
+import miniHeroImg from "@/public/images/sunplanetMiniHero-1.jpg";
 
+import proj1 from "@/public/images/projects/Frame-1.png";
+import proj2 from "@/public/images/projects/Frame-4.png";
+import proj3 from "@/public/images/projects/Frame-3.png";
+import proj4 from "@/public/images/projects/Frame-2.png";
+import proj5 from "@/public/images/projects/Frame-5.png";
+import proj6 from "@/public/images/projects/Frame-6.png";
 
 export default function SunplanetPage() {
+  const projects = [
+    { id: "chevron", title: "Chevron", image: proj1 },
+    { id: "rob", title: "Rob’s Place", image: proj2 },
+    { id: "adino", title: "Adrino HQ", image: proj3 },
+    { id: "sunplant", title: "Sun Planet Co", image: proj4 },
+    { id: "brooks", title: "The Brook Finance Ltd", image: proj5 },
+    { id: "ogedentist", title: "Oga Dentist", image: proj6 },
+  ];
 
   return (
     <>
-      <Hero
-        ImageSrc="/images/sunplanetHero.jpg"
-        title="Sun Planet Co"
-        height="h-[90vh]"
-      />
+      <Hero ImageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" />
 
       <Meta
-        title={"The Brief"}
+        title="The Brief"
         description={[
-            {
-              paragraph:
-                "X35 Projects was commissioned by Sun Planet Co to provide full architectural and interior design consultancy for a new residential development conceived under a joint-venture partnership between the company and its client. The mandate was to create a block of modern apartment units that achieved the right balance between high livability standards and a strong investment return for both partners."
-            },
-            {
-              paragraph:
-                "Our team led the project from the conceptual stage, beginning with detailed feasibility studies, site assessment, and benchmarking of residential market expectations. The goal was to develop a design strategy that maximized land efficiency, optimized circulation, and delivered unit configurations that would remain attractive, functional, and financially viable over time."
-            },
-            {
-              paragraph:
-                "We produced a complete architectural design package—including space planning, massing studies, façade concepts, and construction-ready drawings—supported by a cohesive interior design direction. The design focused on smart spatial layouts, durable material selections, and lifestyle-driven amenities tailored to appeal to diverse user groups while maintaining cost control for profitability."
-            },
-          ]}
-        infoItem= {[
-            { heading: "Category", value: "Architecture / Interior Design / Consultancy" },
-            { heading: "Floor Area", value: "580 m²" },
-            { heading: "Floors", value: "3 Floors" },
-            { heading: "Architectural Style", value: "Modern / Minimalism" },
-            { heading: "Typology", value: "Real Estate" },
-          ]}
-          backgroundColor="bg-[#DFC0AB]"
-        />
-        <FullImageSection
-          ImageSrc="/images/sunplanetFullImage.jpg"
-          title="chevron deep interior"
-        />
-        <Feature
+          {
+            paragraph:
+              "X35 Projects was commissioned by Sun Planet Co to provide full architectural and interior design consultancy for a new residential development conceived under a joint-venture partnership between the company and its client. The mandate was to create a block of modern apartment units that achieved the right balance between high livability standards and a strong investment return for both partners.",
+          },
+          {
+            paragraph:
+              "Our team led the project from the conceptual stage, beginning with detailed feasibility studies, site assessment, and benchmarking of residential market expectations. The goal was to develop a design strategy that maximized land efficiency, optimized circulation, and delivered unit configurations that would remain attractive, functional, and financially viable over time.",
+          },
+          {
+            paragraph:
+              "We produced a complete architectural design package—including space planning, massing studies, façade concepts, and construction-ready drawings—supported by a cohesive interior design direction. The design focused on smart spatial layouts, durable material selections, and lifestyle-driven amenities tailored to appeal to diverse user groups while maintaining cost control for profitability.",
+          },
+        ]}
+        infoItem={[
+          { heading: "Category", value: "Architecture / Interior Design / Consultancy" },
+          { heading: "Floor Area", value: "580 m²" },
+          { heading: "Floors", value: "3 Floors" },
+          { heading: "Architectural Style", value: "Modern / Minimalism" },
+          { heading: "Typology", value: "Real Estate" },
+        ]}
+        backgroundColor="bg-[#DFC0AB]"
+      />
+
+      <FullImageSection ImageSrc={fullImg} title="sun planet interior" />
+
+      <Feature
+        ImageSrc={featureImg}
         backgroundColor="bg-[#11111F]"
-        ImageSrc="/images/sunplanetFeature.jpg"
-        description={[
-            {
-              paragraph:
-                "In this engagement, X35 Projects acted as the design and consultancy partner, providing technical oversight, design development, and client advisory throughout the pre-construction and design phases. The physical construction of the development was carried out by a separate contracting firm, while we ensured continuous design compliance and quality alignment with the project vision."
-            }, 
-          ]}
         title="X35 Projects as Design and Technical Consultancy Partner"
-        /> 
-        <ImageGallery
-          BackgroundColor="bg-[#EAF1FF]"
-          images={[
-            {
-            ImageSrc: "/images/sunplanetImageSplit-1.jpg",
-            alt: " kitchen area Interior 1",
-            height: "594",
-            width: "615"
+        description={[
+          {
+            paragraph:
+              "In this engagement, X35 Projects acted as the design and consultancy partner, providing technical oversight, design development, and client advisory throughout the pre-construction and design phases. The physical construction of the development was carried out by a separate contracting firm, while we ensured continuous design compliance and quality alignment with the project vision.",
           },
-            {
-            ImageSrc: "/images/sunplanetImageSplit-2.jpg",
-            alt: " kitchen area Interior 2",
-            height: "594",
-            width: "615",
-            colspan: "col-span-2"
-          },
-            {
-            ImageSrc: "/images/sunplanetImageSplit-3.jpg",
-            alt: " kitchen area Interior 2",
-            height: "594",
-            width: "615",
-            colspan: "col-span-2"
-          },
-            {
-            ImageSrc: "/images/sunplanetImageSplit-4.jpg",
-            alt: " kitchen area Interior 2",
-            height: "594",
-            width: "615",
-          },
-        ]}/> 
+        ]}
+      />
+
+      <ImageGallery
+        BackgroundColor="bg-[#EAF1FF]"
+        images={[
+          { ImageSrc: gallery1, alt: "Interior 1", height: "594", width: "615" },
+          { ImageSrc: gallery2, alt: "Interior 2", height: "594", width: "615", colspan: "col-span-2" },
+          { ImageSrc: gallery3, alt: "Interior 3", height: "594", width: "615", colspan: "col-span-2" },
+          { ImageSrc: gallery4, alt: "Interior 4", height: "594", width: "615" },
+        ]}
+      />
+
       <MiniHero
-        ImageSrc="/images/sunplanetMiniHero-1.jpg"
+        ImageSrc={miniHeroImg}
         title="A Refined and Strategic Residential Development"
-        description="Overall, the collaboration with Sun Planet Co resulted in a residential development that is not only architecturally refined but also commercially strategic—delivering value, efficiency, and long-term ROI for both stakeholders."/>
-      <RelatedProjects
-      const projects = {[
-        {
-          id: "chevron",
-          title: "Chevron",
-          image: "/images/projects/Frame-1.png",
-        },
-        {
-          id: "rob",
-          title: "Rob’s Place",
-          image: "/images/projects/Frame-4.png",
-        },
-        {
-          id: "adino",
-          title: "Adrino HQ",
-          image: "/images/projects/Frame-3.png",
-        },
-        {
-          id: "sunplant",
-          title: "Sun Planet Co",
-          image: "/images/projects/Frame-2.png",
-        },
-        {
-          id: "brooks",
-          title: "The Brook Finance Ltd",
-          image: "/images/projects/Frame-5.png",
-        },
-        {
-          id: "ogedentist",
-          title: "Oga Dentist",
-          image: "/images/projects/Frame-6.png",
-        },
-      ]}/>  
-      </>
+        description="Overall, the collaboration with Sun Planet Co resulted in a residential development that is not only architecturally refined but also commercially strategic—delivering value, efficiency, and long-term ROI for both stakeholders."
+      />
+
+      <RelatedProjects projects={projects} />
+    </>
   );
 }
