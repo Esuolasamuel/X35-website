@@ -26,7 +26,7 @@ const items = [
 ];
 
 export default function Services() {
-  const INTERVAL = 4000;
+  const INTERVAL = 2000;
   const STEP_TIME = 50;
 
   const [index, setIndex] = useState(0);
