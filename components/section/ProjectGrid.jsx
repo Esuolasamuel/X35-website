@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // ✅ Static image imports
-import brooksImg from "@/assets/images/brooks.jpg";
+import brookImg from "@/assets/images/brook.jpg";
 import ogaDentistImg from "@/assets/images/ogadentist.jpg";
 import robsPlaceImg from "@/assets/images/robsplace.jpg";
 import chevronImg from "@/assets/images/chevron.png";
@@ -13,8 +13,8 @@ const projects = [
   {
     name: "The Brook Finance Ltd",
     type: "Commercial",
-    img: brooksImg,
-    href: "/Projects/thebrooks",
+    img: brookImg,
+    href: "/Projects/thebrook",
   },
   {
     name: "Oga Dentist",

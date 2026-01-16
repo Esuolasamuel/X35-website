@@ -18,7 +18,7 @@ const x35Content = () => {
       title: "The Brook Finance",
       type: "Commercial",
       img: brookImg,
-      slug: "thebrooks",
+      slug: "thebrook",
     },
     {
       title: "Rob’s Place",

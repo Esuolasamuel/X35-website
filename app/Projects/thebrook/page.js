@@ -8,42 +8,42 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import images from public folder (optional, safer)
-import thebrooksHero from "@/assets/images/brooksHero.png";
-import brooksFull1 from "@/assets/images/bg-3.png";
-import brooksFull2 from "@/assets/images/brooksFullImage-2.jpg";
-// import brooksNarrative from "@/assets/images/brooksFeature-1.jpg";
-import brooksFeature1 from "@/assets/images/brooksFeature-1.jpg";
-import brooksFeature2 from "@/assets/images/brooksFeature-2.jpg";
-import brooksFeature3 from "@/assets/images/brooksFeature-3.jpg";
-import brooksFeature4 from "@/assets/images/brooksFeature-4.jpg";
-import brooksSplit1 from "@/assets/images/brooksImageSplit-1.jpg";
-import brooksSplit2 from "@/assets/images/brooksImageSplit-2.jpg";
-import brooksSplit3 from "@/assets/images/brooksImageSplit-3.jpg";
-import brooksSplit4 from "@/assets/images/brooksImageSplit-4.jpg";
-import brooksSplit5 from "@/assets/images/brooksImageSplit-5.jpg";
-import brooksSplit6 from "@/assets/images/brooksImageSplit-6.jpg";
-import brooksSplit7 from "@/assets/images/brooksImageSplit-7.jpg";
-import brooksSplit8 from "@/assets/images/brooksImageSplit-8.jpg";
+import thebrookHero from "@/assets/images/brookHero.png";
+import brookFull1 from "@/assets/images/bg-3.png";
+import brookFull2 from "@/assets/images/brookFullImage-2.jpg";
+// import brookNarrative from "@/assets/images/brookFeature-1.jpg";
+import brookFeature1 from "@/assets/images/brookFeature-1.jpg";
+import brookFeature2 from "@/assets/images/brookFeature-2.jpg";
+import brookFeature3 from "@/assets/images/brookFeature-3.jpg";
+import brookFeature4 from "@/assets/images/brookFeature-4.jpg";
+import brookSplit1 from "@/assets/images/brookImageSplit-1.jpg";
+import brookSplit2 from "@/assets/images/brookImageSplit-2.jpg";
+import brookSplit3 from "@/assets/images/brookImageSplit-3.jpg";
+import brookSplit4 from "@/assets/images/brookImageSplit-4.jpg";
+import brookSplit5 from "@/assets/images/brookImageSplit-5.jpg";
+import brookSplit6 from "@/assets/images/brookImageSplit-6.jpg";
+import brookSplit7 from "@/assets/images/brookImageSplit-7.jpg";
+import brookSplit8 from "@/assets/images/brookImageSplit-8.jpg";
 import projectChevron from "@/assets/images/chevron.png";
 import projectRob from "@/assets/images/robsplace.jpg";
 import projectAdino from "@/assets/images/adino.png";
 import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectBrooks from "@/assets/images/brooks.jpg";
+import projectbrook from "@/assets/images/brook.jpg";
 import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 
-export default function TheBrooksPage() {
+export default function thebrookPage() {
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
     { id: "rob", title: "Rob's Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
-    { id: "brooks", title: "The Brook Finance Ltd", image: projectBrooks },
+    { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
     { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 
   return (
     <>
-      <Hero ImageSrc={thebrooksHero} title="The Brooks Finances" height="h-[90vh]" />
+      <Hero ImageSrc={thebrookHero} title="The brook Finances" height="h-[90vh]" />
 
       <Meta
         title="Transforming a Financial Workplace into a Modern, Human-Centric Environment"
@@ -72,10 +72,10 @@ export default function TheBrooksPage() {
         backgroundColor="bg-[#e5f1e7]"
       />
       
-      <FullImageSection ImageSrc={brooksFull1} title="brooks interior" />
+      <FullImageSection ImageSrc={brookFull1} title="brook interior" />
 
       <Feature
-        ImageSrc={brooksFeature1}
+        ImageSrc={brookFeature1}
         description={[
           {
             paragraph:
@@ -106,15 +106,15 @@ export default function TheBrooksPage() {
       <ImageGallery
         BackgroundColor="bg-[#EAF1FF]"
         images={[
-          { ImageSrc: brooksSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
-          { ImageSrc: brooksSplit2, alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
-          { ImageSrc: brooksSplit3, alt: "Interior 3", aspect: "aspect-732/582", colspan: "col-span-2" },
-          { ImageSrc: brooksSplit4, alt: "Interior 4", aspect: "aspect-460/910" },
+          { ImageSrc: brookSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
+          { ImageSrc: brookSplit2, alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
+          { ImageSrc: brookSplit3, alt: "Interior 3", aspect: "aspect-732/582", colspan: "col-span-2" },
+          { ImageSrc: brookSplit4, alt: "Interior 4", aspect: "aspect-460/910" },
         ]}
       />
 
       <Feature
-        ImageSrc={brooksFeature2}
+        ImageSrc={brookFeature2}
         title="Design Language and Material Strategy"
         description={[
           {
@@ -131,15 +131,15 @@ export default function TheBrooksPage() {
       <ImageGallery
         BackgroundColor="bg-[#EAF1FF]"
         images={[
-          { ImageSrc: brooksSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
-          { ImageSrc: brooksSplit6, alt: "Interior 6", aspect: "aspect-722/582", colspan: "col-span-2" },
-          { ImageSrc: brooksSplit7, alt: "Interior 7", aspect: "aspect-722/582", colspan: "col-span-2" },
-          { ImageSrc: brooksSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
+          { ImageSrc: brookSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
+          { ImageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-722/582", colspan: "col-span-2" },
+          { ImageSrc: brookSplit7, alt: "Interior 7", aspect: "aspect-722/582", colspan: "col-span-2" },
+          { ImageSrc: brookSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
         ]}
       />
 
       <Feature
-        ImageSrc={brooksFeature3}
+        ImageSrc={brookFeature3}
         description={[
           {
             paragraph:
@@ -157,10 +157,10 @@ export default function TheBrooksPage() {
         backgroundColor="bg-[#dfc0ab]"
       />
 
-      <FullImageSection ImageSrc={brooksFull2} title="brooks full view" />
+      <FullImageSection ImageSrc={brookFull2} title="brook full view" />
 
       <Feature
-        ImageSrc={brooksFeature4}
+        ImageSrc={brookFeature4}
         description={[
           {
             paragraph:

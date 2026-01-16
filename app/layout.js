@@ -29,7 +29,7 @@ const fraunces = localFont({
 
 
 export const metadata = {
-  metadataBase: new URL("https://www.x35.com"), // 🔴 change to real domain
+  metadataBase: new URL("https://www.x35projects.com"),
 
   title: {
     default: "X35 – Architecture, Interior Design & Construction",
@@ -65,11 +65,11 @@ export const metadata = {
     title: "X35 – Architecture, Interior Design & Construction",
     description:
       "Designing and building modern architectural and interior spaces.",
-    url: "https://www.x35.com",
+    url: "https://www.x35projects.com",
     siteName: "X35",
     images: [
       {
-        url: "/images/logo.svg", // 1200x630
+        url: "@/assets/images/favicon-16x16.png", // 1200x630
         width: 1200,
         height: 630,
         alt: "X35 Architecture Projects",
@@ -84,11 +84,11 @@ export const metadata = {
     title: "X35 – Architecture & Construction",
     description:
       "Modern architecture, interior design, and construction services.",
-    images: ["/images/logo.svg"],
+    images: ["@/assets/images/favicon-16x16.png"],
   },
 
   alternates: {
-    canonical: "https://www.x35.com",
+    canonical: "https://www.x35projects.com",
   },
 };
 

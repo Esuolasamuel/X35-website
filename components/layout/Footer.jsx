@@ -25,9 +25,9 @@ export default function Footer() {
                 <div className="hover:cursor-pointer">
                     <h4 className="text-white/60 text-sm font-body font-semibold mb-7 cursor-pointer">Quick Links</h4>
                     <ul className="space-y-6 text-white text-sm">
-                        <li>About Us</li>
-                        <li>Our Projects</li>
-                        <li>Our Services</li>
+                        <li href="/about">About Us</li>
+                        <li href="/projects">Our Projects</li>
+                        <li href="/#services">Our Services</li>
                     </ul>
                 </div>
                 <div className="hover:cursor-pointer">

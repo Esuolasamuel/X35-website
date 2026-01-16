@@ -21,7 +21,7 @@ import projectChevron from "@/assets/images/chevron.png";
 import projectRob from "@/assets/images/robsplace.jpg";
 import projectAdino from "@/assets/images/adino.png";
 import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectBrooks from "@/assets/images/brooks.jpg";
+import projectbrook from "@/assets/images/brook.jpg";
 import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 
 export default function RobPlacePage() {
@@ -31,7 +31,7 @@ export default function RobPlacePage() {
     { id: "rob", title: "Rob’s Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
-    { id: "brooks", title: "The Brook Finance Ltd", image: projectBrooks },
+    { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
     { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 

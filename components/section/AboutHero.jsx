@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
+import aboutHero from "@/assets/images/aboutHero.png";  
 
 
 
@@ -17,7 +18,7 @@ export default function AboutHero() {
                 </div>
             </Container>
             <div className="relative mt-16 h-[60vh]">
-                <Image src="/images/aboutHero.png" alt="Hero" fill className="object-cover" priority />
+                <Image src={aboutHero} alt="Hero" fill className="object-cover" priority />
             </div>
         </section>
     );

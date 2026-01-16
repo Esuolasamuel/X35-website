@@ -21,7 +21,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
           </h3>
           
           <Link 
-            href="/projects" 
+            href="/Projects" 
             className="px-8 py-3 border border-[#1A1A1A] rounded-full text-[15px] font-bold hover:bg-[#1A1A1A] hover:text-white transition-colors duration-300"
           >
             View all project
@@ -33,7 +33,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
           {relatedProjects.map((project) => (
             <Link
               key={project.id}
-              href={`/projects/${project.id}`}
+              href={`/Projects/${project.id}`}
               className="group relative block w-full aspect-592/350 rounded-3xl lg:rounded-4xl overflow-hidden bg-gray-100"
             >
               {/* Main Project Image */}

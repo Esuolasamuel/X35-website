@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+
 /* ---------------------------------------
    LCP-FIRST HERO
 --------------------------------------- */
@@ -93,14 +94,14 @@ export default function HeroLCP({ images = [ ], interval = 4000 }) {
         <>
           <button
             onClick={prevSlide}
-            className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+            className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Previous slide"
           >
             <ChevronLeft size={24} className="text-white" />
           </button>
           <button
             onClick={nextSlide}
-            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Next slide"
           >
             <ChevronRight size={24} className="text-white" />
@@ -131,7 +132,7 @@ export default function HeroLCP({ images = [ ], interval = 4000 }) {
                 className="
                   absolute -left-1 sm:-left-2 md:-left-3 lg:-left-4 -bottom-1 sm:-bottom-1.5 md:-bottom-2 lg:-bottom-2
                   h-12 w-28 sm:h-16 sm:w-40 md:h-20 md:w-48 lg:h-24 lg:w-60
-                  bg-[url('/images/Fill-4.svg')]
+                  bg-[url(@/assets/icons/Fill-4.svg)]
                   bg-cover bg-no-repeat
                   -z-10
                 "
