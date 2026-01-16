@@ -93,7 +93,7 @@ export default function Services() {
   const item = useMemo(() => items[index], [index]);
 
   return (
-    <section className="py-32 bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
+    <section id="services" className="py-32 bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-y-12 items-center">
 
         {/* LEFT */}
