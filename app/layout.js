@@ -83,7 +83,7 @@ export const metadata = {
     siteName: "X35",
     images: [
       {
-        url: "@/assets/images/favicon-16x16.png", // 1200x630
+        url: "/favicon-16x16.png", // 1200x630
         width: 1200,
         height: 630,
         alt: "X35 Architecture Projects",
@@ -98,7 +98,7 @@ export const metadata = {
     title: "X35 – Architecture & Construction",
     description:
       "Modern architecture, interior design, and construction services.",
-    images: ["@/assets/images/favicon-16x16.png"],
+    images: ["/favicon-16x16.png"],
   },
 
   alternates: {
