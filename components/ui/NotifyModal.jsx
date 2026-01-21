@@ -53,7 +53,7 @@ export default function NotifyModal({ open, onClose }) {
 
           <button
             type="submit"
-            className="w-full rounded-full bg-yellow-400 py-3 font-semibold  text-dark-500transition hover:bg-yellow-700"
+            className="w-full rounded-full bg-yellow-400 py-3 font-semibold  text-dark-500transition hover:bg-[#FFD700]"
           >
             Notify Me
           </button>

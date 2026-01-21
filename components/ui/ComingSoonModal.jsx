@@ -37,7 +37,7 @@ export default function ComingSoonModal({
             className="
               mt-6 w-full rounded-full bg-yellow-400 py-4
               font-semibold  text-dark-500
-              hover:bg-yellow-700 transition
+              hover:bg-[#FFD700] transition
             "
           >
             Notify me

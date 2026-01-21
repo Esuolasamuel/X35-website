@@ -60,16 +60,16 @@ export default function ProjectDemo({ projects }) {
               pl-6 pr-2 py-2
                text-dark-500
               font-body    font-bold text-[15px]
-               bg-yellow-400 hover: bg-yellow-700 transition
+               bg-[#FFD700] hover: bg-[#E2C007] transition
             "
           >
             View all Projects
-            <span className="rounded-full p-2.5  bg-yellow-400 hover: bg-yellow-700 transition">
+            <span className="rounded-full p-2.5  bg-[#FFD700] hover: bg-[#E2C007] transition">
               <Image
                 src= {arrowrigth}
                 width={14}
                 height={16}
-                alt="arrow right hover: bg-yellow-700 "
+                alt="arrow right hover: bg-[#FFD700] "
               />
             </span>
           </Link>

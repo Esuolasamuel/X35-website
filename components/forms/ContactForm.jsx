@@ -23,7 +23,7 @@ export default function ContactForm({ onSuccess }) {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full bg-yellow-700 hover:bg-yellow-400 font-bold py-4 rounded-full transition disabled:opacity-50"
+        className="w-full bg-[#FFD700] hover:bg-yellow-400 font-bold py-4 rounded-full transition disabled:opacity-50"
       >
         {isPending ? "Sending..." : "Submit"}
       </button>

@@ -78,7 +78,7 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex rounded-full bg-yellow-500 hover:bg-yellow-700 transition-colors px-6 py-3.5 font-body font-semibold text-sm text-dark-500"
+            className="hidden lg:inline-flex rounded-full bg-yellow-500 hover:bg-[#FFD700] transition-colors px-6 py-3.5 font-body font-semibold text-sm text-dark-500"
           >
             Contact Us
           </button>
@@ -106,7 +106,7 @@ export default function Header() {
               <button className="" onClick={() => { setIsComingSoonOpen(true); setMenuOpen(false); }}>Products</button>
               <button
                 onClick={() => { setIsContactOpen(true); setMenuOpen(false); }}
-                className="mt-4 rounded-full bg-yellow-700 px-6 py-3 font-body font-semibold text-sm text-dark-500"
+                className="mt-4 rounded-full bg-[#FFD700] px-6 py-3 font-body font-semibold text-sm text-dark-500"
               >
                 Contact Us
               </button>

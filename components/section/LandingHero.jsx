@@ -10,8 +10,8 @@ import bg6 from "@/assets/images/bg-6.png";
 import bg7 from "@/assets/images/bg-7.png";
 import bg8 from "@/assets/images/bg-8.jpg";
 import bg9 from "@/assets/images/bg-9.jpg";
-import bg10 from "@/assets/images/bg-10.jpg";
-import bg11 from "@/assets/images/bg-11.png";
+import bg10 from "@/assets/images/bg-10.png";
+import bg11 from "@/assets/images/bg-11.jpg";
 import bg12 from "@/assets/images/bg-12.jpg";
 
 export default function LandingHero() {
