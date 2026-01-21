@@ -3,9 +3,7 @@ import Image from 'next/image';
 const FullImageSection = ({ ImageSrc, title, backgrounColor ="bg-white" }) => {
   return (
     /* p-[120px] applies the padding on all sides as requested */
-    <section className="bg-white xl:p-32 lg:p-24
-        md:p-16
-        p-6 flex justify-center items-center">
+    <section className="bg-white flex justify-center items-center">
       
       {/* Container is fixed at 1200px width. 
           The aspect ratio ensures the height is exactly 796px.

@@ -26,7 +26,7 @@ const items = [
 ];
 
 export default function Services() {
-  const INTERVAL = 4000;
+  const INTERVAL = 5000;
   const STEP_TIME = 50;
 
   const [index, setIndex] = useState(0);
@@ -93,12 +93,12 @@ export default function Services() {
   const item = useMemo(() => items[index], [index]);
 
   return (
-    <section id="services" className="py-32 bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-y-12 items-center">
+    <section id="services" className="py-28 bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
+      <div className="max-w-7xl grid md:grid-cols-2 gap-y-12 items-center">
 
         {/* LEFT */}
-        <div className="max-w-md">
-          <h2 className="text-5xl leading-15 font-heading font-bold mb-6">
+        <div className="max-w-md hidden md:block">
+          <h2 className="text-5xl leading-15 font-heading text-dark mb-6 text-white">
             Our Services
           </h2>
 
@@ -114,14 +114,14 @@ export default function Services() {
                   onClick={() => handleSelect(i)}
                   aria-current={i === index}
                   className={`w-full text-left transition ${
-                    i === index ? "text-white" : "text-white/60"
+                    i === index ? "text-white" : "text-white/60 cursor-pointer"
                   }`}
                 >
                   <span className="text-lg font-medium">{it.title}</span>
                 </button>
 
                 {i === index && (
-                  <div className="mt-2 h-[0.05rem] w-full bg-white/10 rounded-full overflow-hidden">
+                  <div className="mt-2 h-[0.05rem] w-full bg-white/30 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-2xl overflow-hidden aspect-615/594">
+        <div className="relative rounded-2xl overflow-hidden aspect-615/594 hidden md:block">
           <Image
             key={item.title}
             src={item.img}
@@ -148,7 +148,31 @@ export default function Services() {
             style={{ opacity: visible ? 1 : 0 }}
           />
         </div>
+      </div>
 
+      {/* MOBILE VIEW */}
+      <div className="md:hidden space-y-6">
+        {items.map((item) => (
+          <div
+            key={item.title}
+            className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
+          >
+            <div className="relative aspect-4/3">
+              <Image
+                src={item.img}
+                alt={item.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-white">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

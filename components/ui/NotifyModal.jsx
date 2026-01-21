@@ -13,7 +13,7 @@ export default function NotifyModal({ open, onClose }) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center">
+    <div className="fixed inset-0 z-999 flex items-center justify-center">
       {/* Backdrop */}
       <div
         onClick={onClose}
@@ -25,16 +25,16 @@ export default function NotifyModal({ open, onClose }) {
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 text-gray-500 hover:text-black"
+          className="absolute right-4 top-4  text-dark-500hover: text-dark-500/80"
         >
           <X size={20} />
         </button>
 
         {/* Content */}
-        <h2 className="text-center text-2xl font-bold text-[#0C0C1C] mb-2">
+        <h2 className="text-center text-2xl font-bold  text-dark-500 mb-2">
           Be the First to Know
         </h2>
-        <p className="text-center text-sm text-gray-600 mb-6">
+        <p className="text-center text-sm  text-dark-500mb-6">
           Enter your email and we’ll let you know when our product launches.
         </p>
 
@@ -48,12 +48,12 @@ export default function NotifyModal({ open, onClose }) {
           <input
             type="email"
             placeholder="Email address"
-            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm   text-dark-500 focus:outline-none focus:ring-2 focus:ring-yellow-5        00"
           />
 
           <button
             type="submit"
-            className="w-full rounded-full bg-yellow-400 py-3 font-semibold text-[#0C0C1C] transition hover:bg-yellow-500"
+            className="w-full rounded-full bg-yellow-400 py-3 font-semibold  text-dark-500transition hover:bg-yellow-700"
           >
             Notify Me
           </button>

@@ -18,8 +18,8 @@ const logos = [
 
 export default function Clients() {
     return (
-        <section className="py-0 md:py-12 border-b bg-white">
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 place-items-center">
+        <section className="py-3 md:py-12 bg-white">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 place-items-center">
                 {logos.map((logo, index) => (
                     <div key={index} className="flex items-center justify-center">
                         <Image

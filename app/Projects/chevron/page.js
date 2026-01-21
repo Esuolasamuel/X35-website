@@ -36,59 +36,55 @@ export default function ChevronPage() {
   return (
     <>
       <Hero ImageSrc={chevronHero} title="Chevron" height="h-[90vh]" />
-
-      <Meta
-        title="Chevron Deep Waters Workspace Redesign"
-        description={[
-          { paragraph: "X35 Projects was commissioned to transform the office interior into a contemporary, efficient, and performance-driven work environment. The objective was to rethink how the space functioned and elevate it into a more connected, productive, and visually polished workplace." },
-          { paragraph: "The project featured a complete upgrade of the department’s open workstation area, where we introduced a refreshed spatial layout that improves movement, communication, and ergonomic comfort. Custom acoustic partitions, integrated cable-management systems, and contemporary workstation modules were designed to support daily operations while maintaining a clean, organized aesthetic." },
-        ]}
-        infoItem={[
-          { heading: "Category", value: "Interior Design / Consultancy" },
-          { heading: "Floor Area", value: "145 m²" },
-          { heading: "Floors", value: "2 Floors" },
-          { heading: "Architectural Style", value: "Modern / Minimalism" },
-          { heading: "Typology", value: "Commercial" },
-        ]}
-        backgroundColor="bg-[#DFC0AB]"
-      />
-
-      <FullImageSection ImageSrc={chevronFull} title="chevron deep interior" />
-
-      <Narrative
-        BackgroundColor="bg-[#11111F]"
-        TextColor="text-white"
-        title="chevron narrative image"
-        description={[
-          { paragraph: "A standout element of the redesign is the bespoke modern ceiling system, created with bold geometric forms and energy-efficient lighting. Concealed linear LED fixtures and coordinated MEP integration allowed us to achieve a polished, uncluttered look that enhances the overall ambience of the space." },
-          { paragraph: "Flooring was upgraded using durable, commercial-grade materials, selected for their long-term performance and seamless compatibility with the department’s new design language. These materials contribute to a cohesive visual identity while withstanding the demands of a busy corporate environment." },
-          { paragraph: "The project also included the creation of a new 11-man conference room, designed with advanced AV infrastructure, custom joinery, optimal sightlines, and a modern material palette." },
-        ]}
-        ImageSrc={chevronNarrative}
-        textColor = "text-white/80"
-        headerColor = "text-white"
-      />
-
-      <Feature
-        ImageSrc={chevronFeature}
-        title="Delivering a Functional and Refined Collaborative Space"
-        description={[
-          { paragraph: "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions." },
-          { paragraph: "Through this redevelopment, X35 Projects delivered a workspace that blends functionality, aesthetics, and technical precision—reflecting our commitment to quality, innovation, and client-focused design solutions." },
-        ]}
-      />
-
-      <ImageGallery
-        BackgroundColor="bg-[#EAF1FF]"
-        images={[
-          { ImageSrc: chevronSplit1, alt: "Interior 1", height: 594, width: 615 },
-          { ImageSrc: chevronSplit2, alt: "Interior 2", height: 594, width: 615, colspan: "col-span-2" },
-          { ImageSrc: chevronSplit3, alt: "Interior 3", height: 594, width: 615, colspan: "col-span-2" },
-          { ImageSrc: chevronSplit4, alt: "Interior 4", height: 594, width: 615 },
-        ]}
-      />
-
-      <RelatedProjects projects={projects} />
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 md:px-16 lg:px-32">
+        <Meta
+          title="Chevron Deep Waters Workspace Redesign"
+          description={[
+            { paragraph: "X35 Projects was commissioned to transform the office interior into a contemporary, efficient, and performance-driven work environment. The objective was to rethink how the space functioned and elevate it into a more connected, productive, and visually polished workplace." },
+            { paragraph: "The project featured a complete upgrade of the department’s open workstation area, where we introduced a refreshed spatial layout that improves movement, communication, and ergonomic comfort. Custom acoustic partitions, integrated cable-management systems, and contemporary workstation modules were designed to support daily operations while maintaining a clean, organized aesthetic." },
+          ]}
+          infoItem={[
+            { heading: "Category", value: "Interior Design / Consultancy" },
+            { heading: "Floor Area", value: "145 m²" },
+            { heading: "Floors", value: "2 Floors" },
+            { heading: "Architectural Style", value: "Modern / Minimalism" },
+            { heading: "Typology", value: "Commercial" },
+          ]}
+          backgroundColor="bg-[#DFC0AB]"
+        />
+        <FullImageSection ImageSrc={chevronFull} title="chevron deep interior" />
+        <Narrative
+          BackgroundColor="text-indigo-700"
+          TextColor="text-white"
+          title="chevron narrative image"
+          description={[
+            { paragraph: "A standout element of the redesign is the bespoke modern ceiling system, created with bold geometric forms and energy-efficient lighting. Concealed linear LED fixtures and coordinated MEP integration allowed us to achieve a polished, uncluttered look that enhances the overall ambience of the space." },
+            { paragraph: "Flooring was upgraded using durable, commercial-grade materials, selected for their long-term performance and seamless compatibility with the department’s new design language. These materials contribute to a cohesive visual identity while withstanding the demands of a busy corporate environment." },
+            { paragraph: "The project also included the creation of a new 11-man conference room, designed with advanced AV infrastructure, custom joinery, optimal sightlines, and a modern material palette." },
+          ]}
+          ImageSrc={chevronNarrative}
+          textColor = "text-white/80"
+          headerColor = "text-white"
+        />
+        <Feature
+          ImageSrc={chevronFeature}
+          title="Delivering a Functional and Refined Collaborative Space"
+          description={[
+            { paragraph: "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions." },
+            { paragraph: "Through this redevelopment, X35 Projects delivered a workspace that blends functionality, aesthetics, and technical precision—reflecting our commitment to quality, innovation, and client-focused design solutions." },
+          ]}
+        />
+        <ImageGallery
+          BackgroundColor="bg-[#EAF1FF]"
+          images={[
+            { ImageSrc: chevronSplit1, alt: "Interior 1", height: 594, width: 615 },
+            { ImageSrc: chevronSplit2, alt: "Interior 2", height: 594, width: 615, colspan: "col-span-2" },
+            { ImageSrc: chevronSplit3, alt: "Interior 3", height: 594, width: 615, colspan: "col-span-2" },
+            { ImageSrc: chevronSplit4, alt: "Interior 4", height: 594, width: 615 },
+          ]}
+        />
+        <RelatedProjects projects={projects} />
+      </div>
     </>
   );
 }

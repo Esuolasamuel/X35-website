@@ -12,37 +12,37 @@ import adinoImg from "@/assets/images/adino.png";
 const projects = [
   {
     name: "The Brook Finance Ltd",
-    type: "Commercial",
+    type: "COMMERCIAL",
     img: brookImg,
     href: "/Projects/thebrook",
   },
   {
     name: "Oga Dentist",
-    type: "Healthcare",
+    type: "HEALTHCARE",
     img: ogaDentistImg,
     href: "/Projects/ogadentist",
   },
   {
     name: "Rob’s Place",
-    type: "Residential",
+    type: "RESIDENTIAL",
     img: robsPlaceImg,
     href: "/Projects/robs-place",
   },
   {
     name: "Chevron",
-    type: "Commercial",
+    type: "COMMERCIAL",
     img: chevronImg,
     href: "/Projects/chevron",
   },
   {
     name: "Sun Planet Co",
-    type: "Commercial",
+    type: "COMMERCIAL",
     img: sunplanetImg,
     href: "/Projects/sunplanet",
   },
   {
     name: "Adino Capital",
-    type: "Commercial",
+    type: "COMMERCIAL",
     img: adinoImg,
     href: "/Projects/adino",
   },
@@ -62,8 +62,7 @@ const ProjectGrid = () => {
                 src={p.img}
                 alt={p.name}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                className="object-cover transition-transform duration-700 aspect-720/497 ease-in-out group-hover:scale-110"
                 priority={false}
               />
 
@@ -71,11 +70,11 @@ const ProjectGrid = () => {
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
 
               {/* Text */}
-              <div className="absolute bottom-6 left-6 text-white z-10">
-                <h3 className="text-2xl font-heading font-bold">
+              <div className="absolute bottom-6 left-6  z-10">
+                <h3 className="text-2xl text-white font-bold">
                   {p.name}
                 </h3>
-                <p className="text-sm uppercase font-body tracking-wide opacity-80">
+                <p className="text-sm uppercase font-body tracking-wide text-white/80">
                   {p.type}
                 </p>
               </div>

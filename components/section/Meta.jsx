@@ -10,9 +10,6 @@ const Meta = ({
     <section
       className={`
         ${backgroundColor}
-        lg:p-32
-        md:p-12
-        p-6
         min-h-fit
         lg:h-157
         flex
@@ -39,7 +36,7 @@ const Meta = ({
         {/* LEFT CONTENT */}
         <div className=" my-10 w-full lg:max-w-xl">
           <h2 className="
-            font-heading  
+            font-heading     
             font-bold
             text-[32px]
             md:text-[38px]
@@ -57,7 +54,7 @@ const Meta = ({
               <p
                 key={index}
                 className="
-                  font-body
+                  font-body   
                   font-normal
                   text-[15px]
                   md:text-[16px]
@@ -81,7 +78,7 @@ const Meta = ({
               <li
                 key={index}
                 className="
-                  font-body
+                  font-body   
                   font-semibold
                   flex
                   items-center
@@ -96,7 +93,7 @@ const Meta = ({
                 <span className="
                   text-[#1A1A1A]
                   font-semibold
-                  font-body
+                  font-body   
                   text-[14px]
                   md:text-[15px]
                   lg:text-[17px]
@@ -107,7 +104,7 @@ const Meta = ({
                 <span className="
                   text-[#1A1A1A]
                   font-semibold
-                  font-body
+                  font-body   
                   text-[14px]
                   md:text-[15px]
                   lg:text-[17px]

@@ -58,15 +58,15 @@ export default function Header() {
           isTransparent ? "bg-transparent" : "bg-white shadow-sm"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between ">
           <Link href="/">
             <Image src={Logo} alt="X35 Logo" width={60} height={60} />
           </Link>
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden lg:flex items-center gap-8 text-sm font-semibold font-body ${
-              isTransparent ? "text-white/90" : "text-gray-900"
+            className={`hidden lg:flex items-center gap-8 text-base font-semibold font-body cursor-pointer    ${
+              isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
             <Link href="/about">About Us</Link>
@@ -78,7 +78,7 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex rounded-full bg-yellow-400 px-6 py-3 font-body font-semibold text-sm text-[#0C0C1C]"
+            className="hidden lg:inline-flex rounded-full bg-yellow-500 hover:bg-yellow-700 transition-colors px-6 py-3.5 font-body font-semibold text-sm text-dark-500"
           >
             Contact Us
           </button>
@@ -97,16 +97,16 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden" onClick={() => setMenuOpen(false)}>
+        <div className="fixed inset-0 top-5 z-40 lg:hidden" onClick={() => setMenuOpen(false)}>
           <div className="fixed top-0 left-0 right-0 bg-white shadow-lg p-6 pt-20">
             <nav className="flex flex-col gap-6 text-lg font-semibold text-gray-900">
               <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link href="/Projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
               <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
-              <button onClick={() => { setIsComingSoonOpen(true); setMenuOpen(false); }}>Products</button>
+              <button className="" onClick={() => { setIsComingSoonOpen(true); setMenuOpen(false); }}>Products</button>
               <button
                 onClick={() => { setIsContactOpen(true); setMenuOpen(false); }}
-                className="mt-4 rounded-full bg-yellow-400 px-6 py-3 font-body font-semibold text-sm text-[#0C0C1C]"
+                className="mt-4 rounded-full bg-yellow-700 px-6 py-3 font-body font-semibold text-sm text-dark-500"
               >
                 Contact Us
               </button>
@@ -131,7 +131,7 @@ export default function Header() {
           <div className="relative w-full max-w-md bg-white rounded-2xl p-0 md:p-8 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              className="absolute top-4 right-4 text-dark-500 hover:text-dark-500"
             >
               <X size={24} />
             </button>

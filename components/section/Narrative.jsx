@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = "text-black/80"}) => {
+const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = " text-dark-500/80"}) => {
   return (
     /* Added 'group' to trigger the hover state for the entire section */
-    <section className={`${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-4 group`}>
+    <section className={`${backgroundColor} group`}>
       <div className="mx-auto max-w-500 flex flex-col lg:flex-row items-center gap-14 lg:gap-16">
         
         {/* LEFT TEXT SECTION */}
         <div className="w-full lg:w-5/12">
-          <div className="font-body font-normal text-[17px]">
+          <div className="font-body text-dark-500 font-normal text-[17px]">
             {description.map((desc, index) => (
               <p
                 key={index}

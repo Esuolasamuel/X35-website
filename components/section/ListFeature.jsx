@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 const ListFeature = ({
   title, 
-  textColor = "text-black/80",
-  headerColor = "text-black",
+  textColor = " text-dark-500/80",
+  headerColor = " text-dark-500",
   ImageSrc, 
   description, 
   summary, 
@@ -16,25 +16,25 @@ const ListFeature = ({
 }) => {
     return (
         /* Added 'group' to the section to trigger the image zoom */
-        <section className={`${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-4 group`}>
+        <section className={`${backgroundColor} group`}>
             <div className={`mx-auto max-w-500 flex flex-col lg:${flex} items-center gap-14 lg:gap-16`}>
                 
                 {/* LEFT TEXT SECTION */}
                 <div className={`w-full lg:w-1/2 ${orderL}`}>
                     <div className="">
-                        <h3 className={`font-heading font-bold text-4xl mb-4 ${headerColor}`}>{title}</h3>
-                        <p className={`text-[16px] lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                        <h3 className={`font-heading  text-4xl mb-4 ${headerColor}`}>{title}</h3>
+                        <p className={`text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                             {description}
                         </p>
-                        <ul className='font-body-font-normal list-disc ml-5'>
+                        <ul className='font-body   -font-normal list-disc ml-5'>
                             {lists.map((l, index) => (
-                                <li key={index} className={`text-[16px] lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                                <li key={index} className={`text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                                     {l.paragraph}
                                 </li>
                             ))}
                         </ul>
                         {summary && (
-                            <p className={`mt-8 text-[16px] lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                            <p className={`mt-8 text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                                 {summary}
                             </p>
                         )}

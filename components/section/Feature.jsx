@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 const Feature = ({
-  textColor = "text-black/80",
-  headerColor = "text-black",
+  textColor = " text-dark-500/80",
+  headerColor = " text-dark-500",
   title,
   ImageSrc,
   description,
@@ -14,7 +14,7 @@ const Feature = ({
 }) => {
   return (
     /* Added 'group' here so the hover is triggered when the section is entered */
-    <section className={`${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-4 group`}>
+    <section className={`${backgroundColor} group`}>
       <div
         className={`
           mx-auto max-w-8xl
@@ -24,14 +24,14 @@ const Feature = ({
       >
         {/* LEFT TEXT SECTION */}
         <div className={`w-full xl:w-1/2 ${orderL}`}>
-          <h3 className={`mb-4 text-3xl md:text-4xl font-heading font-bold ${headerColor}`}>
+          <h3 className={`mb-4 text-3xl md:text-4xl font-heading  ${headerColor}`}>
             {title}
           </h3>
 
           {description.map((desc, index) => (
             <p
               key={index}
-              className={`mb-6 last:mb-0 text-[16px] font-body font-normal md:text-[17px] leading-relaxed ${textColor} tracking-wide`}
+              className={`mb-6 last:mb-0 text-[16px] font-body    font-normal md:text-[17px] leading-relaxed ${textColor} tracking-wide`}
             >
               {desc.paragraph}
             </p>

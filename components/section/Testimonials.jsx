@@ -23,14 +23,14 @@ img: customer,
 
 export default function Testimonials() {
     return (
-        <section className="xl:p-24 lg:p-24 md:p-16 py-4 bg-white">
-            <div className="max-w-7xl mx-auto px-0 sm:px-6">
-                <h2 className="text-3xl font-heading font-bold text-center mb-12">What Our Clients Say</h2>
+        <section className="py-4 bg-white">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="text-3xl font-heading  text-center mb-12">What Our Clients Say</h2>
                 <div className="grid md:grid-cols-3 gap-5">
                     {testimonials.map((t, i) => (
                         <div key={i} className="p-0 md:p-9 rounded-xl md:bg-white shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
-                            <p className="text-base font-medium font-body mb-4">“{t.text}”</p>
-                            <span className="text-sm flex items-center justify-content font-medium font-body pt-4 text-neutral-500">
+                            <p className="text-base font-medium font-body    mb-4 ">“{t.text}”</p>
+                            <span className="text-sm flex items-center justify-content font-medium font-body    pt-4">
                                <div className="pr-3">
                                     <Image
                                     src={t.img}
