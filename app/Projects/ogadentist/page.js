@@ -38,7 +38,7 @@ export default function OgaDentistPage() {
   return (
     <>
       <Hero ImageSrc={heroImg} title="Oga Dentist" height="h-[90vh]" />
-      <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="Redefining Patient-Centered Dentistry with Oga Dentist"
           description={[
