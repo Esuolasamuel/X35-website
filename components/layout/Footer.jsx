@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <>
             <footer className="bg-indigo-700 py-15 px-3.5 sm:px-7.5 md:px-15 lg:px-30">
-                <div className="px-0 sm:px-6 grid md:grid-cols-4 gap-10 border-b-[0.5px] border-white/40 pb-12">
+                <div className="px-0 sm:px-6 grid md:grid-cols-4 gap-9 border-b-[0.5px] border-white/40 pb-12">
                     <div>
                         <div className="font-bold text-white mb-7">
                             <Link href="/">

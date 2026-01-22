@@ -65,7 +65,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden lg:flex items-center gap-8 text-base font-semibold font-body cursor-pointer    ${
+            className={`hidden lg:flex items-center gap-12 text-base font-semibold font-body cursor-pointer    ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
