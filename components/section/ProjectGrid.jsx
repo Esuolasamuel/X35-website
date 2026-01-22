@@ -55,7 +55,7 @@ const ProjectGrid = () => {
         {projects.map((p) => (
           <div
             key={p.name}
-            className="relative h-90 md:h-105 overflow-hidden group"
+            className="relative h-90 md:h-125 overflow-hidden group"
           >
             <Link href={p.href} className="block">
               <Image

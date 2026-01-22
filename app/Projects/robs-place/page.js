@@ -38,7 +38,6 @@ export default function RobPlacePage() {
   return (
     <>
       <Hero ImageSrc={heroImg} title="Rob’s Place" height="h-[90vh]" />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="Inception"
           description={[
@@ -108,7 +107,6 @@ export default function RobPlacePage() {
           aspect="aspect-615/722"
         />
         <RelatedProjects projects={projects} />
-      </div>
     </>
   );
 }

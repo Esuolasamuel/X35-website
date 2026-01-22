@@ -13,8 +13,10 @@
   --font-body:  var(--font-montserrat), "inter";
   --color-dark-500: oklch(16.41% 0.0333 282.1);
   --color-yellow-400: oklch(0.813 0.1663 96.05);
+  --color-yellow-600: oklch(0.7928 0.1349 86.71);
   --color-yellow-700: oklch(83.4% 0.170 86.0);
-  --color-indigo-700: oklch(18.9% 0.035 281)
+  --color-indigo-700: oklch(18.9% 0.035 281);
+  --color-indigo-600: oklch(0.2023 0.0808 276.4);
 }
 
 

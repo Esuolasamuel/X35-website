@@ -8,7 +8,7 @@ import instagram from "@/assets/icons/instagram.svg";
 export default function Footer() {
     return (
         <>
-            <footer className="bg-indigo-700 py-15 px-3.5 sm:px-7.5 md:px-15 lg:px-30">
+            <footer className="bg-indigo-700 py-1.75 sm:py-3.25 md:py-7.5 lg:py-15 px-3.5 sm:px-7.5 md:px-15 lg:px-30">
                 <div className="px-0 sm:px-6 grid md:grid-cols-4 gap-7 border-b-[0.5px] border-white/40 pb-12">
                     <div>
                         <div className="font-bold text-white mb-7">
@@ -72,7 +72,7 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-            <div className="text-center font-body bg-indigo-700 text-base text-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 ">
+            <div className="text-center font-body bg-indigo-700 text-base text-white p-1.75 sm:p-3.25 md:p-7.5 lg:p-15 ">
                 © 2025 XS Projects. All Rights Reserved.
             </div>
         </>

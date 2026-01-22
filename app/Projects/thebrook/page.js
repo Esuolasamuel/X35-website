@@ -44,7 +44,6 @@ export default function thebrookPage() {
   return (
     <>
       <Hero ImageSrc={thebrookHero} title="The brook Finances" height="h-[90vh]" />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="Transforming a Financial Workplace into a Modern, Human-Centric Environment"
           description={[
@@ -165,7 +164,6 @@ export default function thebrookPage() {
           ]}
         />
         <RelatedProjects projects={projects} />
-      </div>
     </>
   );
 }

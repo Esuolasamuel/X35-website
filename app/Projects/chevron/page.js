@@ -36,7 +36,6 @@ export default function ChevronPage() {
   return (
     <>
       <Hero ImageSrc={chevronHero} title="Chevron" height="h-[90vh]" />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="Chevron Deep Waters Workspace Redesign"
           description={[
@@ -84,7 +83,6 @@ export default function ChevronPage() {
           ]}
         />
         <RelatedProjects projects={projects} />
-      </div>
     </>
   );
 }

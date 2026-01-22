@@ -5,8 +5,8 @@ import highlightSvg from "@/assets/images/Fill-4.svg";
 
 const ProjectHero = () => {
   return (
-    <section className=" pt-24 pb-4 text-center">
-      <h1 className="text-5xl md:text-6xl mx-auto max-w-xl font-heading  leading-tight">
+    <section className=" pt-24 pb-4 text-center bg-white">
+      <h1 className="text-5xl md:text-6xl mx-auto max-w-xl font-heading text-dark-500 leading-tight">
         The Work That{" "}
         <span className="relative inline-block">
           Defines

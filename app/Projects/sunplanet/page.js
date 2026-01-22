@@ -36,7 +36,6 @@ export default function SunplanetPage() {
   return (
     <>
       <Hero ImageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="The Brief"
           description={[
@@ -91,7 +90,6 @@ export default function SunplanetPage() {
           description="Overall, the collaboration with Sun Planet Co resulted in a residential development that is not only architecturally refined but also commercially strategic—delivering value, efficiency, and long-term ROI for both stakeholders."
         />
         <RelatedProjects projects={projects} />
-      </div>
     </>
   );
 }

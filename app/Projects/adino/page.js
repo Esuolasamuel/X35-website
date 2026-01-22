@@ -35,7 +35,6 @@ export default function AdrinoPage() {
   return (
     <>
       <Hero ImageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="The Commissioning"
           description={[
@@ -95,7 +94,6 @@ export default function AdrinoPage() {
           ]}
         />
         <RelatedProjects projects={projects} />
-      </div>
     </>
   );
 }
