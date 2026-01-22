@@ -54,7 +54,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 py-6 px-3.5 sm:px-7.5 md:px-15 lg:px-30 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 py-3 px-3.5 sm:px-7.5 md:px-15 lg:px-30 ${
           isTransparent ? "bg-transparent" : "bg-white shadow-sm" 
         }`}
       >

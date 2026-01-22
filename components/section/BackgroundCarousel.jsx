@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
    LCP-FIRST HERO
 --------------------------------------- */
 
-export default function HeroLCP({ images = [ ], interval = 4000 }) {
+export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
   const timerRef = useRef(null);

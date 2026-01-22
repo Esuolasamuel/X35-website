@@ -57,7 +57,7 @@ const ProjectGrid = () => {
             key={p.name}
             className="relative h-90 md:h-105 overflow-hidden group"
           >
-            <Link href={p.href} className="block h-full w-full">
+            <Link href={p.href} className="block">
               <Image
                 src={p.img}
                 alt={p.name}

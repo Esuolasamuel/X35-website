@@ -23,12 +23,12 @@ img: customer,
 
 export default function Testimonials() {
     return (
-        <section className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 bg-white">
-            <div className="max-w-7xl mx-auto">
+        <section className=" bg-white">
+            <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-7xl mx-auto">
                 <h2 className="text-3xl font-heading  text-center mb-12">What Our Clients Say</h2>
                 <div className="grid md:grid-cols-3 gap-5">
                     {testimonials.map((t, i) => (
-                        <div key={i} className="p-0 md:p-9 rounded-xl md:bg-white shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
+                        <div key={i} className="sm:p-3 md:p-6 xl:p-9 rounded-xl md:bg-white shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
                             <p className="text-base font-medium font-body    mb-4 ">“{t.text}”</p>
                             <span className="text-sm flex items-center justify-content font-medium font-body    pt-4">
                                <div className="pr-3">
