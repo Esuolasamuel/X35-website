@@ -13,7 +13,7 @@ export default function ImageGrid({ images = [], backgroundColor  }) {
             className={`
               relative h-105 w-full rounded-xl overflow-hidden 
               ${i.aspect || "aspect-auto"} 
-              ${i.colspan}
+              ${i.colspan || ""}
               group bg-gray-100 shadow-sm
             `}
           >
