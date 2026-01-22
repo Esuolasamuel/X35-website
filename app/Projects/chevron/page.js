@@ -36,7 +36,7 @@ export default function ChevronPage() {
   return (
     <>
       <Hero ImageSrc={chevronHero} title="Chevron" height="h-[90vh]" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="Chevron Deep Waters Workspace Redesign"
           description={[

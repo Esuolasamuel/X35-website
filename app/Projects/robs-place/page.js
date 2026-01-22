@@ -38,7 +38,7 @@ export default function RobPlacePage() {
   return (
     <>
       <Hero ImageSrc={heroImg} title="Rob’s Place" height="h-[90vh]" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
         <Meta
           title="Inception"
           description={[

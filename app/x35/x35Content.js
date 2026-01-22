@@ -37,7 +37,7 @@ const x35Content = () => {
   return (
     <>
       <LandingHero />
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
         <Clients />
         <ProjectDemo projects={projects} />
         <Services />

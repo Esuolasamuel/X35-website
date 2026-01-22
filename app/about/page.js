@@ -18,7 +18,7 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 md:px-16 lg:px-32  text-dark-500">
+      <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32  text-dark-500">
         <WhoWeAre />
         {/* First Image Grid */}
         <ImageGrid
