@@ -121,7 +121,7 @@ export default function Services() {
                 </button>
 
                 {i === index && (
-                  <div className="mt-2 h-[0.05rem] w-full bg-white/30 rounded-full overflow-hidden">
+                  <div className="mt-2 h-[0.05rem] w-full bg-white/15 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
