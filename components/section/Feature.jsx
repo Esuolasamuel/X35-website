@@ -14,7 +14,7 @@ const Feature = ({
 }) => {
   return (
     /* Added 'group' here so the hover is triggered when the section is entered */
-    <section className={`${backgroundColor} group`}>
+    <section className={`p-3.5 sm:p-7.5 md:p-15 lg:p-30 ${backgroundColor} group`}>
       <div
         className={`
           mx-auto max-w-8xl

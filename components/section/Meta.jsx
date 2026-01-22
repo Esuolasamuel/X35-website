@@ -10,6 +10,7 @@ const Meta = ({
     <section
       className={`
         ${backgroundColor}
+        p-3.5 sm:p-7.5 md:p-15 lg:p-30
         min-h-fit
         lg:h-157
         flex

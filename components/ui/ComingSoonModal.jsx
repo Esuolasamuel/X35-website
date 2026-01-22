@@ -11,7 +11,7 @@ export default function ComingSoonModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-90 flex  text-dark-500items-center justify-center bg-dark-500/60 backdrop-blur-sm px-4">
+    <div className="fixed inset-0 z-90 flex  text-dark-500 items-center justify-center bg-dark-500/60 backdrop-blur-sm px-4">
       <div
         className="
           relative w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl

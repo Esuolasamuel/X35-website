@@ -2,7 +2,7 @@ import Container from "./Container";
 
 export default function VisionMission() {
     return (
-        <section className="py-4 bg-slate-900 text-white">
+        <section className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 bg-slate-900 text-white">
             <Container>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="p-6 md:p-12 lg:p-20 rounded-xl bg-slate-800">

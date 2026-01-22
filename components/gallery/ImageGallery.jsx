@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ImageGallery({ images = [], backgroundColor = "bg-white"}) {
   return (
     <section className={`w-full ${backgroundColor} xl:p-32 lg:p-24 md:p-16 p-4`}>
-      <div className="mx-auto max-w-8xl">
+      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {images.map((image, index) => (
             <div

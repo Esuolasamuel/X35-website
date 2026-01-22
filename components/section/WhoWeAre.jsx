@@ -3,7 +3,7 @@ import Container from "./Container";
 
 export default function WhoWeAre() {
     return (
-        <section className=" bg-white">
+        <section className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 bg-white">
             <Container>
                 <div className="grid md:grid-cols-2 gap-12 items-start">
                     <h2 className="text-3xl  font-heading">Who we are</h2>

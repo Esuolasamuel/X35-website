@@ -54,11 +54,11 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          isTransparent ? "bg-transparent" : "bg-white shadow-sm"
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 p-3.5 sm:p-7.5 md:p-15 lg:p-30 ${
+          isTransparent ? "bg-transparent" : "bg-white shadow-sm" 
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between ">
+        <div className=" flex items-center justify-between ">
           <Link href="/">
             <Image src={Logo} alt="X35 Logo" width={60} height={60} />
           </Link>

@@ -12,7 +12,7 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className="py-4 bg-white">
+    <section className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 bg-white">
       <div className="max-w-5xl mx-auto">
 
         <h2 className="text-4xl text-center  text-dark-500 font-heading  mb-10">
@@ -59,7 +59,7 @@ export default function ProjectDemo({ projects }) {
               border rounded-full
               pl-6 pr-2 py-2
                text-dark-500
-              font-body    font-bold text-[15px]
+              font-body font-bold text-[15px]
                bg-[#FFD700] hover: bg-[#E2C007] transition
             "
           >

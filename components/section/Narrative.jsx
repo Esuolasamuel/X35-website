@@ -3,7 +3,7 @@ import Image from "next/image";
 const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = " text-dark-500/80"}) => {
   return (
     /* Added 'group' to trigger the hover state for the entire section */
-    <section className={`${backgroundColor} group`}>
+    <section className={`p-3.5 sm:p-7.5 md:p-15 lg:p-30 ${backgroundColor} group`}>
       <div className="mx-auto max-w-500 flex flex-col lg:flex-row items-center gap-14 lg:gap-16">
         
         {/* LEFT TEXT SECTION */}

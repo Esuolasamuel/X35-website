@@ -7,7 +7,7 @@ import instagram from "@/assets/icons/instagram.svg";
 
 export default function Footer() {
     return (
-        <footer className="bg-indigo-700 px-4 sm:px-8 md:px-16 lg:px-32">
+        <footer className="bg-indigo-700 p-3.5 sm:p-7.5 md:p-15 lg:p-30">
             <div className="px-0 sm:px-6 grid md:grid-cols-4 gap-10 border-b-[0.5px] border-white/20 pb-12">
                 <div>
                     <div className="font-bold text-white mb-7">

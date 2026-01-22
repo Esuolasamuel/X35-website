@@ -11,7 +11,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
 
   return (
     /* py-[120px] matches your previous structural requirements for consistent spacing */
-    <section className="bg-white">
+    <section className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 bg-white">
       <div className="mx-auto max-w-450">
         
         {/* HEADER: Responsive layout matching Frame 115 (1).jpg */}
