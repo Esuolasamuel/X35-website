@@ -16,7 +16,7 @@ const x35Content = () => {
   [
     {
       title: "The Brook Finance",
-      type: "COMMERCIAl",
+      type: "COMMERCIAL",
       img: brookImg,
       slug: "thebrook",
     },
@@ -28,7 +28,7 @@ const x35Content = () => {
     },
     {
       title: "Chevron",
-      type: "COMMERCIAl",
+      type: "COMMERCIAL",
       img: chevronImg,
       slug: "chevron",
     },
@@ -37,17 +37,15 @@ const x35Content = () => {
   return (
     <>
       <LandingHero />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
-        <Clients />
-        <ProjectDemo projects={projects} />
-        <Services />
-        <Testimonials />
-        <CTA
-          title="Your vision deserves an architect with purpose. Have you been x35ied?"
-          text="Contact us"
-          paragraph=""
-        />
-      </div>
+      <Clients />
+      <ProjectDemo projects={projects} />
+      <Services />
+      <Testimonials />
+      <CTA
+        title="Your vision deserves an architect with purpose. Have you been x35ied?"
+        text="Contact us"
+        paragraph=""
+      />
     </>
   );
 };
