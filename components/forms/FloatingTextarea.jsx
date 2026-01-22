@@ -5,7 +5,7 @@ export function FloatingTextarea({ label, name }) {
         required
         name={name}
         rows={4}
-        className="peer w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg  text-dark-500focus:ring-2 focus:ring-yellow-700 outline-none resize-none"
+        className="peer w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg  text-dark-500 focus:ring-2 focus:ring-yellow-700 outline-none resize-none"
       />
       <label
         className="

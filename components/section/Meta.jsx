@@ -10,7 +10,7 @@ const Meta = ({
     <section
       className={`
         ${backgroundColor}
-        p-3.5 sm:p-7.5 md:p-15 lg:p-30
+        
         min-h-fit
         lg:h-157
         flex
@@ -20,6 +20,7 @@ const Meta = ({
     >
       <div
         className="
+        p-3.5 sm:p-7.5 md:p-15 lg:p-30
           mx-auto
           lg:max-w-7xl
           md:max-w-5xl

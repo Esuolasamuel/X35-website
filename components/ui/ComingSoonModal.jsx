@@ -27,7 +27,7 @@ export default function ComingSoonModal({
 
         <div className="text-center space-y-4">
           <div className="text-5xl">🎉</div>
-          <h2 className="text-2xl  text-dark-500font-bold">Coming Soon</h2>
+          <h2 className="text-2xl  text-dark-500 font-bold">Coming Soon</h2>
           <p className=" text-dark-500">
             We’re crafting something exciting. Be the first to know when it launches.
           </p>

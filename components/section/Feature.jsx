@@ -14,12 +14,13 @@ const Feature = ({
 }) => {
   return (
     /* Added 'group' here so the hover is triggered when the section is entered */
-    <section className={`p-3.5 sm:p-7.5 md:p-15 lg:p-30 ${backgroundColor} group`}>
+    <section className={`${backgroundColor} group`}>
       <div
         className={`
           mx-auto max-w-8xl
           flex flex-col ${flex}
           items-center gap-12 xl:gap-16
+          p-3.5 sm:p-7.5 md:p-15 lg:p-30
         `}
       >
         {/* LEFT TEXT SECTION */}

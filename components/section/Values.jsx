@@ -3,7 +3,7 @@ import Container from "./Container";
 
 export default function Values({ values }) {
   return (
-    <section className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 bg-white">
+    <section className="bg-white">
       <Container>
         <h2 className="text-center text-3xl font-heading  mb-12">Our Values</h2>
         <div className="grid md:grid-cols-3 gap-6">

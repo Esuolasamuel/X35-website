@@ -29,23 +29,23 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white/60 text-sm font-body text-dark font-semibold mb-7">Quick Links</h4>
                         <ul className="space-y-6 text-white text-sm">
-                            <li className=" text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
+                            <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
                                 <Link href="/about">About Us</Link>
                             </li>
-                            <li className="text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
+                            <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
                                 <Link href="/Projects">Our Projects</Link>
                             </li>
-                            <li className="text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
+                            <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
                                 <Link href="/#services">Our Services</Link>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white/60 text-sm font-body text-dark font-semibold mb-7">Contact Us</h4>
-                        <a href="mailto:hello@xsprojects.com" className="text-sm text-white pb-6 block hover:text-yellow-700 transition-colors">
+                        <a href="mailto:hello@xsprojects.com" className="text-sm font-body text-white pb-6 block hover:text-yellow-700 transition-colors">
                             hello@xsprojects.com
                         </a>
-                        <a href="tel:+2348144694380" className="text-sm text-white hover:text-yellow-700 transition-colors">
+                        <a href="tel:+2348144694380" className="text-sm text-white font-body hover:text-yellow-700 transition-colors">
                             +234 814 469 4380
                         </a>
                     </div>
@@ -72,9 +72,9 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-                <div className="text-center bg-indigo-700 text-base text-white py-auto px-auto ">
-                    © 2025 XS Projects. All Rights Reserved.
-                </div>
+            <div className="text-center font-body bg-indigo-700 text-base text-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 ">
+                © 2025 XS Projects. All Rights Reserved.
+            </div>
         </>
     );
 }

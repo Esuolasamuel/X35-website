@@ -20,7 +20,7 @@ export default function RelatedProjects({
 
   return (
     <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
           <h2 className="font-serif text-2xl">{title}</h2>
