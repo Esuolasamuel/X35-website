@@ -55,15 +55,24 @@ const ProjectGrid = () => {
         {projects.map((p) => (
           <div
             key={p.name}
-            className="relative aspect-[1.45] overflow-hidden group"
+            className="relative h-70 sm:h-90 lg:h-105
+            rounded-xl
+            group
+            bg-gray-100
+            shadow-sm overflow-hidden group"
           >
             <Link href={p.href} className="block">
               <Image
-                src={p.img}
-                alt={p.name}
-                fill={true}
-                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                priority={false}
+                src={i.ImageSrc}
+                alt={i.alt || "Gallery Image"}
+                fill
+                sizes="(max-width: 1024px) 100vw, 805px"
+                className="
+                  object-contain
+                  transition-transform
+                  duration-700
+                  ease-in-out
+                  group-hover:scale-110"
               />
 
               {/* Overlay */}
