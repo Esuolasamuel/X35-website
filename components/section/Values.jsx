@@ -5,7 +5,7 @@ export default function Values({ values }) {
   return (
     <section className="bg-white">
       <Container>
-        <h2 className="text-center text-5xl font-heading text-dark-500 mb-12">Our Values</h2>
+        <h2 className="text-center text-5xl font-bold font-heading text-dark-500 mb-12">Our Values</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {values.map((v) => (
             /* Added 'group' class to the card container */
@@ -23,8 +23,8 @@ export default function Values({ values }) {
                   className="transition-transform duration-500 ease-in-out group-hover:scale-125"
                 />
               </div>
-              <h4 className="font-semibold font-heading text-dark-500 text-xl leading-8 mb-2">{v.title}</h4>
-              <p className="text-sm font-body text-dark-500 font-normal">{v.desc}</p>
+              <h4 className="font-bold font-heading text-dark-500 text-xl leading-8 mb-2">{v.title}</h4>
+              <p className="text-base font- leading-6 text-dark-500 font-normal">{v.desc}</p>
             </div>
           ))}
         </div>

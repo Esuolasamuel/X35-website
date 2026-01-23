@@ -22,18 +22,18 @@ export default function AboutPage() {
         {/* First Image Grid */}
         <ImageGrid
           images={[
-            { ImageSrc: aboutImg1, aspect: "aspect-508/605", colspan: "col" },
-            { ImageSrc: aboutImg2, aspect: "aspect-805/605", colspan: "col-span-2" },
+            { ImageSrc: aboutImg1 },
+            { ImageSrc: aboutImg2 },
           ]}
         />
         <VisionMission />
         {/* Second Image Grid */}
         <ImageGrid
+          gridcol="grid-col-[805px_1fr]"
           images={[
-            { ImageSrc: aboutImg3, aspect: "aspect-805/605", colspan: "col-span-2" },
-            { ImageSrc: aboutImg4, aspect: "aspect-508/605", colspan: "col" },
+            { ImageSrc: aboutImg3 },
+            { ImageSrc: aboutImg4 },
           ]}
-          aspect=""
         />
         {/* Values Section */}
         <Values
