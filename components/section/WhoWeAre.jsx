@@ -5,7 +5,7 @@ export default function WhoWeAre() {
     return (
         <section className="bg-white">
             <Container>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 max-w-7xl">
                     <div className="w-full h-full flex items-center">
                         <h2 className="text-5xl font-bold text-center font-heading">Who we are</h2>
                     </div>
