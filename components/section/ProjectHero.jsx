@@ -5,7 +5,7 @@ import highlightSvg from "@/assets/images/Fill-4.svg";
 
 const ProjectHero = () => {
   return (
-    <section className=" py-8 text-center bg-white">
+    <section className=" py-10 text-center bg-white">
           <h1    
             className="
               font-heading  drop-shadow-lg

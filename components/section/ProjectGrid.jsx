@@ -61,7 +61,8 @@ const ProjectGrid = () => {
               <Image
                 src={p.img}
                 alt={p.name}
-                className="object-cover transition-transform w-full h-full duration-700 ease-in-out group-hover:scale-110"
+                fill={true}
+                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 priority={false}
               />
 

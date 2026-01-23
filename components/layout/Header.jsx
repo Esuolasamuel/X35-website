@@ -54,8 +54,8 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 py-3 px-3.5 sm:px-7.5 md:px-15 lg:px-30 ${
-          isTransparent ? "bg-transparent" : "bg-white shadow-sm" 
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[1440px] h-[92px] pt-4 pr-30 pb-4 pl-30 border transition-all duration-300 ${
+          isTransparent ? "bg-transparent" : "bg-white border-[#BDBDBD33] shadow-[0px_16px_32px_0px_#BDBDBD40]"
         }`}
       >
         <div className=" flex items-center justify-between ">
@@ -99,7 +99,7 @@ export default function Header() {
       {menuOpen && (
         <div className="fixed inset-0 top-5 z-40 lg:hidden" onClick={() => setMenuOpen(false)}>
           <div className="fixed top-0 left-0 right-0 bg-white shadow-lg p-6 pt-20">
-            <nav className="flex flex-col gap-6 text-lg font-semibold text-gray-900">
+            <nav className="flex flex-col items-center gap-6 text-lg font-semibold text-gray-900">
               <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link href="/Projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
               <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>

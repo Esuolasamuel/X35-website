@@ -39,7 +39,7 @@ export default function AboutHero() {
                     </p>
                 </div>
             </Container>
-            <div className="relative mt-16 sm:h-[12.5vh] md:h-[25vh] h-[50vh] w-full">
+            <div className="relative mt-16 w-full aspect-[1.78] opacity-100">
                 <Image src={aboutHero} alt="Hero" fill className="object-cover" priority />
             </div>
         </section>
