@@ -5,7 +5,7 @@ export default function ImageGrid({ images = [], backgroundColor, gridcol = "gri
   return (
     <section className={`w-full ${backgroundColor}`}>
       <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-         <div className={`grid grid-cols-1 ${gridcol} gap-6 overflow-hidden rounded-3xl`}>
+         <div className={`grid grid-cols-1 lg:${gridcol} gap-6 overflow-hidden rounded-3xl`}>
         {images.map((i, index) => (
           <div
             key={index}

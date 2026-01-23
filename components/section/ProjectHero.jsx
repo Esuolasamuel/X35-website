@@ -5,7 +5,7 @@ import highlightSvg from "@/assets/images/Fill-4.svg";
 
 const ProjectHero = () => {
   return (
-    <section className=" pt-24 pb-4 text-center bg-white">
+    <section className=" py-8 text-center bg-white">
           <h1    
             className="
               font-heading  drop-shadow-lg
@@ -16,7 +16,7 @@ const ProjectHero = () => {
             "
             style={{ leadingTrim: 'cap-height' }}
           >
-            The Work That{" "}
+            The Work That<br/>{" "}
             <span className="relative inline-block">
               Defines
               <span
