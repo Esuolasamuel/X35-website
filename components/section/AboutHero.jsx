@@ -4,8 +4,7 @@ import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as nee
 
 export default function AboutHero() {
   return (
-    <div className="w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 pt-60 flex flex-col gap-5 sm:gap-8 mx-auto">
-      <div>
+    <div className="w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 mt-16 flex flex-col gap- sm:gap-8 mx-auto">
         <h1 className="
           font-heading
           font-bold
@@ -43,9 +42,9 @@ export default function AboutHero() {
           At X35 Projects, we bring ideas to life with<br />
           precision, purpose, and partnership.
         </p>
-      </div>
 
-      <div className="max-w-371.75 aspect-1487/836 mt-5 relative">
+
+      <div className="max-w-371.75 aspect-1487/836 relative">
         <Image
           src={aboutHero}
           alt="X35 Projects - Building trust, vision, and lasting value"
