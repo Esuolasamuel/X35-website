@@ -29,7 +29,7 @@ export default function AboutPage() {
         <VisionMission />
         {/* Second Image Grid */}
         <ImageGrid
-          gridcol="grid-col-[805px_1fr]"
+          gridcol="[805px_1fr]"
           images={[
             { ImageSrc: aboutImg3 },
             { ImageSrc: aboutImg4 },

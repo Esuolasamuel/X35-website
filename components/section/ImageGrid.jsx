@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-export default function ImageGrid({ images = [], backgroundColor, gridcol = "grid-col-[1fr_805px]"  }) {
+export default function ImageGrid({ images = [], backgroundColor, gridcol = "[1fr_805px]"  }) {
   return (
     <section className={`w-full ${backgroundColor}`}>
       <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-         <div className={`grid grid-cols-1 lg:${gridcol} gap-6 h-145.5 overflow-hidden rounded-3xl`}>
+         <div className={`grid grid-cols-1 lg:grid-cols-${gridcol} gap-6 h-145.5 overflow-hidden rounded-3xl`}>
         {images.map((i, index) => (
           <div
             key={index}
