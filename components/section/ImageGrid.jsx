@@ -16,9 +16,9 @@ export default function ImageGrid({
           lg:grid-cols-[1fr_805px] 
           gap-4 
           h-[145.5px] 
-          sm:h-[291px] 
+          sm:h-72.75 
           md:h-[436.5px] 
-          lg:h-[582px]
+          lg:h-145.5
           overflow-hidden 
           rounded-3xl
         `}>

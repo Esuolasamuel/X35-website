@@ -71,10 +71,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+                <div className="text-center font-body bg-indigo-700 text-sm text-white p-0.85 sm:p-1.75 md:p-3.25 lg:p-7.5">
+                    © 2025 XS Projects. All Rights Reserved.
+                </div>
             </footer>
-            <div className="text-center font-body bg-indigo-700 text-base text-white p-1.75 sm:p-3.25 md:p-7.5 lg:p-15 ">
-                © 2025 XS Projects. All Rights Reserved.
-            </div>
         </>
     );
 }
