@@ -4,7 +4,7 @@ export default function WhoWeAre() {
     return (
         <section className="bg-white">
             <Container>
-                <div className="w-full max-w-360 h-auto min-h-153 flex flex-col lg:flex-row gap-10 lg:gap-20 p-8 md:p-16 lg:p-30 mx-auto">
+                <div className="w-full max-w-360 h-auto flex flex-col lg:flex-row gap-10 lg:gap-20 mx-auto">
                     <div className="w-full lg:w-1/2 h-full flex items-center justify-center lg:justify-start">
                         <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-left font-heading">Who we are</h2>
                     </div>

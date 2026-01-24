@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as needed
 
 export default function TextContainer() {
   return (
@@ -40,6 +42,18 @@ export default function TextContainer() {
         At X35 Projects, we bring ideas to life with<br />
         precision, purpose, and partnership.
       </p>
+
+      <div className="relative w-full max-w-371.75 mx-auto">
+        <Image 
+          src={aboutHero} 
+          alt="X35 Projects - Building trust, vision, and lasting value" 
+          width={1487}
+          height={836}
+          className="w-full h-auto object-cover rounded-lg shadow-lg"
+          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 1487px"
+        />
+      </div>
     </div>
   );
 }
