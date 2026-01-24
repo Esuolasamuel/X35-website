@@ -12,11 +12,11 @@ export default function AboutHero() {
                     <h1    
                         className="
                         font-heading
-                        font-bold
+                        font-extrabold
                         tracking-[-0.03em]
                         leading-3 sm:leading-6 md:leading-12 lg:leading-16
                         text-[64px] sm:text-2xl md:text-3xl lg:text-4xl
-                        px-0 py-1
+                        px-0 mb-4
                         "
                         style={{ leadingTrim: 'cap-height' }}
                     >
@@ -26,7 +26,7 @@ export default function AboutHero() {
                         value.
                         <span
                             className="
-                            absolute -left-1 sm:-left-2 md:-left-3 lg:-left-4 -bottom-1 sm:-bottom-1.5 md:-bottom-2 lg:-bottom-2
+                            absolute -rigth-1 sm:-rigth-2 md:-rigth-3 lg:-rigth-4 -top-1 sm:-top-1.5 md:-top-2 lg:-top-2
                             h-26.5 w-66.29 sm:h-16 sm:w-40 md:h-20 md:w-48 lg:h-24 lg:w-60
                             bg-[url(@/assets/icons/Fill-4.svg)]
                             bg-cover bg-no-repeat
@@ -35,7 +35,7 @@ export default function AboutHero() {
                         />
                         </span>
                     </h1>
-                    <p className="mt-4 font-body text-dark-500">
+                    <p className="mt-4 font-body text-[19px] h-10.5 w-114.5 text-dark-500">
                         At X35 Projects, we bring ideas to life with precision, purpose, and partnership.
                     </p>
                 </div>
