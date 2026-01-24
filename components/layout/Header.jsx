@@ -6,14 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-
 // import Modal from "@/components/ui/Modal";
 import ContactForm from "../forms/ContactForm";
 import SuccessNotification from "../ui/SuccessNotification";
 import ComingSoonModal from "../ui/ComingSoonModal";
 import NotifyModal from "../ui/NotifyModal";
 import Logo from "@/assets/images/logo.svg";
-
 
 export default function Header() {
   const pathname = usePathname();
@@ -22,7 +20,6 @@ export default function Header() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
   const [notifyModalOpen, setNotifyModalOpen] = useState(false);
-
   const [showSuccess, setShowSuccess] = useState(false);
 
   /* Scroll detection */
@@ -54,18 +51,18 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-360 h-23 pt-4 pr-30 pb-4 pl-30 border transition-all duration-300 ${
-          isTransparent ? "bg-transparent" : "bg-white border-[#BDBDBD33] shadow-[0px_16px_32px_0px_#BDBDBD40]"
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-360 h-23 pt-4 pr-30 pb-4 pl-30 border border-[#BDBDBD33] transition-all duration-300 ${
+          isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40]"
         }`}
       >
-        <div className=" flex items-center justify-between ">
+        <div className="flex items-center justify-between w-full h-full">
           <Link href="/">
             <Image src={Logo} alt="X35 Logo" width={60} height={60} />
           </Link>
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden lg:flex items-center gap-12 text-base font-semibold font-body cursor-pointer    ${
+            className={`hidden lg:flex items-center gap-12 text-base font-semibold font-body cursor-pointer ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >

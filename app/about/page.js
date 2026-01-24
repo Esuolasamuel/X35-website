@@ -21,19 +21,16 @@ export default function AboutPage() {
         <WhoWeAre />
         {/* First Image Grid */}
         <ImageGrid
-          images={[
-            { ImageSrc: aboutImg1 },
-            { ImageSrc: aboutImg2 },
-          ]}
+            images={[aboutImg1, aboutImg2]}
+            orders={["lg:order-1", "lg:order-2"]} // Reverse order
+            widths={["lg:w-[506px]", "lg:w-[805px]"]}
         />
         <VisionMission />
         {/* Second Image Grid */}
         <ImageGrid
-          gridcol="[805px_1fr]"
-          images={[
-            { ImageSrc: aboutImg3 },
-            { ImageSrc: aboutImg4 },
-          ]}
+          images={[aboutImg3, aboutImg4]}
+          orders={["lg:order-2", "lg:order-1"]} // Reverse order
+          widths={["lg:w-[506px]", "lg:w-[805px]"]}
         />
         {/* Values Section */}
         <Values

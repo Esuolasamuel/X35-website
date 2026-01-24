@@ -1,48 +1,68 @@
 import React from "react";
 import Image from "next/image";
 
-export default function ImageGrid({ images = [], backgroundColor, gridcol = "[1fr_805px]"  }) {
+export default function ImageGrid({ 
+  images = [], 
+  backgroundColor = "bg-white",
+  orders = ["lg:order-1", "lg:order-2"], // Array of order classes for each image
+  widths = ["lg:w-[506px]", "lg:w-[805px]"] // Array of width classes for each image
+}) {
   return (
     <section className={`w-full ${backgroundColor}`}>
-      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-         <div className={`grid grid-cols-1 lg:grid-cols-${gridcol} gap-6 h-145.5 overflow-hidden rounded-3xl`}>
-        {images.map((i, index) => (
-          <div
-            key={index}
-            /* Added 'group' and consistent transition properties */
-            className={`
-              relative
-              group bg-gray-100 shadow-sm
-            `}
-          >
-            <Image
-              src={i.ImageSrc}
-              alt={i.alt || "Gallery Image"}
-              fill={true}
-              /* Added the scale transition */
-              className="
-                object-cover
-                transition-transform
-                duration-700
-                ease-in-out
-                group-hover:scale-110
-              "
-            />
-            
-            {/* Darkening overlay to match your other sections */}
-            <div 
-              className="
-                absolute inset-0 
-                bg-black/0 
-                group-hover:bg-black/20 
-                transition-colors 
-                duration-500 
-                pointer-events-none
-              " 
-            />
-          </div>
-        ))}
-      </div>
+      <div className="p-3.5 sm:p-7.5 md:p-14 lg:p-14">
+        <div className={`
+          grid 
+          grid-cols-1 
+          lg:grid-cols-[1fr_805px] 
+          gap-4 
+          h-[145.5px] 
+          sm:h-[291px] 
+          md:h-[436.5px] 
+          lg:h-[582px]
+          overflow-hidden 
+          rounded-3xl
+        `}>
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`
+                relative
+                group
+                bg-gray-100
+                shadow-sm
+                h-full
+                ${widths[index] || ''}
+                ${orders[index] || ''}
+              `}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt || "Gallery Image"}
+                fill={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="
+                  object-cover
+                  transition-transform
+                  duration-700
+                  ease-in-out
+                  group-hover:scale-110
+                "
+              />
+              
+              <div 
+                className="
+                  absolute 
+                  inset-0 
+                  bg-black/0 
+                  group-hover:bg-black/20 
+                  transition-colors 
+                  duration-500 
+                  pointer-events-none
+                " 
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
