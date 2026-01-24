@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as needed
 
-export default function TextContainer() {
+export default function AboutHero() {
   return (
-    <div className="w-full sm:w-153.75 h-auto sm:h-45.75 flex flex-col gap-4 sm:gap-8 mx-auto">
+    <div className="w-full sm:w-153.75 sm:h-45.75 p-3.5 sm:p-7.5 md:p-14 lg:p-14 pt-24 flex flex-col gap-4 sm:gap-8 mx-auto">
       <h1 className="
         font-heading 
         font-bold 
@@ -43,15 +43,14 @@ export default function TextContainer() {
         precision, purpose, and partnership.
       </p>
 
-      <div className="relative w-full max-w-371.75 mx-auto">
+      <div className="relative w-full max-w-371.75 aspect-1487/836 mx-auto">
         <Image 
           src={aboutHero} 
           alt="X35 Projects - Building trust, vision, and lasting value" 
-          width={1487}
-          height={836}
-          className="w-full h-auto object-cover rounded-lg shadow-lg"
+          fill
+          className="object-cover rounded-lg shadow-lg"
           priority
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 1487px"
+          sizes="100vw"
         />
       </div>
     </div>
