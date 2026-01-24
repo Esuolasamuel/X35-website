@@ -5,13 +5,13 @@ export default function ImageGrid({ images = [], backgroundColor, gridcol = "gri
   return (
     <section className={`w-full ${backgroundColor}`}>
       <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-         <div className={`grid sm:grid-cols-1 lg:${gridcol} gap-6 overflow-hidden rounded-3xl`}>
+         <div className={`grid lg:${gridcol} gap-6 h-145.5 overflow-hidden rounded-3xl`}>
         {images.map((i, index) => (
           <div
             key={index}
             /* Added 'group' and consistent transition properties */
             className={`
-              relative rounded-xl
+              relative
               group bg-gray-100 shadow-sm
             `}
           >

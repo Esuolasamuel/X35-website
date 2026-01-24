@@ -21,10 +21,10 @@ export default function Footer() {
                                 />
                             </Link>
                         </div>
-                        <p className="text-sm font-body text-dark text-white font-medium">
-                            <span className="text-yellow-400">We</span> Design.
-                            <span className="text-yellow-400">We</span> Build.
-                            <span className="text-yellow-400">We</span> Deliver.</p>
+                        <div className="text-sm flex-col md:flex-row font-body text-dark text-white font-medium">
+                            <p className="p-1"><span className="text-yellow-400">We</span> Design.</p>
+                            <p className="p-1"><span className="text-yellow-400">We</span> Build.</p>
+                            <p className="p-1"><span className="text-yellow-400">We</span> Deliver.</p></div>
                     </div>
                     <div>
                         <h4 className="text-white/60 text-sm font-body text-dark font-semibold mb-7">Quick Links</h4>
