@@ -43,7 +43,7 @@ export default function AboutHero() {
         precision, purpose, and partnership.
       </p>
 
-      <div className="relative w-full max-w-371.75 aspect-1487/836 mx-auto">
+      <div className="w-full max-w-371.75 aspect-1487/836 mx-auto">
         <Image 
           src={aboutHero} 
           alt="X35 Projects - Building trust, vision, and lasting value" 
