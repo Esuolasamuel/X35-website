@@ -15,7 +15,7 @@ export default function AboutHero() {
                         font-extrabold
                         tracking-[-0.03em]
                         leading-3 sm:leading-6 md:leading-12 lg:leading-16
-                        text-[64px] sm:text-2xl md:text-3xl lg:text-4xl
+                        text-6xl sm:text-2xl md:text-3xl lg:text-4xl
                         px-0 mb-4
                         "
                         style={{ leadingTrim: 'cap-height' }}
