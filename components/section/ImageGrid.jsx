@@ -5,7 +5,7 @@ export default function ImageGrid({ images = [], backgroundColor, gridcol = "gri
   return (
     <section className={`w-full ${backgroundColor}`}>
       <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-         <div className={`grid lg:${gridcol} gap-6 h-145.5 overflow-hidden rounded-3xl`}>
+         <div className={`grid grid-cols-1 lg:${gridcol} gap-6 h-145.5 overflow-hidden rounded-3xl`}>
         {images.map((i, index) => (
           <div
             key={index}
@@ -18,15 +18,14 @@ export default function ImageGrid({ images = [], backgroundColor, gridcol = "gri
             <Image
               src={i.ImageSrc}
               alt={i.alt || "Gallery Image"}
+              fill={true}
               /* Added the scale transition */
               className="
-                object-cover 
-                transition-transform 
-                duration-700 
-                ease-in-out 
+                object-cover
+                transition-transform
+                duration-700
+                ease-in-out
                 group-hover:scale-110
-                w-full
-                h-full
               "
             />
             
