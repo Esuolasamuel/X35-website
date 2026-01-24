@@ -8,14 +8,14 @@ export default function AboutHero() {
     return (
         <section className="pt-28">
             <Container>
-                <div className="text-center w-153.75 h-45.75 mx-auto bg-white">
+                <div className="text-center w-165 h-65 mx-auto bg-white">
                     <h1    
                         className="
                         font-heading
                         font-extrabold
                         tracking-[-0.03em]
                         leading-3 sm:leading-6 md:leading-12 lg:leading-16
-                        text-6xl sm:text-2xl md:text-3xl lg:text-4xl
+                        text-7xl sm:text-3xl md:text-4xl lg:text-5xl
                         px-0 mb-4
                         "
                         style={{ leadingTrim: 'cap-height' }}
