@@ -63,8 +63,8 @@ const ProjectGrid = () => {
           >
             <Link href={p.href} className="block">
               <Image
-                src={i.ImageSrc}
-                alt={i.alt || "Gallery Image"}
+                src={p.ImageSrc}
+                alt={p.alt || "Gallery Image"}
                 fill
                 sizes="(max-width: 1024px) 100vw, 805px"
                 className="
