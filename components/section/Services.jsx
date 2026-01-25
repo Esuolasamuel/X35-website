@@ -133,12 +133,11 @@ export default function Services() {
       id="services" 
       className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white"
       style={{
-        width: '1440px',
         height: '837px',
         gap: '120px',
         paddingTop: '120px',
         paddingBottom: '120px',
-        margin: '0 auto'
+        margin: 'auto 0'
       }}
     >
       <div className="w-full h-full max-w-360 mx-auto px-6 grid md:grid-cols-2 items-center gap-30">
@@ -206,11 +205,9 @@ export default function Services() {
               key={item.title}
               src={item.img}
               alt={item.title}
-              width={615}
-              height={594}
               className={`
                 object-cover
-                transition-opacity duration-700 ease-in-out
+                transition-opacity duration-700 ease-in-out w-full
               `}
               style={{ 
                 opacity: visible ? 1 : 0,
@@ -218,16 +215,6 @@ export default function Services() {
               }}
               priority
             />
-            
-            {/* IMAGE OVERLAY/CAPTION */}
-            <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-6">
-              <h3 className="text-white text-[24px] font-semibold mb-2">
-                {item.title}
-              </h3>
-              <p className="text-white/80 text-[16px]">
-                {item.desc}
-              </p>
-            </div>
           </div>
         </div>
       </div>
