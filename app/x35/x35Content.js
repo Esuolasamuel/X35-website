@@ -35,19 +35,19 @@ const x35Content = () => {
   ]
 
   return (
-    <div className="px-30 max-w-7xl mx-auto">
-      <LandingHero />
-      <Clients />
-      <ProjectDemo projects={projects} />
-      <Services />
-      <Testimonials />
-      <CTA
-          title="Your vision deserves an architect with purpose."
-          paragraph="Have you been x35ied?"
-          text="Contact us"
-          id="contact-section"
-      />
-    </div>
+    <>
+    <LandingHero />
+    <Clients />
+    <ProjectDemo projects={projects} />
+    <Services />
+    <Testimonials />
+    <CTA
+        title="Your vision deserves an architect with purpose."
+        paragraph="Have you been x35ied?"
+        text="Contact us"
+        id="contact-section"
+    />
+    </>
   );
 };
 

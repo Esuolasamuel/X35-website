@@ -42,7 +42,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative sm:h-[25dvh] md:h-[50dvh] lg:h-dvh min-h-150 w-full overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden">
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
       -------------------------------- */}
@@ -53,7 +53,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
           fill
           priority
           loading="eager"
-          sizes="100vw"
+          sizes="80vw"
           className="object-cover brightness-90 contrast-105"
         />
       </div>
@@ -79,7 +79,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
                 alt=""
                 fill
                 loading="lazy"
-                sizes="100vw"
+                sizes="80vw"
                 className="object-cover brightness-90 contrast-105"
               />
             </div>
