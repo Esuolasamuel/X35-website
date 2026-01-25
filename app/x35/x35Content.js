@@ -35,7 +35,7 @@ const x35Content = () => {
   ]
 
   return (
-    <>
+    <div className="px-30 max-w-7xl mx-auto">
       <LandingHero />
       <Clients />
       <ProjectDemo projects={projects} />
@@ -47,7 +47,7 @@ const x35Content = () => {
           text="Contact us"
           id="contact-section"
       />
-    </>
+    </div>
   );
 };
 
