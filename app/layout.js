@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   metadataBase: new URL(
     process.env.VERCEL_URL
@@ -20,7 +22,7 @@ export const metadata = {
     url: "/",
     siteName: "X35",
     images: [
-      {z
+      {
         url: "/og-image.png",
         width: 1200,
         height: 630,
@@ -43,3 +45,11 @@ export const metadata = {
     canonical: "/",
   },
 };
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
