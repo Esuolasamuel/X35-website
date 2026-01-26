@@ -26,7 +26,7 @@ const ListFeature = ({
                         <p className={`text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                             {description}
                         </p>
-                        <ul className='font-body   -font-normal list-disc ml-5'>
+                        <ul className='font-body font-normal list-disc ml-5'>
                             {lists.map((l, index) => (
                                 <li key={index} className={`text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                                     {l.paragraph}
@@ -34,7 +34,7 @@ const ListFeature = ({
                             ))}
                         </ul>
                         {summary && (
-                            <p className={`mt-8 text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                            <p className={`mt-8 text-[16px] lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                                 {summary}
                             </p>
                         )}

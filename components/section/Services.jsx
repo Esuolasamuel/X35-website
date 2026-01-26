@@ -140,7 +140,7 @@ export default function Services() {
         margin: 'auto 0'
       }}
     >
-      <div className="w-full h-full max-w-360 mx-auto px-6 grid md:grid-cols-2 items-center gap-30">
+      <div className="h-full mx-auto px-6 grid md:grid-cols-2 items-center gap-30">
 
         {/* LEFT TEXT CONTAINER */}
         <div 
@@ -195,8 +195,6 @@ export default function Services() {
           <div 
             className="relative"
             style={{
-              width: '615px',
-              height: '594px',
               borderRadius: '15px',
               overflow: 'hidden'
             }}

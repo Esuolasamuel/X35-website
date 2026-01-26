@@ -10,7 +10,7 @@ export default function CTA({ title, text, paragraph, id }) {
   return (
     <section
       id={`${id ? id : ""}`}
-      className="relative w-full max-w-360 h-auto min-h-135.75 mx-auto overflow-hidden"
+      className="relative w-full h-auto min-h-135.75 mx-auto overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
