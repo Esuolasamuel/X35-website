@@ -17,48 +17,12 @@ import turnkeyImg from "@/assets/images/turnkey-project-consultant.png";
    SERVICES DATA
 ------------------------------------------------ */
 const items = [
-  { 
-    title: "Architecture", 
-    desc: "Peaceful mountain view", 
-    img: architectureImg,
-    width: 615,
-    height: 594
-  },
-  { 
-    title: "Interior Design", 
-    desc: "Green forest landscape", 
-    img: interiorImg,
-    width: 615,
-    height: 594
-  },
-  { 
-    title: "Renovation", 
-    desc: "Sunny beach vibes", 
-    img: renovationImg,
-    width: 615,
-    height: 594
-  },
-  { 
-    title: "Construction", 
-    desc: "Construction excellence", 
-    img: constructionImg,
-    width: 615,
-    height: 594
-  },
-  { 
-    title: "Project Management", 
-    desc: "Efficient project delivery", 
-    img: projectMgtImg,
-    width: 615,
-    height: 594
-  },
-  { 
-    title: "Turnkey Project", 
-    desc: "End-to-end solutions", 
-    img: turnkeyImg,
-    width: 615,
-    height: 594
-  },
+  { title: "Architecture", desc: "Peaceful mountain view", img: architectureImg },
+  { title: "Interior Design", desc: "Green forest landscape", img: interiorImg },
+  { title: "Renovation", desc: "Sunny beach vibes", img: renovationImg },
+  { title: "Construction", desc: "Construction excellence", img: constructionImg },
+  { title: "Project Management", desc: "Efficient project delivery", img: projectMgtImg },
+  { title: "Turnkey Project", desc: "End-to-end solutions", img: turnkeyImg },
 ];
 
 export default function Services() {
@@ -129,56 +93,35 @@ export default function Services() {
   const item = useMemo(() => items[index], [index]);
 
   return (
-    <section 
-      id="services" 
-      className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white"
-      style={{
-        height: '837px',
-        gap: '120px',
-        paddingTop: '120px',
-        paddingBottom: '120px',
-        margin: 'auto 0'
-      }}
-    >
-      <div className="h-full mx-auto px-6 grid md:grid-cols-2 items-center gap-30">
+    <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
+      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-7xl grid md:grid-cols-2 gap-y-12 items-center">
 
-        {/* LEFT TEXT CONTAINER */}
-        <div 
-          className="max-w-113.25 h-149.25 flex flex-col justify-between"
-          style={{ gap: '64px' }}
-        >
-          <div>
-            <h2 className="text-[56px] leading-16 font-heading font-bold text-white mb-8">
-              Our Services
-            </h2>
+        {/* LEFT */}
+        <div className="max-w-md hidden md:block">
+          <h2 className="text-5xl leading-15 font-heading text-dark mb-6 text-white">
+            Our Services
+          </h2>
 
-            <p className="text-white/80 text-lg leading-7">
-              With solution-driven designs and precise execution, we help you
-              transform your space into a high-performing asset you can truly enjoy.
-            </p>
-          </div>
+          <p className="text-white/80 text-lg leading-7 mb-12">
+            With solution-driven designs and precise execution, we help you
+            transform your space into a high-performing asset you can truly enjoy.
+          </p>
 
-          {/* SERVICES LIST */}
-          <ul className="space-y-8">
+          <ul className="space-y-9">
             {items.map((it, i) => (
-              <li key={it.title} className="relative">
+              <li key={it.title}>
                 <button
                   onClick={() => handleSelect(i)}
                   aria-current={i === index}
-                  className={`w-full text-left transition-all duration-300 ${
-                    i === index 
-                      ? "text-white font-semibold" 
-                      : "text-white/60 cursor-pointer hover:text-white/80"
+                  className={`w-full text-left transition ${
+                    i === index ? "text-white" : "text-white/60 cursor-pointer"
                   }`}
                 >
-                  <span className="text-[20px] leading-7 font-medium">
-                    {it.title}
-                  </span>
+                  <span className="text-lg font-medium">{it.title}</span>
                 </button>
 
-                {/* PROGRESS BAR */}
                 {i === index && (
-                  <div className="mt-3 h-0.5 w-full bg-white/15 rounded-full overflow-hidden">
+                  <div className="mt-2 h-[0.05rem] w-full bg-white/15 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
@@ -190,69 +133,46 @@ export default function Services() {
           </ul>
         </div>
 
-        {/* RIGHT IMAGE CONTAINER */}
-        <div className="relative flex items-center justify-center">
-          <div 
-            className="relative"
-            style={{
-              borderRadius: '15px',
-              overflow: 'hidden'
-            }}
-          >
-            <Image
-              key={item.title}
-              src={item.img}
-              alt={item.title}
-              className={`
-                object-cover
-                transition-opacity duration-700 ease-in-out w-full
-              `}
-              style={{ 
-                opacity: visible ? 1 : 0,
-                borderRadius: '15px'
-              }}
-              priority
-            />
-          </div>
+        {/* RIGHT */}
+        <div className="relative rounded-2xl overflow-hidden aspect-615/594 hidden md:block">
+          <Image
+            key={item.title}
+            src={item.img}
+            alt={item.title}
+            fill
+            priority
+            className="
+              object-cover rounded-2xl shadow-xl
+              transition-opacity duration-700 ease-in-out
+            "
+            style={{ opacity: visible ? 1 : 0 }}
+          />
         </div>
       </div>
 
       {/* MOBILE VIEW */}
-      <div className="md:hidden space-y-8 pt-12 px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-          <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
-            With solution-driven designs and precise execution, we help you
-            transform your space into a high-performing asset you can truly enjoy.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {items.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
-            >
-              <div className="relative aspect-4/3">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-white/60 text-sm">
-                  {item.desc}
-                </p>
-              </div>
+      <div className="md:hidden space-y-6">
+        {items.map((item) => (
+          <div
+            key={item.title}
+            className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
+          >
+            <div className="relative aspect-4/3">
+              <Image
+                src={item.img}
+                alt={item.title}
+                fill
+                className="object-cover"
+              />
             </div>
-          ))}
-        </div>
+
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-white">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
