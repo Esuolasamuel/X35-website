@@ -112,7 +112,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
       {/* --------------------------------
            HERO CONTENT (IMMEDIATE)
         -------------------------------- */}
-      <div className="absolute z-20 bottom-17.5 md:bottom-25 lg:bottom-32.5 left-3.75 md:left-15 lg:left-30 max-w-7xl">
+      <div className="absolute z-20 bottom-17.5 md:bottom-25 lg:bottom-32.5 left-3.75 md:left-15 lg:left-30 ">
         <div className="text-white text-left">
           <h1
             className="

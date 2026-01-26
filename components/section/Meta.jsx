@@ -22,7 +22,7 @@ const Meta = ({
         className="
         p-3.5 sm:p-7.5 md:p-15 lg:p-30
           mx-auto
-          lg:max-w-7xl
+          lg:
           md:max-w-5xl
           flex
           flex-col

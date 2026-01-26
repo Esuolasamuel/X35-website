@@ -24,7 +24,7 @@ img: customer,
 export default function Testimonials() {
     return (
         <section className=" bg-white">
-            <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-7xl mx-auto">
+            <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30  mx-auto">
                 <h2 className="text-3xl font-heading  text-center mb-12">What Our Clients Say</h2>
                 <div className="grid md:grid-cols-3 gap-5">
                     {testimonials.map((t, i) => (

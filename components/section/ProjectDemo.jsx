@@ -13,7 +13,7 @@ export default function ProjectDemo({ projects }) {
 
   return (
     <section className=" bg-white">
-      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-7xl mx-auto">
+      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30  mx-auto">
 
         <h2 className="text-4xl text-center text-dark-500 font-heading  mb-10">
           Our Latest Projects
