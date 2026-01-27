@@ -19,14 +19,14 @@ export default function ProjectDemo({ projects }) {
           Our Latest Projects
         </h1>
 
-        <div className="grid md:grid-cols-3 gap-7">
+        <div className="grid md:grid-cols-3 gap-4">
           {projects.map((p) => (
             <Link
               key={p.slug}
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative h-48 md:h-69 w-95  rounded-xl overflow-hidden">
+              <div className="relative h-48 md:h-69 w-95 rounded-xl overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
