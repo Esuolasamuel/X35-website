@@ -94,7 +94,7 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-6 items-center">
+      <div className="grid md:grid-cols-2 gap-6 items-center h-209">
 
         {/* LEFT */}
         <div className=" max-w-3xl hidden md:block">
