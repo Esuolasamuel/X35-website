@@ -42,7 +42,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
       -------------------------------- */}
