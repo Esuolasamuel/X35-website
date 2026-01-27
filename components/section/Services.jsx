@@ -97,7 +97,7 @@ export default function Services() {
       <div className="grid md:grid-cols-2 gap-6 items-center h-209">
 
         {/* LEFT */}
-        <div className=" max-w-2xl hidden md:block">
+        <div className=" max-w-2xl hidden lg:block">
           <h2 className="text-5xl leading-15 font-heading text-dark mb-6 text-white">
             Our Services
           </h2>
@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-2xl overflow-hidden aspect-615/594 hidden md:block">
+        <div className="relative rounded-2xl overflow-hidden aspect-615/594 hidden lg:block">
           <Image
             key={item.title}
             src={item.img}
@@ -151,7 +151,7 @@ export default function Services() {
       </div>
 
       {/* MOBILE VIEW */}
-      <div className="md:hidden space-y-6">
+      <div className="lg:hidden space-y-6">
         {items.map((item) => (
           <div
             key={item.title}

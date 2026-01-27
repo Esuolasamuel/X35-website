@@ -26,7 +26,7 @@ export default function ProjectDemo({ projects }) {
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative h-48 md:h-69 w-95 rounded-xl overflow-hidden">
+              <div className="relative h-48 md:h-69 rounded-xl overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
