@@ -12,29 +12,29 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className=" bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 mx-auto">
-      <div className="">
+    <section className="bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 mx-auto">
+      <div className="flex flex-col gap-14">
 
-        <h2 className="text-4xl text-center text-dark-500 font-heading  mb-10">
+        <h1 className="text-5xl text-center font-bold text-dark-500 font-heading">
           Our Latest Projects
-        </h2>
+        </h1>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-7">
           {projects.map((p) => (
             <Link
               key={p.slug}
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+              <div className="relative h-48 md:h-69 w-95  rounded-xl overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="
-                    object-cover transition-transform duration-500
-                    group-hover:scale-105  text-dark-500
+                    object-center transition-transform duration-500
+                    group-hover:scale-105  text-dark-500 w-full
                   "
                 />
               </div>
@@ -57,14 +57,14 @@ export default function ProjectDemo({ projects }) {
             className="
               inline-flex items-center gap-3
               border rounded-full
-              pl-6 pr-2 py-2
+              pl-8 pr-4 py-4
                text-dark-500
-              font-body font-bold text-[15px]
-              hover:bg-yellow-500  transition
+              font-body font-bold text-lg
+              hover:bg-yellow-400  transition
             "
           >
             View all Projects
-            <span className="rounded-full p-2.5 bg-yellow-500 transition">
+            <span className="rounded-full p-2.5 bg-yellow-400 transition">
               <Image
                 src= {arrowrigth}
                 width={14}
