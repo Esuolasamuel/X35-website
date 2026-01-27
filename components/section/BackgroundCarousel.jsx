@@ -42,7 +42,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-svh w-screenn overflow-hidden" style={{ contain: "paint layout size" }}>
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
       -------------------------------- */}
@@ -70,6 +70,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
               key={slideIndex}
               className={`
                 absolute inset-0 z-0
+                w-screen h-full
                 transition-opacity duration-700 ease-in-out
                 ${index === slideIndex ? "opacity-100" : "opacity-0"}
               `}
@@ -79,7 +80,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
                 alt=""
                 fill
                 loading="lazy"
-                sizes="80vw"
+                sizes="100vw"
                 className="object-cover brightness-90 contrast-105"
               />
             </div>
@@ -146,3 +147,5 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   );
   
 }
+
+

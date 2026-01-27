@@ -12,8 +12,8 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className=" bg-white">
-      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30  mx-auto">
+    <section className=" bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 mx-auto">
+      <div className="">
 
         <h2 className="text-4xl text-center text-dark-500 font-heading  mb-10">
           Our Latest Projects

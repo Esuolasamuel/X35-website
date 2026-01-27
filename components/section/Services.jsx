@@ -93,8 +93,8 @@ export default function Services() {
   const item = useMemo(() => items[index], [index]);
 
   return (
-    <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white">
-      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30  grid md:grid-cols-2 gap-y-12 items-center">
+    <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-3.5 sm:p-7.5 md:p-15 lg:p-30">
+      <div className="  grid md:grid-cols-2 gap-y-12 items-center">
 
         {/* LEFT */}
         <div className="max-w-md hidden md:block">
