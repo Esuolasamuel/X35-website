@@ -42,7 +42,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative min-h-svh w-screenn overflow-hidden" style={{ contain: "paint layout size" }}>
+    <section className="relative min-h-80 sm:min-h-96 md:min-h-112 lg:min-h-128 xl:min-h-144 2xl:min-h-160 w-screen overflow-hidden" style={{ contain: "paint layout size" }}>
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
       -------------------------------- */}
@@ -113,7 +113,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
       {/* --------------------------------
            HERO CONTENT (IMMEDIATE)
         -------------------------------- */}
-      <div className="absolute z-20 bottom-17.5 md:bottom-25 lg:bottom-32.5 left-3.75 md:left-15 lg:left-30 ">
+      <div className="absolute z-20 bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-24 2xl:bottom-28 left-3 sm:left-6 md:left-12 lg:left-16 xl:left-20 2xl:left-24 ">
         <div className="text-white text-left">
           <h1
             className="
