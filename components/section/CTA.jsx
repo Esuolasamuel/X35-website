@@ -9,7 +9,7 @@ export default function CTA({title, text, paragraph, id}) {
 
     return (
         <>
-            <section id={`${id ? id : ''}`} className="relative bg-[url(@/assets/images/image-9.png)] w-full min-h-135.75 z-20">
+            <section id={`${id ? id : ''}`} className="relative bg-[url(@/assets/images/image-9.png)] w-full min-h-135.75 sm:min-h-140 md:min-h-145 lg:min-h-150 xl:min-h-155 2xl:min-h-160 z-20">
                 <div className="absolute inset-0 bg-[#D1D1E4] z-10 opacity-50"></div>
                 <div className="relative flex flex-col items-center justify-center z-30 h-full">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-12 pt-6 sm:pt-8 md:pt-10 lg:pt-12 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 font-heading font-bold  mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14">

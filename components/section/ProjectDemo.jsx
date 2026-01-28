@@ -12,26 +12,26 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className="bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 mx-auto">
+    <section className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-14 mx-auto">
       <div className="flex flex-col gap-14">
 
-        <h1 className="text-5xl text-center font-bold text-dark-500 font-heading">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl text-center font-bold text-dark-500 font-heading">
           Our Latest Projects
         </h1>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
           {projects.map((p) => (
             <Link
               key={p.slug}
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative h-48 md:h-69 rounded-xl overflow-hidden">
+              <div className="relative h-48 sm:h-52 md:h-56 lg:h-60 xl:h-64 2xl:h-68 rounded-xl overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 375px) 100vw, (max-width: 576px) 50vw, (max-width: 768px) 50vw, (max-width: 992px) 33vw, (max-width: 1200px) 33vw, (max-width: 1400px) 33vw, 33vw"
                   className="
                     object-center transition-transform duration-500
                     group-hover:scale-105  text-dark-500 w-full
@@ -51,7 +51,7 @@ export default function ProjectDemo({ projects }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 2xl:mt-18 text-center">
           <Link
             href="/Projects"
             className="
