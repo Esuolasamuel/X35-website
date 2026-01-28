@@ -23,8 +23,8 @@ img: customer,
 
 export default function Testimonials() {
     return (
-        <section className=" p-3.5 sm:p-7.5 md:p-15 lg:p-30 xl:p-32 2xl:p-34 mx-auto bg-white">
-            <div className="">
+        <section className=" p-3.5 sm:p-7.5 md:p-15 lg:p-30 xl:p-32 2xl:p-34 mx-auto bg-white max-w-7xl">
+            <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
                 <h2 className="text-3xl font-heading text-center mb-12">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-9">
                     {testimonials.map((t, i) => (

@@ -97,7 +97,7 @@ export default function Services() {
       <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 items-center min-h-120 sm:min-h-140 md:min-h-160 lg:min-h-180 xl:min-h-200 2xl:min-h-220">
 
         {/* LEFT */}
-        <div className=" max-w-2xl hidden md:block">
+        <div className=" max-w-2xl hidden lg:block">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-heading text-dark mb-6 text-white">
             Our Services
           </h2>
