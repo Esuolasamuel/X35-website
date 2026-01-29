@@ -29,18 +29,20 @@ export default function Testimonials() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-9">
                     {testimonials.map((t, i) => (
                         <div key={i} className="sm:p-3 md:p-6 xl:p-9 rounded-xl md:bg-white md:shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
-                            <p className="text-base font-medium font-body mb-4 ">“{t.text}”</p>
-                            <span className="text-sm flex items-center justify-content font-medium font-body pt-4">
-                               <div className="pr-3">
-                                    <Image
-                                    src={t.img}
-                                    alt={t.author}
-                                    width={40}
-                                    height={40}
-                                    className="rounded-full"
-                                    />  
-                               </div>
-                                {t.author}</span>
+                            <div className="flex flex-col">
+                                <p className="text-base font-medium font-body mb-4 items-start">“{t.text}”</p>
+                                <span className="text-sm flex items-end justify-content font-medium font-body pt-4 ">
+                                   <div className="pr-3">
+                                        <Image
+                                        src={t.img}
+                                        alt={t.author}
+                                        width={40}
+                                        height={40}
+                                        className="rounded-full"
+                                        />
+                                   </div>
+                                    {t.author}</span>
+                            </div>
                         </div>
                     ))}
                 </div>
