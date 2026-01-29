@@ -42,7 +42,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-[842px] 2xl:min-h-[842px] w-screen overflow-hidden" style={{ contain: "paint layout size" }}>
+    <section className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-210.5 2xl:min-h-210.5 w-screen overflow-hidden" style={{ contain: "paint layout size" }}>
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
       -------------------------------- */}
