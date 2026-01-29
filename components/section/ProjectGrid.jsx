@@ -51,24 +51,24 @@ const projects = [
 const ProjectGrid = () => {
   return (
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => (
           <div
             key={p.name}
-            className="relative h-70 sm:h-90 lg:h-105
+            className="relative h-70 sm:h-80 md:h-90 lg:h-100 xl:h-105 2xl:h-110
             rounded-xl
             group
             bg-gray-100
-            shadow-sm overflow-hidden group"
+            shadow-sm overflow-hidden"
           >
             <Link href={p.href} className="block">
               <Image
-                src={p.ImageSrc}
+                src={p.img}
                 alt={p.alt || "Gallery Image"}
                 fill
-                sizes="(max-width: 1024px) 100vw, 805px"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="
-                  object-contain
+                  object-cover
                   transition-transform
                   duration-700
                   ease-in-out
