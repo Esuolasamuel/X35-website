@@ -19,14 +19,14 @@ export default function ProjectDemo({ projects }) {
           Our Latest Projects
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 :grid-cols-3 gap-2 sm:gap-3 md:gap-4">
           {projects.map((p) => (
             <Link
               key={p.slug}
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative h-48 sm:h-52 md:h-56 lg:h-60 xl:h-64 2xl:h-68 rounded-xl overflow-hidden">
+              <div className="relative aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/3] lg:aspect-[5/4] xl:aspect-[4/3] 2xl:aspect-[5/4] rounded-xl overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
