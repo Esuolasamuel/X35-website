@@ -51,14 +51,13 @@ const projects = [
 const ProjectGrid = () => {
   return (
     <section>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         {projects.map((p) => (
           <div
             key={p.name}
             className="relative h-70 sm:h-80 md:h-90 lg:h-100 xl:h-105 2xl:h-110
-            rounded-xl
             group
-            bg-gray-100
+            bg-white
             shadow-sm overflow-hidden"
           >
             <Link href={p.href} className="block">
