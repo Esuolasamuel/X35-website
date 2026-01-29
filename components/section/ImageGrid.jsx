@@ -11,15 +11,19 @@ export default function ImageGrid({
     <section className={`w-full ${backgroundColor}`}>
       <div className="p-3.5 sm:p-7.5 md:p-14 lg:p-14">
         <div className={`
-          grid 
-          grid-cols-1 
-          lg:grid-cols-[1fr_805px] 
-          gap-4 
-          h-[145.5px] 
-          sm:h-72.75 
-          md:h-[436.5px] 
-          lg:h-145.5
-          overflow-hidden 
+          grid
+          grid-cols-1
+          lg:grid-cols-[1fr_805px]
+          gap-4
+          h-30
+          xs:h-[140px]
+          sm:h-40
+          md:h-50
+          lg:h-60
+          xl:h-70
+          xxl:h-[320px]
+          xxxl:h-[360px]
+          overflow-hidden
           rounded-3xl
         `}>
           {images.map((image, index) => (

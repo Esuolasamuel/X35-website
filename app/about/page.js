@@ -22,8 +22,8 @@ export default function AboutPage() {
         {/* First Image Grid */}
         <ImageGrid
             images={[aboutImg1, aboutImg2]}
-            orders={["lg:order-1", "lg:order-2"]} // Reverse order
-            widths={["lg:w-[506px]", "lg:w-[805px]"]}
+            orders={["md:order-1", "md:order-2"]} // Reverse order
+            widths={["md:w-[506px]", "md:w-[805px]"]}
         />
         <VisionMission />
         {/* Second Image Grid */}
