@@ -4,14 +4,14 @@ import { useState } from "react";
 import ContactForm from "../forms/ContactForm";
 import { X } from "lucide-react";
 
-export default function CTA({title, text, paragraph, id}) {
+export default function CTA({title, text, paragraph, id, align="center", width=""}) {
     const [isContactOpen, setIsContactOpen] = useState(false);
 
     return (
         <>
             <section id={`${id ? id : ''}`} className="relative bg-[url(@/assets/images/image-9.png)] w-full min-h-135.75 sm:min-h-140 md:min-h-145 lg:min-h-150 xl:min-h-155 2xl:min-h-160 z-20">
                 <div className="absolute inset-0 bg-[#D1D1E4] z-10 opacity-90"></div>
-                <div className="relative flex flex-col items-center justify-center z-30 h-full py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
+                <div className={`relative flex flex-col items-center justify-center w-${width} z-30 h-full py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 text-${align}`}>
                     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 font-heading font-bold mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14">
                         {title}
                     </h2>
@@ -19,7 +19,7 @@ export default function CTA({title, text, paragraph, id}) {
                     onClick={() => setIsContactOpen(true)}
                     className="bg-yellow-500 hover:bg-yellow-700 px-6 sm:px-7 md:px-8 py-2 sm:py-3 rounded-full font-body cursor-pointer font-medium">{text} </button>}
                         {paragraph && <p
-                   className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed sm:leading-loose md:leading-relaxed lg:leading-loose xl:leading-relaxed 2xl:leading-loose text-dark-500 mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14 last:mb-0 font-body text-dark font-normal tracking-wide"
+                   className={`text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed sm:leading-loose md:leading-relaxed lg:leading-loose xl:leading-relaxed 2xl:leading-loose text-dark-500 mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14 last:mb-0 font-body text-dark font-normal tracking-wide`}
                    >
                     {paragraph}
                   </p>}

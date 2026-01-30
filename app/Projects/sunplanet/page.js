@@ -64,7 +64,7 @@ export default function SunplanetPage() {
         <FullImageSection ImageSrc={fullImg} title="sun planet interior" />
         <Feature
           ImageSrc={featureImg}
-          backgroundColor="text-indigo-700"
+          backgroundColor="bg-indigo-700"
           title="X35 Projects as Design and Technical Consultancy Partner"
           description={[
             {
@@ -76,7 +76,7 @@ export default function SunplanetPage() {
           headerColor = "text-white"
         />
         <ImageGallery
-          BackgroundColor="bg-[#EAF1FF]"
+          backgroundColor="bg-[#EAF1FF]"
           images={[
             { ImageSrc: gallery1, alt: "Interior 1", height: "594", width: "615" },
             { ImageSrc: gallery2, alt: "Interior 2", height: "594", width: "615", colspan: "col-span-2" },

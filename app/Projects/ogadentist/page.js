@@ -52,14 +52,14 @@ export default function OgaDentistPage() {
             { heading: "Architectural Style", value: "Modern / Minimalism" },
             { heading: "Typology", value: "Healthcare" },
           ]}
-          backgroundColor="bg-[#eaf1ff]"
+          backgroundColor="bg-[#EAF1FF]"
         />
         <FullImageSection ImageSrc={full1} title="ogadentist interior" />
         <ListFeature
           ImageSrc={feature1}
           title="Understanding the Vision"
           description="From the very beginning, this project was rooted in close collaboration..."
-          backgroundColor="text-indigo-700"
+          backgroundColor="bg-indigo-700"
           lists={[
             { paragraph: "Patient confidence and comfort" },
             { paragraph: "Operational efficiency" },
@@ -75,7 +75,7 @@ export default function OgaDentistPage() {
           title="Scope of Spaces Designed"
           description="The facility features a wide range of carefully curated spaces, each designed with intention and precision:"
           backgroundColor="bg-[#d1ebe8]"
-          aspect="aspect-615/796"
+          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[615/550] xl:aspect-[615/550] 2xl:aspect-[615/550]"
           lists={[
             { paragraph: "A welcoming reception that immediately sets the tone of professionalism" },
             { paragraph: "A comfortable waiting lounge with zoning that reduces patient anxiety" },
@@ -117,6 +117,8 @@ export default function OgaDentistPage() {
           ]}
         />
         <CTA
+          width="133"
+          align="start"
           title="The Result"
           paragraph="The final outcome is a carefully executed environment that speaks the language of Professionalism, Cleanliness, Comfort, Innovation."
         />

@@ -53,7 +53,7 @@ export default function ChevronPage() {
         />
         <FullImageSection ImageSrc={chevronFull} title="chevron deep interior" />
         <Narrative
-          BackgroundColor="text-indigo-700"
+          backgroundColor="bg-indigo-700"
           TextColor="text-white"
           title="chevron narrative image"
           description={[
@@ -74,7 +74,7 @@ export default function ChevronPage() {
           ]}
         />
         <ImageGallery
-          BackgroundColor="bg-[#EAF1FF]"
+          backgroundColor="bg-[#EAF1FF]"
           images={[
             { ImageSrc: chevronSplit1, alt: "Interior 1", height: 594, width: 615 },
             { ImageSrc: chevronSplit2, alt: "Interior 2", height: 594, width: 615, colspan: "col-span-2" },

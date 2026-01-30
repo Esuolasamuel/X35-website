@@ -62,7 +62,7 @@ export default function RobPlacePage() {
             { paragraph: "During early consultations, it became clear that the client had deep concerns about renovation risks, particularly demolition. He feared that touching structural elements might weaken the building or cause collapse — a concern many homeowners share." },
             { paragraph: "Our role was not only technical but also reassurance-driven. Through structural assessments, transparent communication, and detailed planning, we helped the client understand exactly which elements were safe to modify and how the integrity of the building would be preserved." },
           ]}
-          backgroundColor="text-indigo-700"
+          backgroundColor="bg-indigo-700"
           textColor = "text-white/80"
           headerColor = "text-white"
         />

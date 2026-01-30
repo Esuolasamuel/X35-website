@@ -93,14 +93,14 @@ export default function thebrookPage() {
             },
           ]}
           title="Unified Workspace Design Enhancing Collaboration, Productivity, and Brand Identity for The Brook Finance"
-          aspect="aspect-615/910"
+          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[615/550] xl:aspect-[615/550] 2xl:aspect-[615/550]"
           height="910"
-          backgroundColor="text-indigo-700"
+          backgroundColor="bg-indigo-700"
           textColor = "text-white/80"
           headerColor = "text-white"
         />
         <ImageGallery
-          BackgroundColor="bg-[#EAF1FF]"
+          backgroundColor="bg-[#EAF1FF]"
           images={[
             { ImageSrc: brookSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
             { ImageSrc: brookSplit2, alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
@@ -123,7 +123,7 @@ export default function thebrookPage() {
           ]}
         />
         <ImageGallery
-          BackgroundColor="bg-[#EAF1FF]"
+          backgroundColor="bg-[#EAF1FF]"
           images={[
             { ImageSrc: brookSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
             { ImageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-722/582", colspan: "col-span-2" },

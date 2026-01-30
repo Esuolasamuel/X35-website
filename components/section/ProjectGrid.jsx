@@ -55,7 +55,7 @@ const ProjectGrid = () => {
         {projects.map((p) => (
           <div
             key={p.name}
-            className="relative h-70 sm:h-80 md:h-90 lg:h-100 xl:h-105 2xl:h-110
+            className="relative xs:aspect-[16/9] sm:aspect-4/3 md:aspect-3/2 lg:aspect-720/497 xl:aspect-720/497 xxl:aspect-[720/497] xxxl:aspect-[720/497]
             group
             bg-white
             shadow-sm overflow-hidden"

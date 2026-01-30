@@ -58,7 +58,7 @@ export default function AdrinoPage() {
         />
         <FullImageSection ImageSrc={adinoFull1} title="adino interior" />
         <Narrative
-          BackgroundColor="text-indigo-700"
+          backgroundColor="bg-indigo-700"
           TextColor="text-white"
           title="adino narrative image"
           description={[
@@ -87,7 +87,7 @@ export default function AdrinoPage() {
           ]}
         />
         <ImageGallery
-          BackgroundColor="bg-[#EAF1FF]"
+          backgroundColor="bg-[#EAF1FF]"
           images={[
             { ImageSrc: adinoSplit1, alt: "kitchen area Interior 1", height: 594, width: 615 },
             { ImageSrc: adinoSplit2, alt: "kitchen area Interior 2", height: 594, width: 615 },

@@ -10,14 +10,14 @@ const ListFeature = ({
   backgroundColor = "bg-[#e3f4ef]", 
   aspect="aspect-615/550", 
   lists=[], 
-  flex="flex-row", 
+  flex="lg:flex-row", 
   orderL, 
   orderR
 }) => {
     return (
         /* Added 'group' to the section to trigger the image zoom */
         <section className={` ${backgroundColor} group`}>
-            <div className={`p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-500 flex flex-col lg:${flex} items-center gap-14 lg:gap-16`}>
+            <div className={`p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-500 flex flex-col ${flex} items-center gap-14 lg:gap-16 mx-auto`}>
                 
                 {/* LEFT TEXT SECTION */}
                 <div className={`w-full lg:w-1/2 ${orderL}`}>

@@ -23,9 +23,9 @@ export default function Footer() {
                             </Link>
                         </div>
                         <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl flex-col md:flex-row font-body text-dark text-white font-medium">
-                            <p className="p-0.5 xs:p-1"><span className="text-yellow-400">We</span> Design.</p>
-                            <p className="p-0.5 xs:p-1"><span className="text-yellow-400">We</span> Build.</p>
-                            <p className="p-0.5 xs:p-1"><span className="text-yellow-400">We</span> Deliver.</p></div>
+                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Design.</p>
+                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Build.</p>
+                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Deliver.</p></div>
                     </div>
                     <div>
                         <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Quick Links</h4>
@@ -43,10 +43,10 @@ export default function Footer() {
                     </div>
                     <div>
                         <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Contact Us</h4>
-                        <a href="mailto:hello@xsprojects.com" className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-white pb-4 xs:pb-5 sm:pb-6 block hover:text-yellow-700 transition-colors">
+                        <a href="mailto:hello@xsprojects.com" className="text-xs xs:text-sm sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-white pb-4 xs:pb-5 sm:pb-6 block hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]">
                             hello@xsprojects.com
                         </a>
-                        <a href="tel:+2348144694380" className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl text-white font-body hover:text-yellow-700 transition-colors">
+                        <a href="tel:+2348144694380" className="text-xs xs:text-sm sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl text-white font-body hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]">
                             +234 814 469 4380
                         </a>
                     </div>
@@ -74,7 +74,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-center font-body bg-indigo-700 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl text-white py-3 xs:py-4 sm:py-5 lg:py-6 xl:py-7 xxl:py-8 xxxl:py-9">
+                <div className="text-center font-body bg-indigo-700 text-xs xs:text-sm sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl text-white hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]">
                     © 2025 XS Projects. All Rights Reserved.
                 </div>
             </footer>
