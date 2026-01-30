@@ -12,10 +12,10 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-14 mx-auto">
-      <div className="flex flex-col gap-20">
+    <section className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-14">
+      <div className="flex flex-col gap-20 mx-auto">
 
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[40px] 2xl:text-[40px] text-center font-bold text-dark-500 font-heading">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4x xl:text-[40px] 2xl:text-[40px] text-center font-bold text-dark-500 font-heading">
           Our Latest Projects
         </h1>
 
@@ -57,7 +57,7 @@ export default function ProjectDemo({ projects }) {
             className="
               inline-flex items-center gap-3
               border rounded-full
-              pl- pr-4 py-4
+              pl-2 pr-4 py-4
                text-dark-500
               font-body font-bold text-base
               hover:bg-yellow-400  transition

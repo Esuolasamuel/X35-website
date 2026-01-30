@@ -43,7 +43,7 @@ const x35Content = () => {
     <Testimonials />
     <CTA
         title="Your vision deserves an architect with purpose."
-        paragraph="Have you been x35ied?"
+        width="200"
         text="Contact us"
         id="contact-section"
     />
