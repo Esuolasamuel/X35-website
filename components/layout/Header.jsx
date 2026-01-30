@@ -51,11 +51,11 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 xs: sm:p-15 md:px-20 lg:px-25 xl:px-30 border border-[#BDBDBD33] transition-all duration-300 ${
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 sm:px-15 md:px-20 lg:px-25 xl:px-30 border border-[#BDBDBD33] transition-all duration-300 ${
           isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40]"
         }`}
       >
-        <div className="flex items-center justify-between w-full h-full mx-auto">
+        <div className="flex items-center justify-between w-full mx-auto">
           <Link href="/">
             <Image src={Logo} alt="X35 Logo" width={60} height={60} className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-13 md:h-13 lg:w-14 lg:h-14 xl:w-15 xl:h-15 xxl:w-16 xxl:h-16 xxxl:w-17 xxxl:h-17" />
           </Link>
