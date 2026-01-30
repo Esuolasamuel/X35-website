@@ -22,15 +22,15 @@ export default function Footer() {
                                 />
                             </Link>
                         </div>
-                        <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl flex-col md:flex-row font-body text-dark text-white font-medium">
-                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Design.</p>
-                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Build.</p>
-                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Deliver.</p>
+                        <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm flex-col lg:flex-row font-body text-dark text-white font-medium">
+                            <p className=" md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Design.</p>
+                            <p className=" md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Build.</p>
+                            <p className=" md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Deliver.</p>
                         </div>
                     </div>
                     <div>
-                        <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Quick Links</h4>
-                        <ul className="space-y-4 xs:space-y-5 sm:space-y-6 text-white text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl">
+                        <h4 className="text-white/60 text-xs xs:text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Quick Links</h4>
+                        <ul className="space-y-4 xs:space-y-5 sm:space-y-6 text-white text-xs xs:text-sm sm:text-sm md:text-smg lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm">
                             <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
                                 <Link href="/about">About Us</Link>
                             </li>
@@ -43,7 +43,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Contact Us</h4>
+                        <h4 className="text-white/60 text-xs xs:text-sm sm:text-sm md:text-smg lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Contact Us</h4>
                         <a href="mailto:hello@xsprojects.com" className="text-xs xs:text-sm sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-white pb-4 xs:pb-5 sm:pb-6 block hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]">
                             hello@xsprojects.com
                         </a>
@@ -52,8 +52,8 @@ export default function Footer() {
                         </a>
                     </div>
                     <div>
-                        <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Follow Us</h4>
-                        <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl flex items-center gap-4 xs:gap-5 sm:gap-6 ">
+                        <h4 className="text-white/60 text-xs xs:text-sm sm:text-sm md:text-smg lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Follow Us</h4>
+                        <div className="text-xs xs:text-sm sm:text-sm md:text-smg lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm flex items-center gap-4 xs:gap-5 sm:gap-6 ">
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                                 <Image
                                 src={linkedin}

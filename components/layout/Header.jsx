@@ -83,7 +83,7 @@ export default function Header() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className={`md:hidden p-0.5 xs:p-1 sm:p-1.5 md:p-2 ${
+            className={`md:hidden  sm:p-1.5 md:p-2 ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
