@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <>
             <footer className="bg-indigo-700 pt-8 px-15 sm:px-20 md:px-25 lg:px-30 xl:px-30 2xl:px-30 lg:pt-12 xl:pt-16 xxl:pt-20 xxxl:pt-24 border-t mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 xxl:gap-10 xxxl:gap-11 border-b-[0.5px] border-white/40 pb-8 xs:pb-9 sm:pb-10 md:pb-11 lg:pb-12 xl:pb-13 xxl:pb-14 xxxl:pb-15 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-4 md:gap-4 lg:gap-5 xl:gap-5 xxl:gap-6 xxxl:gap-6 border-b-[0.5px] border-white/40 pb-8 xs:pb-9 sm:pb-10 md:pb-11 lg:pb-12 xl:pb-13 xxl:pb-14 xxxl:pb-15 text-center mx-auto">
                     <div>
                         <div className="font-bold text-white mb-4 xs:mb-5 sm:mb-6 md:mb-7">
                             <Link href="/">
@@ -17,7 +17,7 @@ export default function Footer() {
                                 src={Logo}
                                 alt="x35 Logo"
                                 width={40}
-                                height={40}
+                                height={40}g
                                 className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-13 md:h-13 lg:w-14 lg:h-14 xl:w-15 xl:h-15 xxl:w-16 xxl:h-16 xxxl:w-17 xxxl:h-17"
                                 />
                             </Link>
