@@ -18,14 +18,15 @@ export default function Footer() {
                                 alt="x35 Logo"
                                 width={40}
                                 height={40}g
-                                className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-13 md:h-13 lg:w-14 lg:h-14 xl:w-15 xl:h-15 xxl:w-16 xxl:h-16 xxxl:w-17 xxxl:h-17"
+                                className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-13 md:h-13 lg:w-14 lg:h-14 xl:w-15 xl:h-15 xxl:w-16 xxl:h-16 xxxl:w-17 xxxl:h-17 mx-auto"
                                 />
                             </Link>
                         </div>
                         <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl flex-col md:flex-row font-body text-dark text-white font-medium">
                             <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Design.</p>
                             <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Build.</p>
-                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Deliver.</p></div>
+                            <p className="p-0.5 xs:p-1 md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]"><span className="text-yellow-400">We</span> Deliver.</p>
+                        </div>
                     </div>
                     <div>
                         <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Quick Links</h4>
@@ -52,7 +53,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <h4 className="text-white/60 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-body text-dark font-semibold mb-4 xs:mb-5 sm:mb-6 md:mb-7">Follow Us</h4>
-                        <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl flex gap-4 xs:gap-5 sm:gap-6">
+                        <div className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl flex items-center gap-4 xs:gap-5 sm:gap-6 ">
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                                 <Image
                                 src={linkedin}
@@ -74,8 +75,8 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-center font-body bg-indigo-700 text-xs xs:text-sm sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl text-white hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]">
-                    © 2025 XS Projects. All Rights Reserved.
+                <div className="text-center font-body bg-indigo-700 ">
+                    <small className="text-white hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT] py-16 px-15 sm:px-20 md:px-25 lg:px-30">© 2025 XS Projects. All Rights Reserved.</small>
                 </div>
             </footer>
         </>

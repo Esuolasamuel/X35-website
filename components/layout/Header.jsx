@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-4 xs: sm:p-15 md:px-20 lg:px-25 xl:px-30 border border-[#BDBDBD33] transition-all duration-300 ${
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 xs: sm:p-15 md:px-20 lg:px-25 xl:px-30 border border-[#BDBDBD33] transition-all duration-300 ${
           isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40]"
         }`}
       >
