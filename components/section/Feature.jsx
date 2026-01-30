@@ -17,7 +17,7 @@ const Feature = ({
     <section className={`${backgroundColor} group`}>
       <div
         className={`
-          mx-auto max-w-8xl
+          mx-auto
           flex flex-col ${flex}
           items-center gap-12 xl:gap-16
           p-3.5 sm:p-7.5 md:p-15 lg:p-30

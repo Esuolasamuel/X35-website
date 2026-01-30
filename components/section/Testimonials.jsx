@@ -23,30 +23,27 @@ img: customer,
 
 export default function Testimonials() {
     return (
-        <section className=" p-3.5 sm:p-7.5 md:p-15 lg:p-30 xl:p-32 2xl:p-34 mx-auto bg-white">
-            <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-                <h2 className="text-3xl font-heading text-center mb-12">What Our Clients Say</h2>
+        <section className=" p-7.5 sm:p-15 md:p-20 lg:p-25 xl:p-30 2xl:p-30 mx-auto bg-white">
+
+                <h2 className=" text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[40px] font-heading font-bold text-dark-500 text-center mb-12">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-9">
                     {testimonials.map((t, i) => (
-                        <div key={i} className="sm:p-3 md:p-6 xl:p-9 rounded-xl md:bg-white md:shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
-                            <div className="flex flex-col">
-                                <p className="text-base font-medium font-body mb-4 items-start">“{t.text}”</p>
-                                <span className="text-sm flex items-end justify-content font-medium font-body pt-4 ">
-                                   <div className="pr-3">
-                                        <Image
-                                        src={t.img}
-                                        alt={t.author}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-full"
-                                        />
-                                   </div>
-                                    {t.author}</span>
-                            </div>
+                        <div key={i} className="sm:p-4 md:p-8 xl:p-10 rounded-xl md:bg-white md:shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
+                            <p className="text-base font-medium font-body mb-4">“{t.text}”</p>
+                            <span className="text-sm flex justify-content font-medium font-body pt-4 ">
+                                <div className="pr-3">
+                                    <Image
+                                    src={t.img}
+                                    alt={t.author}
+                                    width={40}
+                                    height={40}
+                                    className="rounded-full"
+                                    />
+                                </div>
+                                {t.author}</span>
                         </div>
                     ))}
                 </div>
-            </div>
         </section>
     );
 }

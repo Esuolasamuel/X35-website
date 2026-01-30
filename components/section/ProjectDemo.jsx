@@ -15,18 +15,18 @@ export default function ProjectDemo({ projects }) {
     <section className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-14 mx-auto">
       <div className="flex flex-col gap-20">
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl text-center font-bold text-dark-500 font-heading">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[40px] 2xl:text-[40px] text-center font-bold text-dark-500 font-heading">
           Our Latest Projects
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-10">
           {projects.map((p) => (
             <Link
               key={p.slug}
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative aspect-4/3 sm:aspect-16/10 md:aspect-4/3 lg:aspect-5/4 xl:aspect-4/3 2xl:aspect-5/4 rounded-xl overflow-hidden">
+              <div className="relative aspect-4/3 sm:aspect-16/10 md:aspect-4/3 lg:aspect-636/358 xl:aspect-636/358 2xl:aspect-636/358 rounded-xl overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
@@ -39,7 +39,7 @@ export default function ProjectDemo({ projects }) {
                 />
               </div>
 
-              <h3 className="mt-4 font-body text-dark-500">
+              <h3 className="mt-4 font-body font-bold text-dark-500">
                 {p.title}
               </h3>
 
@@ -57,9 +57,9 @@ export default function ProjectDemo({ projects }) {
             className="
               inline-flex items-center gap-3
               border rounded-full
-              pl-8 pr-4 py-4
+              pl- pr-4 py-4
                text-dark-500
-              font-body font-bold text-lg
+              font-body font-bold text-base
               hover:bg-yellow-400  transition
             "
           >

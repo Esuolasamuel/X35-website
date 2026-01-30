@@ -51,18 +51,18 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full mx-auto h-18 p-4 xs:p-5 sm:p-6 md:p-7 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 border border-[#BDBDBD33] transition-all duration-300 ${
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-4 xs: sm:p-15 md:px-20 lg:px-25 xl:px-30 border border-[#BDBDBD33] transition-all duration-300 ${
           isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40]"
         }`}
       >
-        <div className="flex items-center justify-between w-full h-full">
+        <div className="flex items-center justify-between w-full h-full mx-auto">
           <Link href="/">
             <Image src={Logo} alt="X35 Logo" width={60} height={60} className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-13 md:h-13 lg:w-14 lg:h-14 xl:w-15 xl:h-15 xxl:w-16 xxl:h-16 xxxl:w-17 xxxl:h-17" />
           </Link>
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden md:flex items-center gap-6 xs:gap-7 sm:gap-8 md:gap-9 lg:gap-10 xl:gap-11 xxl:gap-12 xxxl:gap-13 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl font-semibold font-body cursor-pointer ${
+            className={`hidden md:flex items-center gap-6 xs:gap-7 sm:gap-8 md:gap-9 lg:gap-10 xl:gap-11 xxl:gap-12 xxxl:gap-13 text-xs xs:text-sm sm:text-base md:text-base lg:text-base xl:text-base xxl:text-base xxxl:text-base font-semibold font-body cursor-pointer ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
@@ -75,7 +75,7 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex rounded-full bg-yellow-400 hover:bg-yellow-700 transition-colors px-4 xs:px-5 sm:px-6 md:px-7 lg:px-8 xl:px-9 xxl:px-10 xxxl:px-11 py-2 xs:py-2.5 sm:py-3 md:py-3.5 lg:py-4 xl:py-4.5 xxl:py-5 xxxl:py-5.5 font-body font-semibold text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl xxxl:text-4xl text-dark-500"
+            className="hidden lg:inline-flex rounded-full bg-yellow-400 hover:bg-yellow-700 transition-colors px-4 xs:px-6 sm:px-6 md:px-6 lg:px-6 xl:px-6 xxl:px-6 xxxl:px-6 py-2.5  sm:py-3 md:py-3.5 lg:py-3.5 xl:py-3.5 xxl:py-3.5 xxxl:py-3.5 font-body font-semibold text-xs xs:text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500"
           >
             Contact Us
           </button>

@@ -94,7 +94,7 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-3.5 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 items-center min-h-80 sm:min-h-100 md:min-h-120 lg:min-h-140 xl:min-h-160 2xl:min-h-180">
+      <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 items-center">
 
         {/* LEFT */}
         <div className=" max-w-2xl hidden lg:block">
@@ -121,7 +121,7 @@ export default function Services() {
                 </button>
 
                 {i === index && (
-                  <div className="mt-2 h-[0.05rem] w-full bg-white/15 rounded-full overflow-hidden">
+                  <div className="mt-2 h-1 w-full bg-white/15 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
