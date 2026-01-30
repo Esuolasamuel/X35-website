@@ -75,10 +75,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+            </footer>
                 <div className="text-center font-body bg-indigo-700 px-15 sm:px-20 md:px-25 lg:px-30">
                     <p className="text-white hover:text-yellow-700 transition-colors md:font-body md:font-medium md:text-sm md:leading-[31.2px] md:tracking-normal md:[leading-trim:CAP_HEIGHT]">© 2025 XS Projects. All Rights Reserved.</p>
                 </div>
-            </footer>
         </>
     );
 }
