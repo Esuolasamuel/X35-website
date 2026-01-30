@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <>
             <footer className="bg-indigo-700 pt-8 px-15 sm:px-20 md:px-25 lg:px-30 xl:px-30 2xl:px-30 lg:pt-12 xl:pt-16 xxl:pt-20 xxxl:pt-24 border-t mx-auto">
-                <div className="flex flex-col items-start justify-center gap-3 xs:gap-4 sm:gap-4 md:gap-4 lg:gap-5 xl:gap-5 xxl:gap-6 xxxl:gap-6 border-b-[0.5px] border-white/40 pb-8 xs:pb-9 sm:pb-10 md:pb-11 lg:pb-12 xl:pb-13 xxl:pb-14 xxxl:pb-15 text-center mx-auto">
+                <div className="flex md:flex-col lg:flex-row items-start justify-center gap-3 xs:gap-4 sm:gap-4 md:gap-4 lg:gap-5 xl:gap-5 xxl:gap-6 xxxl:gap-6 border-b-[0.5px] border-white/40 pb-8 xs:pb-9 sm:pb-10 md:pb-11 lg:pb-12 xl:pb-13 xxl:pb-14 xxxl:pb-15 text-center mx-auto">
                     <div className="flex flex-col items-center justify-center">
                         <div className="font-bold text-white mb-4 xs:mb-5 sm:mb-6 md:mb-7">
                             <Link href="/">
