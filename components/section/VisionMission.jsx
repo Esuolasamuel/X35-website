@@ -19,7 +19,7 @@ export default function VisionMission() {
             flex-1
             rounded-2xl
             bg-linear-to-b from-[#14124A] to-[#0E0C3C]
-            p-8 md:p-10
+            p-8 md:p-12 lg:p-20
           "
         >
           <h3
@@ -53,7 +53,7 @@ export default function VisionMission() {
             flex-1
             rounded-2xl
             bg-linear-to-b from-[#14124A] to-[#0E0C3C]
-            p-8 md:p-10
+            p-8 md:p-12 lg:p-20
           "
         >
           <h3

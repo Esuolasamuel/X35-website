@@ -19,15 +19,15 @@ export default function Footer() {
                             className="w-14 h-14 md:w-16 md:h-16 mx-auto lg:mx-0"
                         />
                     </Link>
-                    <p className="mt-4 flex lg:flex-row text-sm text-white font-body font-medium">
-                        <span className="text-yellow-400 px-0.5">We</span> Design.{" "}
-                        <span className="text-yellow-400 px-0.5">We</span> Build.{" "}
-                        <span className="text-yellow-400 px-0.5">We</span> Deliver.
-                    </p>
+                    <div className="mt-4 flex lg:flex-row text-sm text-white text-start font-body font-medium">
+                        <p><span className="text-yellow-400">We </span> Design.{" "}</p>
+                        <p><span className="text-yellow-400">We </span> Build.{" "}</p>
+                        <p><span className="text-yellow-400">We </span> Deliver.</p>
+                    </div>
                 </div>
                 <div className="flex flex-col items-center lg:items-start">
                     <h4 className="text-white/60 text-sm font-body font-semibold mb-4">Quick Links</h4>
-                    <ul className="space-y-3 text-white text-sm md:text-base">
+                    <ul className="space-y-3 text-white text-sm text-start">
                         <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
                             <Link href="/about">About Us</Link>
                         </li>
@@ -40,7 +40,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="flex flex-col items-center lg:items-start">
-                    <h4 className="text-white/60 text-sm md:text-base font-body font-semibold mb-4">Contact Us</h4>
+                    <h4 className="text-white/60 text-sm text-start font-body font-semibold mb-4">Contact Us</h4>
                     <a href="mailto:hello@xsprojects.com" className="text-white text-sm font-body hover:text-yellow-700 transition-colors">
                         hello@xsprojects.com
                     </a>
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
             <div className="bg-white/60 h-0.1 px-15 sm:px-20 md:px-25 lg:px-30"></div>
             <div className="text-center py-6 md:py-8">
-                <p className="text-white text-xs md:text-sm font-body">© 2025 XS Projects. All Rights Reserved.</p>
+                <p className="text-white text-xs font-body">© 2025 XS Projects. All Rights Reserved.</p>
             </div>
         </footer>
     );
