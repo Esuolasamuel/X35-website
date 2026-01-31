@@ -1,71 +1,45 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
-export default function ImageGrid({ 
-  images = [], 
-  backgroundColor = "bg-white",
-  orders = ["lg:order-1", "lg:order-2"], // Array of order classes for each image
-  widths = ["w-full", "lg:w-[805px]"] // Array of width classes for each image
-}) {
+
+const ImageGrid = (
+  imageA,
+  imageB,
+  reverse = false,
+) => {
   return (
-    <section className={`w-full ${backgroundColor}`}>
-      <div className="p-3.5 sm:p-7.5 md:p-14 lg:p-14">
-        <div className={`
-          grid
-          grid-cols-1
-          lg:grid-cols-2
-          gap-4
-          h-30
-          sm:h-40
-          md:h-50
-          lg:h-60
-          xl:h-70
-          2xl:h-80
-          overflow-hidden
-          rounded-3xl
-        `}>
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`
-                relative
-                group
-                bg-gray-100
-                shadow-sm
-                h-full
-                ${widths[index] || 'w-full'}
-                ${orders[index] || ''}
-              `}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt || "Gallery Image"}
-                fill={true}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="
-                  object-cover
-                  transition-transform
-                  duration-700
-                  ease-in-out
-                  group-hover:scale-110
-                "
-              />
-              
-              <div 
-                className="
-                  absolute 
-                  inset-0 
-                  bg-black/0 
-                  group-hover:bg-black/20 
-                  transition-colors 
-                  duration-500 
-                  pointer-events-none
-                " 
-              />
-            </div>
-          ))}
+    <section className="w-full px-4 md:px-30 py-12 md:py-16">
+      <div
+        className={`
+          flex flex-col md:flex-row
+          gap-3.75
+          ${reverse ? "md:flex-row-reverse" : ""}
+        `}
+      >
+        {/* Smaller Image */}
+        <div className="w-full md:w-[38.6%] aspect-506/582 overflow-hidden rounded-[15px]">
+          <Image
+            src={imageA}
+            alt="Feature detail"
+            loading="lazy"
+            sizes="(min-width: 768px) 40vw, 100vw"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Larger Image */}
+        <div className="w-full md:w-[61.4%] aspect-805/582 overflow-hidden rounded-[15px]">
+          <Image
+            src={imageB}
+            alt="Feature main"
+            loading="lazy"
+            sizes="(min-width: 768px) 60vw, 100vw"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default ImageGrid;
