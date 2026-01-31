@@ -5,7 +5,7 @@ export default function ImageGrid({
   images = [], 
   backgroundColor = "bg-white",
   orders = ["lg:order-1", "lg:order-2"], // Array of order classes for each image
-  widths = ["lg:w-[506px]", "lg:w-[805px]"] // Array of width classes for each image
+  widths = ["w-full", "lg:w-[805px]"] // Array of width classes for each image
 }) {
   return (
     <section className={`w-full ${backgroundColor}`}>
@@ -13,15 +13,14 @@ export default function ImageGrid({
         <div className={`
           grid
           grid-cols-1
-          lg:grid-cols-[1fr_805px]
+          lg:grid-cols-2
           gap-4
           h-30
           sm:h-40
           md:h-50
           lg:h-60
           xl:h-70
-          xxl:h-[320px]
-          xxxl:h-[360px]
+          2xl:h-80
           overflow-hidden
           rounded-3xl
         `}>
@@ -34,7 +33,7 @@ export default function ImageGrid({
                 bg-gray-100
                 shadow-sm
                 h-full
-                ${widths[index] || ''}
+                ${widths[index] || 'w-full'}
                 ${orders[index] || ''}
               `}
             >

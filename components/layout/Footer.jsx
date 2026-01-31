@@ -7,7 +7,7 @@ import instagram from "@/assets/icons/instagram.svg";
 
 export default function Footer() {
     return (
-        <footer className="bg-indigo-700 pt-8 px-8 sm:px-16 md:px-20 lg:px-30 xl:px-30 2xl:px-30 md:pt-16 lg:pt-20 border-t mx-auto">
+        <footer className="bg-indigo-700 pt-8 px-8 sm:px-16 md:px-20 lg:px-30 xl:px-30 2xl:px-30 md:pt-16 lg:pt-20 mx-auto">
             <div className="flex flex-col lg:flex-row items-start justify-evenly gap-8 md:gap-12 lg:gap-16 border-b-[0.5px] border-white/40 pb-8 md:pb-10 lg:pb-12 text-center mx-auto">
                 <div className="flex flex-col items-center lg:items-start">
                     <Link href="/">
@@ -19,7 +19,7 @@ export default function Footer() {
                             className="w-14 h-14 md:w-16 md:h-16 mx-auto lg:mx-0"
                         />
                     </Link>
-                    <p className="mt-4 text-sm md:text-base text-white font-body font-medium">
+                    <p className="mt-4 flex lg:flex-row text-sm md:text-base text-white font-body font-medium">
                         <span className="text-yellow-400">We</span> Design.{" "}
                         <span className="text-yellow-400">We</span> Build.{" "}
                         <span className="text-yellow-400">We</span> Deliver.
@@ -72,6 +72,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="bg-white/60 py-0.5 px-15 sm:px-20 md:px-25 lg:px-30"></div>
             <div className="text-center py-6 md:py-8">
                 <p className="text-white text-xs md:text-sm font-body">© 2025 XS Projects. All Rights Reserved.</p>
             </div>
