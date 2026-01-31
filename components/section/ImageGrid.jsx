@@ -2,11 +2,11 @@ import Image from "next/image";
 import React from "react";
 
 
-const ImageGrid = (
+const ImageGrid = ({
   imageA,
   imageB,
   reverse = false,
-) => {
+}) => {
   return (
     <section className="w-full px-4 md:px-30 py-12 md:py-16">
       <div

@@ -2,7 +2,6 @@ import AboutHero from "@/components/section/AboutHero";
 import WhoWeAre from "@/components/section/WhoWeAre";
 import VisionMission from "@/components/section/VisionMission";
 import Values from "@/components/section/Values";
-import ImageGrid from "@/components/section/ImageGrid";
 
 // Static imports for all images
 import aboutImg1 from "@/assets/images/aboutImageSplit-1.png";
@@ -13,6 +12,7 @@ import aboutImg4 from "@/assets/images/aboutImageSplit-4.png";
 import profileIcon from "@/assets/images/profile.svg";
 import integrityIcon from "@/assets/images/integrity.svg";
 import starIcon from "@/assets/images/star.svg";
+import ImageGrid from "@/components/section/ImageGrid";
 
 export default function AboutPage() {
   return (
