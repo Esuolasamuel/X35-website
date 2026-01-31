@@ -28,6 +28,7 @@ export default function VisionMission() {
               text-[32px]
               leading-[35.2px]
               font-semibold
+              font-heading
               mb-4
             "
           >
@@ -39,6 +40,7 @@ export default function VisionMission() {
               text-white/80
               text-[14px]
               leading-[25.5px]
+              font-body
               max-w-sm
             "
           >
@@ -62,6 +64,7 @@ export default function VisionMission() {
               text-[32px]
               leading-[35.2px]
               font-semibold
+              font-heading
               mb-4
             "
           >
@@ -73,6 +76,7 @@ export default function VisionMission() {
               text-white/80
               text-[14px]
               leading-[25.5px]
+              font-body
               max-w-sm
             "
           >
