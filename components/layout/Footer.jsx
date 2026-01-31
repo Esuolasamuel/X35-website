@@ -7,8 +7,8 @@ import instagram from "@/assets/icons/instagram.svg";
 
 export default function Footer() {
     return (
-        <footer className="bg-indigo-700 pt-8 px-8 sm:px-16 md:px-20 lg:px-30 xl:px-30 2xl:px-30 pt-12 md:pt-16 lg:pt-20 border-t mx-auto">
-            <div className="flex flex-col lg:flex-row items-start justify-center gap-8 md:gap-12 lg:gap-16 border-b-[0.5px] border-white/40 pb-8 md:pb-10 lg:pb-12 text-center mx-auto">
+        <footer className="bg-indigo-700 pt-8 px-8 sm:px-16 md:px-20 lg:px-30 xl:px-30 2xl:px-30 md:pt-16 lg:pt-20 border-t mx-auto">
+            <div className="flex flex-col lg:flex-row items-start justify-evenly gap-8 md:gap-12 lg:gap-16 border-b-[0.5px] border-white/40 pb-8 md:pb-10 lg:pb-12 text-center mx-auto">
                 <div className="flex flex-col items-center lg:items-start">
                     <Link href="/">
                         <Image

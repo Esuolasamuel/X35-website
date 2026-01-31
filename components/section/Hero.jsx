@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero({
   ImageSrc="",
   title ="",
-  height = "h-[25vh] xs:h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] xxl:h-[80vh] xxxl:h-[80vh]",
+  height = "h-[25vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh] xxl:h-[80vh] xxxl:h-[80vh]",
 }) {
   if (!ImageSrc || !title) return null;
 
