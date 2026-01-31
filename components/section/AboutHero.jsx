@@ -4,7 +4,7 @@ import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as nee
 
 export default function AboutHero() {
   return (
-    <div className="w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 mt-16 flex flex-col gap-6 sm:gap-8 bg-white">
+    <div className="w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 mt-16 flex flex-col gap-6 sm:gap-8 bg-white -z-20">
         <h1 className="
           font-heading
           font-bold
@@ -13,7 +13,7 @@ export default function AboutHero() {
           leading-tight sm:leading-16
           tracking-tight sm:tracking-[-0.03em]
           [leading-trim:cap-height]
-          z-40
+          z-20
         ">
           Building trust, vision,<br />
           and lasting{" "}
@@ -25,7 +25,7 @@ export default function AboutHero() {
                 h-26.5 w-66.29 sm:h-16 sm:w-40 md:h-20 md:w-48 lg:h-24 lg:w-60
                 bg-[url(@/assets/icons/Fill-4.svg)]
                 bg-cover bg-no-repeat
-                z-10
+                -z-10
               "
             />
           </span>

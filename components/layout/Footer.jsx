@@ -19,14 +19,14 @@ export default function Footer() {
                             className="w-14 h-14 md:w-16 md:h-16 mx-auto lg:mx-0"
                         />
                     </Link>
-                    <p className="mt-4 flex lg:flex-row text-sm md:text-base text-white font-body font-medium">
-                        <span className="text-yellow-400 pr-0.5">We</span> Design.{" "}
-                        <span className="text-yellow-400 pr-0.5">We</span> Build.{" "}
-                        <span className="text-yellow-400">We</span> Deliver.
+                    <p className="mt-4 flex lg:flex-row text-sm text-white font-body font-medium">
+                        <span className="text-yellow-400 px-0.5">We</span> Design.{" "}
+                        <span className="text-yellow-400 px-0.5">We</span> Build.{" "}
+                        <span className="text-yellow-400 px-0.5">We</span> Deliver.
                     </p>
                 </div>
                 <div className="flex flex-col items-center lg:items-start">
-                    <h4 className="text-white/60 text-sm md:text-base font-body font-semibold mb-4">Quick Links</h4>
+                    <h4 className="text-white/60 text-sm font-body font-semibold mb-4">Quick Links</h4>
                     <ul className="space-y-3 text-white text-sm md:text-base">
                         <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
                             <Link href="/about">About Us</Link>
@@ -41,10 +41,10 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col items-center lg:items-start">
                     <h4 className="text-white/60 text-sm md:text-base font-body font-semibold mb-4">Contact Us</h4>
-                    <a href="mailto:hello@xsprojects.com" className="text-white text-sm md:text-base font-body hover:text-yellow-700 transition-colors">
+                    <a href="mailto:hello@xsprojects.com" className="text-white text-sm font-body hover:text-yellow-700 transition-colors">
                         hello@xsprojects.com
                     </a>
-                    <a href="tel:+2348144694380" className="text-white text-sm md:text-base font-body mt-3 hover:text-yellow-700 transition-colors">
+                    <a href="tel:+2348144694380" className="text-white text-sm font-body mt-3 hover:text-yellow-700 transition-colors">
                         +234 814 469 4380
                     </a>
                 </div>
@@ -72,7 +72,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="bg-white/60 h-0.5 px-15 sm:px-20 md:px-25 lg:px-30"></div>
+            <div className="bg-white/60 h-0.1 px-15 sm:px-20 md:px-25 lg:px-30"></div>
             <div className="text-center py-6 md:py-8">
                 <p className="text-white text-xs md:text-sm font-body">© 2025 XS Projects. All Rights Reserved.</p>
             </div>
