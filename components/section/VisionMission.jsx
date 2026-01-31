@@ -39,7 +39,7 @@ export default function VisionMission() {
               text-white/80
               text-[14px]
               leading-[25.5px]
-              max-w-md
+              max-w-sm
             "
           >
             To democratize architecture and interior within the design and build
@@ -73,7 +73,7 @@ export default function VisionMission() {
               text-white/80
               text-[14px]
               leading-[25.5px]
-              max-w-md
+              max-w-sm
             "
           >
             To mobilize and enable highly creative individuals to design and

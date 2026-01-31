@@ -20,21 +20,21 @@ export default function Footer() {
                         />
                     </Link>
                     <p className="mt-4 flex lg:flex-row text-sm md:text-base text-white font-body font-medium">
-                        <span className="text-yellow-400">We</span> Design.{" "}
-                        <span className="text-yellow-400">We</span> Build.{" "}
+                        <span className="text-yellow-400 pr-0.5">We</span> Design.{" "}
+                        <span className="text-yellow-400 pr-0.5">We</span> Build.{" "}
                         <span className="text-yellow-400">We</span> Deliver.
                     </p>
                 </div>
                 <div className="flex flex-col items-center lg:items-start">
                     <h4 className="text-white/60 text-sm md:text-base font-body font-semibold mb-4">Quick Links</h4>
                     <ul className="space-y-3 text-white text-sm md:text-base">
-                        <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
+                        <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
                             <Link href="/about">About Us</Link>
                         </li>
-                        <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
+                        <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
                             <Link href="/Projects">Our Projects</Link>
                         </li>
-                        <li className="font-body text-yellow-400 hover:text-yellow-700 transition-colors cursor-pointer">
+                        <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
                             <Link href="/#services">Our Services</Link>
                         </li>
                     </ul>
@@ -72,7 +72,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="bg-white/60 py-0.5 px-15 sm:px-20 md:px-25 lg:px-30"></div>
+            <div className="bg-white/60 h-0.5 px-15 sm:px-20 md:px-25 lg:px-30"></div>
             <div className="text-center py-6 md:py-8">
                 <p className="text-white text-xs md:text-sm font-body">© 2025 XS Projects. All Rights Reserved.</p>
             </div>

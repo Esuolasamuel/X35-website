@@ -25,7 +25,7 @@ export default function AboutHero() {
                 h-26.5 w-66.29 sm:h-16 sm:w-40 md:h-20 md:w-48 lg:h-24 lg:w-60
                 bg-[url(@/assets/icons/Fill-4.svg)]
                 bg-cover bg-no-repeat
-                z-30
+                z-10
               "
             />
           </span>
