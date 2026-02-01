@@ -10,7 +10,6 @@ const Meta = ({
     <section
       className={`
         ${backgroundColor}
-        
         min-h-fit
         lg:h-157
         flex
@@ -34,13 +33,13 @@ const Meta = ({
         "
       >
         {/* LEFT CONTENT */}
-        <div className=" my-10 w-full lg:max-w-xl">
+        <div className=" my-10 w-full lg:max-w-xl text-dark-500">
           <h2 className="
             font-heading     
             font-bold
-            text-[32px]
-            md:text-[38px]
-            lg:text-[42px]
+            text-2xl
+            md:text-3xl
+            lg:text-5xl
             leading-tight
             mb-6
             lg:mb-10
@@ -56,8 +55,8 @@ const Meta = ({
                 className="
                   font-body   
                   font-normal
-                  text-[15px]
-                  md:text-[16px]
+                  text-sm
+                  md:text-base
                   lg:text-[17px]
                   leading-[1.7]
                   lg:leading-[1.8]
@@ -73,7 +72,7 @@ const Meta = ({
 
         {/* RIGHT META LIST */}
         <div className="w-full">
-          <ul className=" border-t border-neutral-400/50">
+          <ul className=" border-t border-neutral-400/50 text-dark-500">
             {infoItem.map((info, index) => (
               <li
                 key={index}
@@ -91,7 +90,7 @@ const Meta = ({
                 "
               >
                 <span className="
-                  text-[#1A1A1A]
+                  text-dark-500
                   font-semibold
                   font-body   
                   text-[14px]
@@ -102,7 +101,7 @@ const Meta = ({
                 </span>
 
                 <span className="
-                  text-[#1A1A1A]
+                  text-dark-500
                   font-semibold
                   font-body   
                   text-[14px]

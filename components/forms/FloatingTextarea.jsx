@@ -12,7 +12,7 @@ export function FloatingTextarea({ label, name }) {
           absolute left-4 top-4  text-dark-500text-sm
           transition-all
           peer-focus:top-2 peer-focus:text-xs peer-focus:text-yellow-400
-          peer-valid:top-2 peer-valid:text-xs
+          peer-valid:top-2 peer-valid:text-xs text-dark-500
         "
       >
         {label}

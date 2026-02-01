@@ -12,7 +12,7 @@ const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = "
             {description.map((desc, index) => (
               <p
                 key={index}
-                className={`text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] leading-[1.8] ${textColor} mb-6 sm:mb-8 last:mb-0 font-normal tracking-wide`}
+                className={`text-sm md:text-base lg:text-[17px] leading-[1.8] ${textColor} mb-6 sm:mb-8 last:mb-0 font-normal tracking-wide`}
               >
                 {desc.paragraph}
               </p>
@@ -22,7 +22,7 @@ const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = "
 
         {/* RIGHT IMAGE SECTION */}
         <div className="w-full lg:w-7/12">
-          <div className="relative w-full aspect-4/3 sm:aspect-5/4 md:aspect-3/2 lg:aspect-615/550 rounded-2xl overflow-hidden bg-gray-800">
+          <div className="relative w-full aspect-4/3 sm:aspect-5/4 md:aspect-3/2 lg:aspect-615/550 lg:rounded-2xl overflow-hidden bg-gray-800">
             {ImageSrc && (
               <Image
                 src={ImageSrc}

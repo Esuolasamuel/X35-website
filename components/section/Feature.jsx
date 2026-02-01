@@ -32,7 +32,7 @@ const Feature = ({
           {description.map((desc, index) => (
             <p
               key={index}
-              className={`mb-6 last:mb-0 text-[16px] font-body    font-normal md:text-[17px] leading-relaxed ${textColor} tracking-wide`}
+              className={`mb-6 last:mb-0 text-sm md:text-base lg:text-[17px] font-body font-normal leading-relaxed ${textColor} tracking-wide`}
             >
               {desc.paragraph}
             </p>
@@ -47,7 +47,7 @@ const Feature = ({
               ${aspect}
               max-w-153.75
               mx-auto
-              overflow-hidden rounded-2xl bg-gray-800
+              overflow-hidden lg:rounded-2xl bg-gray-800
             `}
           >
             {ImageSrc && (

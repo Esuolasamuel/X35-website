@@ -23,12 +23,12 @@ const ListFeature = ({
                 <div className={`w-full lg:w-1/2 ${orderL}`}>
                     <div className="">
                         <h3 className={`font-heading  text-4xl mb-4 ${headerColor}`}>{title}</h3>
-                        <p className={`text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                        <p className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                             {description}
                         </p>
                         <ul className='font-body font-normal list-disc ml-5'>
                             {lists.map((l, index) => (
-                                <li key={index} className={`text-[16px] lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                                <li key={index} className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                                     {l.paragraph}
                                 </li>
                             ))}
@@ -43,7 +43,7 @@ const ListFeature = ({
 
                 {/* RIGHT IMAGE SECTION */}
                 <div className={`w-full lg:w-1/2 ${orderR}`}>
-                    <div className={`relative w-full aspect-4/3 ${aspect} rounded-2xl overflow-hidden bg-gray-800 shadow-sm`}>
+                    <div className={`relative w-full aspect-4/3 ${aspect} lg:rounded-2xl overflow-hidden bg-gray-800 shadow-sm`}>
                         {ImageSrc && (
                             <Image
                                 src={ImageSrc}

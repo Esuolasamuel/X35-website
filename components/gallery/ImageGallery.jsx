@@ -9,7 +9,7 @@ export default function ImageGallery({ images = [], backgroundColor = "bg-white"
             <div
               key={index}
               /* Added 'group' for hover tracking and 'shadow-sm' for depth */
-              className={`relative w-full h-64 sm:h-80 md:h-100 lg:h-120 xl:h-145.5 overflow-hidden rounded-2xl group shadow-sm ${
+              className={`relative w-full h-64 sm:h-80 md:h-100 lg:h-120 xl:h-145.5 overflow-hidden lg:rounded-2xl group shadow-sm ${
                 image.colspan ? "md:col-span-2" : ""
               }`}
             >

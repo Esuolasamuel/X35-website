@@ -13,7 +13,7 @@ export default function NotifyModal({ open, onClose }) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-999 flex items-center justify-center">
+    <div className="fixed inset-0 z-999 flex items-center justify-center text-dark-500">
       {/* Backdrop */}
       <div
         onClick={onClose}
@@ -21,7 +21,7 @@ export default function NotifyModal({ open, onClose }) {
       />
 
       {/* Modal */}
-      <div className="relative z-10 w-[92%] max-w-md rounded-2xl bg-white px-6 py-7 shadow-2xl">
+      <div className="relative z-10 w-[92%] max-w-md lg:rounded-2xl bg-white px-6 py-7 shadow-2xl">
         {/* Close */}
         <button
           onClick={onClose}
@@ -38,7 +38,7 @@ export default function NotifyModal({ open, onClose }) {
           Enter your email and we’ll let you know when our product launches.
         </p>
 
-        <form className="space-y-4">
+        <form className="space-y-4 text-dark-500">
           <input
             type="text"
             placeholder="Full name"

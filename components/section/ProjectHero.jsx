@@ -5,14 +5,14 @@ import highlightSvg from "@/assets/images/Fill-4.svg";
 
 const ProjectHero = () => {
   return (
-    <section className=" pt-20 pb-14 text-center bg-white">
+    <section className=" w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 mt-16 text-center bg-white ">
           <h1    
             className="
               font-heading  drop-shadow-lg
               tracking-[-0.01em]
               leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
               text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
-              px-0 py-1
+              px-0 py-1 text-dark-500
             "
             style={{ leadingTrim: 'cap-height' }}
           >

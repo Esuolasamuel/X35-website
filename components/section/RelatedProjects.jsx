@@ -16,13 +16,13 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
 
         {/* HEADER: Responsive layout matching Frame 115 (1).jpg */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 sm:mb-10 md:mb-12 gap-6">
-          <h3 className="font-serif font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] leading-tight text-[#1A1A1A]">
+          <h3 className="font-serif font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-dark-500 leading-tight">
             See more of our Projects
           </h3>
 
           <Link
             href="/Projects"
-            className="px-6 sm:px-8 py-3 border border-[#1A1A1A] rounded-full text-[14px] sm:text-[15px] font-bold hover:bg-[#1A1A1A] hover:text-white transition-colors duration-300"
+            className="px-6 sm:px-8 py-3 border border-[#1A1A1A] rounded-full text-[14px] sm:text-[15px] font-bold text-dark-500 hover:bg-[#1A1A1A] hover:text-white transition-colors duration-300 "
           >
             View all project
           </Link>
@@ -34,7 +34,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
             <Link
               key={project.id}
               href={`/Projects/${project.id}`}
-              className="group relative block w-full aspect-592/350 rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden bg-gray-100"
+              className="group relative block w-full aspect-592/350 lg:rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden bg-gray-100"
             >
               {/* Main Project Image */}
               <Image
@@ -49,7 +49,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
 
               {/* Text Information: Aligned bottom-left per Frame 115 (1).jpg */}
-              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-white">
+              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-dark-500">
                 <h4 className="font-serif font-bold text-[20px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-1">
                   {project.title}
                 </h4>

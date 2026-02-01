@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer className="bg-indigo-700 pt-8 px-8 sm:px-16 md:px-20 lg:px-30 xl:px-30 2xl:px-30 md:pt-16 lg:pt-20 mx-auto">
             <div className="flex flex-col lg:flex-row items-start justify-evenly gap-8 md:gap-12 lg:gap-16 border-b-[0.5px] border-white/40 pb-8 md:pb-10 lg:pb-12 text-center mx-auto">
-                <div className="flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-start">
                     <Link href="/">
                         <Image
                             src={Logo}
@@ -19,13 +19,13 @@ export default function Footer() {
                             className="w-14 h-14 md:w-16 md:h-16 mx-auto lg:mx-0"
                         />
                     </Link>
-                    <div className="mt-4 flex lg:flex-row text-sm text-white text-start font-body font-medium">
+                    <div className="mt-4 flex flex-col lg:flex-row text-sm text-white text-start font-body font-medium">
                         <p><span className="text-yellow-400">We </span> Design.{" "}</p>
                         <p><span className="text-yellow-400">We </span> Build.{" "}</p>
                         <p><span className="text-yellow-400">We </span> Deliver.</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-start">
                     <h4 className="text-white/60 text-sm font-body font-semibold mb-4">Quick Links</h4>
                     <ul className="space-y-3 text-white text-sm text-start">
                         <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
@@ -39,7 +39,7 @@ export default function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className="flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-start">
                     <h4 className="text-white/60 text-sm text-start font-body font-semibold mb-4">Contact Us</h4>
                     <a href="mailto:hello@xsprojects.com" className="text-white text-sm font-body hover:text-yellow-700 transition-colors">
                         hello@xsprojects.com
@@ -48,8 +48,8 @@ export default function Footer() {
                         +234 814 469 4380
                     </a>
                 </div>
-                <div className="flex flex-col items-center lg:items-start">
-                    <h4 className="text-white/60 text-sm md:text-base font-body font-semibold mb-4">Follow Us</h4>
+                <div className="flex items-start">
+                    <h4 className="text-white/60 text-sm font-body font-semibold mb-4">Follow Us</h4>
                     <div className="flex gap-4">
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                             <Image
