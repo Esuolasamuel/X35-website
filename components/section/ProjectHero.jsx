@@ -9,7 +9,7 @@ const ProjectHero = () => {
           <h1    
             className="
               font-heading  drop-shadow-lg
-              tracking-[-0.01em]
+              tracking-[-0.01em] font-bold
               leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
               text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
               px-0 pt-6 text-dark-500

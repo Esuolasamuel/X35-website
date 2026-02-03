@@ -2,39 +2,64 @@ import Image from 'next/image';
 
 const ListFeature = ({
   title, 
-  textColor = " text-dark-500/80",
-  headerColor = " text-dark-500",
+  textColor = "text-black/80", // Changed to white with opacity
+  headerColor = "text-black",     // Changed to solid white
   ImageSrc, 
   description, 
   summary, 
-  backgroundColor = "bg-[#e3f4ef]", 
-  aspect="aspect-615/594", 
-  lists=[], 
-  flex="lg:flex-row", 
-  orderL, 
-  orderR
+  backgroundColor = "bg-[#0B0B1A]", // Deep navy/black from Frame 110
+  aspect = "aspect-[615/594]", 
+  lists = [], 
+  flex = "lg:flex-row", 
+  orderL = "order-1", 
+  orderR = "order-2"
 }) => {
     return (
-        /* Added 'group' to the section to trigger the image zoom */
-        <section className={` ${backgroundColor} group`}>
-            <div className={`p-3.5 sm:p-7.5 md:p-15 lg:p-30 max-w-500 flex flex-col ${flex} items-center gap-14 lg:gap-16 mx-auto`}>
+        <section className={`${backgroundColor} group transition-colors duration-500`}>
+            <div className={`
+                px-6 py-16 
+                sm:px-10 sm:py-20 
+                md:px-16 md:py-24 
+                lg:px-24 lg:py-32 
+                xl:px-40
+                max-w-360 flex flex-col ${flex} items-center gap-12 lg:gap-20 mx-auto
+            `}>
                 
                 {/* LEFT TEXT SECTION */}
                 <div className={`w-full lg:w-1/2 ${orderL}`}>
-                    <div className="">
-                        <h3 className={`font-heading  text-4xl mb-4 ${headerColor}`}>{title}</h3>
-                        <p className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                    <div className="max-w-lg">
+                        <h3 className={`
+                            font-heading font-extrabold 
+                            text-3xl md:text-4xl lg:text-[40px] 
+                            leading-[1.1] mb-6 ${headerColor}
+                        `}>
+                            {title}
+                        </h3>
+                        
+                        <p className={`
+                            text-[15px] md:text-[16px] lg:text-[17px] 
+                            leading-[1.6] font-body ${textColor} 
+                            mb-8 font-normal tracking-wide
+                        `}>
                             {description}
                         </p>
-                        <ul className='font-body font-normal list-disc ml-5'>
+
+                        <ul className='font-body font-normal space-y-4'>
                             {lists.map((l, index) => (
-                                <li key={index} className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                                <li key={index} className={`
+                                    flex items-start text-[15px] md:text-[16px] 
+                                    leading-[1.6] font-body ${textColor} 
+                                    font-normal tracking-wide
+                                `}>
+                                    {/* Pixel-perfect custom bullet point */}
+                                    <span className="mr-3 mt-2.5 h-1 w-1 rounded-full bg-white/60 shrink-0" />
                                     {l.paragraph}
                                 </li>
                             ))}
                         </ul>
+
                         {summary && (
-                            <p className={`mt-8 text-[16px] lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                            <p className={`mt-10 text-[16px] lg:text-[17px] leading-[1.6] font-body ${textColor} font-normal italic opacity-90`}>
                                 {summary}
                             </p>
                         )}
@@ -43,20 +68,24 @@ const ListFeature = ({
 
                 {/* RIGHT IMAGE SECTION */}
                 <div className={`w-full lg:w-1/2 ${orderR}`}>
-                    <div className={`relative w-full aspect-4/3 ${aspect} sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-800 shadow-sm`}>
+                    <div className={`
+                        relative w-full ${aspect} 
+                        rounded-[20px] md:rounded-4xl 
+                        overflow-hidden bg-[#1A1A2E] 
+                        shadow-2xl ring-1 ring-white/10
+                    `}>
                         {ImageSrc && (
                             <Image
                                 src={ImageSrc}
                                 alt={title}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
-                                /* Added transition and group-hover scale */
-                                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                                 priority
                             />
                         )}
-                        {/* Subtle darkening overlay on hover to maintain brand consistency */}
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none" />
+                        {/* Interactive overlay */}
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none" />
                     </div>
                 </div>
 

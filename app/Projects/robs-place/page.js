@@ -73,7 +73,6 @@ export default function RobPlacePage() {
           description="The design direction centered on simplicity, clean lines, improved lighting, and functional layouts. Key interventions included:"
           summary="Every design choice balanced aesthetics with practicality, ensuring the home felt both contemporary and comfortable."
           backgroundColor="bg-[#d1ebe8]"
-          flex="flex-row-reverse"
           aspect="aspect-615/803"
           lists={[
             { paragraph: "Reconfiguring key spaces to enhance movement and flow." },
@@ -89,6 +88,7 @@ export default function RobPlacePage() {
           description="With a structural plan in place, demolition was executed safely and strategically:"
           summary="Every phase followed strict safety and engineering protocols. This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."
           backgroundColor="bg-[#dfc0ab]"
+          flex="flex-row-reverse"
           aspect="aspect-615/722"
           lists={[
             { paragraph: "Only non-structural partitions were removed" },

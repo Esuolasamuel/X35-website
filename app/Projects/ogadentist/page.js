@@ -58,7 +58,7 @@ export default function OgaDentistPage() {
         <ListFeature
           ImageSrc={feature1}
           title="Understanding the Vision"
-          description="From the very beginning, this project was rooted in close collaboration..."
+          description="From the very beginning, this project was rooted in close collaboration. The CEO and his leadership team were deeply involved, offering continuous feedback throughout the design and execution phases. Our goal was to translate their ideas into a built space that expresses:"
           backgroundColor="bg-indigo-700"
           lists={[
             { paragraph: "Patient confidence and comfort" },
@@ -75,7 +75,7 @@ export default function OgaDentistPage() {
           title="Scope of Spaces Designed"
           description="The facility features a wide range of carefully curated spaces, each designed with intention and precision:"
           backgroundColor="bg-[#d1ebe8]"
-          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[615/550] xl:aspect-[615/550] 2xl:aspect-[615/550]"
+          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-aspect-[615/796] lg:aspect-aspect-[615/796] xl:aspect-[615/796] 2xl:aspect-[615/796]"
           lists={[
             { paragraph: "A welcoming reception that immediately sets the tone of professionalism" },
             { paragraph: "A comfortable waiting lounge with zoning that reduces patient anxiety" },
@@ -94,6 +94,8 @@ export default function OgaDentistPage() {
           title="Design Approach"
           description="At every step, our team at X35 focused on merging aesthetics with healthcare-grade functionality:"
           backgroundColor="bg-[#dfc0ab]"
+          orderL = "order-2"
+          orderR = "order-1"
           lists={[
             { paragraph: "Calming colours and textures that promote trust and reduce patient stress" },
             { paragraph: "Cleanable, durable materials that meet strict hygiene requirements" },
