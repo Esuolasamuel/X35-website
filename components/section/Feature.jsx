@@ -7,7 +7,7 @@ const Feature = ({
   ImageSrc,
   description,
   backgroundColor = "bg-[#e3f4ef]",
-  aspect = "aspect-[615/550]",
+  aspect = "aspect-[615/594]",
   flex = "xl:flex-row",
   orderL = "order-1",
   orderR = "order-2",
@@ -25,7 +25,7 @@ const Feature = ({
       >
         {/* LEFT TEXT SECTION */}
         <div className={`w-full xl:w-1/2 ${orderL}`}>
-          <h3 className={`mb-4 text-3xl md:text-4xl font-heading  ${headerColor}`}>
+          <h3 className={`mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading  ${headerColor}`}>
             {title}
           </h3>
 

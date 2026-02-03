@@ -12,7 +12,7 @@ const ProjectHero = () => {
               tracking-[-0.01em]
               leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
               text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
-              px-0 py-1 text-dark-500
+              px-0 pt-6 text-dark-500
             "
             style={{ leadingTrim: 'cap-height' }}
           >
@@ -32,7 +32,7 @@ const ProjectHero = () => {
             Us
           </h1>
 
-      <p className="mt-6 max-w-sm mx-auto font-body text-dark-500">
+      <p className="mt-6 pb-6 max-w-sm mx-auto font-body text-dark-500">
         A bold showcase of our projects transforming ideas into iconic spaces.
       </p>
     </section>

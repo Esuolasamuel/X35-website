@@ -9,7 +9,7 @@ const FullImageSection = ({ ImageSrc, title, backgrounColor ="bg-white" }) => {
           The aspect ratio ensures the height is exactly 796px.
           Rounded corners match the soft aesthetic of Frame 119.jpg.
       */}
-      <div className={`relative w-full aspect-4/3 md:aspect-16/10 lg:aspect-1200/796 overflow-hidden rounded-[40px] shadow-sm ${backgrounColor}`}>
+      <div className={`relative w-full aspect-4/3 md:aspect-16/10 lg:aspect-1200/796 overflow-hidden rounded-2xl shadow-sm ${backgrounColor}`}>
         <Image
           quality={100}
           src={ImageSrc}

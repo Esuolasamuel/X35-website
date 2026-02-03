@@ -8,7 +8,7 @@ const ListFeature = ({
   description, 
   summary, 
   backgroundColor = "bg-[#e3f4ef]", 
-  aspect="aspect-615/550", 
+  aspect="aspect-615/594", 
   lists=[], 
   flex="lg:flex-row", 
   orderL, 
@@ -23,12 +23,12 @@ const ListFeature = ({
                 <div className={`w-full lg:w-1/2 ${orderL}`}>
                     <div className="">
                         <h3 className={`font-heading  text-4xl mb-4 ${headerColor}`}>{title}</h3>
-                        <p className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                        <p className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                             {description}
                         </p>
                         <ul className='font-body font-normal list-disc ml-5'>
                             {lists.map((l, index) => (
-                                <li key={index} className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body    ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
+                                <li key={index} className={`text-sm md:text-base lg:text-[17px] leading-[1.8] font-body ${textColor} mb-4 last:mb-0 font-normal tracking-wide}`}>
                                     {l.paragraph}
                                 </li>
                             ))}

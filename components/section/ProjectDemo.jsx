@@ -56,7 +56,7 @@ export default function ProjectDemo({ projects }) {
             href="/Projects"
             className="
               inline-flex items-center gap-3
-              border rounded-full
+              border hover:border-yellow-400 rounded-full
               sm:pl-0.5 md:pl-1 lg:pl-2 sm:pr-2 md:pr-3 lg:pr-4 sm:py-2 md:py-3 lg:py-4
                text-dark-500
               font-body font-bold sm:text-xs md:text-sm lg:text-base

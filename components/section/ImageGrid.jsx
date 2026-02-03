@@ -8,7 +8,7 @@ const ImageGrid = ({
   reverse = false,
 }) => {
   return (
-    <section className="w-full px-4 md:px-30 py-12 md:py-16">
+    <section className="w-full px-4 md:px-30 py-12 md:py-16 bg-white">
       <div
         className={`
           flex flex-col md:flex-row

@@ -30,11 +30,11 @@ export default function Hero({
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center px-4 md:px-6">
         <span className="relative inline-block">
-          <h1 className="text-white  text-center font-heading  text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-white text-center font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           {title}
         </h1>
         </span>
-        <span className="absolute left-0 -bottom-2 h-[98.6] bg-no-repeat w-full bg-[url(/images/Fill-4.svg)] -z-10" />
+        <span className="absolute left-0 -bottom-2 h-[98.6] bg-no-repeat w-full bg-[url(/images/Fill-4.svg)] -z-10"/>
       </div>
       
     </section>

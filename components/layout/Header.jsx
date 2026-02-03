@@ -51,8 +51,8 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 px-7.5 sm:px-15 md:px-20 lg:px-25 xl:px-30 border border-[#BDBDBD33] transition-all duration-300 ${
-          isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40]"
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 px-7.5 sm:px-15 md:px-20 lg:px-25 xl:px-30 transition-all duration-300 ${
+          isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#BDBDBD33]"
         }`}
       >
         <div className="flex items-center justify-between w-full mx-auto">

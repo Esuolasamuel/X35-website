@@ -17,7 +17,7 @@ import bg12 from "@/assets/images/bg-12.jpg";
 export default function LandingHero() {
   return (
     <BackgroundCarousel
-      interval={3000}
+      interval={4000}
       images={[
         bg1,
         bg2,

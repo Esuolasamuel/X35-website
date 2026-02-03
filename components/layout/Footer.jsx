@@ -25,7 +25,7 @@ export default function Footer() {
                         <p><span className="text-yellow-400">We </span> Deliver.</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start space-y-3">
                     <h4 className="text-white/60 text-sm font-body font-semibold mb-4">Quick Links</h4>
                     <ul className="space-y-3 text-white text-sm text-start">
                         <li className="font-body text-white hover:text-yellow-700 transition-colors cursor-pointer">
@@ -39,7 +39,7 @@ export default function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start space-y-3">
                     <h4 className="text-white/60 text-sm text-start font-body font-semibold mb-4">Contact Us</h4>
                     <a href="mailto:hello@xsprojects.com" className="text-white text-sm font-body hover:text-yellow-700 transition-colors">
                         hello@xsprojects.com
@@ -48,9 +48,9 @@ export default function Footer() {
                         +234 814 469 4380
                     </a>
                 </div>
-                <div className="flex items-start">
+                <div className="flex flex-col space-y-3 items-start">
                     <h4 className="text-white/60 text-sm font-body font-semibold mb-4">Follow Us</h4>
-                    <div className="flex gap-4">
+                    <div className="flex space-y-3 gap-4">
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                             <Image
                                 src={linkedin}

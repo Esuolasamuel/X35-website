@@ -4,7 +4,7 @@ import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as nee
 
 export default function AboutHero() {
   return (
-    <div className="w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 mt-16 flex flex-col gap-6 sm:gap-8 bg-white -z-20">
+    <div className="w-full mt-16 flex flex-col py- bg-white -z-20">
         <h1 className="
           font-heading
           font-bold
@@ -14,7 +14,7 @@ export default function AboutHero() {
           leading-tight sm:leading-16
           tracking-tight sm:tracking-[-0.03em]
           [leading-trim:cap-height]
-          z-20
+          z-20 pt-6
         ">
           Building trust, vision,<br />
           and lasting{" "}
@@ -40,6 +40,7 @@ export default function AboutHero() {
           leading-relaxed sm:leading-[28.5px]
           tracking-tight sm:tracking-[-0.03em]
           [leading-trim:cap-height] text-dark-500
+          pb-6
         ">
           At X35 Projects, we bring ideas to life with<br />
           precision, purpose, and partnership.

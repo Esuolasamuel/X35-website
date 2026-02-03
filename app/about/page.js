@@ -4,10 +4,10 @@ import VisionMission from "@/components/section/VisionMission";
 import Values from "@/components/section/Values";
 
 // Static imports for all images
-import aboutImg1 from "@/assets/images/aboutImageSplit-1.png";
-import aboutImg2 from "@/assets/images/aboutImageSplit-2.png";
-import aboutImg3 from "@/assets/images/aboutImageSplit-3.png";
-import aboutImg4 from "@/assets/images/aboutImageSplit-4.png";
+import aboutImg2 from "@/assets/images/aboutImageSplit-1.png";
+import aboutImg1 from "@/assets/images/aboutImageSplit-2.png";
+import aboutImg4 from "@/assets/images/aboutImageSplit-3.png";
+import aboutImg3 from "@/assets/images/aboutImageSplit-4.png";
 
 import profileIcon from "@/assets/images/profile.svg";
 import integrityIcon from "@/assets/images/integrity.svg";

@@ -68,7 +68,7 @@ export default function thebrookPage() {
             { heading: "Typology", value: "Commercial" },
             { heading: "Sustainability Features", value: "Solar Design and Power Energy Solution" },
           ]}
-          backgroundColor="bg-[#e5f1e7]"
+          backgroundColor="bg-[#E9F3E9]"
         />
       
         <FullImageSection ImageSrc={brookFull1} title="brook interior" />
@@ -93,7 +93,7 @@ export default function thebrookPage() {
             },
           ]}
           title="Unified Workspace Design Enhancing Collaboration, Productivity, and Brand Identity for The Brook Finance"
-          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[615/550] xl:aspect-[615/550] 2xl:aspect-[615/550]"
+          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[615/910] xl:aspect-[615/910] 2xl:aspect-[615/910]"
           height="910"
           backgroundColor="bg-indigo-700"
           textColor = "text-white/80"
@@ -126,8 +126,8 @@ export default function thebrookPage() {
           backgroundColor="bg-[#EAF1FF]"
           images={[
             { ImageSrc: brookSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
-            { ImageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-722/582", colspan: "col-span-2" },
-            { ImageSrc: brookSplit7, alt: "Interior 7", aspect: "aspect-722/582", colspan: "col-span-2" },
+            { ImageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-732/582", colspan: "col-span-2" },
+            { ImageSrc: brookSplit7, alt: "Interior 7", aspect: "aspect-732/582", colspan: "col-span-2" },
             { ImageSrc: brookSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
           ]}
         />
