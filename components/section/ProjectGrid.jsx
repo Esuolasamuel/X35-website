@@ -78,7 +78,7 @@ const ProjectGrid = () => {
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
 
               {/* Text */}
-              <div className="absolute bottom-6 left-6  z-10">
+              <div className="absolute bottom-12 left-6  z-10">
                 <h3 className="text-2xl text-white font-bold">
                   {p.name}
                 </h3>
