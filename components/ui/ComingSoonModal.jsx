@@ -14,7 +14,7 @@ export default function ComingSoonModal({
     <div className="fixed inset-0 z-90 flex  text-dark-500 items-center justify-center bg-dark-500/60 backdrop-blur-sm px-4">
       <div
         className="
-          relative w-full max-w-md lg:rounded-2xl bg-white p-8 shadow-2xl
+          relative w-full max-w-md sm:rounded-lg md:rounded-xl lg:rounded-2xl bg-white p-8 shadow-2xl
           animate-in slide-in-from-right-6 fade-in duration-300
         "
       >

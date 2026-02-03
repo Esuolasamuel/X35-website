@@ -1,4 +1,5 @@
 import React from "react";
+import WhatsAppWidget from "./WhatsAppWidget";
 
 const Meta = ({
   title,
@@ -116,6 +117,7 @@ const Meta = ({
           </ul>
         </div>
       </div>
+      <WhatsAppWidget />
     </section>
   );
 };

@@ -17,7 +17,7 @@ export default function VisionMission() {
         <div
           className="
             flex-1
-            lg:rounded-2xl
+            sm:rounded-lg md:rounded-xl lg:rounded-2xl
             bg-linear-to-b from-[#14124A] to-[#0E0C3C]
             p-8 md:p-12 lg:p-20
           "
@@ -53,7 +53,7 @@ export default function VisionMission() {
         <div
           className="
             flex-1
-            lg:rounded-2xl
+            sm:rounded-lg md:rounded-xl lg:rounded-2xl
             bg-linear-to-b from-[#14124A] to-[#0E0C3C]
             p-8 md:p-12 lg:p-20
           "

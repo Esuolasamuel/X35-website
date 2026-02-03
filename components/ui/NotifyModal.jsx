@@ -21,7 +21,7 @@ export default function NotifyModal({ open, onClose }) {
       />
 
       {/* Modal */}
-      <div className="relative z-10 w-[92%] max-w-md lg:rounded-2xl bg-white px-6 py-7 shadow-2xl">
+      <div className="relative z-10 w-[92%] max-w-md sm:rounded-lg md:rounded-xl lg:rounded-2xl bg-white px-6 py-7 shadow-2xl">
         {/* Close */}
         <button
           onClick={onClose}

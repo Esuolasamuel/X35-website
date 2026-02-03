@@ -1,47 +1,119 @@
 "use client";
 
-import { useState } from "react";
-import ContactForm from "../forms/ContactForm";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import ContactForm from "../forms/ContactForm";
 
-export default function CTA({title, text, paragraph, id, align="center", width=""}) {
-    const [isContactOpen, setIsContactOpen] = useState(false);
+export default function CTA({ title, text, paragraph, id, align = "center", width = "4xl" }) {
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
-    return (
-        <>
-            <section id={`${id ? id : ''}`} className="relative bg-[url(@/assets/images/image-9.png)] w-full min-h-85.75 sm:min-h-90 md:min-h-95 lg:min-h-100 xl:min-h-105 2xl:min-h-110 z-20 text-dark-500">
-                <div className="absolute inset-0 bg-[#D1D1E4] z-10 opacity-90"></div>
-                <div className={`relative flex flex-col items-center justify-center max-w-${width} z-30 h-full p-15 sm:p-20 md:p-25 lg:p-30 xl:p-30 2xl:p-30 text-${align} mx-auto`}>
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-6xl leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 font-heading font-bold mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14">
-                        {title}
-                    </h2>
-                    {text && <button
-                    onClick={() => setIsContactOpen(true)}
-                    className="bg-yellow-500 hover:bg-yellow-700 px-6 sm:px-7 md:px-8 py-2 sm:py-3 rounded-full font-body cursor-pointer font-medium text-dark-500">{text} </button>}
-                        {paragraph && <p
-                   className={`text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed sm:leading-loose md:leading-relaxed lg:leading-loose xl:leading-relaxed 2xl:leading-loose text-dark-500 mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14 last:mb-0 font-body text-dark font-normal tracking-wide`}
-                   >
-                    {paragraph}
-                  </p>}
-                </div>
-            </section>
-                  {/* --- CONTACT FORM MODAL --- */}
-                  {isContactOpen && (
-                    <div className="fixed inset-0 z-90 flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm">
-                      <div className="relative w-full max-w-md bg-white lg:rounded-2xl p-0 md:p-8 shadow-2xl ">
-                        <button
-                          onClick={() => setIsContactOpen(false)}
-                          className="absolute top-4 right-4 text-dark-500 hover:text-dark-500"
-                        >
-                          <X size={24} />
-                        </button>
-                        <h2 className="text-2xl font-bold mb-6 text-dark-500">Contact Us</h2>
-            
-                        {/* Pass handleFormSuccess to the form */}
-                        <ContactForm onSuccess={handleFormSuccess} />
-                      </div>
-                    </div>
-                  )}
-        </>
-    );
+  useEffect(() => {
+    if (isContactOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+  }, [isContactOpen]);
+
+  const handleFormSuccess = () => {
+    setIsContactOpen(false);
+  };
+
+  const alignmentMap = {
+    left: "text-left items-start mx-0",
+    center: "text-center items-center mx-auto",
+    right: "text-right items-end mx-0 ml-auto",
+  };
+
+  const widthMap = {
+    "xl": "max-w-[1200px]",
+    "2xl": "max-w-[1400px]",
+    "4xl": "max-w-[800px]", 
+    "full": "max-w-full",
+  };
+
+  return (
+    <>
+      <section
+        id={id}
+        className={`relative w-full overflow-hidden bg-[#D1D1E4] 
+          bg-[url('/assets/images/image-9.svg')] bg-blend-multiply bg-center bg-cover
+          flex items-center justify-center
+          min-h-100
+          min-[576px]:min-h-112.5
+          min-[768px]:min-h-125
+          min-[992px]:min-h-141.75
+          min-[1200px]:min-h-150`}
+      >
+        <div className={`relative z-20 px-6 py-12 flex flex-col transition-all duration-300
+          ${alignmentMap[align] || alignmentMap.center} 
+          ${widthMap[width] || widthMap['4xl']}`}
+        >
+          <h2 className={`font-heading font-extrabold text-[#1A1A1A] leading-[1.1] mb-6
+            text-[2.2rem]
+            min-[375px]:text-[2.5rem]
+            min-[576px]:text-[3rem]
+            min-[768px]:text-[3.5rem]
+            min-[992px]:text-[4rem]
+            min-[1200px]:text-[4.5rem]
+            min-[1400px]:text-[5rem]`}
+          >
+            {title} 
+            <span className="relative inline-block ml-2 whitespace-nowrap">
+              x35ied?
+              <svg className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] pointer-events-none" viewBox="0 0 200 100" fill="none">
+                <path 
+                  d="M20,40 C20,10 180,5 190,40 C195,80 30,95 15,65 C10,45 60,25 150,30" 
+                  stroke="#FFD700" 
+                  strokeWidth="4" 
+                  strokeLinecap="round" 
+                  className="animate-draw"
+                />
+              </svg>
+            </span>
+          </h2>
+
+          {paragraph && (
+            <p className="font-body font-medium text-[#1A1A1A]/70 mb-8 max-w-2xl text-base sm:text-lg lg:text-xl">
+              {paragraph}
+            </p>
+          )}
+
+          {text && (
+            <button
+              onClick={() => setIsContactOpen(true)}
+              className="bg-[#FFD700] hover:bg-[#f2cc00] hover:scale-105 active:scale-95 transition-all duration-200 px-10 py-4 rounded-full font-bold text-black text-sm uppercase tracking-wider shadow-lg shadow-yellow-500/10"
+            >
+              {text}
+            </button>
+          )}
+        </div>
+      </section>
+
+      {isContactOpen && (
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity">
+          <div className="relative w-full max-w-md bg-white rounded-3xl p-8 shadow-2xl animate-in fade-in zoom-in duration-300">
+            <button
+              onClick={() => setIsContactOpen(false)}
+              className="absolute top-5 right-5 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X size={20} />
+            </button>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Contact Us</h2>
+            <ContactForm onSuccess={handleFormSuccess} />
+          </div>
+        </div>
+      )}
+
+      {/* Global CSS for the animation to avoid styled-jsx parsing issues in Turbopack */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes draw {
+          from { stroke-dashoffset: 1000; stroke-dasharray: 0 1000; }
+          to { stroke-dashoffset: 0; stroke-dasharray: 1000 1000; }
+        }
+        .animate-draw {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: draw 1.5s ease-out forwards;
+        }
+      `}} />
+    </>
+  );
 }

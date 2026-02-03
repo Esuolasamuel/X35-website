@@ -3,11 +3,12 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import WhatsAppWidget from "./WhatsAppWidget";
 
 
 /* ---------------------------------------
    LCP-FIRST HERO
---------------------------------------- */
+ --------------------------------------- */
 
 export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   const [index, setIndex] = useState(0);
@@ -45,7 +46,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
     <section className="relative min-h-[50vh] sm:min-h-[55vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-210.5 2xl:min-h-210.5 w-screen overflow-hidden" style={{ contain: "paint layout size" }}>
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
-      -------------------------------- */}
+       -------------------------------- */}
       <div className="absolute inset-0 z-0">
         <Image
           src={images[0]}
@@ -60,7 +61,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
 
       {/* --------------------------------
          NON-LCP IMAGES (LAZY)
-      -------------------------------- */}
+       -------------------------------- */}
       {ready &&
         images.slice(1).map((img, i) => {
           const slideIndex = i + 1;
@@ -98,21 +99,21 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
             className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Previous slide"
           >
-            <ChevronLeft size={24} className="text-white" />
+            <ChevronLeft size={50} className="text-white" />
           </button>
           <button
             onClick={nextSlide}
             className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Next slide"
           >
-            <ChevronRight size={24} className="text-white" />
+            <ChevronRight size={50} className="text-white" />
           </button>
         </>
       )}
 
       {/* --------------------------------
            HERO CONTENT (IMMEDIATE)
-        -------------------------------- */}
+       -------------------------------- */}
       <div className="absolute z-20 bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-24 2xl:bottom-28 left-3 sm:left-6 md:left-12 lg:left-16 xl:left-20 2xl:left-30 ">
         <div className="text-white text-left">
           <h1
@@ -120,6 +121,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
               font-heading  drop-shadow-lg
               tracking-[-0.01em]
               leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
+              font-bold
               text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
               px-0 py-1
             "
@@ -143,9 +145,8 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
           </h1>
         </div>
       </div>
+      <WhatsAppWidget />
     </section>
   );
-  
+   
 }
-
-

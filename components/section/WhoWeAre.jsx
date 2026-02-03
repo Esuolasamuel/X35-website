@@ -1,4 +1,5 @@
 import Container from "./Container";
+import WhatsAppWidget from "./WhatsAppWidget";
 
 export default function WhoWeAre() {
     return (
@@ -15,6 +16,7 @@ export default function WhoWeAre() {
                     </div>
                 </div>
             </Container>
+            <WhatsAppWidget />
         </section>
     );
 }

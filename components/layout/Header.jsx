@@ -125,7 +125,7 @@ export default function Header() {
       {/* --- CONTACT FORM MODAL --- */}
       {isContactOpen && (
         <div className="fixed inset-0 z-90 flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm text-dark-500">
-          <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl xxl:max-w-4xl xxxl:max-w-5xl bg-white lg:rounded-2xl p-0 md:p-6 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 shadow-2xl">
+          <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl xxl:max-w-4xl xxxl:max-w-5xl bg-white sm:rounded-lg md:rounded-xl lg:rounded-2xl p-0 md:p-6 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}
               className="absolute top-3  sm:top-5 md:top-6 lg:top-7 xl:top-8 xxl:top-9 xxxl:top-10 right-3  sm:right-5 md:right-6 lg:right-7 xl:right-8 xxl:right-9 xxxl:right-10 text-dark-500 hover:text-dark-500"

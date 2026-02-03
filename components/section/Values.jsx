@@ -29,6 +29,6 @@ export default function Values({ values }) {
           ))}
         </div>
       </Container>
-    </section>
+    </section> 
   );
 }

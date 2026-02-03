@@ -43,7 +43,7 @@ const ListFeature = ({
 
                 {/* RIGHT IMAGE SECTION */}
                 <div className={`w-full lg:w-1/2 ${orderR}`}>
-                    <div className={`relative w-full aspect-4/3 ${aspect} lg:rounded-2xl overflow-hidden bg-gray-800 shadow-sm`}>
+                    <div className={`relative w-full aspect-4/3 ${aspect} sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-800 shadow-sm`}>
                         {ImageSrc && (
                             <Image
                                 src={ImageSrc}

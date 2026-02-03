@@ -47,7 +47,7 @@ const Feature = ({
               ${aspect}
               max-w-153.75
               mx-auto
-              overflow-hidden lg:rounded-2xl bg-gray-800
+              overflow-hidden sm:rounded-lg md:rounded-xl lg:rounded-2xl bg-gray-800
             `}
           >
             {ImageSrc && (
