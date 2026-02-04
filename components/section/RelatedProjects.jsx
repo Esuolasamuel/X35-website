@@ -46,7 +46,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
               />
 
               {/* Gradient Overlay for Text Readability: Matches the dark bottom in screenshot */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-linear-to-t from-white/80 via-white/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
 
               {/* Text Information: Aligned bottom-left per Frame 115 (1).jpg */}
               <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-dark-500">
