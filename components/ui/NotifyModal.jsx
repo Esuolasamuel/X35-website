@@ -6,56 +6,62 @@ import { useEffect } from "react";
 export default function NotifyModal({ open, onClose }) {
   // Lock scroll when modal is open
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "auto";
-    return () => (document.body.style.overflow = "auto");
+    if (typeof window !== "undefined") {
+      document.body.style.overflow = open ? "hidden" : "auto";
+    }
+    return () => {
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "auto";
+      }
+    };
   }, [open]);
 
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-999 flex items-center justify-center text-dark-500">
-      {/* Backdrop */}
+    <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
+      {/* Backdrop - Lighter gray as seen in the image background */}
       <div
         onClick={onClose}
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#E5E7EB]/80 backdrop-blur-[2px]"
       />
 
-      {/* Modal */}
-      <div className="relative z-10 w-[92%] max-w-md sm:rounded-lg md:rounded-xl lg:rounded-2xl bg-white px-6 py-7 shadow-2xl">
-        {/* Close */}
+      {/* Modal Container */}
+      <div className="relative z-10 w-full max-w-[580px] rounded-[32px] bg-white px-8 py-12 md:px-16 md:py-16 shadow-xl animate-in fade-in zoom-in-95 duration-200">
+        
+        {/* Close Button - Positioned exactly like the 'X' in the image */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4  text-dark-500hover: text-dark-500/80"
+          className="absolute right-8 top-8 text-[#0F172A] hover:opacity-60 transition-opacity"
         >
-          <X size={20} />
+          <X size={24} strokeWidth={2.5} />
         </button>
 
-        {/* Content */}
-        <h2 className="text-center text-2xl font-bold  text-dark-500 mb-2">
-          Be the First to Know
-        </h2>
-        <p className="text-center text-sm  text-dark-500mb-6">
-          Enter your email and we’ll let you know when our product launches.
-        </p>
+        {/* Header Section */}
+        <div className="text-center mb-10">
+          <h2 className="text-[32px] md:text-[42px] font-black text-[#111827] leading-tight tracking-tight mb-4">
+            Be the First to Know
+          </h2>
+          <p className="text-[#111827] text-lg md:text-xl leading-relaxed max-w-105 mx-auto opacity-90">
+            Enter your email and we’ll let you know when our product launches.
+          </p>
+        </div>
 
-        <form className="space-y-4 text-dark-500">
-          <input
-            type="text"
-            placeholder="Full name"
-            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          />
-
-          <input
-            type="email"
-            placeholder="Email address"
-            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm   text-dark-500 focus:outline-none focus:ring-2 focus:ring-yellow-5        00"
-          />
+        {/* Form Section */}
+        <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Full name"
+              className="w-full rounded-xl border border-gray-300 bg-transparent px-6 py-5 text-xl text-[#111827] placeholder:text-[#111827] focus:outline-none focus:ring-2 focus:ring-yellow-400/50 transition-all"
+            />
+          </div>
 
           <button
             type="submit"
-            className="w-full rounded-full bg-yellow-400 py-3 font-semibold  text-dark-500transition hover:bg-[#FFD700]"
+            className="w-full rounded-full bg-[#FFD700] py-6 text-xl font-bold text-[#111827] transition-all hover:brightness-105 active:scale-[0.98]"
           >
-            Notify Me
+            Notify me
           </button>
         </form>
       </div>

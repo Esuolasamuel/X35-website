@@ -1,46 +1,60 @@
 "use client";
 
 import { X } from "lucide-react";
+import Image from "next/image";
+import partypopper from "@/assets/icons/Party-Popper";
 
-
-export default function ComingSoonModal({
-  isOpen,
-  onClose,
-  onNotify,
-}) {
+export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-90 flex  text-dark-500 items-center justify-center bg-dark-500/60 backdrop-blur-sm px-4">
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/20 backdrop-blur-sm px-4">
       <div
         className="
-          relative w-full max-w-md sm:rounded-lg md:rounded-xl lg:rounded-2xl bg-white p-8 shadow-2xl
-          animate-in slide-in-from-right-6 fade-in duration-300
+          relative w-full max-w-125 rounded-4xl bg-white p-10 md:p-14 shadow-xl
+          animate-in fade-in zoom-in-95 duration-300
         "
       >
+        {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4  text-dark-500hover: text-dark-500/80"
+          className="absolute right-8 top-8 text-[#0F172A] hover:opacity-70 transition-opacity"
         >
-          <X size={22} />
+          <X size={24} strokeWidth={2.5} />
         </button>
 
-        <div className="text-center space-y-4">
-          <div className="text-5xl">🎉</div>
-          <h2 className="text-2xl  text-dark-500 font-bold">Coming Soon</h2>
-          <p className=" text-dark-500">
-            We’re crafting something exciting. Be the first to know when it launches.
+        <div className="flex flex-col items-center text-center">
+          {/* Party Popper Icon */}
+          <div className="mb-6">
+            <Image
+              src={partypopper}
+              alt="Party Popper"
+              width={80}
+              height={80}
+              className="w-20 h-20 md:w-24 md:h-24"
+            />
+          </div>
+
+          {/* Header */}
+          <h2 className="text-[28px] md:text-[32px] leading-tight text-[#0F172A] font-black tracking-tight mb-4">
+            Coming Soon
+          </h2>
+          
+          {/* Subtext */}
+          <p className="text-[#0F172A] text-lg md:text-xl leading-[1.6] max-w-95 mb-10 opacity-90">
+            We’re crafting something exciting. Join our community to be first to know when it launches.
           </p>
 
+          {/* Action Button */}
           <button
             onClick={onNotify}
             className="
-              mt-6 w-full rounded-full bg-yellow-400 py-4
-              font-semibold  text-dark-500
-              hover:bg-[#FFD700] transition
+              w-full rounded-full bg-[#FFD700] py-5
+              text-lg font-bold text-[#0F172A]
+              hover:brightness-95 transition-all active:scale-[0.98]
             "
           >
-            Notify me
+            Join now
           </button>
         </div>
       </div>
