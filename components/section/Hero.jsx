@@ -1,27 +1,26 @@
 import Image from "next/image";
 
 export default function Hero({
-  imageSrc = "", // Ensure this matches the prop name you pass in
+  imageSrc = "",
   title = "",
 }) {
-  // Debugging: check your console to see if the props are actually arriving
-  if (!imageSrc || !title) {
-    console.warn("Hero Component: Missing imageSrc or title");
-    return null;
-  }
+  const heroImageSrc = imageSrc || "/images/hero-placeholder.jpg";
+  const heroTitle = title || "X35 Projects";
 
   return (
     <section
-      aria-label={title}
-      /* FIX: 'block' ensures it takes up width. 
-         FIX: 'aspect-[1440/668]' only works if width is 100%.
+      aria-label={heroTitle}
+      /* STYLING LOGIC:
+         - aspect-[1440/668]: Maintains your specific design ratio.
+         - min-h: Prevents the hero from becoming a tiny sliver on small screens.
+         - 375px (default): starts at 300px height.
       */
-      className="relative block w-full aspect-1440/668 min-h-75 overflow-hidden"
+      className="relative block w-full aspect-1440/668 min-h-75 sm:min-h-112.5 md:min-h-137.5 lg:min-h-167 overflow-hidden"
     >
       {/* Background Image */}
       <Image
-        src={imageSrc}
-        alt={title}
+        src={heroImageSrc}
+        alt={heroTitle}
         fill
         priority
         sizes="100vw"
@@ -33,16 +32,17 @@ export default function Hero({
 
       {/* Content Container */}
       <div className="flex h-full w-full items-center justify-center px-4 md:px-6">
-        <div className="relative text-center">
-          <h1 className="relative z-10 text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-            {title}
+        <div className="relative text-center max-w-[90%] md:max-w-4xl">
+          <h1 className="relative z-10 text-white font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+            {heroTitle}
           </h1>
           
-          {/* FIX: 'h-[98.6px]' needs units. 
-             'bg-contain' ensures the SVG shows up without being cut off.
+          {/* DECORATIVE SVG (Yellow Highlight):
+              - h-[40px] for mobile (375px)
+              - h-[98.6px] for desktop (lg)
           */}
           <span 
-            className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-full h-15 md:h-24.5 bg-no-repeat bg-contain bg-center -z-10"
+            className="absolute left-1/2 -translate-x-1/2 -bottom-2 md:-bottom-4 block w-full h-10 sm:h-15 md:h-21.25 lg:h-[98.6px] bg-no-repeat bg-contain bg-center -z-10"
             style={{ backgroundImage: "url('/images/Fill-4.svg')" }}
           />
         </div>
