@@ -88,7 +88,7 @@ export default function RobPlacePage() {
           description="With a structural plan in place, demolition was executed safely and strategically:"
           summary="Every phase followed strict safety and engineering protocols. This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."
           backgroundColor="bg-[#dfc0ab]"
-          flex="flex-row-reverse"
+          flex="lg:flex-row-reverse"
           aspect="aspect-615/722"
           lists={[
             { paragraph: "Only non-structural partitions were removed" },
