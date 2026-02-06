@@ -4,7 +4,7 @@ export default function Hero({
   imageSrc = "",
   title = "",
 }) {
-  const heroImageSrc = imageSrc || "/images/hero-placeholder.jpg";
+  const heroimageSrc = imageSrc || "/images/hero-placeholder.jpg";
   const heroTitle = title || "X35 Projects";
 
   return (
@@ -19,7 +19,7 @@ export default function Hero({
     >
       {/* Background Image */}
       <Image
-        src={heroImageSrc}
+        src={heroimageSrc}
         alt={heroTitle}
         fill
         priority
@@ -33,7 +33,7 @@ export default function Hero({
       {/* Content Container */}
       <div className="flex h-full w-full items-center justify-center px-4 md:px-6">
         <div className="relative text-center max-w-[90%] md:max-w-4xl">
-          <h1 className="relative z-10 text-white font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+          <h1 className="relative z-10 text-white font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
             {heroTitle}
           </h1>
           

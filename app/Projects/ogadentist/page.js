@@ -37,7 +37,7 @@ export default function OgaDentistPage() {
 
   return (
     <>
-      <Hero ImageSrc={heroImg} title="Oga Dentist" height="h-[90vh]" />
+      <Hero imageSrc={heroImg} title="Oga Dentist" height="h-[90vh]" />
         <Meta
           title="Redefining Patient-Centered Dentistry with Oga Dentist"
           description={[
@@ -54,9 +54,9 @@ export default function OgaDentistPage() {
           ]}
           backgroundColor="bg-[#EAF1FF]"
         />
-        <FullImageSection ImageSrc={full1} title="ogadentist interior" />
+        <FullImageSection imageSrc={full1} title="ogadentist interior" />
         <ListFeature
-          ImageSrc={feature1}
+          imageSrc={feature1}
           title="Understanding the Vision"
           description="From the very beginning, this project was rooted in close collaboration. The CEO and his leadership team were deeply involved, offering continuous feedback throughout the design and execution phases. Our goal was to translate their ideas into a built space that expresses:"
           backgroundColor="bg-indigo-700"
@@ -69,9 +69,9 @@ export default function OgaDentistPage() {
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <FullImageSection ImageSrc={full2} title="ogadentist interior" />
+        <FullImageSection imageSrc={full2} title="ogadentist interior" />
         <ListFeature
-          ImageSrc={feature2}
+          imageSrc={feature2}
           title="Scope of Spaces Designed"
           description="The facility features a wide range of carefully curated spaces, each designed with intention and precision:"
           backgroundColor="bg-[#d1ebe8]"
@@ -88,9 +88,9 @@ export default function OgaDentistPage() {
             { paragraph: "Modern, hygienic restrooms designed for accessibility and durability" },
           ]}
         />
-        <FullImageSection ImageSrc={full3} title="ogadentist interior" />
+        <FullImageSection imageSrc={full3} title="ogadentist interior" />
         <ListFeature
-          ImageSrc={feature3}
+          imageSrc={feature3}
           title="Design Approach"
           description="At every step, our team at X35 focused on merging aesthetics with healthcare-grade functionality:"
           backgroundColor="bg-[#dfc0ab]"
@@ -104,9 +104,9 @@ export default function OgaDentistPage() {
             { paragraph: "Lighting strategies that create clarity, focus, and warmth" },
           ]}
         />
-        <FullImageSection ImageSrc={full4} title="ogadentist interior" />
+        <FullImageSection imageSrc={full4} title="ogadentist interior" />
         <ListFeature
-          ImageSrc={feature4}
+          imageSrc={feature4}
           title="Execution Excellence"
           description="Throughout the project, we worked closely with the Oga Dentist team—reviewing concepts, refining details, and ensuring that every decision aligned with their expectations."
           backgroundColor="bg-[#e3cede]"

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const MiniHero = ({ title, ImageSrc, description }) => {
+const MiniHero = ({ title, imageSrc, description }) => {
     return (
         /* Added 'group' to trigger the hover effect for the whole section */
         <section className="bg-[#E3CEDE] group">
@@ -20,7 +20,7 @@ const MiniHero = ({ title, ImageSrc, description }) => {
                 <div className="w-full">
                     <div className="relative w-full aspect-1200/700 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl bg-gray-200">
                         <Image
-                            src={ImageSrc}
+                            src={imageSrc}
                             alt={title}
                             fill
                             priority

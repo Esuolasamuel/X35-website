@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = " text-dark-500/80"}) => {
+const Narrative = ({description, imageSrc, title, backgroundColor, textColor = " text-dark-500/80"}) => {
   return (
     /* Added 'group' to trigger the hover state for the entire section */
     <section className={` ${backgroundColor} group`}>
@@ -23,9 +23,9 @@ const Narrative = ({description, ImageSrc, title, backgroundColor, textColor = "
         {/* RIGHT IMAGE SECTION */}
         <div className="w-full lg:w-7/12">
           <div className="relative w-full aspect-615/594 rounded-sm md:rounded-md lg:rounded-lg shadow-2xl  overflow-hidden bg-gray-800">
-            {ImageSrc && (
+            {imageSrc && (
               <Image
-                src={ImageSrc}
+                src={imageSrc}
                 alt={title}
                 fill
                 sizes="(max-width: 576px) 100vw, (max-width: 768px) 100vw, (max-width: 992px) 100vw, (max-width: 1200px) 100vw, (max-width: 1400px) 100vw, 60vw"

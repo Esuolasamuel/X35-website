@@ -37,7 +37,7 @@ export default function RobPlacePage() {
 
   return (
     <>
-      <Hero ImageSrc={heroImg} title="Rob’s Place" height="h-[90vh]" />
+      <Hero imageSrc={heroImg} title="Rob’s Place" height="h-[90vh]" />
         <Meta
           title="Inception"
           description={[
@@ -54,9 +54,9 @@ export default function RobPlacePage() {
           ]}
           backgroundColor="bg-[#e5f1e7]"
         />
-        <FullImageSection ImageSrc={full1} title="rob's place interior" />
+        <FullImageSection imageSrc={full1} title="rob's place interior" />
         <Feature
-          ImageSrc={feature1}
+          imageSrc={feature1}
           title="Understanding the Client’s Fears and Challenges"
           description={[
             { paragraph: "During early consultations, it became clear that the client had deep concerns about renovation risks, particularly demolition. He feared that touching structural elements might weaken the building or cause collapse — a concern many homeowners share." },
@@ -66,9 +66,9 @@ export default function RobPlacePage() {
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <FullImageSection ImageSrc={full2} title="rob place interior" />
+        <FullImageSection imageSrc={full2} title="rob place interior" />
         <ListFeature
-          ImageSrc={feature2}
+          imageSrc={feature2}
           title="The Transformation Strategy: Minimalist Modern Living"
           description="The design direction centered on simplicity, clean lines, improved lighting, and functional layouts. Key interventions included:"
           summary="Every design choice balanced aesthetics with practicality, ensuring the home felt both contemporary and comfortable."
@@ -81,9 +81,9 @@ export default function RobPlacePage() {
             { paragraph: "Upgrading flooring, ceilings, and wall treatments for a cohesive minimalist feel." },
           ]}
         />
-        <FullImageSection ImageSrc={full3} title="rob place interior" />
+        <FullImageSection imageSrc={full3} title="rob place interior" />
         <ListFeature
-          ImageSrc={feature3}
+          imageSrc={feature3}
           title="Systematic Demolition and Execution"
           description="With a structural plan in place, demolition was executed safely and strategically:"
           summary="Every phase followed strict safety and engineering protocols. This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."
@@ -95,9 +95,9 @@ export default function RobPlacePage() {
             { paragraph: "Reinforcement was applied where needed" },
           ]}
         />
-        <FullImageSection ImageSrc={full4} title="rob place interior" />
+        <FullImageSection imageSrc={full4} title="rob place interior" />
         <Feature
-          ImageSrc={feature4}
+          imageSrc={feature4}
           title="Final Outcome: A Peaceful, Modern Family Home"
           description={[
             { paragraph: "During early consultations, it became clear that the client had deep concerns about renovation risks, particularly demolition. He feared that touching structural elements might weaken the building or cause collapse — a concern many homeowners share." },

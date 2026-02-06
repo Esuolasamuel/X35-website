@@ -4,7 +4,7 @@ const Feature = ({
   textColor = " text-dark-500/80",
   headerColor = " text-dark-500",
   title,
-  ImageSrc,
+  imageSrc,
   description,
   backgroundColor = "bg-[#e3f4ef]",
   aspect = "aspect-[615/594]",
@@ -50,9 +50,9 @@ const Feature = ({
               overflow-hidden rounded-sm md:rounded-md lg:rounded-lg bg-gray-800
             `}
           >
-            {ImageSrc && (
+            {imageSrc && (
               <Image
-                src={ImageSrc}
+                src={imageSrc}
                 alt={title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 615px"

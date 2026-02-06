@@ -4,7 +4,7 @@ const ListFeature = ({
   title, 
   textColor = "text-black/80", // Changed to white with opacity
   headerColor = "text-black",     // Changed to solid white
-  ImageSrc, 
+  imageSrc, 
   description, 
   summary, 
   backgroundColor = "bg-[#0B0B1A]", // Deep navy/black from Frame 110
@@ -74,9 +74,9 @@ const ListFeature = ({
                         overflow-hidden bg-[#1A1A2E] 
                         shadow-2xl ring-1 ring-white/10
                     `}>
-                        {ImageSrc && (
+                        {imageSrc && (
                             <Image
-                                src={ImageSrc}
+                                src={imageSrc}
                                 alt={title}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"

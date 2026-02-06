@@ -35,7 +35,7 @@ export default function ChevronPage() {
 
   return (
     <>
-      <Hero ImageSrc={chevronHero} title="Chevron" height="h-[90vh]" />
+      <Hero imageSrc={chevronHero} title="Chevron" height="h-[90vh]" />
         <Meta
           title="Chevron Deep Waters Workspace Redesign"
           description={[
@@ -51,7 +51,7 @@ export default function ChevronPage() {
           ]}
           backgroundColor="bg-[#DFC0AB]"
         />
-        <FullImageSection ImageSrc={chevronFull} title="chevron deep interior" />
+        <FullImageSection imageSrc={chevronFull} title="chevron deep interior" />
         <Narrative
           backgroundColor="bg-indigo-700"
           TextColor="text-white"
@@ -61,12 +61,12 @@ export default function ChevronPage() {
             { paragraph: "Flooring was upgraded using durable, commercial-grade materials, selected for their long-term performance and seamless compatibility with the department’s new design language. These materials contribute to a cohesive visual identity while withstanding the demands of a busy corporate environment." },
             { paragraph: "The project also included the creation of a new 11-man conference room, designed with advanced AV infrastructure, custom joinery, optimal sightlines, and a modern material palette." },
           ]}
-          ImageSrc={chevronNarrative}
+          imageSrc={chevronNarrative}
           textColor = "text-white/80"
           headerColor = "text-white"
         />
         <Feature
-          ImageSrc={chevronFeature}
+          imageSrc={chevronFeature}
           title="Delivering a Functional and Refined Collaborative Space"
           description={[
             { paragraph: "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions." },
@@ -76,10 +76,10 @@ export default function ChevronPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { ImageSrc: chevronSplit1, alt: "Interior 1", height: 594, width: 615 },
-            { ImageSrc: chevronSplit2, alt: "Interior 2", height: 594, width: 615, colspan: "col-span-2" },
-            { ImageSrc: chevronSplit3, alt: "Interior 3", height: 594, width: 615, colspan: "col-span-2" },
-            { ImageSrc: chevronSplit4, alt: "Interior 4", height: 594, width: 615 },
+            { imageSrc: chevronSplit1, alt: "Interior 1", height: 594, width: 615 },
+            { imageSrc: chevronSplit2, alt: "Interior 2", height: 594, width: 615, colspan: "col-span-2" },
+            { imageSrc: chevronSplit3, alt: "Interior 3", height: 594, width: 615, colspan: "col-span-2" },
+            { imageSrc: chevronSplit4, alt: "Interior 4", height: 594, width: 615 },
           ]}
         />
         <RelatedProjects projects={projects} />

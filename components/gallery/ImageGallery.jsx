@@ -15,7 +15,7 @@ export default function ImageGallery({ images = [], backgroundColor = "bg-[#E5D1
               style={{ aspectRatio: "615 / 594" }}
             >
               <Image
-                src={image.ImageSrc}
+                src={image.imageSrc}
                 alt={image.alt || `Gallery image ${index + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

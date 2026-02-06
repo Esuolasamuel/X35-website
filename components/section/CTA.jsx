@@ -33,27 +33,25 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
     <>
       <section
         id={id}
-        className={`relative w-full overflow-hidden
-          flex items-center justify-center
+        className={`relative w-full overflow-hidden flex items-center justify-center
+          /* Ensure these values exist in your tailwind.config.js */
           min-h-100
-          min-[576px]:min-h-112.5
-          min-[768px]:min-h-125
-          min-[992px]:min-h-141.75
-          min-[1200px]:min-h-150`}
+          sm:min-h-125
+          md:min-h-150
+          lg:min-h-175`}
       >
-        {/* Layer 1: Background Pattern (Bottom) */}
+        {/* Combined Background Layer: Using a single div often prevents z-index fighting */}
         <div 
-          className="absolute inset-0 z-0 bg-[url('/assets/images/image-9.svg')] bg-center bg-cover" 
+          className="absolute inset-0 z-0 bg-[#D1D1E4]" 
           aria-hidden="true"
-        />
-        
-        {/* Layer 2: Background Color (Middle - Blend applied here) */}
-        <div 
-          className="absolute inset-0 z-10 bg-[#D1D1E4] mix-blend-multiply" 
-          aria-hidden="true"
-        />
+        >
+            <div 
+                className="absolute inset-0 w-full h-full bg-[url('/assets/images/image-9.svg')] bg-center bg-cover mix-blend-multiply opacity-80"
+                aria-hidden="true"
+            />
+        </div>
 
-        {/* Layer 3: Text & Hand-drawn circle (Top) */}
+        {/* Content Layer */}
         <div className={`relative z-20 px-6 py-12 flex flex-col transition-all duration-300
           ${alignmentMap[align] || alignmentMap.center} 
           ${widthMap[width] || widthMap['4xl']}`}
@@ -99,6 +97,7 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
         </div>
       </section>
 
+      {/* Modal remains the same... */}
       {isContactOpen && (
         <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity">
           <div className="relative w-full max-w-md bg-white rounded-3xl p-8 shadow-2xl animate-in fade-in zoom-in duration-300">

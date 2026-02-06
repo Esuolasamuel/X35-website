@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const FullImageSection = ({ ImageSrc, title, backgrounColor ="bg-white" }) => {
+const FullImageSection = ({ imageSrc, title, backgrounColor ="bg-white" }) => {
   return (
     /* p-[120px] applies the padding on all sides as requested */
     <section className="p-6 sm:p-7.5 md:p-15 lg:p-30 bg-white flex justify-center items-center">
@@ -12,7 +12,7 @@ const FullImageSection = ({ ImageSrc, title, backgrounColor ="bg-white" }) => {
       <div className={`relative w-full aspect-1200/796 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl ${backgrounColor}`}>
         <Image
           quality={100}
-          src={ImageSrc}
+          src={imageSrc}
           alt={title}
           fill
           priority

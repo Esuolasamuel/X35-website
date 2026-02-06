@@ -35,7 +35,7 @@ export default function SunplanetPage() {
 
   return (
     <>
-      <Hero ImageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" />
+      <Hero imageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" />
         <Meta
           title="The Brief"
           description={[
@@ -61,9 +61,9 @@ export default function SunplanetPage() {
           ]}
           backgroundColor="bg-[#DFC0AB]"
         />
-        <FullImageSection ImageSrc={fullImg} title="sun planet interior" />
+        <FullImageSection imageSrc={fullImg} title="sun planet interior" />
         <Feature
-          ImageSrc={featureImg}
+          imageSrc={featureImg}
           backgroundColor="bg-indigo-700"
           title="X35 Projects as Design and Technical Consultancy Partner"
           description={[
@@ -78,14 +78,14 @@ export default function SunplanetPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { ImageSrc: gallery1, alt: "Interior 1", height: "594", width: "615" },
-            { ImageSrc: gallery2, alt: "Interior 2", height: "594", width: "615", colspan: "col-span-2" },
-            { ImageSrc: gallery3, alt: "Interior 3", height: "594", width: "615", colspan: "col-span-2" },
-            { ImageSrc: gallery4, alt: "Interior 4", height: "594", width: "615" },
+            { imageSrc: gallery1, alt: "Interior 1", height: "594", width: "615" },
+            { imageSrc: gallery2, alt: "Interior 2", height: "594", width: "615", colspan: "col-span-2" },
+            { imageSrc: gallery3, alt: "Interior 3", height: "594", width: "615", colspan: "col-span-2" },
+            { imageSrc: gallery4, alt: "Interior 4", height: "594", width: "615" },
           ]}
         />
         <MiniHero
-          ImageSrc={miniHeroImg}
+          imageSrc={miniHeroImg}
           title="A Refined and Strategic Residential Development"
           description="Overall, the collaboration with Sun Planet Co resulted in a residential development that is not only architecturally refined but also commercially strategic—delivering value, efficiency, and long-term ROI for both stakeholders."
         />

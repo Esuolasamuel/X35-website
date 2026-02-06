@@ -33,13 +33,13 @@ export default function AdrinoPage() {
   ];
 
  const images = [
-    { ImageSrc: adinoSplit1, alt: "kitchen area Interior 1" },
-    { ImageSrc: adinoSplit2, alt: "kitchen area Interior 2" },
+    { imageSrc: adinoSplit1, alt: "kitchen area Interior 1" },
+    { imageSrc: adinoSplit2, alt: "kitchen area Interior 2" },
  ]
 
   return (
     <>
-      <Hero ImageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" />
+      <Hero imageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" />
         <Meta
           title="The Commissioning"
           description={[
@@ -61,7 +61,7 @@ export default function AdrinoPage() {
           ]}
           backgroundColor="bg-[#DFC0AB]"
         />
-        <FullImageSection ImageSrc={adinoFull1} title="adino interior" />
+        <FullImageSection imageSrc={adinoFull1} title="adino interior" />
         <Narrative
           backgroundColor="bg-indigo-700"
           TextColor="text-white"
@@ -76,13 +76,13 @@ export default function AdrinoPage() {
                 "The scope further extended to a full refresh of the cafeteria area, transforming it into a more inviting social hub that also functions effectively as a secondary workspace.",
             },
           ]}
-          ImageSrc={adinoNarrative}
+          imageSrc={adinoNarrative}
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <FullImageSection ImageSrc={adinoFull2} title="adino interior" />
+        <FullImageSection imageSrc={adinoFull2} title="adino interior" />
         <Feature
-          ImageSrc={adinoFeature}
+          imageSrc={adinoFeature}
           title="Delivered a Balanced and Innovative Workspace"
           description={[
             {
