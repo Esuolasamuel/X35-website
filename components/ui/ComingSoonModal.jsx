@@ -2,7 +2,7 @@
 
 import { X } from "lucide-react";
 import Image from "next/image";
-import partypopper from "@/assets/icons/Party-Popper";
+import partypopper from "@/assets/icons/Party-Popper.svg";
 
 export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
   if (!isOpen) return null;
