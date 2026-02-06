@@ -48,7 +48,7 @@ export default function CTA({
           aria-hidden="true"
           className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
           style={{
-            backgroundImage: "url('/assets/images/image-9.svg')",
+            backgroundImage: "url('@/assets/images/image-9.svg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -91,7 +91,7 @@ export default function CTA({
                     className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] z-0 bg-no-repeat bg-contain bg-center"
                     style={{
                       backgroundImage:
-                        "url('/assets/icons/fill-4.svg')",
+                        "url('@/assets/icons/fill-4.svg')",
                     }}
                   />
                 </span>
@@ -114,7 +114,7 @@ export default function CTA({
                     className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] z-0 bg-no-repeat bg-contain bg-center"
                     style={{
                       backgroundImage:
-                        "url('/assets/icons/fill-4.svg')",
+                        "url('@/assets/icons/fill-4.svg')",
                     }}
                   />
                 </span>
