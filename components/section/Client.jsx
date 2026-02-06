@@ -42,7 +42,6 @@ export default function Clients() {
                             className="
                                 w-25 sm:w-27.5 md:w-32.5 lg:w-35 
                                 h-auto object-contain
-                                grayscale opacity-60 hover:grayscale-0 hover:opacity-100
                                 hover:scale-105 
                                 transition-all duration-300 ease-in-out 
                                 cursor-pointer

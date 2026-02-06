@@ -96,7 +96,7 @@ export default function Header() {
       {menuOpen && (
         <div className="fixed inset-0 top-5 z-40 lg:hidden text-dark-500" onClick={() => setMenuOpen(false)}>
           <div className="fixed top-0 left-0 right-0 bg-white shadow-lg p-6 pt-20">
-            <nav className="flex flex-col items-start font-body gap-6 text-lg font-semibold text-dark-500">
+            <nav className="flex flex-col items-start font-body gap-6 text-sm sm:text-md md:text-lg font-semibold text-dark-500">
               <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link href="/Projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
               <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>

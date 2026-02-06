@@ -50,7 +50,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
 
               {/* Text Information: Aligned bottom-left per Frame 115 (1).jpg */}
               <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-white">
-                <h4 className="font-heading font-bold text-[20px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-1">
+                <h4 className="font-heading font-bold text-base sm:text-lg lg:text-[28px] xl:text-[32px] mb-1">
                   {project.title}
                 </h4>
                 <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-light opacity-90">

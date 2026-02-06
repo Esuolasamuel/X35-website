@@ -78,11 +78,11 @@ const ProjectGrid = () => {
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
 
               {/* Text */}
-              <div className="absolute bottom-15 left-10 z-10">
-                <h3 className="text-2xl text-white font-heading font-bold">
+              <div className="absolute bottom-5 left-3 sm:bottom-10 sm:left-5 md:bottom-12 md:left-7 lg:bottom-15 lg:left-10 z-10">
+                <h3 className=" text-lg sm:text-lg md:text-xl lg:text-2xl text-white font-heading font-bold">
                   {p.name}
                 </h3>
-                <p className="text-sm uppercase font-normal font-body tracking-wide text-white/80">
+                <p className=" text-xs md:text-sm uppercase font-normal font-body tracking-wide text-white/80">
                   {p.type}
                 </p>
               </div>
