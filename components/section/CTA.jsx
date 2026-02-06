@@ -25,7 +25,7 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
   const widthMap = {
     "xl": "max-w-[1200px]",
     "2xl": "max-w-[1400px]",
-    "4xl": "max-w-[800px]", 
+    "4xl": "max-w-[950px]", // Widened slightly to match the screenshot's line breaks
     "full": "max-w-full",
   };
 
@@ -33,46 +33,43 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
     <>
       <section
         id={id}
-        className={`relative w-full overflow-hidden flex items-center justify-center
-          /* Ensure these values exist in your tailwind.config.js */
-          min-h-100
-          sm:min-h-125
-          md:min-h-150
-          lg:min-h-175`}
+        /* Adjusted height to match the '1440 x 567' aspect from screenshot */
+        className="relative w-full overflow-hidden flex items-center justify-center py-20 lg:py-32 bg-[#D9D9E9]"
       >
-        {/* Combined Background Layer: Using a single div often prevents z-index fighting */}
+        {/* Background Layer with Wavvy Pattern */}
         <div 
-          className="absolute inset-0 z-0 bg-[#D1D1E4]" 
+          className="absolute inset-0 z-0 opacity-40 mix-blend-overlay" 
+          style={{ 
+            backgroundImage: "url('/assets/images/image-9.svg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
           aria-hidden="true"
-        >
-            <div 
-                className="absolute inset-0 w-full h-full bg-[url('/assets/images/image-9.svg')] bg-center bg-cover mix-blend-multiply opacity-80"
-                aria-hidden="true"
-            />
-        </div>
+        />
 
         {/* Content Layer */}
-        <div className={`relative z-20 px-6 py-12 flex flex-col transition-all duration-300
+        <div className={`relative z-10 px-6 flex flex-col transition-all duration-300
           ${alignmentMap[align] || alignmentMap.center} 
           ${widthMap[width] || widthMap['4xl']}`}
         >
-          <h2 className={`font-heading font-extrabold text-[#1A1A1A] leading-[1.1] mb-6
-            text-[2.2rem]
-            min-[375px]:text-[2.5rem]
-            min-[576px]:text-[3rem]
-            min-[768px]:text-[3.5rem]
-            min-[992px]:text-[4rem]
-            min-[1200px]:text-[4.5rem]
-            min-[1400px]:text-[5rem]`}
+          <h2 className={`font-heading font-bold text-[#1A1A1A] leading-[1.05] mb-10
+            text-[2.25rem]
+            sm:text-[3.5rem]
+            lg:text-[4.8rem]`}
           >
             {title} 
-            <span className="relative inline-block ml-2 whitespace-nowrap">
+            <span className="relative inline-block ml-3">
               x35ied?
-              <svg className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] pointer-events-none" viewBox="0 0 200 100" fill="none">
+              {/* Hand-drawn circle SVG */}
+              <svg 
+                className="absolute -top-[15%] -left-[10%] w-[125%] h-[140%] pointer-events-none" 
+                viewBox="0 0 200 100" 
+                preserveAspectRatio="none"
+              >
                 <path 
-                  d="M20,40 C20,10 180,5 190,40 C195,80 30,95 15,65 C10,45 60,25 150,30" 
+                  d="M10,50 C10,20 100,5 180,20 C200,45 150,90 80,90 C30,90 5,70 15,45 C25,20 90,15 170,25" 
                   stroke="#FFD700" 
-                  strokeWidth="4" 
+                  strokeWidth="3" 
                   strokeLinecap="round" 
                   className="animate-draw"
                 />
@@ -81,7 +78,7 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
           </h2>
 
           {paragraph && (
-            <p className="font-body font-medium text-[#1A1A1A]/70 mb-8 max-w-2xl text-base sm:text-lg lg:text-xl">
+            <p className="font-body font-medium text-[#1A1A1A]/80 mb-10 max-w-2xl text-lg lg:text-xl leading-relaxed">
               {paragraph}
             </p>
           )}
@@ -89,7 +86,8 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
           {text && (
             <button
               onClick={() => setIsContactOpen(true)}
-              className="bg-[#FFD700] hover:bg-[#f2cc00] hover:scale-105 active:scale-95 transition-all duration-200 px-10 py-4 rounded-full font-bold text-black text-sm uppercase tracking-wider shadow-lg shadow-yellow-500/10"
+              /* Pixel perfect button styling: Rounded-full, specific yellow, and dark text */
+              className="bg-[#FFD700] hover:bg-[#F0C800] transition-all duration-200 px-12 py-4 rounded-full font-body font-bold text-[#1A1A1A] text-sm md:text-base shadow-md"
             >
               {text}
             </button>
@@ -97,17 +95,17 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
         </div>
       </section>
 
-      {/* Modal remains the same... */}
+      {/* Modal Container */}
       {isContactOpen && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity">
-          <div className="relative w-full max-w-md bg-white rounded-3xl p-8 shadow-2xl animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="relative w-full max-w-md bg-white rounded-3xl p-8 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}
               className="absolute top-5 right-5 p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-colors"
             >
               <X size={20} />
             </button>
-            <h2 className="text-2xl font-bold font-body mb-6 text-gray-900">Contact Us</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Contact Us</h2>
             <ContactForm onSuccess={handleFormSuccess} />
           </div>
         </div>
@@ -115,13 +113,13 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
 
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes draw {
-          from { stroke-dashoffset: 1000; stroke-dasharray: 0 1000; }
-          to { stroke-dashoffset: 0; stroke-dasharray: 1000 1000; }
+          from { stroke-dashoffset: 1000; }
+          to { stroke-dashoffset: 0; }
         }
         .animate-draw {
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
-          animation: draw 1.5s ease-out forwards;
+          animation: draw 2s ease-in-out forwards;
         }
       `}} />
     </>

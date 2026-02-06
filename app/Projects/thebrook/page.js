@@ -43,7 +43,7 @@ export default function thebrookPage() {
 
   return (
     <>
-      <Hero ImageSrc={thebrookHero} title="The brook Finances" height="h-[90vh]" />
+      <Hero imageSrc={thebrookHero} title="The brook Finances" height="h-[90vh]" />
         <Meta
           title="Transforming a Financial Workplace into a Modern, Human-Centric Environment"
           description={[
@@ -71,9 +71,9 @@ export default function thebrookPage() {
           backgroundColor="bg-[#E9F3E9]"
         />
       
-        <FullImageSection ImageSrc={brookFull1} title="brook interior" />
+        <FullImageSection imageSrc={brookFull1} title="brook interior" />
         <Feature
-          ImageSrc={brookFeature1}
+          imageSrc={brookFeature1}
           description={[
             {
               paragraph:
@@ -102,14 +102,14 @@ export default function thebrookPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { ImageSrc: brookSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
-            { ImageSrc: brookSplit2, alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
-            { ImageSrc: brookSplit3, alt: "Interior 3", aspect: "aspect-732/582", colspan: "col-span-2" },
-            { ImageSrc: brookSplit4, alt: "Interior 4", aspect: "aspect-460/910" },
+            { imageSrc: brookSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
+            { imageSrc: brookSplit2, alt: "Interior 2", aspect: "aspect-732/582", colspan: "col-span-2" },
+            { imageSrc: brookSplit3, alt: "Interior 3", aspect: "aspect-732/582", colspan: "col-span-2" },
+            { imageSrc: brookSplit4, alt: "Interior 4", aspect: "aspect-460/910" },
           ]}
         />
         <Feature
-          ImageSrc={brookFeature2}
+          imageSrc={brookFeature2}
           title="Design Language and Material Strategy"
           description={[
             {
@@ -125,14 +125,14 @@ export default function thebrookPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { ImageSrc: brookSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
-            { ImageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-732/582", colspan: "col-span-2" },
-            { ImageSrc: brookSplit7, alt: "Interior 7", aspect: "aspect-732/582", colspan: "col-span-2" },
-            { ImageSrc: brookSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
+            { imageSrc: brookSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
+            { imageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-732/582", colspan: "col-span-2" },
+            { imageSrc: brookSplit7, alt: "Interior 7", aspect: "aspect-732/582", colspan: "col-span-2" },
+            { imageSrc: brookSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
           ]}
         />
         <Feature
-          ImageSrc={brookFeature3}
+          imageSrc={brookFeature3}
           description={[
             {
               paragraph:
@@ -149,9 +149,9 @@ export default function thebrookPage() {
           orderR="order-1"
           backgroundColor="bg-[#dfc0ab]"
         />
-        <FullImageSection ImageSrc={brookFull2} title="brook full view" />
+        <FullImageSection imageSrc={brookFull2} title="brook full view" />
         <Feature
-          ImageSrc={brookFeature4}
+          imageSrc={brookFeature4}
           description={[
             {
               paragraph:

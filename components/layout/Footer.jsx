@@ -53,7 +53,7 @@ export default function Footer() {
                 hello@x35projects.com
               </a>
               <a href="tel:+2348144694380" className="text-white hover:text-yellow-400 transition-colors">
-                +234 814 469 4380
+                +234 802 942 0580
               </a>
             </div>
           </div>
