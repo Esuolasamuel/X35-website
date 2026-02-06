@@ -22,7 +22,7 @@ export default function Footer() {
                 className="w-16 h-16 mb-6"
               />
             </Link>
-            <div className="text-white font-body font-medium text-lg tracking-tight">
+            <div className="text-white font-body flex-col lg:flex-row font-medium text-lg tracking-tight">
               <span className="text-yellow-400">We</span> Design.{" "}
               <span className="text-yellow-400">We</span> Build.{" "}
               <span className="text-yellow-400">We</span> Deliver.

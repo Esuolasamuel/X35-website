@@ -25,7 +25,7 @@ const Feature = ({
       >
         {/* LEFT TEXT SECTION */}
         <div className={`w-full xl:w-1/2 ${orderL}`}>
-          <h3 className={`mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold ${headerColor}`}>
+          <h3 className={`mb-6 text-3xl md:text-4xl lg:text-[40px] font-heading font-bold ${headerColor}`}>
             {title}
           </h3>
 
@@ -47,7 +47,7 @@ const Feature = ({
               ${aspect}
               max-w-153.75
               mx-auto
-              overflow-hidden rounded-lg bg-gray-800
+              overflow-hidden rounded-sm md:rounded-md lg:rounded-lg bg-gray-800
             `}
           >
             {ImageSrc && (

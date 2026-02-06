@@ -5,7 +5,7 @@ export default function Values({ values }) {
   return (
     <section className="bg-white">
       <Container>
-        <h2 className="text-center text-xl md:text-3xl lg:text-5xl font-bold font-heading text-dark-500 mb-12">Our Values</h2>
+        <h2 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold font-heading text-dark-500 mb-12">Our Values</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {values.map((v) => (
             /* Added 'group' class to the card container */

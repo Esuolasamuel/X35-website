@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden aspect-615/594 hidden lg:block">
+        <div className="relative rounded-md sm:rounded-sm md:rounded-md lg:rounded-lg  overflow-hidden aspect-615/594 hidden lg:block">
           <Image
             key={item.title}
             src={item.img}
@@ -142,7 +142,7 @@ export default function Services() {
             fill
             priority
             className="
-              object-cover rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl  shadow-xl
+              object-cover rounded-md sm:rounded-sm md:rounded-md lg:rounded-lg  shadow-xl
               transition-opacity duration-700 ease-in-out
             "
             style={{ opacity: visible ? 1 : 0 }}
@@ -165,7 +165,7 @@ export default function Services() {
         {items.map((item) => (
           <div
             key={item.title}
-            className="sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden bg-white/5 border border-white/10"
+            className="sm:rounded-sm md:rounded-md lg:rounded-lg overflow-hidden bg-white/5 border border-white/10"
           >
             <div className="relative aspect-4/3">
               <Image

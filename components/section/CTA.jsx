@@ -33,8 +33,7 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
     <>
       <section
         id={id}
-        className={`relative w-full overflow-hidden bg-[#D1D1E4] 
-          bg-[url('/assets/images/image-9.svg')] bg-blend-multiply bg-center bg-cover
+        className={`relative w-full overflow-hidden
           flex items-center justify-center
           min-h-100
           min-[576px]:min-h-112.5
@@ -42,6 +41,19 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
           min-[992px]:min-h-141.75
           min-[1200px]:min-h-150`}
       >
+        {/* Layer 1: Background Pattern (Bottom) */}
+        <div 
+          className="absolute inset-0 z-0 bg-[url('/assets/images/image-9.svg')] bg-center bg-cover" 
+          aria-hidden="true"
+        />
+        
+        {/* Layer 2: Background Color (Middle - Blend applied here) */}
+        <div 
+          className="absolute inset-0 z-10 bg-[#D1D1E4] mix-blend-multiply" 
+          aria-hidden="true"
+        />
+
+        {/* Layer 3: Text & Hand-drawn circle (Top) */}
         <div className={`relative z-20 px-6 py-12 flex flex-col transition-all duration-300
           ${alignmentMap[align] || alignmentMap.center} 
           ${widthMap[width] || widthMap['4xl']}`}
@@ -102,7 +114,6 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
         </div>
       )}
 
-      {/* Global CSS for the animation to avoid styled-jsx parsing issues in Turbopack */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes draw {
           from { stroke-dashoffset: 1000; stroke-dasharray: 0 1000; }

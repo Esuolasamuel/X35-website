@@ -34,7 +34,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
             <Link
               key={project.id}
               href={`/Projects/${project.id}`}
-              className="group relative block w-full aspect-592/300 sm:rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-100"
+              className="group relative block w-full aspect-592/300 sm:rounded-md md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-100"
             >
               {/* Main Project Image */}
               <Image
@@ -46,10 +46,10 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
               />
 
               {/* Gradient Overlay for Text Readability: Matches the dark bottom in screenshot */}
-              <div className="absolute inset-0 bg-linear-to-t from-white/80 via-white/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
 
               {/* Text Information: Aligned bottom-left per Frame 115 (1).jpg */}
-              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-dark-500">
+              <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-white">
                 <h4 className="font-heading font-bold text-[20px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-1">
                   {project.title}
                 </h4>

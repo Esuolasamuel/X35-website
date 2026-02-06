@@ -26,7 +26,7 @@ export default function ProjectDemo({ projects }) {
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative aspect-636/375 rounded-md sm:rounded-md sm:rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl md:rounded-xl lg:rounded-2xl md:rounded-xl lg:rounded-2xl  overflow-hidden">
+              <div className="relative aspect-636/375 rounded-md sm:rounded-md md:rounded-md lg:rounded-lg overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}

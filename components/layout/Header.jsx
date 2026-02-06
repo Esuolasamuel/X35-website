@@ -87,7 +87,7 @@ export default function Header() {
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
-            {menuOpen ? <X size={24} className="w-5 h-5 sm:w-7 sm:h-7" /> : <Menu size={24} className="w-5 h-5 sm:w-7 sm:h-7" />}
+            {menuOpen ? <X size={24} className="w-5 h-5 sm:w-7 sm:h-7 bg-dark-500" /> : <Menu size={24} className="w-5 h-5 sm:w-7 sm:h-7" />}
           </button>
         </div>
       </header>
