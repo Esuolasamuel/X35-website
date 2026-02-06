@@ -1,48 +1,157 @@
-import Image from "next/image";
+"use client";
 
-export default function Hero({
-  imageSrc = "", 
-  title = "",
-}) {
-  if (!imageSrc || !title) return null;
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+
+// import Modal from "@/components/ui/Modal";
+import ContactForm from "../forms/ContactForm";
+import SuccessNotification from "../ui/SuccessNotification";
+import ComingSoonModal from "../ui/ComingSoonModal";
+import NotifyModal from "../ui/NotifyModal";
+import Logo from "@/assets/images/logo.svg";
+
+export default function Header() {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
+  const [notifyModalOpen, setNotifyModalOpen] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  /* Scroll detection */
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 222);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Logical checks for routing
+  const isAboutPage = pathname === "/about";
+  const isProjectsPage = pathname === "/Projects";
+
+  // If it's about page, force white. Otherwise, toggle based on scroll.
+  const isTransparent = isAboutPage ? false : (isProjectsPage ? scrolled : !scrolled);
+
+  const handleFormSuccess = () => {
+    // 1. Close the contact form modal immediately
+    setIsContactOpen(false);
+    // 2. Show the success notification at the top
+    setShowSuccess(true);
+    
+    // 3. Automatically hide the notification after 5 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 5000);
+  };
 
   return (
-    <section
-      aria-label={title}
-      /* 1. aspect-[1440/668] sets the ratio.
-         2. min-h-[400px] prevents it from being too short on small phones.
-      */
-      className="relative w-full aspect-1440/668 min-h-100 overflow-hidden flex items-center justify-center"
-    >
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-20">
-        <Image
-          src={imageSrc}
-          alt={title}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
+    <>
+      <header
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 px-7.5 sm:px-15 md:px-20 lg:px-25 xl:px-30 transition-all duration-300 ${
+          isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#BDBDBD33]"
+        }`}
+      >
+        <div className="flex items-center justify-between w-full mx-auto">
+          <Link href="/">
+            <Image src={Logo} alt="X35 Logo" width={60} height={60} className="w-10 h-10  sm:w-12 sm:h-12 md:w-13 md:h-13 lg:w-14 lg:h-14 xl:w-15 xl:h-15 xxl:w-16 xxl:h-16 xxxl:w-17 xxxl:h-17" />
+          </Link>
 
-      {/* Overlay */}
-      <div aria-hidden="true" className="absolute inset-0 bg-black/40 -z-10" />
+          {/* Desktop Nav */}
+          <nav
+            className={`hidden lg:flex items-center gap-6  sm:gap-8 md:gap-9 lg:gap-10 xl:gap-11 xxl:gap-12 xxxl:gap-13 text-xs sm:text-base md:text-base lg:text-base xl:text-base xxl:text-base xxxl:text-base font-semibold font-body cursor-pointer ${
+              isTransparent ? "text-white" : "text-gray-900"
+            }`}
+          >
+            <Link href="/about">About Us</Link>
+            <Link href="/Projects">Our Projects</Link>
+            <Link href="/#services">Services</Link>
+            <button onClick={() => setIsComingSoonOpen(true)}>Products</button>
+          </nav>
 
-      {/* Content */}
-      <div className="relative z-10 px-4 text-center">
-        <div className="relative inline-block">
-          <h1 className="text-white font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-            {title}
-          </h1>
-          
-          {/* Decorative SVG - Adjusted for better scaling */}
-          <span 
-            className="absolute left-0 -bottom-2 h-5 md:h-7.5 w-full bg-no-repeat bg-contain bg-center -z-10"
-            style={{ backgroundImage: "url('/images/Fill-4.svg')" }}
+          {/* CTA */}
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="hidden lg:inline-flex rounded-full bg-yellow-400 hover:bg-yellow-700 transition-colors px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 xxl:px-6 xxxl:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-3.5 xl:py-3.5 xxl:py-3.5 xxxl:py-3.5 font-body font-semibold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500"
+          >
+            Contact Us
+          </button>
+
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            className={`md:hidden  sm:p-1.5 md:p-2 ${
+              isTransparent ? "text-white" : "text-gray-900"
+            }`}
+          >
+            {menuOpen ? <X size={24} className="w-5 h-5 sm:w-7 sm:h-7 text-dark-500" /> : <Menu size={24} className="w-5 h-5 sm:w-7 sm:h-7" />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed inset-0 top-5 z-40 lg:hidden text-dark-500" onClick={() => setMenuOpen(false)}>
+          <div className="fixed top-0 left-0 right-0 bg-white shadow-lg p-6 pt-20">
+            <nav className="flex flex-col items-start font-body gap-6 text-lg font-semibold text-dark-500">
+              <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+              <Link href="/Projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
+              <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
+              <button className="text-start" onClick={() => { setIsComingSoonOpen(true); setMenuOpen(false); }}>Products</button>
+              <button
+                onClick={() => { setIsContactOpen(true); setMenuOpen(false); }}
+                className="mt-4 rounded-full bg-yellow-400 hover:bg-yellow-700 px-4 sm:px-6 py-2 sm:py-3 font-body font-semibold text-xs sm:text-base text-dark-500 md:font-body md:font-semibold md:text-sm md:leading-none md:tracking-normal"
+              >
+                Contact Us
+              </button>
+            </nav>
+          </div>
+        </div>
+      )}
+
+      {/* --- SUCCESS NOTIFICATION (Top Center) --- */}
+      {showSuccess && (
+        <div className="fixed top-4 sm:top-6 md:top-7 lg:top-8 xl:top-9 xxl:top-10 xxxl:top-11 left-1/2 -translate-x-1/2 z-100 w-full max-w-100 px-3 sm:px-5 md:px-6 lg:px-7 xl:px-8 xxl:px-9 xxxl:px-10 animate-in fade-in slide-in-from-top-4 duration-500 text-dark-500">
+          <SuccessNotification
+            isOpen={true}
+            onClose={() => setShowSuccess(false)}
           />
         </div>
-      </div>
-    </section>
+      )}
+
+      {/* --- CONTACT FORM MODAL --- */}
+      {isContactOpen && (
+        <div className="fixed inset-0 z-90 flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm text-dark-500">
+          <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl xxl:max-w-4xl xxxl:max-w-5xl bg-white rounded-lg md:rounded-xl lg:rounded-2xl p-0 md:p-6 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 shadow-2xl">
+            <button
+              onClick={() => setIsContactOpen(false)}
+              className="absolute top-3  sm:top-5 md:top-6 lg:top-7 xl:top-8 xxl:top-9 xxxl:top-10 right-3  sm:right-5 md:right-6 lg:right-7 xl:right-8 xxl:right-9 xxxl:right-10 text-dark-500 hover:text-dark-500"
+            >
+              <X size={20} className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            </button>
+            <h2 className="text-xl font-heading sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-7xl xxxl:text-8xl font-bold mb-4 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-9 xxl:mb-10 xxxl:mb-11 text-dark-500">Contact Us</h2>
+
+            {/* Pass handleFormSuccess to the form */}
+            <ContactForm onSuccess={handleFormSuccess} />
+          </div>
+        </div>
+      )}
+
+      {/* --- COMING SOON MODAL --- */}
+      <ComingSoonModal
+        isOpen={isComingSoonOpen}
+        onClose={() => setIsComingSoonOpen(false)}
+        onNotify={() => {
+          setIsComingSoonOpen(false);
+          setNotifyModalOpen(true);
+        }}
+      />
+
+      {/* --- NOTIFY MODAL --- */}
+      <NotifyModal open={notifyModalOpen} onClose={() => setNotifyModalOpen(false)} />
+    </>
   );
 }
