@@ -25,7 +25,7 @@ export default function Testimonials() {
     return (
         <section className=" p-7.5 sm:p-15 md:p-20 lg:p-25 xl:p-30 2xl:p-30 mx-auto bg-white">
 
-                <h2 className=" text-3xl md:text-4xl lg:text-[40px] font-heading font-bold text-dark-500 text-center mb-12">What Our Clients Say</h2>
+                <h2 className=" text-2xl md:text-4xl lg:text-[40px] font-heading font-bold text-dark-500 text-center mb-12">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-9">
                     {testimonials.map((t, i) => (
                         <div key={i} className=" p-2 sm:p-4 md:p-8 xl:p-10 rounded-sm md:rounded-md lg:rounded-lg md:bg-white md:shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">

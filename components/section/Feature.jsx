@@ -25,7 +25,7 @@ const Feature = ({
       >
         {/* LEFT TEXT SECTION */}
         <div className={`w-full xl:w-1/2 ${orderL}`}>
-          <h3 className={`mb-6 text-3xl md:text-4xl lg:text-[40px] font-heading font-bold ${headerColor}`}>
+          <h3 className={`mb-6 text-2xl md:text-4xl lg:text-[40px] font-heading font-bold ${headerColor}`}>
             {title}
           </h3>
 

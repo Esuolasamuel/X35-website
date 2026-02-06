@@ -153,7 +153,7 @@ export default function Services() {
       {/* MOBILE VIEW */}
       <div className="lg:hidden space-y-6">
         <div className="py-2">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-heading text-dark mb-1 text-white">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl  leading-15 font-heading text-dark mb-1 text-white">
             Our Services
           </h2>
 
