@@ -16,7 +16,7 @@ export default function Hero({
       /* FIX: 'block' ensures it takes up width. 
          FIX: 'aspect-[1440/668]' only works if width is 100%.
       */
-      className="relative block w-full aspect-[1440/668] min-h-[300px] overflow-hidden"
+      className="relative block w-full aspect-1440/668 min-h-75 overflow-hidden"
     >
       {/* Background Image */}
       <Image
@@ -42,7 +42,7 @@ export default function Hero({
              'bg-contain' ensures the SVG shows up without being cut off.
           */}
           <span 
-            className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-full h-[60px] md:h-[98px] bg-no-repeat bg-contain bg-center -z-10"
+            className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-full h-15 md:h-24.5 bg-no-repeat bg-contain bg-center -z-10"
             style={{ backgroundImage: "url('/images/Fill-4.svg')" }}
           />
         </div>
