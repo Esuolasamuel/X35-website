@@ -88,7 +88,7 @@ export default function CTA({
                   {/* Background underline */}
                   <span
                     aria-hidden="true"
-                    className="absolute inset-x-[-10%] bottom-[-15%] h-[120%] z-0 bg-no-repeat bg-contain bg-center"
+                    className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] z-0 bg-no-repeat bg-contain bg-center"
                     style={{
                       backgroundImage:
                         "url('/assets/icons/fill-4.svg')",
@@ -111,7 +111,7 @@ export default function CTA({
                   {/* Background underline */}
                   <span
                     aria-hidden="true"
-                    className="absolute inset-x-[-12%] bottom-[-18%] h-[130%] z-0 bg-no-repeat bg-contain bg-center"
+                    className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] z-0 bg-no-repeat bg-contain bg-center"
                     style={{
                       backgroundImage:
                         "url('/assets/icons/fill-4.svg')",
