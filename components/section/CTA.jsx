@@ -46,7 +46,7 @@ export default function CTA({
         {/* Background pattern */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-40 mix-blend-overlay"
+          className="absolute inset-0 opacity-40 z-30 mix-blend-overlay"
           style={{
             backgroundImage: "url('/assets/images/image-9.svg')",
             backgroundSize: "cover",
