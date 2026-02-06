@@ -19,7 +19,7 @@ export default function NotifyModal({ open, onClose }) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-999 flex items-center justify-center p-4">
       {/* Backdrop - Lighter gray as seen in the image background */}
       <div
         onClick={onClose}
@@ -27,7 +27,7 @@ export default function NotifyModal({ open, onClose }) {
       />
 
       {/* Modal Container */}
-      <div className="relative z-10 w-full max-w-[580px] rounded-[32px] bg-white px-8 py-12 md:px-16 md:py-16 shadow-xl animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative z-10 w-full max-w-145 rounded-4xl bg-white px-8 py-12 md:px-16 md:py-16 shadow-xl animate-in fade-in zoom-in-95 duration-200">
         
         {/* Close Button - Positioned exactly like the 'X' in the image */}
         <button
@@ -39,10 +39,10 @@ export default function NotifyModal({ open, onClose }) {
 
         {/* Header Section */}
         <div className="text-center mb-10">
-          <h2 className="text-[32px] md:text-[42px] font-black text-[#111827] leading-tight tracking-tight mb-4">
+          <h2 className="text-[32px] md:text-[42px] font-heading font-black text-[#111827] leading-tight tracking-tight mb-4">
             Be the First to Know
           </h2>
-          <p className="text-[#111827] text-lg md:text-xl leading-relaxed max-w-105 mx-auto opacity-90">
+          <p className="text-[#111827] font-body text-lg md:text-xl leading-relaxed max-w-105 mx-auto opacity-90">
             Enter your email and we’ll let you know when our product launches.
           </p>
         </div>
@@ -53,13 +53,13 @@ export default function NotifyModal({ open, onClose }) {
             <input
               type="text"
               placeholder="Full name"
-              className="w-full rounded-xl border border-gray-300 bg-transparent px-6 py-5 text-xl text-[#111827] placeholder:text-[#111827] focus:outline-none focus:ring-2 focus:ring-yellow-400/50 transition-all"
+              className="w-full rounded-xl border border-gray-300 font-body bg-transparent px-6 py-5 text-xl text-[#111827] placeholder:text-[#111827] focus:outline-none focus:ring-2 focus:ring-yellow-400/50 transition-all"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full rounded-full bg-[#FFD700] py-6 text-xl font-bold text-[#111827] transition-all hover:brightness-105 active:scale-[0.98]"
+            className="w-full rounded-full bg-[#FFD700] py-6 text-xl font-body font-bold text-[#111827] transition-all hover:brightness-105 active:scale-[0.98]"
           >
             Notify me
           </button>

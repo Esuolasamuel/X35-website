@@ -12,7 +12,7 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className="bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 xl:p-30 2xl:p-30">
+    <section className="bg-white p-6 sm:p-7.5 md:p-15 lg:p-30 xl:p-30 2xl:p-30">
       <div className="flex flex-col gap-20 mx-auto">
 
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[40px] 2xl:text-[40px] text-center font-bold text-dark-500 font-heading">
@@ -26,7 +26,7 @@ export default function ProjectDemo({ projects }) {
               href={`/Projects/${p.slug}`}
               className="group block"
             >
-              <div className="relative aspect-4/3 sm:aspect-16/10 md:aspect-4/3 lg:aspect-636/375 xl:aspect-636/375 2xl:aspect-636/375 sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden">
+              <div className="relative aspect-636/375 rounded-md sm:rounded-md sm:rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl md:rounded-xl lg:rounded-2xl md:rounded-xl lg:rounded-2xl  overflow-hidden">
                 <Image
                   src={p.img}
                   alt={p.title}
@@ -55,11 +55,11 @@ export default function ProjectDemo({ projects }) {
           <Link
             href="/Projects"
             className="
-              inline-flex items-center gap-3
+              inline-flex items-center gap-1.5 md:gap-2 lg:gap-3
               border hover:border-yellow-400 rounded-full
-              sm:pl-0.5 md:pl-1 lg:pl-2 sm:pr-2 md:pr-3 lg:pr-4 sm:py-2 md:py-3 lg:py-4
+              pl-1 md:pl-1 lg:pl-2 pr-2 md:pr-3 lg:pr-4 py-2 md:py-3 lg:py-4
                text-dark-500
-              font-body font-bold sm:text-xs md:text-sm lg:text-base
+              font-body font-bold text-xs md:text-sm lg:text-base
               hover:bg-yellow-400  transition
             "
           >

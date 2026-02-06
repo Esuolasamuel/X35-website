@@ -3,23 +3,21 @@ import Image from "next/image";
 export default function Hero({
   ImageSrc="",
   title ="",
-  height = "h-full",
 }) {
   if (!ImageSrc || !title) return null;
 
   return (
     <section
       aria-label={title}
-      className={`relative w-full ${height} overflow-hidden`}
+      className={`relative w-full overflow-hidden`}
     >
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute aspect-1440/668 inset-0">
         <Image
           src={ImageSrc}
           alt={title}
           fill
           priority
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover"
         />
       </div>

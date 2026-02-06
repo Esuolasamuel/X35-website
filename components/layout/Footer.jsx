@@ -22,7 +22,7 @@ export default function Footer() {
                 className="w-16 h-16 mb-6"
               />
             </Link>
-            <div className="text-white font-medium text-lg tracking-tight">
+            <div className="text-white font-body font-medium text-lg tracking-tight">
               <span className="text-yellow-400">We</span> Design.{" "}
               <span className="text-yellow-400">We</span> Build.{" "}
               <span className="text-yellow-400">We</span> Deliver.
@@ -30,8 +30,8 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col items-start">
-            <h4 className="text-white/50 text-sm font-semibold mb-6 uppercase tracking-wider">Quick Links</h4>
+          <div className="flex flex-col items-start font-body">
+            <h4 className="text-white/50 text-sm font-semibold mb-8 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
               <li>
                 <Link href="/about" className="text-white hover:text-yellow-400 transition-colors">About Us</Link>
@@ -46,9 +46,9 @@ export default function Footer() {
           </div>
 
           {/* Contact Us */}
-          <div className="flex flex-col items-start">
-            <h4 className="text-white/50 text-sm font-semibold mb-6 uppercase tracking-wider">Contact Us</h4>
-            <div className="flex flex-col space-y-4">
+          <div className="flex flex-col items-start font-body">
+            <h4 className="text-white/50 text-sm font-semibold mb-8 uppercase tracking-wider">Contact Us</h4>
+            <div className="flex flex-col space-y-3">
               <a href="mailto:hello@x35projects.com" className="text-white hover:text-yellow-400 transition-colors">
                 hello@x35projects.com
               </a>
@@ -59,8 +59,8 @@ export default function Footer() {
           </div>
 
           {/* Follow Us */}
-          <div className="flex flex-col items-start">
-            <h4 className="text-white/50 text-sm font-semibold mb-6 uppercase tracking-wider">Follow Us</h4>
+          <div className="flex flex-col items-start font-body">
+            <h4 className="text-white/50 text-sm font-semibold mb-8 uppercase tracking-wider">Follow Us</h4>
             <div className="flex items-center gap-5">
               <a href="https://www.linkedin.com/company/x35-projects-ltd" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <Image src={linkedin} alt="linkedin" width={28} height={28} />
@@ -74,7 +74,7 @@ export default function Footer() {
 
         {/* Bottom Copyright */}
         <div className="py-10 text-center">
-          <p className="text-white/90 text-sm tracking-wide">
+          <p className="text-white/90 text-sm font-body tracking-wide">
             © 2025 X35 Projects. All Rights Reserved.
           </p>
         </div>

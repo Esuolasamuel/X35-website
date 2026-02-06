@@ -20,10 +20,10 @@ export default function RelatedProjects({
 
   return (
     <section className="py-24">
-      <div className="p-3.5 sm:p-7.5 md:p-15 lg:p-30">
+      <div className="p-6 sm:p-7.5 md:p-15 lg:p-30">
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
-          <h2 className="font-serif text-2xl">{title}</h2>
+          <h2 className="font-heading font-bold text-2xl">{title}</h2>
 
           <Link
             href="/projects"
@@ -39,7 +39,7 @@ export default function RelatedProjects({
             <Link
               key={project.id}
               href={project.href}
-              className="group relative h-65 overflow-hidden sm:rounded-lg md:rounded-xl lg:rounded-2xl"
+              className="group relative h-65 overflow-hidden rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl"
             >
               <Image
                 src={project.image}
@@ -51,7 +51,7 @@ export default function RelatedProjects({
               <div className="absolute inset-0 bg-black/30" />
 
               <div className="absolute bottom-6 left-6 text-white">
-                <p className="font-serif text-lg">{project.title}</p>
+                <p className="font-heading *:text-lg">{project.title}</p>
                 <span className="text-sm opacity-80">
                   {project.category}
                 </span>

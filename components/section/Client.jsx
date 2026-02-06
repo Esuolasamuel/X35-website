@@ -18,15 +18,15 @@ const logos = [
 
 export default function Clients() {
     return (
-        <section className=" bg-white px-3.5 sm:px-7.5 md:px-15 lg:x-30 pt-1.25 sm:pt-2.5 md:pt-5.5 lg:pt-10.5 ">
+        <section className=" bg-white px-5 sm:px-7.5 md:px-15 lg:x-30 pt-1.25 pt:3 sm:pt-3.5 md:pt-5.5 lg:pt-10.5 ">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 md:gap-12 place-items-center mx-auto">
                 {logos.map((logo, index) => (
                     <div key={index} className="flex items-center justify-center">
                         <Image
                             src={logo.src}
                             alt={logo.alt}
-                            width={120}
-                            height={48} 
+                            width={100}
+                            height={40} 
                             className="
                                 hover:scale-110 
                                 transition-all duration-300 ease-in-out 

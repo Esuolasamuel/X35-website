@@ -93,12 +93,12 @@ export default function Services() {
   const item = useMemo(() => items[index], [index]);
 
   return (
-    <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-3.5 sm:p-7.5 md:p-15 lg:p-30">
+    <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
       <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 items-center">
 
         {/* LEFT */}
-        <div className=" max-w-2xl hidden lg:block">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-heading text-dark mb-6 text-white">
+        <div className="max-w-2xl hidden lg:block">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-bold font-heading text-dark mb-6 text-white">
             Our Services
           </h2>
 
@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden aspect-square sm:aspect-video md:aspect-4/3 lg:aspect-615/594 hidden lg:block">
+        <div className="relative rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden aspect-615/594 hidden lg:block">
           <Image
             key={item.title}
             src={item.img}
@@ -142,7 +142,7 @@ export default function Services() {
             fill
             priority
             className="
-              object-cover sm:rounded-lg md:rounded-xl lg:rounded-2xl shadow-xl
+              object-cover rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl  shadow-xl
               transition-opacity duration-700 ease-in-out
             "
             style={{ opacity: visible ? 1 : 0 }}
@@ -153,7 +153,7 @@ export default function Services() {
       {/* MOBILE VIEW */}
       <div className="lg:hidden space-y-6">
         <div className="py-2">
-          <h2 className="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-heading text-dark mb-6 text-white">
+          <h2 className=" text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-heading text-dark mb-3 text-white">
             Our Services
           </h2>
 

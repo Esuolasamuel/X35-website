@@ -36,12 +36,12 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
           </div>
 
           {/* Header */}
-          <h2 className="text-[28px] md:text-[32px] leading-tight text-[#0F172A] font-black tracking-tight mb-4">
+          <h2 className="text-[28px] md:text-[32px] leading-tight text-[#0F172A] font-heading font-black tracking-tight mb-4">
             Coming Soon
           </h2>
           
           {/* Subtext */}
-          <p className="text-[#0F172A] text-lg md:text-xl leading-[1.6] max-w-95 mb-10 opacity-90">
+          <p className="text-[#0F172A] text-lg font-body md:text-xl leading-[1.6] max-w-95 mb-10 opacity-90">
             We’re crafting something exciting. Join our community to be first to know when it launches.
           </p>
 
@@ -50,6 +50,7 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
             onClick={onNotify}
             className="
               w-full rounded-full bg-[#FFD700] py-5
+              font-body
               text-lg font-bold text-[#0F172A]
               hover:brightness-95 transition-all active:scale-[0.98]
             "

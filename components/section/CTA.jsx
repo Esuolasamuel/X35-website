@@ -96,7 +96,7 @@ export default function CTA({ title, text, paragraph, id, align = "center", widt
             >
               <X size={20} />
             </button>
-            <h2 className="text-2xl font-bold mb-6 text-gray-900">Contact Us</h2>
+            <h2 className="text-2xl font-bold font-body mb-6 text-gray-900">Contact Us</h2>
             <ContactForm onSuccess={handleFormSuccess} />
           </div>
         </div>

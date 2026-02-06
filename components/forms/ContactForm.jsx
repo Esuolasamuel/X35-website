@@ -15,7 +15,7 @@ export default function ContactForm({ onSuccess }) {
   }, [state?.success, onSuccess]);
 
   return (
-    <form action={formAction} className="space-y-6">
+    <form action={formAction} className="space-y-6 p-6 sm:p-5 md:p-7 lg:p-10">
       <FloatingInput label="Full Name" name="name" required />
       <FloatingInput label="Email Address" name="email" type="email" required />
       <FloatingTextarea label="Message" name="message" required />

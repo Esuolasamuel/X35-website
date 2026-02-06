@@ -12,11 +12,11 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
   return (
     /* py-[120px] matches your previous structural requirements for consistent spacing */
     <section className="bg-white">
-      <div className="p-3.5 sm:p-6 md:p-10 lg:p-15 xl:p-20 2xl:p-30 mx-auto">
+      <div className="p-6 sm:p-6 md:p-10 lg:p-15 xl:p-20 2xl:p-30 mx-auto">
 
         {/* HEADER: Responsive layout matching Frame 115 (1).jpg */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 sm:mb-10 md:mb-12 gap-6">
-          <h3 className="font-serif font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-dark-500 leading-tight">
+          <h3 className="font-heading font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] text-dark-500 leading-tight">
             See more of our Projects
           </h3>
 
@@ -34,7 +34,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
             <Link
               key={project.id}
               href={`/Projects/${project.id}`}
-              className="group relative block w-full aspect-592/350 sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-100"
+              className="group relative block w-full aspect-592/300 sm:rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-100"
             >
               {/* Main Project Image */}
               <Image
@@ -50,7 +50,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
 
               {/* Text Information: Aligned bottom-left per Frame 115 (1).jpg */}
               <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 text-dark-500">
-                <h4 className="font-serif font-bold text-[20px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-1">
+                <h4 className="font-heading font-bold text-[20px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-1">
                   {project.title}
                 </h4>
                 <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-light opacity-90">

@@ -5,7 +5,7 @@ import highlightSvg from "@/assets/images/Fill-4.svg";
 
 const ProjectHero = () => {
   return (
-    <section className=" w-full p-3.5 sm:p-7.5 md:p-14 lg:p-14 mt-16 text-center bg-white ">
+    <section className=" w-full p-6 sm:p-7.5 md:p-14 lg:p-14 mt-16 text-center bg-white ">
           <h1    
             className="
               font-heading  drop-shadow-lg

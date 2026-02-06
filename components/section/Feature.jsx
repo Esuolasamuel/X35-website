@@ -20,12 +20,12 @@ const Feature = ({
           mx-auto
           flex flex-col ${flex}
           items-center gap-12 xl:gap-16
-          p-3.5 sm:p-7.5 md:p-15 lg:p-30
+          p-6 sm:p-7.5 md:p-15 lg:p-30
         `}
       >
         {/* LEFT TEXT SECTION */}
         <div className={`w-full xl:w-1/2 ${orderL}`}>
-          <h3 className={`mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading  font-bold ${headerColor}`}>
+          <h3 className={`mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold ${headerColor}`}>
             {title}
           </h3>
 
@@ -47,7 +47,7 @@ const Feature = ({
               ${aspect}
               max-w-153.75
               mx-auto
-              overflow-hidden sm:rounded-lg md:rounded-xl lg:rounded-2xl bg-gray-800
+              overflow-hidden rounded-lg bg-gray-800
             `}
           >
             {ImageSrc && (

@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden lg:flex items-center gap-6  sm:gap-8 md:gap-9 lg:gap-10 xl:gap-11 xxl:gap-12 xxxl:gap-13 text-xs  sm:text-base md:text-base lg:text-base xl:text-base xxl:text-base xxxl:text-base font-semibold font-body cursor-pointer ${
+            className={`hidden lg:flex items-center gap-6  sm:gap-8 md:gap-9 lg:gap-10 xl:gap-11 xxl:gap-12 xxxl:gap-13 text-xs sm:text-base md:text-base lg:text-base xl:text-base xxl:text-base xxxl:text-base font-semibold font-body cursor-pointer ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
@@ -75,7 +75,7 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex rounded-full bg-yellow-400 hover:bg-yellow-700 transition-colors px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 xxl:px-6 xxxl:px-6 py-2.5  sm:py-3 md:py-3.5 lg:py-3.5 xl:py-3.5 xxl:py-3.5 xxxl:py-3.5 font-body font-semibold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500"
+            className="hidden lg:inline-flex rounded-full bg-yellow-400 hover:bg-yellow-700 transition-colors px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 xxl:px-6 xxxl:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-3.5 xl:py-3.5 xxl:py-3.5 xxxl:py-3.5 font-body font-semibold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500"
           >
             Contact Us
           </button>
@@ -96,14 +96,14 @@ export default function Header() {
       {menuOpen && (
         <div className="fixed inset-0 top-5 z-40 lg:hidden text-dark-500" onClick={() => setMenuOpen(false)}>
           <div className="fixed top-0 left-0 right-0 bg-white shadow-lg p-6 pt-20">
-            <nav className="flex flex-col items-center gap-6 text-lg font-semibold text-dark-500">
+            <nav className="flex flex-col items-start font-body gap-6 text-lg font-semibold text-dark-500">
               <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link href="/Projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
               <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
               <button className="text-start" onClick={() => { setIsComingSoonOpen(true); setMenuOpen(false); }}>Products</button>
               <button
                 onClick={() => { setIsContactOpen(true); setMenuOpen(false); }}
-                className="mt-4 rounded-full bg-yellow-400 hover:bg-yellow-700 px-4 sm:px-6 py-2  sm:py-3 font-body font-semibold text-xs sm:text-base text-dark-500 md:font-body md:font-semibold md:text-sm md:leading-none md:tracking-normal"
+                className="mt-4 rounded-full bg-yellow-400 hover:bg-yellow-700 px-4 sm:px-6 py-2 sm:py-3 font-body font-semibold text-xs sm:text-base text-dark-500 md:font-body md:font-semibold md:text-sm md:leading-none md:tracking-normal"
               >
                 Contact Us
               </button>
@@ -125,14 +125,14 @@ export default function Header() {
       {/* --- CONTACT FORM MODAL --- */}
       {isContactOpen && (
         <div className="fixed inset-0 z-90 flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm text-dark-500">
-          <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl xxl:max-w-4xl xxxl:max-w-5xl bg-white sm:rounded-lg md:rounded-xl lg:rounded-2xl p-0 md:p-6 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 shadow-2xl">
+          <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl xxl:max-w-4xl xxxl:max-w-5xl bg-white rounded-lg md:rounded-xl lg:rounded-2xl p-0 md:p-6 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}
               className="absolute top-3  sm:top-5 md:top-6 lg:top-7 xl:top-8 xxl:top-9 xxxl:top-10 right-3  sm:right-5 md:right-6 lg:right-7 xl:right-8 xxl:right-9 xxxl:right-10 text-dark-500 hover:text-dark-500"
             >
               <X size={20} className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
             </button>
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-7xl xxxl:text-8xl font-bold mb-4 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-9 xxl:mb-10 xxxl:mb-11 text-dark-500">Contact Us</h2>
+            <h2 className="text-xl font-heading sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-7xl xxxl:text-8xl font-bold mb-4 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-9 xxl:mb-10 xxxl:mb-11 text-dark-500">Contact Us</h2>
 
             {/* Pass handleFormSuccess to the form */}
             <ContactForm onSuccess={handleFormSuccess} />

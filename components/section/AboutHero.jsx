@@ -37,7 +37,7 @@ export default function AboutHero() {
             font-body
             font-normal
             text-center
-            text-base sm:text-lg md:text-[19px]
+            text-base sm:text-lg md:text-[17px]
             leading-relaxed sm:leading-[28.5px]
             tracking-tight sm:tracking-[-0.03em]
             [leading-trim:cap-height] text-dark-500
@@ -53,7 +53,7 @@ export default function AboutHero() {
         <Image
           src={aboutHero}
           alt="X35 Projects - Building trust, vision, and lasting value"
-          className="object-cover rounded-lg shadow-lg"
+          className="object-cover shadow-lg"
           fill
           priority
         />

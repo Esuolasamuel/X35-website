@@ -32,6 +32,11 @@ export default function AdrinoPage() {
     { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 
+ const images = [
+    { ImageSrc: adinoSplit1, alt: "kitchen area Interior 1" },
+    { ImageSrc: adinoSplit2, alt: "kitchen area Interior 2" },
+ ]
+
   return (
     <>
       <Hero ImageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" />
@@ -87,11 +92,8 @@ export default function AdrinoPage() {
           ]}
         />
         <ImageGallery
-          backgroundColor="bg-[#EAF1FF]"
-          images={[
-            { ImageSrc: adinoSplit1, alt: "kitchen area Interior 1", height: 594, width: 615 },
-            { ImageSrc: adinoSplit2, alt: "kitchen area Interior 2", height: 594, width: 615 },
-          ]}
+          backgroundColor="bg-[#E3CEDE]"
+          images={images}
         />
         <RelatedProjects projects={projects} />
     </>

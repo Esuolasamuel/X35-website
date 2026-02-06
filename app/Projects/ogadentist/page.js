@@ -75,7 +75,7 @@ export default function OgaDentistPage() {
           title="Scope of Spaces Designed"
           description="The facility features a wide range of carefully curated spaces, each designed with intention and precision:"
           backgroundColor="bg-[#d1ebe8]"
-          aspect="aspect-[16/9] sm:aspect-[4/3] md:aspect-aspect-[615/796] lg:aspect-aspect-[615/796] xl:aspect-[615/796] 2xl:aspect-[615/796]"
+          aspect="aspect-[615/796]"
           lists={[
             { paragraph: "A welcoming reception that immediately sets the tone of professionalism" },
             { paragraph: "A comfortable waiting lounge with zoning that reduces patient anxiety" },
