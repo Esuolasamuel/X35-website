@@ -41,12 +41,12 @@ export default function CTA({
       {/* ================= CTA SECTION ================= */}
       <section
         id={id}
-        className="relative isolate w-full overflow-hidden bg-[#D9D9E9] py-24 lg:py-32"
+        className="relative w-full overflow-hidden bg-[#D9D9E9] py-24 lg:py-32"
       >
-        {/* Background pattern */}
+        {/* Background pattern – now visible */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-40 z-30 mix-blend-overlay"
+          className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
           style={{
             backgroundImage: "url('/assets/images/image-9.svg')",
             backgroundSize: "cover",
@@ -80,29 +80,20 @@ export default function CTA({
               <span className="block">architect</span>
               <span className="block">with purpose.</span>
 
-              <span className="relative isolate block mt-3">
-                <span className="relative z-10 inline-block">
-                  Have you been
-                  <span className="relative inline-block ml-2">
-                    <span className="relative z-10">x35ied?</span>
+              <span className="block mt-3">
+                Have you been{" "}
+                <span className="relative inline-block ml-2">
+                  <span className="relative z-10">x35ied?</span>
 
-                    {/* SVG UNDERLAY */}
-                    <svg
-                      aria-hidden="true"
-                      className="absolute inset-0 z-0 pointer-events-none"
-                      viewBox="0 0 200 100"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M10,50 C10,20 100,5 180,20 C200,45 150,90 80,90 C30,90 5,70 15,45 C25,20 90,15 170,25"
-                        stroke="#FFD700"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        fill="none"
-                        className="animate-draw"
-                      />
-                    </svg>
-                  </span>
+                  {/* Background underline */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-[-10%] bottom-[-15%] h-[120%] z-0 bg-no-repeat bg-contain bg-center"
+                    style={{
+                      backgroundImage:
+                        "url('/assets/icons/fill-4.svg')",
+                    }}
+                  />
                 </span>
               </span>
             </span>
@@ -112,29 +103,20 @@ export default function CTA({
               <span className="block">Your vision deserves an</span>
               <span className="block">architect with purpose.</span>
 
-              <span className="relative isolate block mt-2">
-                <span className="relative z-10 inline-block">
-                  Have you been
-                  <span className="relative inline-block ml-3">
-                    <span className="relative z-10">x35ied?</span>
+              <span className="block mt-2">
+                Have you been{" "}
+                <span className="relative inline-block ml-3">
+                  <span className="relative z-10">x35ied?</span>
 
-                    {/* SVG UNDERLAY */}
-                    <svg
-                      aria-hidden="true"
-                      className="absolute inset-0 z-0 pointer-events-none"
-                      viewBox="0 0 200 100"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M10,50 C10,20 100,5 180,20 C200,45 150,90 80,90 C30,90 5,70 15,45 C25,20 90,15 170,25"
-                        stroke="#FFD700"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        fill="none"
-                        className="animate-draw"
-                      />
-                    </svg>
-                  </span>
+                  {/* Background underline */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-[-12%] bottom-[-18%] h-[130%] z-0 bg-no-repeat bg-contain bg-center"
+                    style={{
+                      backgroundImage:
+                        "url('/assets/icons/fill-4.svg')",
+                    }}
+                  />
                 </span>
               </span>
             </span>
@@ -185,23 +167,6 @@ export default function CTA({
           </div>
         </div>
       )}
-
-      {/* ================= ANIMATION ================= */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            @keyframes draw {
-              from { stroke-dashoffset: 1000; }
-              to { stroke-dashoffset: 0; }
-            }
-            .animate-draw {
-              stroke-dasharray: 1000;
-              stroke-dashoffset: 1000;
-              animation: draw 2s ease-in-out forwards;
-            }
-          `,
-        }}
-      />
     </>
   );
 }
