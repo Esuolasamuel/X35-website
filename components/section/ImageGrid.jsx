@@ -17,7 +17,7 @@ const ImageGrid = ({
         `}
       >
         {/* Smaller Image */}
-        <div className="w-full md:w-[38.6%] aspect-506/582 overflow-hidden rounded-[15px]">
+        <div className="w-full md:w-[38.6%] aspect-506/582 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl">
           <Image
             src={imageA}
             alt="Feature detail"
@@ -28,7 +28,7 @@ const ImageGrid = ({
         </div>
 
         {/* Larger Image */}
-        <div className="w-full md:w-[61.4%] aspect-805/582 overflow-hidden rounded-[15px]">
+        <div className="w-full md:w-[61.4%] aspect-805/582 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl">
           <Image
             src={imageB}
             alt="Feature main"

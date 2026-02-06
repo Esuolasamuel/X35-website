@@ -34,7 +34,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
             <Link
               key={project.id}
               href={`/Projects/${project.id}`}
-              className="group relative block w-full aspect-592/300 sm:rounded-md md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-100"
+              className="group relative block w-full aspect-592/300 rounded-sm md:rounded-md lg:rounded-lg shadow-2xl overflow-hidden bg-gray-100"
             >
               {/* Main Project Image */}
               <Image

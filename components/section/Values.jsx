@@ -11,7 +11,7 @@ export default function Values({ values }) {
             /* Added 'group' class to the card container */
             <div
               key={v.title}
-              className="group bg-yellow-600 font-body font-normal text-dark-500 rounded-xl py-6.5 md:py-12 px-6 md:px-10 transition-all duration-500 hover:shadow-lg"
+              className="group bg-yellow-600 font-body font-normal text-dark-500 rounded-sm md:rounded-md lg:rounded-lgpy-6.5 md:py-12 px-6 md:px-10 transition-all duration-500 hover:shadow-lg"
             >
               <div className="overflow-hidden w-fit mb-4">
                 <Image

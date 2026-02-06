@@ -18,7 +18,7 @@ const MiniHero = ({ title, ImageSrc, description }) => {
 
                 {/* IMAGE SECTION */}
                 <div className="w-full">
-                    <div className="relative w-full aspect-1200/700 overflow-hidden shadow-sm bg-gray-200">
+                    <div className="relative w-full aspect-1200/700 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl bg-gray-200">
                         <Image
                             src={ImageSrc}
                             alt={title}

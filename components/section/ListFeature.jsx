@@ -70,7 +70,7 @@ const ListFeature = ({
                 <div className={`w-full lg:w-1/2 ${orderR}`}>
                     <div className={`
                         relative w-full ${aspect} 
-                        rounded-[20px] md:rounded-4xl 
+                        rounded-sm md:rounded-md lg:rounded-lg 
                         overflow-hidden bg-[#1A1A2E] 
                         shadow-2xl ring-1 ring-white/10
                     `}>

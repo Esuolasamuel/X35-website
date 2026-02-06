@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-md sm:rounded-sm md:rounded-md lg:rounded-lg  overflow-hidden aspect-615/594 hidden lg:block">
+        <div className="relative rounded-sm md:rounded-md lg:rounded-lg  overflow-hidden aspect-615/594 hidden lg:block">
           <Image
             key={item.title}
             src={item.img}
