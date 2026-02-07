@@ -62,7 +62,9 @@ export default function Services() {
     if (startTimeRef.current == null) return;
 
     const timer = setInterval(() => {
-      const elapsed = getNow() - startTimeRef.current;
+      const current = startTimeRef.current;
+      if (current == null) return;
+      const elapsed = getNow() - current;
       const pct = Math.min((elapsed / INTERVAL) * 100, 100);
 
       setProgress(pct);
