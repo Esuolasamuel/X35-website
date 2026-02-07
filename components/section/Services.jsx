@@ -94,7 +94,7 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-2 sm:gap-4 md:gap-6 lg:gap-8 items-center">
+      <div className="grid md:grid-cols-2 gap-0 sm:gap-1 md:gap-1 lg:gap-2 items-center">
 
         {/* LEFT */}
         <div className="max-w-xl hidden lg:block">
@@ -142,7 +142,7 @@ export default function Services() {
             fill
             priority
             className="
-              object-cover rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  shadow-xl
+              object-cover rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-4xl  shadow-xl
               transition-opacity duration-700 ease-in-out
             "
             style={{ opacity: visible ? 1 : 0 }}
