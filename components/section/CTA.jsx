@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import ContactForm from "../forms/ContactForm";
 
-import bgPattern from "@/assets/images/image-9.svg";
-import handdrawn from "@/assets/icons/Fill-4.svg";
+import bgPattern from "@/assets/images/image-9.svg"
+// import handdrawn from "@/assets/icons/fill-4.svg";
 
 
 
@@ -41,14 +41,16 @@ export default function CTA({
       {/* ================= CTA SECTION ================= */}
       <section
         id={id}
-        className="relative overflow-hidden bg-[#D1D1E4] py-24 lg:py-32"
+        // className="relative overflow-hidden bg-[#D1D1E4] py-24 lg:py-32"
+        style={{ backgroundImage: `url(${bgPattern.src})` }}
+        className="relative py-16 bg-[#C9C9DC] bg-repeat"
       >
         {/* ================= BACKGROUND PATTERN ================= */}
         <div
           aria-hidden
           className="absolute inset-0 z-0 pointer-events-none opacity-35"
           style={{
-            backgroundImage: `url(${bgPattern.src})`,
+            backgroundImage: `url(@/assets/images/image-9.svg)`,
             backgroundRepeat: "repeat",
             backgroundSize: "640px",
           }}
