@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import ContactForm from "../forms/ContactForm";
 
 import bgPattern from "@/assets/images/image-9.svg";
-import handdrawn from "@/assets/icons/fill-4.svg";
+import handdrawn from "@/assets/icons/Fill-4.svg";
 
 
 
