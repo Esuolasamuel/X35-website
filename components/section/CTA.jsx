@@ -4,9 +4,14 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import ContactForm from "../forms/ContactForm";
 
+import bgpattern from "@/assets/images/image-9.svg";
+import handdrawn from "@/assets/icons/fill-4.svg";
+
+
+
 export default function CTA({
   title,
-  text,
+  text = "Contact us",
   paragraph,
   id,
   align = "center",
@@ -15,13 +20,8 @@ export default function CTA({
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
-    if (isContactOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "unset";
+    document.body.style.overflow = isContactOpen ? "hidden" : "unset";
   }, [isContactOpen]);
-
-  const handleFormSuccess = () => {
-    setIsContactOpen(false);
-  };
 
   const alignmentMap = {
     left: "items-start text-left",
@@ -41,25 +41,25 @@ export default function CTA({
       {/* ================= CTA SECTION ================= */}
       <section
         id={id}
-        className="relative w-full overflow-hidden bg-[#D9D9E9] py-24 lg:py-32"
+        className="relative overflow-hidden bg-[#D1D1E4] py-24 lg:py-32"
       >
-        {/* Background pattern – now visible */}
+        {/* ================= BACKGROUND PATTERN ================= */}
         <div
-          aria-hidden="true"
-          className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
+          aria-hidden
+          className="absolute inset-0 z-0 pointer-events-none opacity-35"
           style={{
-            backgroundImage: "url('@/assets/images/image-9.svg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundImage: `url(${bgpattern.src})`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "640px",
           }}
         />
 
-        {/* Content wrapper */}
+        {/* ================= CONTENT ================= */}
         <div
           className={`
-            relative z-10 mx-auto flex flex-col gap-10 px-6 transition-all duration-300
-            ${alignmentMap[align] || alignmentMap.center}
-            ${widthMap[width] || widthMap["4xl"]}
+            relative z-10 mx-auto flex flex-col gap-10 px-6
+            ${alignmentMap[align]}
+            ${widthMap[width]}
           `}
         >
           {/* ================= HEADLINE ================= */}
@@ -67,13 +67,13 @@ export default function CTA({
             className="
               font-heading font-bold text-[#1A1A1A]
               leading-[1.05]
-              tracking-[-0.02em] sm:tracking-[-0.025em] lg:tracking-[-0.03em]
+              tracking-[-0.03em]
               text-[2.25rem]
               sm:text-[3.5rem]
               lg:text-[4.8rem]
             "
           >
-            {/* -------- Mobile -------- */}
+            {/* Mobile */}
             <span className="block sm:hidden">
               <span className="block">Your vision</span>
               <span className="block">deserves an</span>
@@ -85,20 +85,18 @@ export default function CTA({
                 <span className="relative inline-block ml-2">
                   <span className="relative z-10">x35ied?</span>
 
-                  {/* Background underline */}
                   <span
-                    aria-hidden="true"
-                    className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] z-0 bg-no-repeat bg-contain bg-center"
+                    aria-hidden
+                    className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] bg-no-repeat bg-contain bg-center"
                     style={{
-                      backgroundImage:
-                        "url('@/assets/icons/fill-4.svg')",
+                      backgroundImage: `url(${handdrawn.src})`,
                     }}
                   />
                 </span>
               </span>
             </span>
 
-            {/* -------- Desktop -------- */}
+            {/* Desktop */}
             <span className="hidden sm:block">
               <span className="block">Your vision deserves an</span>
               <span className="block">architect with purpose.</span>
@@ -108,13 +106,11 @@ export default function CTA({
                 <span className="relative inline-block ml-3">
                   <span className="relative z-10">x35ied?</span>
 
-                  {/* Background underline */}
                   <span
-                    aria-hidden="true"
-                    className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] z-0 bg-no-repeat bg-contain bg-center"
+                    aria-hidden
+                    className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] bg-no-repeat bg-contain bg-center"
                     style={{
-                      backgroundImage:
-                        "url('/assets/icons/fill-4.svg')",
+                      backgroundImage: `url(${handdrawn.src})`,
                     }}
                   />
                 </span>
@@ -124,27 +120,25 @@ export default function CTA({
 
           {/* ================= PARAGRAPH ================= */}
           {paragraph && (
-            <p className="max-w-2xl text-lg leading-relaxed tracking-[-0.01em] text-[#1A1A1A]/80 lg:text-xl">
+            <p className="max-w-2xl text-lg leading-relaxed text-[#1A1A1A]/80 lg:text-xl">
               {paragraph}
             </p>
           )}
 
           {/* ================= CTA BUTTON ================= */}
-          {text && (
-            <button
-              onClick={() => setIsContactOpen(true)}
-              className="
-                inline-flex w-fit items-center justify-center
-                rounded-full bg-[#FFD700] px-12 py-4
-                font-body text-sm font-bold tracking-[0.02em] text-[#1A1A1A]
-                shadow-lg transition-all duration-200
-                hover:bg-[#F0C800] hover:shadow-xl
-                md:text-base
-              "
-            >
-              {text}
-            </button>
-          )}
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="
+              inline-flex w-fit items-center justify-center
+              rounded-full bg-[#FFD700] px-12 py-4
+              text-sm font-bold tracking-[0.02em] text-[#1A1A1A]
+              shadow-lg transition-all
+              hover:bg-[#F0C800] hover:shadow-xl
+              md:text-base
+            "
+          >
+            {text}
+          </button>
         </div>
       </section>
 
@@ -154,16 +148,16 @@ export default function CTA({
           <div className="relative w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}
-              className="absolute right-5 top-5 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-black"
+              className="absolute right-5 top-5 rounded-full p-2 text-gray-400 hover:bg-gray-100 hover:text-black"
             >
               <X size={20} />
             </button>
 
-            <h2 className="mb-6 text-2xl font-bold tracking-[-0.02em] text-gray-900">
+            <h2 className="mb-6 text-2xl font-bold text-gray-900">
               Contact Us
             </h2>
 
-            <ContactForm onSuccess={handleFormSuccess} />
+            <ContactForm onSuccess={() => setIsContactOpen(false)} />
           </div>
         </div>
       )}

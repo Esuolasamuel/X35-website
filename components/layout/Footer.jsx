@@ -7,9 +7,9 @@ import instagram from "@/assets/icons/instagram.svg";
 export default function Footer() {
   return (
     // Updated background to match the dark navy/black in the screenshot
-    <footer className="bg-[#0B0B15] p-6 sm:p-7.5 md:p-15 lg:p-30">
+    <footer className="bg-[#11111F] p-6 sm:p-7.5 md:p-15 lg:p-20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 pb-6 sm:pb-7.5 md:pb-15 lg:pb-30 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 pb-6 sm:pb-7.5 md:pb-15 lg:pb-20 border-b border-white/10">
           
           {/* Logo & Slogan Section */}
           <div className="flex flex-col items-start max-w-xs">
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-6 sm:pt-7.5 md:pt-15 lg:pt-30 text-center">
+        <div className="pt-6 sm:pt-7.5 md:pt-15 lg:pt-20 text-center">
           <p className="text-white/90 text-sm font-body tracking-wide">
             © 2025 X35 Projects. All Rights Reserved.
           </p>
