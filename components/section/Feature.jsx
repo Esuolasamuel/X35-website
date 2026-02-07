@@ -1,74 +1,129 @@
-import Image from "next/image";
+// app/page.tsx OR components/CTA.tsx
+"use client";
 
-const Feature = ({
-  textColor = " text-dark-500/80",
-  headerColor = " text-dark-500",
-  title,
-  imageSrc,
-  description,
-  backgroundColor = "bg-[#e3f4ef]",
-  aspect = "aspect-[615/594]",
-  flex = "xl:flex-row",
-  orderL = "order-1",
-  orderR = "order-2",
-}) => {
+import { useState } from "react";
+
+export default function CTASection() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
-    /* Added 'group' here so the hover is triggered when the section is entered */
-    <section className={`${backgroundColor} group`}>
+    <section
+      className="
+        relative flex min-h-140 w-full items-center justify-center
+        overflow-hidden bg-[#D9D9E9]
+        py-24 lg:py-32
+      "
+    >
+      {/* ================= BACKGROUND PATTERN OVERLAY ================= */}
       <div
-        className={`
-          mx-auto
-          flex flex-col ${flex}
-          items-center gap-6 lg:gap-8
-          p-6 sm:p-7.5 md:p-15 lg:p-30
-        `}
-      >
-        {/* LEFT TEXT SECTION */}
-        <div className={`w-full lg:w-1/2 ${orderL}`}>
-          <h3 className={`mb-6 text-xl md:text-4xl lg:text-[40px] font-heading font-bold ${headerColor}`}>
-            {title}
-          </h3>
+        aria-hidden
+        className="absolute inset-0 z-10 opacity-40 pointer-events-none"
+        style={{
+          backgroundImage: "url('@/assets/images/image-9.svg')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "600px",
+        }}
+      />
 
-          {description.map((desc, index) => (
-            <p
-              key={index}
-              className={`mb-6 last:mb-0 text-sm md:text-base lg:text-[17px] font-body font-normal leading-relaxed ${textColor} tracking-wide`}
+      {/* ================= CONTENT ================= */}
+      <div className="relative z-20 mx-auto w-full max-w-237.5 px-6 text-center">
+        <h1
+          className="
+            font-heading font-bold text-[#1A1A1A]
+            leading-[1.05]
+            tracking-[-0.02em] sm:tracking-[-0.025em] lg:tracking-[-0.03em]
+            text-[2.25rem]
+            sm:text-[3.5rem]
+            lg:text-[4.75rem]
+          "
+        >
+          {/* -------- Mobile -------- */}
+          <span className="block sm:hidden">
+            <span className="block">Your vision</span>
+            <span className="block">deserves an</span>
+            <span className="block">architect</span>
+            <span className="block">with purpose.</span>
+
+            <span className="relative block mt-3">
+              Have you been{" "}
+              <span className="relative inline-block ml-2">
+                <span className="relative z-20">x35ied?</span>
+
+                {/* Hand-drawn underline */}
+                <span
+                  aria-hidden
+                  className="
+                    absolute inset-x-[-12%] bottom-[-10%]
+                    h-[130%] z-10
+                    bg-no-repeat bg-contain bg-center
+                  "
+                  style={{
+                    backgroundImage: "url('@/assets/icons/fill-4.svg')",
+                  }}
+                />
+              </span>
+            </span>
+          </span>
+
+          {/* -------- Desktop -------- */}
+          <span className="hidden sm:block">
+            <span className="block">Your vision deserves an</span>
+            <span className="block">architect with purpose.</span>
+
+            <span className="relative block mt-2">
+              Have you been{" "}
+              <span className="relative inline-block ml-3">
+                <span className="relative z-20">x35ied?</span>
+
+                {/* Hand-drawn underline */}
+                <span
+                  aria-hidden
+                  className="
+                    absolute inset-x-[-12%] bottom-[-12%]
+                    h-[130%] z-10
+                    bg-no-repeat bg-contain bg-center
+                  "
+                  style={{
+                    backgroundImage: "url('@/assets/icons/fill-4.svg')",
+                  }}
+                />
+              </span>
+            </span>
+          </span>
+        </h1>
+
+        {/* ================= CTA BUTTON ================= */}
+        <button
+          onClick={() => setIsContactOpen(true)}
+          className="
+            mt-8 inline-flex items-center justify-center
+            rounded-full bg-[#FFD700]
+            px-10 py-4
+            font-body text-sm font-bold tracking-[0.02em]
+            text-[#1A1A1A]
+            shadow-md transition
+            hover:bg-[#F0C800]
+            focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20
+          "
+        >
+          Contact us
+        </button>
+      </div>
+
+      {/* ================= OPTIONAL MODAL PLACEHOLDER ================= */}
+      {isContactOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="rounded-2xl bg-white p-8 shadow-xl">
+            <p className="text-lg font-semibold">Contact form goes here</p>
+            <button
+              onClick={() => setIsContactOpen(false)}
+              className="mt-4 text-sm underline"
             >
-              {desc.paragraph}
-            </p>
-          ))}
-        </div>
-
-        {/* RIGHT IMAGE SECTION */}
-        <div className={`w-full xl:w-1/2 ${orderR}`}>
-          <div
-            className={`
-              relative w-full
-              ${aspect}
-              max-w-153.75
-              mx-auto
-              overflow-hidden rounded-sm md:rounded-md lg:rounded-lg bg-gray-800
-            `}
-          >
-            {imageSrc && (
-              <Image
-                src={imageSrc}
-                alt={title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 615px"
-                /* Added transition classes and group-hover scale */
-                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                priority
-              />
-            )}
-            
-            {/* Added a subtle overlay that darkens slightly on hover to match the ProjectGrid style */}
-            <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-colors duration-500 pointer-events-none" />
+              Close
+            </button>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
-};
-
-export default Feature;
+}
