@@ -5,15 +5,15 @@ const Meta = ({
   title,
   description = [],
   infoItem = [],
-  // Updated default to the exact mint green from the screenshot
-  backgroundColor = "", 
+  // Updated to a specific hex for a clean mint/off-white background
+  backgroundColor = "bg-[#F0FDF4]", 
 }) => {
   return (
     <section
       className={`
         ${backgroundColor}
         w-full
-        /* Responsive vertical padding to match screenshot's breathable design */
+        /* Responsive vertical padding for a breathable architectural feel */
         py-16 md:py-24 lg:py-32
         flex
         items-center
@@ -22,6 +22,7 @@ const Meta = ({
     >
       <div
         className="
+          /* Corrected max-width for standard desktop displays */
           max-w-360
           mx-auto
           px-6 sm:px-10 md:px-16 lg:px-24
@@ -32,14 +33,12 @@ const Meta = ({
           items-start
         "
       >
-        {/* LEFT CONTENT: Text and Paragraphs */}
+        {/* LEFT CONTENT: Title and Description paragraphs */}
         <div className="w-full lg:w-1/2">
           <h2 className="
             font-heading 
             font-extrabold
-            text-[28px]
-            md:text-[36px]
-            lg:text-[44px]
+           text-xl md:text-4xl lg:text-[40px]
             leading-[1.1]
             tracking-tight
             mb-8
@@ -70,7 +69,7 @@ const Meta = ({
 
         {/* RIGHT CONTENT: Metadata List */}
         <div className="w-full lg:w-1/2 lg:pt-4">
-          <ul className="border-t border-black/10">
+          <ul className="w-full">
             {infoItem.map((info, index) => (
               <li
                 key={index}
@@ -82,14 +81,20 @@ const Meta = ({
                   md:py-6
                   border-b
                   border-black/10
+                   /* FIX: Removes the top-border of the first item 
+                      and the bottom-border of the last item */
+                  first:border-t-0
+                  last:border-b-0
                 "
               >
                 <span className="
                   text-[#1A1A1A]
                   font-body 
-                  font-semibold
+                  font-bold
                   text-[14px]
                   md:text-[16px]
+                  uppercase
+                  tracking-wider
                 ">
                   {info.heading}
                 </span>
@@ -97,7 +102,7 @@ const Meta = ({
                 <span className="
                   text-[#1A1A1A]
                   font-body 
-                  font-bold
+                  font-medium
                   text-[14px]
                   md:text-[16px]
                   text-right

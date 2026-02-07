@@ -19,13 +19,13 @@ const Feature = ({
         className={`
           mx-auto
           flex flex-col ${flex}
-          items-center gap-12 xl:gap-16
+          items-center gap-6 lg:gap-8
           p-6 sm:p-7.5 md:p-15 lg:p-30
         `}
       >
         {/* LEFT TEXT SECTION */}
-        <div className={`w-full xl:w-1/2 ${orderL}`}>
-          <h3 className={`mb-6 text-2xl md:text-4xl lg:text-[40px] font-heading font-bold ${headerColor}`}>
+        <div className={`w-full lg:w-1/2 ${orderL}`}>
+          <h3 className={`mb-6 text-xl md:text-4xl lg:text-[40px] font-heading font-bold ${headerColor}`}>
             {title}
           </h3>
 

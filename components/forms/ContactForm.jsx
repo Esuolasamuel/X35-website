@@ -15,18 +15,19 @@ export default function ContactForm({ onSuccess }) {
   }, [state?.success, onSuccess]);
 
   return (
-    <form action={formAction} className="space-y-6 p-6 sm:p-5 md:p-7 lg:p-10">
-      <FloatingInput label="Full Name" name="name" required />
-      <FloatingInput label="Email Address" name="email" type="email" required />
-      <FloatingTextarea label="Message" name="message" required />
-
-      <button
-        type="submit"
-        disabled={isPending}
-        className="w-full bg-[#FFD700] hover:bg-yellow-400 font-bold py-4 rounded-full transition disabled:opacity-50 text-dark-500"
-      >
-        {isPending ? "Sending..." : "Submit"}
-      </button>
-    </form>
+    <div className="|">
+      <form action={formAction} className="space-y-6 p-4 sm:p-5 md:p-6 lg:p-8">
+        <FloatingInput label="Full Name" name="name" required />
+        <FloatingInput label="Email Address" name="email" type="email" required />
+        <FloatingTextarea label="Message" name="message" required />
+        <button
+          type="submit"
+          disabled={isPending}
+          className="w-full bg-[#FFD700] hover:bg-yellow-400 font-bold py-4 rounded-full transition disabled:opacity-50 text-dark-500"
+        >
+          {isPending ? "Sending..." : "Submit"}
+        </button>
+      </form>
+    </div>
   );
 }

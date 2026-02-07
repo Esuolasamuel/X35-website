@@ -99,14 +99,14 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
             className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Previous slide"
           >
-            <ChevronLeft size={50} className="text-white" />
+            <ChevronLeft size={50} className="text-white font-normal h-0.5" />
           </button>
           <button
             onClick={nextSlide}
             className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Next slide"
           >
-            <ChevronRight size={50} className="text-white" />
+            <ChevronRight size={50} className="text-white font-normal h-0.5" />
           </button>
         </>
       )}
@@ -114,7 +114,7 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
       {/* --------------------------------
            HERO CONTENT (IMMEDIATE)
        -------------------------------- */}
-      <div className="absolute z-20 bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 xl:bottom-24 2xl:bottom-28 left-3 sm:left-6 md:left-12 lg:left-16 xl:left-20 2xl:left-30 ">
+      <div className="absolute z-20 bottom-6 sm:bottom-8 md:bottom-12 lg:bottom-16 xl:bottom-24 2xl:bottom-28 left-3 sm:left-6 md:left-12 lg:left-16 xl:left-20 2xl:left-30 ">
         <div className="text-white text-left">
           <h1
             className="

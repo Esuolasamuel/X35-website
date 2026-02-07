@@ -22,7 +22,7 @@ const Narrative = ({description, imageSrc, title, backgroundColor, textColor = "
 
         {/* RIGHT IMAGE SECTION */}
         <div className="w-full lg:w-7/12">
-          <div className="relative w-full aspect-615/594 rounded-sm md:rounded-md lg:rounded-lg shadow-2xl  overflow-hidden bg-gray-800">
+          <div className="relative w-full aspect-615/594 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden bg-gray-800">
             {imageSrc && (
               <Image
                 src={imageSrc}

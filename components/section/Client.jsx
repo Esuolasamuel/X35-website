@@ -18,7 +18,7 @@ const logos = [
 
 export default function Clients() {
     return (
-        <section className="bg-white px-5 sm:px-10 lg:px-20 py-10 md:py-16">
+        <section className="bg-white px-5 sm:px-10 lg:px-20 py-5 md:py-10">
             <div className="
                 /* Grid Logic: 
                    - 2 cols for 375px (default)
@@ -26,7 +26,7 @@ export default function Clients() {
                    - 6 cols for lg 
                 */
                 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 
-                gap-8 sm:gap-10 md:gap-12 
+                gap-4 sm:gap-6 md:gap-8 
                 max-w-7xl mx-auto place-items-center
             ">
                 {logos.map((logo, index) => (

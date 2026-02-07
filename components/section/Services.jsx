@@ -94,16 +94,16 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 items-center">
+      <div className="grid md:grid-cols-2 gap-2 sm:gap-4 md:gap-6 lg:gap-8 items-center">
 
         {/* LEFT */}
-        <div className="max-w-2xl hidden lg:block">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-15 font-bold font-heading text-dark mb-6 text-white">
+        <div className="max-w-xl hidden lg:block">
+          <h2 className="text-xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-dark mb-6 text-white">
             Our Services
           </h2>
 
-          <p className="text-white/80 text-lg leading-7 mb-12">
-            With solution-driven designs and precise execution, we help you
+          <p className="text-white/80 text-sm md:text-base lg:text-[17px] leading-7 font-body mb-6">
+            With solution-driven designs and precise execution,<br/> we help you
             transform your space into a high-performing asset you can truly enjoy.
           </p>
 
@@ -117,11 +117,11 @@ export default function Services() {
                     i === index ? "text-white" : "text-white/80 cursor-pointer"
                   }`}
                 >
-                  <span className="text-lg font-medium">{it.title}</span>
+                  <span className="text-lg font-medium font-body">{it.title}</span>
                 </button>
 
                 {i === index && (
-                  <div className="mt-2 h-0.5 w-full bg-white/15 rounded-full overflow-hidden">
+                  <div className="mt-2 h-0.5 w-full bg-white/50 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-white transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-sm md:rounded-md lg:rounded-lg  overflow-hidden aspect-615/594 hidden lg:block">
+        <div className="relative rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden aspect-615/594 hidden lg:block">
           <Image
             key={item.title}
             src={item.img}
@@ -142,7 +142,7 @@ export default function Services() {
             fill
             priority
             className="
-              object-cover rounded-md sm:rounded-sm md:rounded-md lg:rounded-lg  shadow-xl
+              object-cover rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  shadow-xl
               transition-opacity duration-700 ease-in-out
             "
             style={{ opacity: visible ? 1 : 0 }}
@@ -153,7 +153,7 @@ export default function Services() {
       {/* MOBILE VIEW */}
       <div className="lg:hidden space-y-6">
         <div className="py-2">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl  leading-15 font-heading text-dark mb-1 text-white">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-15 font-heading text-dark mb-4 text-white">
             Our Services
           </h2>
 
@@ -165,7 +165,7 @@ export default function Services() {
         {items.map((item) => (
           <div
             key={item.title}
-            className="sm:rounded-sm md:rounded-md lg:rounded-lg overflow-hidden bg-white/5 border border-white/10"
+            className="rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden"
           >
             <div className="relative aspect-4/3">
               <Image
@@ -176,7 +176,7 @@ export default function Services() {
               />
             </div>
 
-            <div className="p-4">
+            <div className="py-4">
               <h3 className="text-lg font-semibold text-white">
                 {item.title}
               </h3>

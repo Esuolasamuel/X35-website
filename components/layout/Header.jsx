@@ -103,7 +103,7 @@ export default function Header() {
               <button className="text-start" onClick={() => { setIsComingSoonOpen(true); setMenuOpen(false); }}>Products</button>
               <button
                 onClick={() => { setIsContactOpen(true); setMenuOpen(false); }}
-                className="mt-4 rounded-full bg-yellow-400 hover:bg-yellow-700 px-4 sm:px-6 py-2 sm:py-3 font-body font-semibold text-xs sm:text-base text-dark-500 md:font-body md:font-semibold md:text-sm md:leading-none md:tracking-normal"
+                className="mt-4 rounded-full bg-yellow-400 hover:bg-yellow-700 px-4 sm:px-6 py-2 sm:py-3 font-body font-semibold text-xs sm:text-base text-dark-500 md:font-body md:font-semibold md:text-sm md:leading-none md:tracking-normal cursor-pointer"
               >
                 Contact Us
               </button>

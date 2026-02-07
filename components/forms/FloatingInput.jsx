@@ -9,7 +9,7 @@ export function FloatingInput({
         required
         name={name}
         type={type}
-        className="peer w-full px-4 pt-6 pb-2 border border-gray-300 font-body  text-dark-500 rounded-lg focus:ring-2 focus:ring-yellow-700 outline-none"
+        className="peer w-full px-4 pt-6 pb-2 border border-gray-300 font-body text-sm md:text-base lg:text-[17px] text-dark-500 rounded-lg focus:ring-2 focus:ring-yellow-700 outline-none"
       />
       <label
         className="

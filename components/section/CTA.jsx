@@ -4,7 +4,14 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import ContactForm from "../forms/ContactForm";
 
-export default function CTA({ title, text, paragraph, id }) {
+export default function CTA({
+  title,
+  text,
+  paragraph,
+  id,
+  align = "center",
+  width = "4xl",
+}) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
@@ -12,72 +19,151 @@ export default function CTA({ title, text, paragraph, id }) {
     else document.body.style.overflow = "unset";
   }, [isContactOpen]);
 
+  const handleFormSuccess = () => {
+    setIsContactOpen(false);
+  };
+
+  const alignmentMap = {
+    left: "items-start text-left",
+    center: "items-center text-center",
+    right: "items-end text-right ml-auto",
+  };
+
+  const widthMap = {
+    xl: "max-w-[1200px]",
+    "2xl": "max-w-[1400px]",
+    "4xl": "max-w-[950px]",
+    full: "max-w-full",
+  };
+
   return (
     <>
+      {/* ================= CTA SECTION ================= */}
       <section
         id={id}
-        className={`
-          relative w-full flex items-center justify-center min-h-141.75 
-          /* Layer 1: The Background Color */
-          bg-[#D1D1E4] 
-          /* Layer 2: The Pattern (Using Tailwind utility + URL) */
-          bg-[url('/assets/images/image-9.svg')] bg-cover bg-center bg-no-repeat 
-          /* Using mix-blend-multiply to let the color bleed through */
-          bg-blend-multiply
-        `}
+        className="relative w-full overflow-hidden bg-[#D9D9E9] py-24 lg:py-32"
       >
-        {/* Content Wrapper - Ensuring z-index stacking */}
-        <div className="relative z-20 px-6 py-12 flex flex-col items-center text-center max-w-300">
-          <h2 
-            className="font-fraunces font-black text-[#1A1A1A] leading-[1.05] tracking-[-0.03em]
-            text-[2.8rem] sm:text-[3.8rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[6rem]"
-            style={{ fontFamily: 'var(--font-fraunces), serif' }}
+        {/* Background pattern – now visible */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
+          style={{
+            backgroundImage: "url('@/assets/images/image-9.svg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Content wrapper */}
+        <div
+          className={`
+            relative z-10 mx-auto flex flex-col gap-10 px-6 transition-all duration-300
+            ${alignmentMap[align] || alignmentMap.center}
+            ${widthMap[width] || widthMap["4xl"]}
+          `}
+        >
+          {/* ================= HEADLINE ================= */}
+          <h2
+            className="
+              font-heading font-bold text-[#1A1A1A]
+              leading-[1.05]
+              tracking-[-0.02em] sm:tracking-[-0.025em] lg:tracking-[-0.03em]
+              text-[2.25rem]
+              sm:text-[3.5rem]
+              lg:text-[4.8rem]
+            "
           >
-            Your vision deserves an<br />
-            architect with purpose.<br />
-            Have you been{" "}
-            <span 
-              className={`
-                relative inline-block px-4 py-2
-                /* Layer 3: The Yellow Circle Background Image */
-                bg-[url('/assets/images/circle-sketch.svg')] 
-                bg-size-[110%_120%] bg-position-[center_center] bg-no-repeat
-              `}
-            >
-              x35ied?
+            {/* -------- Mobile -------- */}
+            <span className="block sm:hidden">
+              <span className="block">Your vision</span>
+              <span className="block">deserves an</span>
+              <span className="block">architect</span>
+              <span className="block">with purpose.</span>
+
+              <span className="block mt-3">
+                Have you been{" "}
+                <span className="relative inline-block ml-2">
+                  <span className="relative z-10">x35ied?</span>
+
+                  {/* Background underline */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] z-0 bg-no-repeat bg-contain bg-center"
+                    style={{
+                      backgroundImage:
+                        "url('@/assets/icons/fill-4.svg')",
+                    }}
+                  />
+                </span>
+              </span>
+            </span>
+
+            {/* -------- Desktop -------- */}
+            <span className="hidden sm:block">
+              <span className="block">Your vision deserves an</span>
+              <span className="block">architect with purpose.</span>
+
+              <span className="block mt-2">
+                Have you been{" "}
+                <span className="relative inline-block ml-3">
+                  <span className="relative z-10">x35ied?</span>
+
+                  {/* Background underline */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] z-0 bg-no-repeat bg-contain bg-center"
+                    style={{
+                      backgroundImage:
+                        "url('/assets/icons/fill-4.svg')",
+                    }}
+                  />
+                </span>
+              </span>
             </span>
           </h2>
 
+          {/* ================= PARAGRAPH ================= */}
           {paragraph && (
-            <p className="mt-8 font-sans font-medium text-[#1A1A1A]/70 max-w-2xl text-lg lg:text-xl">
+            <p className="max-w-2xl text-lg leading-relaxed tracking-[-0.01em] text-[#1A1A1A]/80 lg:text-xl">
               {paragraph}
             </p>
           )}
 
-          <button
-            onClick={() => setIsContactOpen(true)}
-            className="mt-10 bg-[#FFD700] hover:bg-[#F5C200] transition-transform duration-300 px-10 py-4 rounded-full font-bold text-[#1A1A1A] text-[16px] shadow-sm active:scale-95 z-30"
-          >
-            {text || "Contact us"}
-          </button>
+          {/* ================= CTA BUTTON ================= */}
+          {text && (
+            <button
+              onClick={() => setIsContactOpen(true)}
+              className="
+                inline-flex w-fit items-center justify-center
+                rounded-full bg-[#FFD700] px-12 py-4
+                font-body text-sm font-bold tracking-[0.02em] text-[#1A1A1A]
+                shadow-lg transition-all duration-200
+                hover:bg-[#F0C800] hover:shadow-xl
+                md:text-base
+              "
+            >
+              {text}
+            </button>
+          )}
         </div>
-
-        {/* Layer 4: Optional Overlay to control pattern opacity exactly */}
-        <div className="absolute inset-0 bg-[#D1D1E4]/40 z-10 pointer-events-none" />
       </section>
 
-      {/* Modal */}
+      {/* ================= MODAL ================= */}
       {isContactOpen && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm transition-all">
-          <div className="relative w-full max-w-md bg-white rounded-[2.5rem] p-10 shadow-2xl animate-in zoom-in duration-300">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+          <div className="relative w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}
-              className="absolute top-8 right-8 p-2 text-gray-400 hover:text-black transition-colors"
+              className="absolute right-5 top-5 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-black"
             >
-              <X size={24} />
+              <X size={20} />
             </button>
-            <h2 className="text-3xl font-bold font-fraunces mb-6 text-gray-900">Contact Us</h2>
-            <ContactForm onSuccess={() => setIsContactOpen(false)} />
+
+            <h2 className="mb-6 text-2xl font-bold tracking-[-0.02em] text-gray-900">
+              Contact Us
+            </h2>
+
+            <ContactForm onSuccess={handleFormSuccess} />
           </div>
         </div>
       )}

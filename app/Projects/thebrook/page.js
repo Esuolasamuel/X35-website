@@ -43,7 +43,7 @@ export default function thebrookPage() {
 
   return (
     <>
-      <Hero imageSrc={thebrookHero} title="The brook Finances" height="h-[90vh]" />
+      <Hero imageSrc={thebrookHero} title="The Brook Finances" height="h-[90vh]" />
         <Meta
           title="Transforming a Financial Workplace into a Modern, Human-Centric Environment"
           description={[

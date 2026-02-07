@@ -22,7 +22,7 @@ export default function VisionMission() {
           className="
             flex-1
             bg-[#0B0B2A] 
-            rounded-sm md:rounded-md lg:rounded-lg
+            rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl
             p-10 md:p-14 lg:p-20
             /* Lift Effect Logic */
             transition-all duration-300 ease-out

@@ -8,16 +8,16 @@ const ImageGrid = ({
   reverse = false,
 }) => {
   return (
-    <section className="w-full px-4 md:px-30 py-12 md:py-16 bg-white">
+    <section className="w-full px-2 md:px-15 py-5 md:py-10 bg-white">
       <div
         className={`
           flex flex-col md:flex-row
-          gap-3.75
+          gap-1
           ${reverse ? "md:flex-row-reverse" : ""}
         `}
       >
         {/* Smaller Image */}
-        <div className="w-full md:w-[38.6%] aspect-506/582 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl">
+        <div className="w-full md:w-[38.6%] aspect-506/582 overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl shadow-2xl">
           <Image
             src={imageA}
             alt="Feature detail"
@@ -28,7 +28,7 @@ const ImageGrid = ({
         </div>
 
         {/* Larger Image */}
-        <div className="w-full md:w-[61.4%] aspect-805/582 overflow-hidden rounded-sm md:rounded-md lg:rounded-lg shadow-2xl">
+        <div className="w-full md:w-[61.4%] aspect-805/582 overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl shadow-2xl">
           <Image
             src={imageB}
             alt="Feature main"

@@ -8,7 +8,7 @@ export default function ImageGallery({ images = [], backgroundColor = "bg-[#E5D1
           {images.map((image, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-sm md:rounded-md lg:rounded-lg group shadow-2xl ${
+              className={`relative overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl group shadow-2xl ${
                 image.colspan ? "md:col-span-2" : ""
               }`}
               /* Applying the precise aspect ratio 615:594 */
