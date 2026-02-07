@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import ContactForm from "../forms/ContactForm";
 
-import bgpattern from "@/assets/images/image-9.svg";
+import bgPattern from "@/assets/images/image-9.svg";
 import handdrawn from "@/assets/icons/fill-4.svg";
 
 
@@ -48,7 +48,7 @@ export default function CTA({
           aria-hidden
           className="absolute inset-0 z-0 pointer-events-none opacity-35"
           style={{
-            backgroundImage: `url(${bgpattern.src})`,
+            backgroundImage: `url(${bgPattern.src})`,
             backgroundRepeat: "repeat",
             backgroundSize: "640px",
           }}
