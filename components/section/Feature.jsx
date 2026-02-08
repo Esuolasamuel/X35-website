@@ -78,4 +78,4 @@ const Feature = ({
     );
 }
 
-export default ListFeature;
+export default Feature;
