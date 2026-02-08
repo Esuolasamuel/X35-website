@@ -38,7 +38,7 @@ const Meta = ({
           <h2 className="
             font-heading 
             font-extrabold
-           text-xl md:text-4xl lg:text-[40px]
+           text-2xl md:text-4xl lg:text-[40px]
             leading-[1.1]
             tracking-tight
             mb-8
@@ -93,7 +93,6 @@ const Meta = ({
                   font-bold
                   text-[14px]
                   md:text-[16px]
-                  uppercase
                   tracking-wider
                 ">
                   {info.heading}

@@ -1,129 +1,81 @@
-// app/page.tsx OR components/CTA.tsx
-"use client";
+import Image from 'next/image';
 
-import { useState } from "react";
+const Feature = ({
+  title, 
+  textColor = "text-black/80", // Changed to white with opacity
+  headerColor = "text-black",     // Changed to solid white
+  imageSrc, 
+  description, 
+  backgroundColor = "bg-[#0B0B1A]", // Deep navy/black from Frame 110
+  aspect = "aspect-[615/594]", 
+  flex = "lg:flex-row", 
+  orderL = "order-1", 
+  orderR = "order-2"
+}) => {
+    return (
+        <section className={`${backgroundColor} group transition-colors duration-500`}>
+            <div className={`
+                px-6 py-16 
+                sm:px-10 sm:py-20 
+                md:px-16 md:py-24 
+                lg:px-24 lg:py-32 
+                xl:px-40
+                max-w-360 flex flex-col ${flex} items-center gap-12 lg:gap-20 mx-auto
+            `}>
+                
+                {/* LEFT TEXT SECTION */}
+                <div className={`w-full lg:w-1/2 ${orderL}`}>
+                    <div className="max-w-lg">
+                        <h3 className={`
+                            font-heading font-bold 
+                            text-2xl md:text-4xl lg:text-[40px] 
+                            leading-[1.1] mb-6 ${headerColor}
+                        `}>
+                            {title}
+                        </h3>
+                        
+                        {/* LEFT TEXT SECTION */}
+                      <div className="w-full lg:w-5/12">
+                        <div className="font-body text-dark-500 font-normal text-[16px] sm:text-[17px]">
+                          {description.map((desc, index) => (
+                            <p
+                              key={index}
+                              className={`text-sm md:text-base lg:text-[17px] leading-[1.8] ${textColor} mb-6 sm:mb-8 last:mb-0 font-normal tracking-wide`}
+                            >
+                              {desc.paragraph}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                </div>
 
-export default function CTASection() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+                {/* RIGHT IMAGE SECTION */}
+                <div className={`w-full lg:w-1/2 ${orderR}`}>
+                    <div className={`
+                        relative w-full ${aspect} 
+                        rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl
+                        overflow-hidden bg-[#1A1A2E] 
+                        shadow-2xl ring-1 ring-white/10
+                    `}>
+                        {imageSrc && (
+                            <Image
+                                src={imageSrc}
+                                alt={title}
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                                priority
+                            />
+                        )}
+                        {/* Interactive overlay */}
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none" />
+                    </div>
+                </div>
 
-  return (
-    <section
-      className="
-        relative flex min-h-140 w-full items-center justify-center
-        overflow-hidden bg-[#D9D9E9]
-        py-24 lg:py-32
-      "
-    >
-      {/* ================= BACKGROUND PATTERN OVERLAY ================= */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-10 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: "url('@/assets/images/image-9.svg')",
-          backgroundRepeat: "repeat",
-          backgroundSize: "600px",
-        }}
-      />
-
-      {/* ================= CONTENT ================= */}
-      <div className="relative z-20 mx-auto w-full max-w-237.5 px-6 text-center">
-        <h1
-          className="
-            font-heading font-bold text-[#1A1A1A]
-            leading-[1.05]
-            tracking-[-0.02em] sm:tracking-[-0.025em] lg:tracking-[-0.03em]
-            text-[2.25rem]
-            sm:text-[3.5rem]
-            lg:text-[4.75rem]
-          "
-        >
-          {/* -------- Mobile -------- */}
-          <span className="block sm:hidden">
-            <span className="block">Your vision</span>
-            <span className="block">deserves an</span>
-            <span className="block">architect</span>
-            <span className="block">with purpose.</span>
-
-            <span className="relative block mt-3">
-              Have you been{" "}
-              <span className="relative inline-block ml-2">
-                <span className="relative z-20">x35ied?</span>
-
-                {/* Hand-drawn underline */}
-                <span
-                  aria-hidden
-                  className="
-                    absolute inset-x-[-12%] bottom-[-10%]
-                    h-[130%] z-10
-                    bg-no-repeat bg-contain bg-center
-                  "
-                  style={{
-                    backgroundImage: "url('@/assets/icons/fill-4.svg')",
-                  }}
-                />
-              </span>
-            </span>
-          </span>
-
-          {/* -------- Desktop -------- */}
-          <span className="hidden sm:block">
-            <span className="block">Your vision deserves an</span>
-            <span className="block">architect with purpose.</span>
-
-            <span className="relative block mt-2">
-              Have you been{" "}
-              <span className="relative inline-block ml-3">
-                <span className="relative z-20">x35ied?</span>
-
-                {/* Hand-drawn underline */}
-                <span
-                  aria-hidden
-                  className="
-                    absolute inset-x-[-12%] bottom-[-12%]
-                    h-[130%] z-10
-                    bg-no-repeat bg-contain bg-center
-                  "
-                  style={{
-                    backgroundImage: "url('@/assets/icons/fill-4.svg')",
-                  }}
-                />
-              </span>
-            </span>
-          </span>
-        </h1>
-
-        {/* ================= CTA BUTTON ================= */}
-        <button
-          onClick={() => setIsContactOpen(true)}
-          className="
-            mt-8 inline-flex items-center justify-center
-            rounded-full bg-[#FFD700]
-            px-10 py-4
-            font-body text-sm font-bold tracking-[0.02em]
-            text-[#1A1A1A]
-            shadow-md transition
-            hover:bg-[#F0C800]
-            focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20
-          "
-        >
-          Contact us
-        </button>
-      </div>
-
-      {/* ================= OPTIONAL MODAL PLACEHOLDER ================= */}
-      {isContactOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="rounded-2xl bg-white p-8 shadow-xl">
-            <p className="text-lg font-semibold">Contact form goes here</p>
-            <button
-              onClick={() => setIsContactOpen(false)}
-              className="mt-4 text-sm underline"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-    </section>
-  );
+            </div>
+        </section>
+    );
 }
+
+export default ListFeature;

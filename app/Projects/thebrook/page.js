@@ -93,7 +93,7 @@ export default function thebrookPage() {
             },
           ]}
           title="Unified Workspace Design Enhancing Collaboration, Productivity, and Brand Identity for The Brook Finance"
-          aspect="aspect-[615/910]"
+          aspect=" aspect-[615/594] lg:aspect-[615/910]"
           height="910"
           backgroundColor="bg-indigo-700"
           textColor = "text-white/80"
@@ -125,10 +125,28 @@ export default function thebrookPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { imageSrc: brookSplit5, alt: "Interior 5", aspect: "aspect-460/582" },
-            { imageSrc: brookSplit6, alt: "Interior 6", aspect: "aspect-732/582", colspan: "col-span-2" },
-            { imageSrc: brookSplit7, alt: "Interior 7", aspect: "aspect-732/582", colspan: "col-span-2" },
-            { imageSrc: brookSplit8, alt: "Interior 8", aspect: "aspect-460/582" },
+            {
+              imageSrc: brookSplit5,
+              alt: "Interior 5",
+              aspect: "aspect-[460/582]",
+            },
+            {
+              imageSrc: brookSplit6,
+              alt: "Interior 6",
+              aspect: "aspect-[732/582]",
+              colspan: "col-span-2",
+            },
+            {
+              imageSrc: brookSplit7,
+              alt: "Interior 7",
+              aspect: "aspect-[732/582]",
+              colspan: "col-span-2",
+            },
+            {
+              imageSrc: brookSplit8,
+              alt: "Interior 8",
+              aspect: "aspect-[460/582]",
+            },
           ]}
         />
         <Feature
@@ -147,11 +165,12 @@ export default function thebrookPage() {
           aspect="aspect-615/594"
           orderL="order-2"
           orderR="order-1"
-          backgroundColor="bg-[#dfc0ab]"
+          backgroundColor="bg-[#DFC0ABb]"
         />
-        <FullImageSection imageSrc={brookFull2} title="brook full view" />
+        <FullImageSection imageSrc={brookFull2} title="brook full view" backgrounColor="#E3CEDE" />
         <Feature
           imageSrc={brookFeature4}
+          backgroundColor="bg-[#E3CEDE]"
           description={[
             {
               paragraph:
@@ -162,6 +181,7 @@ export default function thebrookPage() {
                 "Whether you’re a developer seeking reliable turnkey execution or a corporate tenant planning your next workspace transformation, X35 Projects brings vision, craftsmanship, and intelligent design to every project.",
             },
           ]}
+          title="Delivering Confidence Through Design"
         />
         <RelatedProjects projects={projects} />
     </>

@@ -5,7 +5,7 @@ import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as nee
 export default function AboutHero() {
   return (
     <div className="w-full flex flex-col bg-white -z-20">
-        <div className="mb-2 mt-5 sm:mb-4 sm:mt-8.5 md:mt-17 md:mb-7.5 lg:mt-33.75 lg:mb-15 px-6 sm:px-7.5 md:px-15 lg:px-30">
+        <div className="mb-2 mt-5 sm:mb-4 sm:mt-8.5 md:mt-17 md:mb-7.5 lg:mt-33.75 lg:mb-15">
           <h1 className="
             font-heading
             font-bold
@@ -48,7 +48,7 @@ export default function AboutHero() {
         </div>
 
 
-      <div className="aspect-1487/780 min-h-100 relative">
+      <div className="aspect-1487/720 min-h-100 relative px-6 sm:px-7.5 md:px-15 lg:px-30">
         <Image
           src={aboutHero}
           alt="X35 Projects - Building trust, vision, and lasting value"

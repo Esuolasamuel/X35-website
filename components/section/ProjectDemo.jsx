@@ -57,14 +57,14 @@ export default function ProjectDemo({ projects }) {
             className="
               inline-flex items-center gap-1.5 md:gap-2 lg:gap-3
               border hover:border-yellow-400 rounded-full
-              pl-2 md:pl-3 lg:pl-4 pr-2 md:pr-3 lg:pr-4 py-1 md:py-1.5 lg:py-2
+              pl-2 md:pl-3 lg:pl-4 pr-2 md:pr-3 lg:pr-4 py-1.5 md:py-2 lg:py-3
                text-dark-500
               font-body font-bold text-xs md:text-sm lg:text-base
               hover:bg-yellow-400  transition
             "
           >
             View all Projects
-            <span className="rounded-full p-2 bg-yellow-400 transition">
+            <span className="rounded-full p-3 bg-yellow-400 transition">
               <Image
                 src= {arrowrigth}
                 width={16}

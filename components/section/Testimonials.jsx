@@ -30,7 +30,7 @@ export default function Testimonials() {
                     {testimonials.map((t, i) => (
                         <div key={i} className=" p-2 sm:p-4 md:p-8 xl:p-10 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl md:bg-white md:shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#0C0C1C0F]">
                             <p className=" text-xs md:text-sm lg:text-base font-medium font-body mb-4 text-dark-500">“{t.text}”</p>
-                            <span className="text-xs md:text-xs lg:text-sm flex justify-content font-medium font-body pt-4 text-dark-500 ">
+                            <span className="text-xs md:text-xs lg:text-sm flex justify-centre font-medium font-body pt-4 text-dark-500 ">
                                 <div className="pr-3">
                                     <Image
                                     src={t.img}
