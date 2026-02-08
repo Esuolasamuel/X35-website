@@ -31,7 +31,6 @@ const Feature = ({
                         </h3>
                         
                         {/* LEFT TEXT SECTION */}
-                      <div className="w-full lg:w-1/2">
                         <div className="font-body text-dark-500 font-normal text-[16px] sm:text-[17px]">
                           {description.map((desc, index) => (
                             <p
@@ -42,7 +41,6 @@ const Feature = ({
                             </p>
                           ))}
                         </div>
-                      </div>
                     </div>
                 </div>
 

@@ -102,10 +102,10 @@ export default function thebrookPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { imageSrc: brookSplit1, alt: "Interior 1", aspect: "aspect-[460/582]" },
-            { imageSrc: brookSplit2, alt: "Interior 2", aspect: "aspect-[582/732]", colspan: "col-span-2" },
-            { imageSrc: brookSplit3, alt: "Interior 3", aspect: "aspect-[582/732]", colspan: "col-span-2" },
-            { imageSrc: brookSplit4, alt: "Interior 4", aspect: "aspect-[460/582]" },
+            { imageSrc: brookSplit1, alt: "Interior 1", aspect: "aspect-460/582" },
+            { imageSrc: brookSplit2, alt: "Interior 2", aspect: "aspect-582/732", colspan: "col-span-2" },
+            { imageSrc: brookSplit3, alt: "Interior 3", aspect: "aspect-582/732", colspan: "col-span-2" },
+            { imageSrc: brookSplit4, alt: "Interior 4", aspect: "aspect-460/582" },
           ]}
         />
         <Feature
@@ -128,24 +128,24 @@ export default function thebrookPage() {
             {
               imageSrc: brookSplit5,
               alt: "Interior 5",
-              aspect: "aspect-[460/582]",
+              aspect: "aspect-460/582",
             },
             {
               imageSrc: brookSplit6,
               alt: "Interior 6",
-              aspect: "aspect-[582/732]",
+              aspect: "aspect-582/732",
               colspan: "col-span-2",
             },
             {
               imageSrc: brookSplit7,
               alt: "Interior 7",
-              aspect: "aspect-[582/732]",
+              aspect: "aspect-582/732",
               colspan: "col-span-2",
             },
             {
               imageSrc: brookSplit8,
               alt: "Interior 8",
-              aspect: "aspect-[460/582]",
+              aspect: "aspect-460/582",
             },
           ]}
         />
