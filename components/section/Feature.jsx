@@ -15,12 +15,8 @@ const Feature = ({
     return (
         <section className={`${backgroundColor} group transition-colors duration-500`}>
             <div className={`
-                px-6 py-16 
-                sm:px-10 sm:py-20 
-                md:px-16 md:py-24 
-                lg:px-24 lg:py-32 
-                xl:px-40
-                max-w-360 flex flex-col ${flex} items-center gap-12 lg:gap-20 mx-auto
+                px-6 sm:px-7.5 md:px-15 lg:px-30
+                max-w-360 flex flex-col ${flex} items-center mx-auto
             `}>
                 
                 {/* LEFT TEXT SECTION */}
@@ -35,7 +31,7 @@ const Feature = ({
                         </h3>
                         
                         {/* LEFT TEXT SECTION */}
-                      <div className="w-full lg:w-5/12">
+                      <div className="w-full lg:w-1/2">
                         <div className="font-body text-dark-500 font-normal text-[16px] sm:text-[17px]">
                           {description.map((desc, index) => (
                             <p
