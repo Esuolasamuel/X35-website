@@ -163,11 +163,10 @@ export default function thebrookPage() {
           ]}
           title="Functionality Meets Comfort"
           aspect="aspect-615/594"
-          orderL="order-2"
-          orderR="order-1"
-          backgroundColor="bg-[#DFC0ABb]"
+          reverse={true}
+          backgroundColor="bg-[#DFC0AB]"
         />
-        <FullImageSection imageSrc={brookFull2} title="brook full view" backgrounColor="#E3CEDE" />
+        <FullImageSection imageSrc={brookFull2} title="brook full view" backgroundColor="#E3CEDE" />
         <Feature
           imageSrc={brookFeature4}
           backgroundColor="bg-[#E3CEDE]"

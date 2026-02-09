@@ -121,7 +121,7 @@ export default function OgaDentistPage() {
         <CTA
           width="133"
           align="start"
-          titlelines={[{text: "The Result"}]}
+          titlelines={"The Result"}
           paragraph="The final outcome is a carefully executed environment that speaks the language of Professionalism, Cleanliness, Comfort, Innovation."
         />
         <RelatedProjects projects={projects} />
