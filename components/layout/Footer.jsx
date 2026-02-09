@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     // Updated background to match the dark navy/black in the screenshot
     <footer className="bg-[#11111F] py-6 sm:py-7.5 md:py-15 lg:py-20 px-6 sm:px-7.5 md:px-15 lg:px-30">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8 pb-6 sm:pb-7.5 md:pb-15 lg:pb-20 border-b border-white/10">
           
           {/* Logo & Slogan Section */}

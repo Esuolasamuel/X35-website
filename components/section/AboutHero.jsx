@@ -4,8 +4,8 @@ import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as nee
 
 export default function AboutHero() {
   return (
-    <div className="w-full flex flex-col bg-white -z-20">
-        <div className="mb-2 mt-5 sm:mb-4 sm:mt-8.5 md:mt-17 md:mb-7.5 lg:mt-33.75 lg:mb-15">
+    <div className="w-full flex flex-col bg-white -z-20 p-7.5 sm:p-15 md:p-20 lg:p-25 xl:p-30 2xl:p-30">
+        <div className="">
           <h1 className="
             font-heading
             font-bold

@@ -96,20 +96,20 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-0 sm:gap-2 md:gap-4 lg:gap-8 items-center">
+      <div className="grid md:grid-cols-2 gap-0 sm:gap-2 md:gap-2 lg:gap-4 items-center max-w-360 mx-auto">
 
         {/* LEFT */}
         <div className="max-w-xl hidden lg:block">
-          <h2 className="text-xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-dark mb-6 text-white">
+          <h2 className="text-xl md:text-4xl lg:text-[55px] leading-15 font-bold font-heading text-dark mb-6 text-white">
             Our Services
           </h2>
 
-          <p className="text-white/80 text-sm md:text-base lg:text-[17px] leading-7 font-body mb-6">
+          <p className="text-white/80 text-sm md:text-base lg:text-[17px] leading-7 font-body mb-12">
             With solution-driven designs and precise execution,<br/> we help you
             transform your space into a high-performing asset you can truly enjoy.
           </p>
 
-         <ul className="space-y-9">
+         <ul className="space-y-6">
             {items.map((it, i) => (
               <li key={it.title} className="pb-6">
                 <button
@@ -144,7 +144,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden aspect-615/594 hidden lg:block">
+        <div className="relative rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden  aspect-615/594 hidden lg:block">
           <Image
             key={item.title}
             src={item.img}

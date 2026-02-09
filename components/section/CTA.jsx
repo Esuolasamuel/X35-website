@@ -43,7 +43,7 @@ export default function CTA({
         id={id}
         // className="relative overflow-hidden bg-[#D1D1E4] py-24 lg:py-32"
         style={{ backgroundImage: `url(${bgPattern.src})` }}
-        className="relative py-16 bg-[#C9C9DC] bg-repeat"
+        className="relative py-16 bg-[#C9C9DC] bg-repeat bg-cover"
       >
         {/* ================= BACKGROUND PATTERN ================= */}
         <div

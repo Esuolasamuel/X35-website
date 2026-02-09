@@ -15,7 +15,7 @@ export default function ProjectDemo({ projects }) {
     <section className="bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 xl:p-30 2xl:p-30">
       <div className="flex flex-col gap-2.5 sm:gap-5 md:gap-10 Lg:gap-20 mx-auto">
 
-        <h1 className="text-2xl md:text-4xl lg:text-[40px] text-center font-bold text-dark-500 font-heading">
+        <h1 className="text-2xl md:text-4xl lg:text-[55px] text-center font-bold text-dark-500 font-heading">
           Our Latest Projects
         </h1>
 

@@ -38,7 +38,7 @@ const Meta = ({
           <h2 className="
             font-heading 
             font-extrabold
-           text-2xl md:text-4xl lg:text-[40px]
+           text-2xl md:text-4xl lg:text-[55px]
             leading-[1.1]
             tracking-tight
             mb-8

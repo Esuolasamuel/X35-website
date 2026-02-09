@@ -26,7 +26,7 @@ export default function Feature({
           <h3
             className={`
               font-heading font-bold
-              text-2xl sm:text-3xl lg:text-[40px]
+              text-2xl sm:text-3xl lg:text-[55px]
               leading-tight mb-6
               ${headerColor}
             `}
@@ -69,7 +69,7 @@ export default function Feature({
                 alt={title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             )}
