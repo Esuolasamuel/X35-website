@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function ImageGallery({
   images = [],
   backgroundColor = "bg-[#E5D1E0]",
+  aspect
 }) {
   return (
     <section
@@ -14,7 +15,6 @@ export default function ImageGallery({
             const {
               imageSrc,
               alt,
-              aspect = "aspect-[615/594]",
               colspan,
             } = image;
 

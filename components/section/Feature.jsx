@@ -11,15 +11,14 @@ export default function Feature({
   reverse = false,
 }) {
   return (
-    <section className={`${backgroundColor}`}>
+    <section className={`${backgroundColor}  px-6 sm:px-10 lg:px-24
+          py-16 sm:py-20 lg:py-28
+          flex flex-col gap-12`}>
       <div
         className={`
-          mx-auto max-w-360
-          px-6 sm:px-10 lg:px-24
-          py-16 sm:py-20 lg:py-28
-          flex flex-col gap-12
+          max-w-360
           ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
-          items-center
+          flex flex-col ${flex} items-center gap-12 lg:gap-20 mx-auto
         `}
       >
         {/* TEXT */}
