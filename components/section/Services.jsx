@@ -96,7 +96,7 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-0 sm:gap-1 md:gap-1 lg:gap-2 items-center">
+      <div className="grid md:grid-cols-2 gap-0 sm:gap-1 md:gap-3 lg:gap-6 items-center">
 
         {/* LEFT */}
         <div className="max-w-xl hidden lg:block">
@@ -109,9 +109,12 @@ export default function Services() {
             transform your space into a high-performing asset you can truly enjoy.
           </p>
 
-          <ul className="space-y-9">
+         <ul className="space-y-9">
             {items.map((it, i) => (
-              <li key={it.title}>
+              <li
+                key={it.title}
+                className="pb-6 border-b border-white/50"
+              >
                 <button
                   onClick={() => handleSelect(i)}
                   aria-current={i === index}
@@ -119,7 +122,9 @@ export default function Services() {
                     i === index ? "text-white" : "text-white/80 cursor-pointer"
                   }`}
                 >
-                  <span className="text-lg font-medium font-body">{it.title}</span>
+                  <span className="text-lg font-medium font-body">
+                    {it.title}
+                  </span>
                 </button>
 
                 {i === index && (
@@ -133,6 +138,7 @@ export default function Services() {
               </li>
             ))}
           </ul>
+
         </div>
 
         {/* RIGHT */}
