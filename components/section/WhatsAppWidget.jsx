@@ -2,7 +2,7 @@ import Image from "next/image";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 
 export default function WhatsAppWidget() {
-  const phoneNumber = "+2348144694380";
+  const phoneNumber = "+2348029420580";
   const message = "Hello! I'm interested in your services.";
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
 

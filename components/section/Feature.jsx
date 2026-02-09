@@ -18,7 +18,7 @@ export default function Feature({
         className={`
           max-w-360
           ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
-          flex flex-col ${flex} items-center gap-12 lg:gap-20 mx-auto
+          flex flex-col items-center gap-12 lg:gap-20 mx-auto
         `}
       >
         {/* TEXT */}

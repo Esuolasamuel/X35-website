@@ -10,9 +10,9 @@ import handdrawn from "@/assets/icons/Fill-4.svg";
 
 
 export default function CTA({
-  text = "Contact us",
+  lines = [],
   paragraph,
-  button,
+  button = "",
   id,
   align = "center",
   width = "4xl",
@@ -153,7 +153,7 @@ export default function CTA({
               md:text-base
             "
           >
-            {text}
+            {button}
           </button>}
         </div>
       </section>

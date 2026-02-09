@@ -54,7 +54,6 @@ const x35Content = () => {
     ]}
     paragraph="We help brands turn ideas into powerful digital products."
     id="contact-section"
-    button={button}
     />
     </>
   );
