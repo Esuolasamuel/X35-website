@@ -10,9 +10,9 @@ import handdrawn from "@/assets/icons/Fill-4.svg";
 
 
 export default function CTA({
-  title,
   text = "Contact us",
   paragraph,
+  button,
   id,
   align = "center",
   width = "4xl",
@@ -77,47 +77,61 @@ export default function CTA({
           >
             {/* Mobile */}
             <span className="block sm:hidden">
-              <span className="block">Your vision</span>
-              <span className="block">deserves an</span>
-              <span className="block">architect</span>
-              <span className="block">with purpose.</span>
+              {lines.map((line, i) => {
+                // Normal text line
+                if (line.text) {
+                  return (
+                    <span key={i} className="block">
+                      {line.text}
+                    </span>
+                  );
+                }
 
-              <span className="block mt-3">
-                Have you been{" "}
-                <span className="relative inline-block ml-2">
-                  <span className="relative z-10">x35ied?</span>
-
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] bg-no-repeat bg-contain bg-center"
-                    style={{
-                      backgroundImage: `url(${handdrawn.src})`,
-                    }}
-                  />
-                </span>
-              </span>
+                // Highlighted line
+                return (
+                  <span key={i} className="block mt-3">
+                    {line.prefix}{" "}
+                    <span className="relative inline-block ml-2">
+                      <span className="relative z-10">{line.highlight}</span>
+                      <span
+                        aria-hidden
+                        className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] bg-no-repeat bg-contain bg-center"
+                        style={{ backgroundImage: `url(${handdrawn.src})` }}
+                      />
+                    </span>
+                  </span>
+                );
+              })}
             </span>
+
 
             {/* Desktop */}
             <span className="hidden sm:block">
-              <span className="block">Your vision deserves an</span>
-              <span className="block">architect with purpose.</span>
+              {lines.map((line, i) => {
+                if (line.text) {
+                  return (
+                    <span key={i} className="block">
+                      {line.text}
+                    </span>
+                  );
+                }
 
-              <span className="block mt-2">
-                Have you been{" "}
-                <span className="relative inline-block ml-3">
-                  <span className="relative z-10">x35ied?</span>
-
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] bg-no-repeat bg-contain bg-center"
-                    style={{
-                      backgroundImage: `url(${handdrawn.src})`,
-                    }}
-                  />
-                </span>
-              </span>
+                return (
+                  <span key={i} className="block mt-2">
+                    {line.prefix}{" "}
+                    <span className="relative inline-block ml-3">
+                      <span className="relative z-10">{line.highlight}</span>
+                      <span
+                        aria-hidden
+                        className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] bg-no-repeat bg-contain bg-center"
+                        style={{ backgroundImage: `url(${handdrawn.src})` }}
+                      />
+                    </span>
+                  </span>
+                );
+              })}
             </span>
+
           </h2>
 
           {/* ================= PARAGRAPH ================= */}
@@ -128,7 +142,7 @@ export default function CTA({
           )}
 
           {/* ================= CTA BUTTON ================= */}
-          <button
+          {button && <button
             onClick={() => setIsContactOpen(true)}
             className="
               inline-flex w-fit items-center justify-center
@@ -140,7 +154,7 @@ export default function CTA({
             "
           >
             {text}
-          </button>
+          </button>}
         </div>
       </section>
 

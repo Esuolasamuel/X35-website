@@ -42,10 +42,19 @@ const x35Content = () => {
     <Services />
     <Testimonials />
     <CTA
-        title="Your vision deserves an architect with purpose."
-        width="150"
-        text="Contact us"
-        id="contact-section"
+    titleLines={[
+      { text: "Your vision" },
+      { text: "deserves an" },
+      { text: "architect" },
+      { text: "with purpose." },
+      {
+        prefix: "Have you been",
+        highlight: "x35ied?",
+      },
+    ]}
+    paragraph="We help brands turn ideas into powerful digital products."
+    id="contact-section"
+    button={button}
     />
     </>
   );
