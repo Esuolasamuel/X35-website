@@ -96,7 +96,7 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-0 sm:gap-1 md:gap-3 lg:gap-6 items-center">
+      <div className="grid md:grid-cols-2 gap-0 sm:gap-2 md:gap-4 lg:gap-8 items-center">
 
         {/* LEFT */}
         <div className="max-w-xl hidden lg:block">
@@ -111,10 +111,7 @@ export default function Services() {
 
          <ul className="space-y-9">
             {items.map((it, i) => (
-              <li
-                key={it.title}
-                className="pb-6 border-b border-white/50"
-              >
+              <li key={it.title} className="pb-6">
                 <button
                   onClick={() => handleSelect(i)}
                   aria-current={i === index}
@@ -127,14 +124,19 @@ export default function Services() {
                   </span>
                 </button>
 
-                {i === index && (
-                  <div className="mt-2 h-0.5 w-full bg-white/50 rounded-full overflow-hidden">
+                {/* Border + Progress Container */}
+                <div className="relative mt-3 h-0.5 w-full">
+                  {/* Static border (always visible) */}
+                  <div className="absolute inset-0 bg-white/50 rounded-full" />
+
+                  {/* Progress bar (on top) */}
+                  {i === index && (
                     <div
-                      className="h-full bg-white transition-[width] duration-75 ease-linear"
+                      className="absolute inset-y-0 left-0 bg-white rounded-full transition-[width] duration-75 ease-linear"
                       style={{ width: `${progress}%` }}
                     />
-                  </div>
-                )}
+                  )}
+                </div>
               </li>
             ))}
           </ul>
