@@ -122,7 +122,7 @@ export default function CTA({
 
           {/* ================= PARAGRAPH ================= */}
           {paragraph && (
-            <p className="max-w-2xl text-lg leading-relaxed text-[#1A1A1A]/80 lg:text-xl">
+            <p className="max-w-2xl text-lg font-body leading-relaxed text-[#1A1A1A]/80 lg:text-xl">
               {paragraph}
             </p>
           )}

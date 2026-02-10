@@ -125,9 +125,9 @@ export default function Services() {
                 </button>
 
                 {/* Border + Progress Container */}
-                <div className="relative mt-3 h-0.5 w-full">
+                <div className="relative mt-3 h-px w-full">
                   {/* Static border (always visible) */}
-                  <div className="absolute inset-0 bg-white/50 rounded-full" />
+                  <div className="absolute inset-0 bg-white/30 rounded-full" />
 
                   {/* Progress bar (on top) */}
                   {i === index && (
