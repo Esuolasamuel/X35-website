@@ -52,7 +52,6 @@ const x35Content = () => {
         highlight: "x35ied?",
       },
     ]}
-    paragraph="We help brands turn ideas into powerful digital products."
     id="contact-section"
     />
     </>

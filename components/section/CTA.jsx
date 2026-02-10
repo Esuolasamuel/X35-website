@@ -7,15 +7,12 @@ import ContactForm from "../forms/ContactForm";
 import bgPattern from "@/assets/icons/image-9.svg";
 import handdrawn from "@/assets/icons/Fill-4.svg";
 
-
-
 export default function CTA({
   title,
   text = "Contact us",
   paragraph,
   id,
   align = "center",
-  width = "4xl",
 }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -26,29 +23,37 @@ export default function CTA({
   const alignmentMap = {
     left: "items-start text-left",
     center: "items-center text-center",
-    right: "items-end text-right ml-auto",
-  };
-
-  const widthMap = {
-    xl: "max-w-[1200px]",
-    "2xl": "max-w-[1400px]",
-    "4xl": "max-w-[950px]",
-    full: "max-w-full",
+    right: "items-end text-right",
   };
 
   return (
     <>
-      {/* ================= CTA SECTION ================= */}
+      {/* ================= SECTION ================= */}
       <section
         id={id}
-        // className="relative overflow-hidden bg-[#D1D1E4] py-24 lg:py-32"
-        style={{ backgroundImage: `url(${bgPattern.src})` }}
-        className="relative py-16 bg-[#C9C9DC] bg-repeat bg-cover"
+        className="
+          relative
+          mx-auto
+          max-w-360
+          min-h-135.75
+          bg-[#C9C9DC]
+          overflow-hidden
+          flex
+          items-center
+          justify-center
+        "
       >
-        {/* ================= BACKGROUND PATTERN ================= */}
+        {/* ================= BACKGROUND IMAGE ================= */}
         <div
           aria-hidden
-          className="absolute inset-0 z-0 pointer-events-none opacity-35"
+          className="
+            absolute
+            w-434.75 h-434.75
+            -top-67 -left-37.5
+            opacity-50
+            mix-blend-luminosity
+            pointer-events-none
+          "
           style={{
             backgroundImage: `url(${bgPattern.src})`,
             backgroundRepeat: "repeat",
@@ -59,70 +64,50 @@ export default function CTA({
         {/* ================= CONTENT ================= */}
         <div
           className={`
-            relative z-10 mx-auto flex flex-col gap-10 px-6
+            relative z-10
+            flex flex-col
+            max-w-150
+            gap-13
             ${alignmentMap[align]}
-            ${widthMap[width]}
           `}
         >
           {/* ================= HEADLINE ================= */}
-          <h2
-            className="
-              font-heading font-bold text-[#1A1A1A]
-              leading-[1.05]
-              tracking-[-0.03em]
-              text-[2.25rem]
-              sm:text-[3.5rem]
-              lg:text-[4.8rem]
-            "
-          >
-            {/* Mobile */}
-            <span className="block sm:hidden">
-              <span className="block">Your vision</span>
-              <span className="block">deserves an</span>
-              <span className="block">architect</span>
-              <span className="block">with purpose.</span>
+      <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-xl sm:text-xl md:text-2xl lg:text-[48px] z-20">
+        <span className="block">Your vision deserves an</span>
+        <span className="block">architect with purpose.</span>
 
-              <span className="block mt-3">
-                Have you been{" "}
-                <span className="relative inline-block ml-2">
-                  <span className="relative z-10">x35ied?</span>
+        <span className="block">
+          Have you been{" "}
+          <span className="relative inline-block ml-2">
+            <span className="relative z-10">x35ied?</span>
 
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-[-10%] bottom-[-5%] h-[120%] bg-no-repeat bg-contain bg-center"
-                    style={{
-                      backgroundImage: `url(${handdrawn.src})`,
-                    }}
-                  />
-                </span>
-              </span>
-            </span>
+            {/* Hand-drawn underline aligned with text */}
+            <span
+              aria-hidden
+              className="
+                absolute
+                inset-x-0 -bottom-4 -left-10
+                w-[242.93px]
+                h-[97.33px]              /* approximate height for underline */
+                bg-no-repeat
+                bg-contain
+                bg-center
+                -rotate-[2.31deg]
+                -z-10      /* subtle Figma rotation */
+              "
+              style={{
+                backgroundImage: `url(${handdrawn.src})`,
+              }}
+            />
+          </span>
+        </span>
+      </h2>
 
-            {/* Desktop */}
-            <span className="hidden sm:block">
-              <span className="block">Your vision deserves an</span>
-              <span className="block">architect with purpose.</span>
 
-              <span className="block mt-2">
-                Have you been{" "}
-                <span className="relative inline-block ml-3">
-                  <span className="relative z-10">x35ied?</span>
-
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-[-12%] bottom-[-10%] h-[130%] bg-no-repeat bg-contain bg-center"
-                    style={{
-                      backgroundImage: `url(${handdrawn.src})`,
-                    }}
-                  />
-                </span>
-              </span>
-            </span>
-          </h2>
 
           {/* ================= PARAGRAPH ================= */}
           {paragraph && (
-            <p className="max-w-2xl text-lg font-body leading-relaxed text-[#1A1A1A]/80 lg:text-xl">
+            <p className="text-xl leading-relaxed font-body text-[#1A1A1A]/80">
               {paragraph}
             </p>
           )}
@@ -131,22 +116,29 @@ export default function CTA({
           <button
             onClick={() => setIsContactOpen(true)}
             className="
-              inline-flex w-fit items-center justify-center
-              rounded-full bg-[#FFD700] px-12 py-4
-              text-sm font-bold tracking-[0.02em] text-[#1A1A1A]
-              shadow-lg transition-all
-              hover:bg-[#F0C800] hover:shadow-xl
-              md:text-base
+              inline-flex items-center justify-center
+              w-33 h-11.5
+              gap-2.5
+              rounded-[60px]
+              bg-[#FFD700]
+              text-[#1A1A1A]
+              font-bold text-base
+              tracking-[0.02em]
+              px-6 py-3.5
+              shadow-lg
+              transition
+              hover:bg-[#F0C800]
             "
           >
             {text}
           </button>
+
         </div>
       </section>
 
       {/* ================= MODAL ================= */}
       {isContactOpen && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <div className="relative w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
             <button
               onClick={() => setIsContactOpen(false)}

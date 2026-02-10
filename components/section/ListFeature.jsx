@@ -30,7 +30,7 @@ const ListFeature = ({
                     <div className="max-w-lg">
                         <h3 className={`
                             font-heading font-bold 
-                            text-2xl md:text-4xl lg:text-[55px] 
+                            text-2xl md:text-3xl lg:text-[40px] 
                             leading-[1.1] mb-6 ${headerColor}
                         `}>
                             {title}

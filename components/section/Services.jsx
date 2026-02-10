@@ -95,23 +95,45 @@ export default function Services() {
   const item = useMemo(() => items[index], [index]);
 
   return (
-    <section id="services" className="bg-linear-to-br from-[#0b1020] to-[#05060d] text-white p-6 sm:p-7.5 md:p-15 lg:p-30">
-      <div className="grid md:grid-cols-2 gap-0 sm:gap-2 md:gap-2 lg:gap-4 items-center max-w-360 mx-auto">
-
+<section
+  id="services"
+  className="
+    bg-linear-to-br from-[#0b1020] to-[#05060d]
+    text-white
+     p-gi3.5 sm:p-7.5 md:p-15 lg:p-30 
+  "
+>
+  <div
+    className="
+      max-w-360
+      mx-auto
+      grid
+      grid-cols-1 lg:grid-cols-2
+      gap-1
+      items-center
+      px-6
+    "
+  >
         {/* LEFT */}
-        <div className="max-w-xl hidden lg:block">
-          <h2 className="text-xl md:text-4xl lg:text-[55px] leading-15 font-bold font-heading text-dark mb-6 text-white">
+        <div
+          className="
+            hidden lg:flex
+            flex-col
+            w-113.25
+          "
+        >
+          <h2 className="text-xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-dark mb-2 text-white">
             Our Services
           </h2>
 
-          <p className="text-white/80 text-sm md:text-base lg:text-[17px] leading-7 font-body mb-12">
+          <p className="text-white/80 text-sm md:text-base lg:text-[17px] font-normal leading-7 mb-8 font-body">
             With solution-driven designs and precise execution,<br/> we help you
             transform your space into a high-performing asset you can truly enjoy.
           </p>
 
-         <ul className="space-y-6">
+         <ul className="w-110 space-y-6 mt-8">
             {items.map((it, i) => (
-              <li key={it.title} className="pb-6">
+              <li key={it.title} className="pb-0">
                 <button
                   onClick={() => handleSelect(i)}
                   aria-current={i === index}
@@ -119,13 +141,13 @@ export default function Services() {
                     i === index ? "text-white" : "text-white/80 cursor-pointer"
                   }`}
                 >
-                  <span className="text-lg font-medium font-body">
+                  <span className="text-[17px] font-semibold font-body">
                     {it.title}
                   </span>
                 </button>
 
                 {/* Border + Progress Container */}
-                <div className="relative mt-3 h-px w-full">
+                <div className="relative mt-6 h-px w-full">
                   {/* Static border (always visible) */}
                   <div className="absolute inset-0 bg-white/30 rounded-full" />
 
@@ -144,7 +166,16 @@ export default function Services() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden  aspect-615/594 hidden lg:block">
+        <div
+          className="
+            relative
+            hidden lg:block
+            aspect-615/594
+            rounded-[15px]
+            overflow-hidden
+          "
+        >
+
           <Image
             key={item.title}
             src={item.img}
@@ -152,11 +183,14 @@ export default function Services() {
             fill
             priority
             className="
-              object-cover rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-4xl  shadow-xl
-              transition-opacity duration-700 ease-in-out
+              object-cover
+              transition-opacity
+              duration-700
+              ease-in-out
             "
             style={{ opacity: visible ? 1 : 0 }}
           />
+
         </div>
       </div>
 
