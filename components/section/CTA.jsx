@@ -34,7 +34,6 @@ export default function CTA({
         className="
           relative
           mx-auto
-          max-w-360
           min-h-135.75
           bg-[#C9C9DC]
           overflow-hidden
@@ -48,9 +47,8 @@ export default function CTA({
           aria-hidden
           className="
             absolute
-            w-434.75 h-434.75
+            w-1400 h-434.75
             -top-67 -left-37.5
-            opacity-50
             mix-blend-luminosity
             pointer-events-none
           "

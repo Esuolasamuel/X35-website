@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-2 px-7.5 sm:px-15 md:px-20 lg:px-25 xl:px-30 transition-all duration-300 ${
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full py-4 px-7.5 sm:px-15 md:px-20 lg:px-25 xl:px-30 transition-all duration-300 ${
           isTransparent ? "bg-transparent" : "bg-white shadow-[0px_16px_32px_0px_#BDBDBD40] border border-[#BDBDBD33]"
         }`}
       >
@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav
-            className={`hidden lg:flex items-center gap-6 sm:gap-8 md:gap-9 lg:gap-10 xl:gap-11 xxl:gap-12 xxxl:gap-13 text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base xxl:text-base xxxl:text-base font-semibold font-body cursor-pointer ${
+            className={`hidden lg:flex items-center gap-6 sm:gap-8 md:gap-9 lg:gap-10 text-xs sm:text-sm md:text-sm lg:text-sm font-semibold font-body cursor-pointer ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
