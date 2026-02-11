@@ -12,10 +12,10 @@ export default function ProjectDemo({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <section className="bg-white p-3.5 sm:p-7.5 md:p-15 lg:p-30 xl:p-30 2xl:p-30">
+    <section className="bg-white p-6 sm:p-7.5 md:p-15 lg:p-30 xl:p-30 2xl:p-30">
       <div className="flex flex-col mx-auto">
 
-        <h1 className="text-2xl md:text-3xl lg:text-[40px] text-center mb-14 font-bold text-dark-500 font-heading">
+        <h1 className="text-2xl md:text-3xl lg:text-[40px] text-center mb-5 sm:mb-5 md:mb-7 lg:mb-14 font-bold text-dark-500 font-heading">
           Our Latest Projects
         </h1>
 
@@ -24,7 +24,7 @@ export default function ProjectDemo({ projects }) {
             <Link
               key={p.slug}
               href={`/Projects/${p.slug}`}
-              className="group block"
+              className="group block py-3 "
             >
               <div className="relative aspect-381/275 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden">
                 <Image
@@ -39,11 +39,11 @@ export default function ProjectDemo({ projects }) {
                 />
               </div>
 
-              <div className="mt-6">
+              <div className="mt-2 sm:mt-3 md:mt-4 lg:mt-6">
                 <h3 className="font-base font-body font-semibold text-dark-500">
                   {p.title}
                 </h3>
-                <p className="pt-2.5text-xs md:text-xs lg:text-xs font-body font-normal text-dark-500">
+                <p className="pt-1 lg:pt-2.5 text-xs md:text-xs lg:text-xs font-body font-normal text-dark-500">
                   {p.type}
                 </p>
               </div>

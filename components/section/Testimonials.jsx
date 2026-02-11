@@ -26,9 +26,9 @@ export default function Testimonials() {
         className="
           max-w-360
           mx-auto
-          p-30
+          p-3.5 sm:p-7.5 md:p-15 lg:p-30
           flex flex-col
-          gap-14
+         gap-3.5 sm:gap-3.5 md:gap-7 lg:gap-14
         "
       >
         {/* Heading */}
@@ -37,16 +37,16 @@ export default function Testimonials() {
         </h2>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-3 gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3.5 sm:gap-3.5 md:gap-7 lg:gap-14">
           {testimonials.map((t, i) => (
             <div
               key={i}
               className="
-                p-10
+                p-3 sm:p-4 md:p-6 lg:p-10
                 rounded-2xl
                 bg-white
                 border border-[#0C0C1C0F]
-                shadow-[0px_16px_32px_0px_#BDBDBD40]
+               sm:shadow-lg lg:shadow-[0px_16px_32px_0px_#BDBDBD40]
                 flex flex-col
                 justify-between
               "

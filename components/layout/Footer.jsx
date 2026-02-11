@@ -24,7 +24,7 @@ export default function Footer() {
                 className="w-16 h-16 mb-6"
               />
             </Link>
-            <div className="text-white font-body flex-col lg:flex-row font-medium text-lg tracking-tight">
+            <div className="text-white font-body flex-col lg:flex-row font-medium text-xs sm:text-xs md:text-base lg:text-lg tracking-tight">
               <span className="text-yellow-400">We</span> Design.{" "}
               <span className="text-yellow-400">We</span> Build.{" "}
               <span className="text-yellow-400">We</span> Deliver.
@@ -33,16 +33,16 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col items-start font-body">
-            <h4 className="text-white/50 text-sm font-bold mb-8 tracking-wider">Quick Links</h4>
+            <h4 className="text-white/50 text-sm sm:text-sm md:text-sm lg:text-sm font-bold mb-8 tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
               <li>
-                <Link href="/about" className="text-white hover:text-yellow-400 transition-colors">About Us</Link>
+                <Link href="/about" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/Projects" className="text-white hover:text-yellow-400 transition-colors">Our Projects</Link>
+                <Link href="/Projects" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">Our Projects</Link>
               </li>
               <li>
-                <Link href="/#services" className="text-white hover:text-yellow-400 transition-colors">Our Services</Link>
+                <Link href="/#services" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">Our Services</Link>
               </li>
             </ul>
           </div>
@@ -63,11 +63,11 @@ export default function Footer() {
           {/* Follow Us */}
           <div className="flex flex-col items-start font-body">
             <h4 className="text-white/50 text-sm font-bold mb-8 tracking-wider">Follow Us</h4>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 text-xs sm:text-sm md:text-sm lg:text-sm">
               <a href="https://www.linkedin.com/company/x35-projects-ltd" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <Image src={linkedin} alt="linkedin" width={28} height={28} />
               </a>
-              <a href="https://www.instagram.com/x35projects/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+              <a href="https://www.instagram.com/x35projects/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-sm lg:text-sm">
                 <Image src={instagram} alt="instagram" width={28} height={28} />
               </a>
             </div>

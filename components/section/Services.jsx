@@ -100,7 +100,7 @@ export default function Services() {
   className="
     bg-linear-to-br from-[#0b1020] to-[#05060d]
     text-white
-     p-gi3.5 sm:p-7.5 md:p-15 lg:p-30 
+     p-3.5 sm:p-7.5 md:p-15 lg:p-30 
   "
 >
   <div
@@ -122,7 +122,7 @@ export default function Services() {
             w-113.25
           "
         >
-          <h2 className="text-xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-dark mb-2 text-white">
+          <h2 className="text-2xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-dark mb-2 text-white">
             Our Services
           </h2>
 
@@ -195,8 +195,8 @@ export default function Services() {
       </div>
 
       {/* MOBILE VIEW */}
-      <div className="lg:hidden space-y-6">
-        <div className="py-2">
+      <div className="lg:hidden space-y-6 p-3 sm:p-4 md:p-6 lg:p-10">
+        <div className="p-2">
           <h2 className="text-2xl md:text-4xl lg:text-5xl leading-15 font-heading text-dark mb-4 text-white">
             Our Services
           </h2>
@@ -207,25 +207,25 @@ export default function Services() {
           </p>
         </div>
         {items.map((item) => (
-          <div
-            key={item.title}
-            className="rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden"
-          >
-            <div className="relative aspect-4/3">
-              <Image
-                src={item.img}
-                alt={item.title}
-                fill
-                className="object-cover"
-              />
+          <div key={item.title}>
+            <div
+              className="overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl"
+            >
+              <div className="relative aspect-4/3">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-
-            <div className="py-4">
-              <h3 className="text-lg font-semibold text-white">
-                {item.title}
-              </h3>
+              <div className="py-4">
+                <h3 className="text-lg font-semibold text-white">
+                  {item.title}
+                </h3>
+              </div>
             </div>
-          </div>
         ))}
       </div>
     </section>

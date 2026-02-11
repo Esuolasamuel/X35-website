@@ -70,13 +70,13 @@ export default function CTA({
           `}
         >
           {/* ================= HEADLINE ================= */}
-      <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-xl sm:text-xl md:text-2xl lg:text-[48px] z-20">
+      <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-3xl sm:text-3xl md:text-4xl lg:text-5xl z-20">
         <span className="block">Your vision deserves an</span>
         <span className="block">architect with purpose.</span>
 
         <span className="block">
           Have you been{" "}
-          <span className="relative inline-block ml-2">
+          <span className="relative inline-block">
             <span className="relative z-10">x35ied?</span>
 
             {/* Hand-drawn underline aligned with text */}
@@ -84,9 +84,13 @@ export default function CTA({
               aria-hidden
               className="
                 absolute
-                inset-x-0 -bottom-4 -left-10
-                w-[242.93px]
-                h-[97.33px]              /* approximate height for underline */
+                inset-x-0 -bottom-4 -left-8 lg:-bottom-4 lg:-left-10
+                lg:w-[242.93px]
+                lg:h-[97.33px] 
+                md:w-[181.43px]
+                md:h-[72.83px]
+                w-[151.43px]
+                h-[72.83px]
                 bg-no-repeat
                 bg-contain
                 bg-center

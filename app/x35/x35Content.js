@@ -6,7 +6,7 @@ import Services from "@/components/section/Services";
 import Testimonials from "@/components/section/Testimonials";
 
 // Import images statically from the assets folder
-import brookImg from "@/assets/images/ourProject-1.jpg";
+import brookImg from "@/assets/images/ourProject-1.png";
 import robImg from "@/assets/images/ourProject-2.jpg";
 import chevronImg from "@/assets/images/ourProject-3.png"
 

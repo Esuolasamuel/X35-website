@@ -4,7 +4,7 @@ import WhatsAppWidget from "./WhatsAppWidget";
 export default function WhoWeAre() {
     return (
         <section className="bg-white">
-            <Container>
+            <div className="p-6 sm:p-7.5 md:p-15 lg:p-25 mx-auto">
                 <div className="w-full max-w-380 h-auto flex flex-col lg:flex-row items-center justify-center gap-0.5 mx-auto">
                     <div className="w-full lg:justify-centre text-dark-500">
                         <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-center font-heading text-dark-500">Who we are</h2>
@@ -15,7 +15,7 @@ export default function WhoWeAre() {
                         <p>Spaces we&apos;ve provided to our clients have led to significant internal brand transformations as our design solutions instill a sense of identity and facilitate alignment with their organizational objectives.</p>
                     </div>
                 </div>
-            </Container>
+            </div>
             <WhatsAppWidget />
         </section>
     );
