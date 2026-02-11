@@ -120,8 +120,10 @@ export default function OgaDentistPage() {
         />
         <CTA
           width="133"
-          align="start"
-          titlelines={"The Result"}
+          title="The Result"
+          backgroundImage="backgroundImage"
+          button={false}
+          align="left"
           paragraph="The final outcome is a carefully executed environment that speaks the language of Professionalism, Cleanliness, Comfort, Innovation."
         />
         <RelatedProjects projects={projects} />

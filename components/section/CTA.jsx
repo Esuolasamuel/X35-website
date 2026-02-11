@@ -8,11 +8,14 @@ import bgPattern from "@/assets/icons/image-9.svg";
 import handdrawn from "@/assets/icons/Fill-4.svg";
 
 export default function CTA({
-  title,
-  text = "Contact us",
-  paragraph,
   id,
+  title,
+  paragraph,
+  text = "Contact us",
   align = "center",
+  button = false,
+  headline = false,
+  backgroundImage = false,
 }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -26,115 +29,112 @@ export default function CTA({
     right: "items-end text-right",
   };
 
+  /* ================= LAYOUT VARIANTS ================= */
+  const sectionClasses = backgroundImage
+    ? "min-h-[540px] px-6 md:px-12 lg:px-[120px]"
+    : "h-[516px] px-6 md:px-12";
+
   return (
     <>
-      {/* ================= SECTION ================= */}
       <section
         id={id}
-        className="
-          relative
-          mx-auto
-          min-h-135.75
+        className={`
+          relative mx-auto
           bg-[#C9C9DC]
           overflow-hidden
-          flex
-          items-center
-          justify-center
-        "
+          flex items-center justify-center
+          ${sectionClasses}
+        `}
       >
         {/* ================= BACKGROUND IMAGE ================= */}
-        <div
-          aria-hidden
-          className="
-            absolute
-            w-1400 h-434.75
-            -top-67 -left-37.5
-            mix-blend-luminosity
-            pointer-events-none
-          "
-          style={{
-            backgroundImage: `url(${bgPattern.src})`,
-            backgroundRepeat: "repeat",
-            backgroundSize: "640px",
-          }}
-        />
+        {backgroundImage && (
+          <div
+            aria-hidden
+            className="
+              absolute
+              w-434.75 h-434.75
+              -top-67 -left-37.5
+              opacity-90
+              mix-blend-luminosity
+              pointer-events-none
+            "
+            style={{
+              backgroundImage: `url(${bgPattern.src})`,
+              backgroundRepeat: "repeat",
+              backgroundSize: "640px",
+            }}
+          />
+        )}
 
         {/* ================= CONTENT ================= */}
         <div
           className={`
             relative z-10
             flex flex-col
-            max-w-150
-            gap-13
+            max-w-240
             ${alignmentMap[align]}
           `}
         >
           {/* ================= HEADLINE ================= */}
-      <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-3xl sm:text-3xl md:text-4xl lg:text-5xl z-20">
-        <span className="block">Your vision deserves an</span>
-        <span className="block">architect with purpose.</span>
+          {headline ? (
+            <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-13">
+              <span className="block">Your vision deserves an</span>
+              <span className="block">architect with purpose.</span>
 
-        <span className="block">
-          Have you been{" "}
-          <span className="relative inline-block">
-            <span className="relative z-10">x35ied?</span>
+              <span className="block">
+                Have you been{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10">x35ied?</span>
 
-            {/* Hand-drawn underline aligned with text */}
-            <span
-              aria-hidden
-              className="
-                absolute
-                inset-x-0 -bottom-4 -left-8 lg:-bottom-4 lg:-left-10
-                lg:w-[242.93px]
-                lg:h-[97.33px] 
-                md:w-[181.43px]
-                md:h-[72.83px]
-                w-[151.43px]
-                h-[72.83px]
-                bg-no-repeat
-                bg-contain
-                bg-center
-                -rotate-[2.31deg]
-                -z-10      /* subtle Figma rotation */
-              "
-              style={{
-                backgroundImage: `url(${handdrawn.src})`,
-              }}
-            />
-          </span>
-        </span>
-      </h2>
-
-
+                  <span
+                    aria-hidden
+                    className="
+                      absolute
+                      -bottom-4 -left-8
+                      w-37.75 h-18
+                      md:w-45.25 md:h-18.25
+                      lg:w-60.75 lg:h-24.25
+                      bg-no-repeat bg-contain bg-center
+                      -rotate-[2.31deg]
+                      -z-10
+                    "
+                    style={{ backgroundImage: `url(${handdrawn.src})` }}
+                  />
+                </span>
+              </span>
+            </h2>
+          ) : (
+            <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-4">
+              {title}
+            </h2>
+          )}
 
           {/* ================= PARAGRAPH ================= */}
           {paragraph && (
-            <p className="text-xl leading-relaxed font-body text-[#1A1A1A]/80">
+            <p className="text-lg md:text-xl leading-relaxed font-body text-[#1A1A1A]/80 max-w-180">
               {paragraph}
             </p>
           )}
 
           {/* ================= CTA BUTTON ================= */}
-          <button
-            onClick={() => setIsContactOpen(true)}
-            className="
-              inline-flex items-center justify-center
-              w-33 h-11.5
-              gap-2.5
-              rounded-[60px]
-              bg-[#FFD700]
-              text-[#1A1A1A]
-              font-bold text-base
-              tracking-[0.02em]
-              px-6 py-3.5
-              shadow-lg
-              transition
-              hover:bg-[#F0C800]
-            "
-          >
-            {text}
-          </button>
-
+          {button ? (
+            <button
+              onClick={() => setIsContactOpen(true)}
+              className="
+                inline-flex items-center justify-center
+                h-12 px-8
+                rounded-full
+                bg-[#FFD700]
+                text-[#1A1A1A]
+                font-bold
+                tracking-[0.02em]
+                shadow-lg
+                transition hover:bg-[#F0C800]
+              "
+            >
+              {text}
+            </button>
+          ):("")}
         </div>
       </section>
 

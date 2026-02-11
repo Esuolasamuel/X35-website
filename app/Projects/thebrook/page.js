@@ -121,6 +121,7 @@ export default function thebrookPage() {
                 "Materials were selected not only for aesthetics but also for durability and acoustic performance. Soft carpet tiles provide sound absorption within open work areas, while high-quality laminate finishes and glass partitions ensure transparency and modern sophistication. Every joinery detail was carefully executed to achieve a seamless, enduring finish.",
             },
           ]}
+          backgroundColor="bg-[#D1EBE8]"
         />
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"

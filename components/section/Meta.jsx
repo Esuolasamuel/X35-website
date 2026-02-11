@@ -29,16 +29,16 @@ const Meta = ({
           flex
           flex-col
           lg:flex-row
-          gap-12 lg:gap-24
+          gap-8 lg:gap-16
           items-start
         "
       >
         {/* LEFT CONTENT: Title and Description paragraphs */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-146 lg:min-h-117">
           <h2 className="
             font-heading 
             font-extrabold
-           text-2xl md:text-3xl lg:text-[40px]
+           text-2xl md:text-3xl lg:text-[32px]
             leading-[1.1]
             tracking-tight
             mb-8
@@ -55,7 +55,7 @@ const Meta = ({
                   font-body 
                   font-normal
                   text-[15px]
-                  md:text-[16px]
+                  md:text-[17px]
                   leading-[1.7]
                   text-[#333333]
                   opacity-90
@@ -68,7 +68,7 @@ const Meta = ({
         </div>
 
         {/* RIGHT CONTENT: Metadata List */}
-        <div className="w-full lg:w-1/2 lg:pt-4">
+        <div className="lg:w-138 min-h-96.5">
           <ul className="w-full">
             {infoItem.map((info, index) => (
               <li
@@ -101,7 +101,7 @@ const Meta = ({
                 <span className="
                   text-[#1A1A1A]
                   font-body 
-                  font-medium
+                  font-bold
                   text-[14px]
                   md:text-[16px]
                   text-right

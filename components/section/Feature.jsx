@@ -12,21 +12,20 @@ export default function Feature({
 }) {
   return (
     <section className={`${backgroundColor}  px-6 sm:px-10 lg:px-24
-          py-16 sm:py-20 lg:py-28
-          flex flex-col gap-12`}>
+          py-16 sm:py-20 lg:py-28`}>
       <div
         className={`
-          max-w-360
+          max-w-360 mx-auto
           ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
-          flex flex-col items-center gap-12 lg:gap-20 mx-auto
+          flex flex-col items-center justify-center gap-12 lg:gap-20
         `}
       >
         {/* TEXT */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-133">
           <h3
             className={`
               font-heading font-bold
-              text-2xl sm:text-3xl lg:text-[55px]
+              text-2xl sm:text-3xl lg:text-[32px]
               leading-tight mb-6
               ${headerColor}
             `}
@@ -40,8 +39,8 @@ export default function Feature({
                 key={index}
                 className={`
                   font-body
-                  text-sm sm:text-base lg:text-[17px]
-                  leading-[1.8]
+                  font-normal
+                  text-sm sm:text-base lg:text-[17px] 
                   tracking-wide
                   ${textColor}
                 `}
@@ -53,7 +52,7 @@ export default function Feature({
         </div>
 
         {/* IMAGE */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-153.75">
           <div
             className={`
               relative w-full
@@ -69,7 +68,7 @@ export default function Feature({
                 alt={title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             )}

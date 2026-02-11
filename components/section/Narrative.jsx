@@ -3,16 +3,22 @@ import Image from "next/image";
 const Narrative = ({description, imageSrc, title, backgroundColor, textColor = " text-dark-500/80"}) => {
   return (
     /* Added 'group' to trigger the hover state for the entire section */
-    <section className={` ${backgroundColor} group`}>
-      <div className="p-6 sm:p-6 md:p-10 lg:p-15 xl:p-20 2xl:p-30 max-w-500 flex flex-col lg:flex-row items-center gap-8 sm:gap-12 md:gap-14 lg:gap-16 mx-auto">
+    <section className={` ${backgroundColor} group transition-colors duration-500`}>
+      <div className="p-7.5 mx-auto
+                sm:p-7.5
+                md:p-15 
+                lg:p-30 
+                max-w-360 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         
         {/* LEFT TEXT SECTION */}
-        <div className="w-full lg:w-5/12">
-          <div className="font-body text-dark-500 font-normal text-[16px] sm:text-[17px]">
+        <div className="w-full lg:w-126" >
+          <div className="font-body text-dark-500 font-normal text-[16px] items-center justify-center sm:text-[17px]">
             {description.map((desc, index) => (
               <p
                 key={index}
-                className={`text-sm md:text-base lg:text-[17px] leading-[1.8] ${textColor} mb-6 sm:mb-8 last:mb-0 font-normal tracking-wide`}
+                className={`text-[15px] md:text-[16px] lg:text-[17px] 
+                            leading-[1.6] font-body ${textColor} 
+                            mb-8 font-normal tracking-wide`}
               >
                 {desc.paragraph}
               </p>
@@ -21,8 +27,8 @@ const Narrative = ({description, imageSrc, title, backgroundColor, textColor = "
         </div>
 
         {/* RIGHT IMAGE SECTION */}
-        <div className="w-full lg:w-7/12">
-          <div className="relative w-full aspect-615/594 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl  overflow-hidden bg-gray-800">
+        <div className="w-full lg:w-153.75">
+          <div className="relative w-full aspect-615/594 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden bg-gray-800">
             {imageSrc && (
               <Image
                 src={imageSrc}

@@ -65,23 +65,24 @@ export default function ChevronPage() {
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <Feature
-          imageSrc={chevronFeature}
-          title="Delivering a Functional and Refined Collaborative Space"
-          description={[
-            { paragraph: "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions." },
-            { paragraph: "Through this redevelopment, X35 Projects delivered a workspace that blends functionality, aesthetics, and technical precision—reflecting our commitment to quality, innovation, and client-focused design solutions." },
-          ]}
-        />
         <ImageGallery
-          backgroundColor="bg-[#EAF1FF]"
+          backgroundColor="bg-white"
           images={[
-            { imageSrc: chevronSplit1, alt: "Interior 1", height: 594, width: 615 },
-            { imageSrc: chevronSplit2, alt: "Interior 2", height: 594, width: 615, colspan: "col-span-2" },
-            { imageSrc: chevronSplit3, alt: "Interior 3", height: 594, width: 615, colspan: "col-span-2" },
-            { imageSrc: chevronSplit4, alt: "Interior 4", height: 594, width: 615 },
+            { imageSrc: chevronSplit1, type: "small" },
+            { imageSrc: chevronSplit2, type: "large" },
+            { imageSrc: chevronSplit3, type: "large" },
+            { imageSrc: chevronSplit4, type: "small" },
           ]}
         />
+          <Feature
+            imageSrc={chevronFeature}
+            title="Delivering a Functional and Refined Collaborative Space"
+            description={[
+              { paragraph: "The result is a sophisticated meeting space that supports both high-level presentations and collaborative team sessions." },
+              { paragraph: "Through this redevelopment, X35 Projects delivered a workspace that blends functionality, aesthetics, and technical precision—reflecting our commitment to quality, innovation, and client-focused design solutions." },
+            ]}
+            backgroundColor="bg-[#E3CEDE]"
+          />
         <RelatedProjects projects={projects} />
     </>
   );

@@ -21,6 +21,7 @@ import projectAdino from "@/assets/images/adino.png";
 import projectSunplant from "@/assets/images/sunplanetco.jpg";
 import projectBrook from "@/assets/images/brook.jpg";
 import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import ImageGrid from "@/components/section/ImageGrid";
 
 export default function AdrinoPage() {
   const projects = [
@@ -59,7 +60,7 @@ export default function AdrinoPage() {
             { heading: "Architectural Style", value: "Modern / Minimalism" },
             { heading: "Typology", value: "Commercial" },
           ]}
-          backgroundColor="bg-[#DFC0AB]"
+          backgroundColor="bg-[#E5F1E7]"
         />
         <FullImageSection imageSrc={adinoFull1} title="adino interior" />
         <Narrative
@@ -91,7 +92,7 @@ export default function AdrinoPage() {
             },
           ]}
         />
-        <ImageGallery
+        <ImageGrid
           backgroundColor="bg-[#E3CEDE]"
           images={images}
         />

@@ -33,7 +33,7 @@ export default function Hero({
       {/* Content Container */}
       <div className="flex h-full w-full items-center justify-center px-4 md:px-6">
         <div className="relative text-center max-w-[90%] md:max-w-4xl">
-          <h1 className="relative z-10 text-white font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+          <h1 className="relative z-10 text-white font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] leading-tight">
             {heroTitle}
           </h1>
           

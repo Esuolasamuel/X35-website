@@ -17,17 +17,16 @@ const ListFeature = ({
     return (
         <section className={`${backgroundColor} group transition-colors duration-500`}>
             <div className={`
-                px-6 py-16 
+                px-6 py-16 mx-auto
                 sm:px-10 sm:py-20 
                 md:px-16 md:py-24 
                 lg:px-24 lg:py-32 
                 xl:px-40
-                max-w-360 flex flex-col ${flex} items-center gap-12 lg:gap-20 mx-auto
+                max-w-360 flex flex-col lg:flex-row ${flex} items-center gap-12 lg:gap-20
             `}>
                 
                 {/* LEFT TEXT SECTION */}
-                <div className={`w-full lg:w-1/2 ${orderL}`}>
-                    <div className="max-w-lg">
+                <div className={`w-full lg:w-133 ${orderL}`}>
                         <h3 className={`
                             font-heading font-bold 
                             text-2xl md:text-3xl lg:text-[40px] 
@@ -63,11 +62,10 @@ const ListFeature = ({
                                 {summary}
                             </p>
                         )}
-                    </div>
                 </div>
 
                 {/* RIGHT IMAGE SECTION */}
-                <div className={`w-full lg:w-1/2 ${orderR}`}>
+                <div className={`w-full lg:w-153.75 ${orderR}`}>
                     <div className={`
                         relative w-full ${aspect} 
                         rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl
@@ -80,7 +78,7 @@ const ListFeature = ({
                                 alt={title}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-contain transition-transform duration-1000 ease-out group-hover:scale-105"
+                                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                                 priority
                             />
                         )}

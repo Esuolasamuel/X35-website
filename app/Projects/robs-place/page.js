@@ -100,8 +100,8 @@ export default function RobPlacePage() {
           imageSrc={feature4}
           title="Final Outcome: A Peaceful, Modern Family Home"
           description={[
-            { paragraph: "During early consultations, it became clear that the client had deep concerns about renovation risks, particularly demolition. He feared that touching structural elements might weaken the building or cause collapse — a concern many homeowners share." },
-            { paragraph: "Our role was not only technical but also reassurance-driven. Through structural assessments, transparent communication, and detailed planning, we helped the client understand exactly which elements were safe to modify and how the integrity of the building would be preserved." },
+            { paragraph: "The completed project delivered exactly what the client envisioned: a serene, minimalist home that supports family living. The new spaces feel lighter, more open, and more functional — with modern finishes and a refined aesthetic that reflects contemporary design standards." },
+            { paragraph: "The project stands as a testament to how thoughtful design and responsible construction can renew a home without compromising safety or stability." },
           ]}
           backgroundColor="bg-[#e3cede]"
           aspect="aspect-615/722"

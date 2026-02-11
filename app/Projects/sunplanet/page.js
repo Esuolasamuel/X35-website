@@ -59,7 +59,7 @@ export default function SunplanetPage() {
             { heading: "Architectural Style", value: "Modern / Minimalism" },
             { heading: "Typology", value: "Real Estate" },
           ]}
-          backgroundColor="bg-[#DFC0AB]"
+          backgroundColor="bg-[#EAF1FF]"
         />
         <FullImageSection imageSrc={fullImg} title="sun planet interior" />
         <Feature
@@ -78,10 +78,10 @@ export default function SunplanetPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { imageSrc: gallery1, alt: "Interior 1", height: "594", width: "615" },
-            { imageSrc: gallery2, alt: "Interior 2", height: "594", width: "615", colspan: "col-span-2" },
-            { imageSrc: gallery3, alt: "Interior 3", height: "594", width: "615", colspan: "col-span-2" },
-            { imageSrc: gallery4, alt: "Interior 4", height: "594", width: "615" },
+            { imageSrc: gallery1, type: "small" },
+            { imageSrc: gallery2, type: "large" },
+            { imageSrc: gallery2, type: "large" },
+            { imageSrc: gallery4, type: "small" },
           ]}
         />
         <MiniHero
