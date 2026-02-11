@@ -23,7 +23,7 @@ export default function VisionMission() {
               flex-1
               min-w-147
               min-h-70.75
-              bg-[#0B0B2A]
+              bg-[#0F0F3A]
               rounded-[15px]
               p-10 md:p-14 lg:p-20
               transition-all duration-300 ease-out
@@ -47,7 +47,7 @@ export default function VisionMission() {
               flex-1
               max-w-147
               min-h-70.75
-              bg-[#0B0B2A]
+              bg-[#0F0F3A]
               rounded-[15px]
               p-10 md:p-14 lg:p-20
               transition-all duration-300 ease-out

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // ✅ Static import works best when used via the .src property
-import highlightSvg from "@/assets/images/Fill-4.svg";
+import handdrawn from "@/assets/icons/Fill-4.svg";
 
 const ProjectHero = () => {
   return (
@@ -19,17 +19,27 @@ const ProjectHero = () => {
         <span className="relative inline-block">
           Defines
           <span
+            aria-hidden
             className="
-              absolute -left-1 sm:-left-2 md:-left-3 lg:-left-4 -bottom-1 sm:-bottom-1.5 md:-bottom-2 lg:-bottom-2
-              /* Using scale to ensure it fits the text responsivey */
-              w-[110%] h-[120%]
-              bg-contain bg-center bg-no-repeat
-              -z-10
+              absolute
+              inset-x-0 -bottom-4 -left-9 lg:-bottom-8 lg:-left-22
+              lg:w-[269.50px]
+              lg:h-[108.23px] 
+              md:w-[181.43px]
+              md:h-[72.83px]
+              w-[151.43px]
+              h-[72.83px]
+              bg-no-repeat
+              bg-contain
+              bg-center
+              -rotate-[2.31deg]
+              -z-10      /* subtle Figma rotation */
             "
-            /* ✅ Fix: Use the .src from the import */
-            style={{ backgroundImage: `url(${highlightSvg.src})` }}
+            style={{
+              backgroundImage: `url(${handdrawn.src})`,
+            }}
           />
-        </span>
+      </span>
         {" "}Us
       </h1>
 
