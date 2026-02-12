@@ -8,51 +8,80 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/20 backdrop-blur-sm px-4">
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/20 backdrop-blur-sm">
+      {/* MODAL CARD */}
       <div
         className="
-          relative w-full max-w-125 rounded-4xl bg-white p-10 md:p-14 shadow-xl
+          relative
+          w-102 h-85.5
+          rounded-[20px]
+          bg-white
+          p-8
+          shadow-xl
           animate-in fade-in zoom-in-95 duration-300
         "
       >
-        {/* Close Button */}
+        {/* CLOSE ICON */}
         <button
           onClick={onClose}
-          className="absolute right-8 top-8 text-[#0F172A] hover:opacity-70 transition-opacity"
+          className="
+            absolute top-6 right-6
+            text-[#0F172A]
+            hover:opacity-70
+            transition-opacity
+          "
         >
-          <X size={24} strokeWidth={2.5} />
+          <X size={20} strokeWidth={2.5} />
         </button>
 
-        <div className="flex flex-col items-center text-center">
-          {/* Party Popper Icon */}
-          <div className="mb-6">
-            <Image
-              src={partypopper}
-              alt="Party Popper"
-              width={80}
-              height={80}
-              className="w-20 h-20 md:w-24 md:h-24"
-            />
+        {/* CONTENT WRAPPER */}
+        <div
+          className="
+            flex flex-col items-center
+            gap-6
+            w-86
+            mx-auto
+          "
+        >
+          {/* ICON */}
+          <Image
+            src={partypopper}
+            alt="Party Popper"
+            width={64}
+            height={64}
+            className="w-16 h-16"
+          />
+
+          {/* TEXT CONTAINER */}
+          <div
+            className="
+              flex flex-col items-center text-center
+              gap-4
+              w-86 h-22
+            "
+          >
+            <h2 className="text-[18px] leading-tight font-bold font-body text-[#0F172A]">
+              Coming Soon
+            </h2>
+
+            <p className="text-sm leading-[1.6] font-body text-[#0F172A]/90">
+              We’re crafting something exciting. Join our community to be first
+              to know when it launches.
+            </p>
           </div>
 
-          {/* Header */}
-          <h2 className="text-[28px] md:text-[32px] leading-tight text-[#0F172A] font-heading font-black tracking-tight mb-4">
-            Coming Soon
-          </h2>
-          
-          {/* Subtext */}
-          <p className="text-[#0F172A] text-lg font-body md:text-xl leading-[1.6] max-w-95 mb-10 opacity-90">
-            We’re crafting something exciting. Join our community to be first to know when it launches.
-          </p>
-
-          {/* Action Button */}
+          {/* CTA BUTTON */}
           <button
             onClick={onNotify}
             className="
-              w-full rounded-full bg-[#FFD700] py-5
-              font-body
-              text-lg font-bold text-[#0F172A]
-              hover:brightness-95 transition-all active:scale-[0.98]
+              w-86 h-14.5
+              rounded-[60px]
+              bg-[#FFD700]
+              px-6 py-5
+              text-lg font-bold font-body text-[#0F172A]
+              hover:brightness-95
+              transition-all
+              active:scale-[0.98]
             "
           >
             Join now

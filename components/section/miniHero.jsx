@@ -4,13 +4,13 @@ const MiniHero = ({ title, imageSrc, description }) => {
     return (
         /* Added 'group' to trigger the hover effect for the whole section */
         <section className="bg-[#E3CEDE] group">
-            <div className="mx-auto p-6 sm:p-7.5 md:p-15 lg:p-30 flex flex-col text-center items-center justify-center gap-18">
+            <div className="mx-auto p-6 sm:p-7.5 md:p-15 lg:p-30 flex flex-col text-center items-center justify-center">
                 
                 {/* TEXT SECTION */}
-                <div className="max-w-3xl">
+                <div className="max-w-126 mb-16">
                     <div className="w-full">
-                        <h3 className="font-heading font-bold text-dark-500 sm:text-xl md:text-2xl lg:text-4xl mb-4">{title}</h3>
-                        <p className="md:text-sm lg:text-base leading-[1.8] mb-8 last:mb-0 font-body text-dark-500 font-normal tracking-wide">
+                        <h3 className="font-heading font-bold text-dark-500 sm:text-xl md:text-2xl lg:text-[32px] mb-4">{title}</h3>
+                        <p className="md:text-sm lg:text-base leading-[1.8] last:mb-0 font-body text-dark-500 font-normal tracking-wide">
                             {description}
                         </p>
                     </div>

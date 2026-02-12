@@ -53,6 +53,9 @@ const x35Content = () => {
       },
     ]}
     id="contact-section"
+    headline={true}
+    button={true}
+    backgroundImage={true}
     />
     </>
   );

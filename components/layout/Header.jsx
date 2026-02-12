@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 // import Modal from "@/components/ui/Modal";
-import ContactForm from "../forms/ContactForm";
+import ContactModal from "../forms/ContactForm";
 import SuccessNotification from "../ui/SuccessNotification";
 import ComingSoonModal from "../ui/ComingSoonModal";
 import NotifyModal from "../ui/NotifyModal";
@@ -112,33 +112,22 @@ export default function Header() {
         </div>
       )}
 
-      {/* --- SUCCESS NOTIFICATION (Top Center) --- */}
-      {showSuccess && (
-        <div className="fixed top-4 sm:top-6 md:top-7 lg:top-8 xl:top-9 xxl:top-10 xxxl:top-11 left-1/2 -translate-x-1/2 z-100 w-full max-w-100 px-3 sm:px-5 md:px-6 lg:px-7 xl:px-8 xxl:px-9 xxxl:px-10 animate-in fade-in slide-in-from-top-4 duration-500 text-dark-500">
-          <SuccessNotification
-            isOpen={true}
-            onClose={() => setShowSuccess(false)}
-          />
-        </div>
-      )}
+      {/* --- SUCCESS NOTIFICATION --- */}
+    {showSuccess && (
+      <div className="fixed top-4 left-1/2 -translate-x-1/2 z-100 w-full max-w-md px-4">
+        <SuccessNotification
+          isOpen={true}
+          onClose={() => setShowSuccess(false)}
+        />
+      </div>
+    )}
 
-      {/* --- CONTACT FORM MODAL --- */}
-      {isContactOpen && (
-        <div className="fixed inset-0 z-90 flex items-center justify-center p-0 bg-black/60 backdrop-blur-sm text-dark-500">
-          <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl xxl:max-w-4xl xxxl:max-w-5xl bg-white rounded-lg md:rounded-xl lg:rounded-2xl p-0 md:p-6 lg:p-8 xl:p-9 xxl:p-10 xxxl:p-11 shadow-2xl">
-            <button
-              onClick={() => setIsContactOpen(false)}
-              className="absolute top-3  sm:top-5 md:top-6 lg:top-7 xl:top-8 xxl:top-9 xxxl:top-10 right-3  sm:right-5 md:right-6 lg:right-7 xl:right-8 xxl:right-9 xxxl:right-10 text-dark-500 hover:text-dark-500"
-            >
-              <X size={20} className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
-            </button>
-            <h2 className="text-xl font-heading sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-7xl xxxl:text-8xl font-bold mb-4 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-9 xxl:mb-10 xxxl:mb-11 text-dark-500">Contact Us</h2>
-
-            {/* Pass handleFormSuccess to the form */}
-            <ContactForm onSuccess={handleFormSuccess} />
-          </div>
-        </div>
-      )}
+    {/* --- CONTACT FORM MODAL --- */}
+    <ContactModal 
+      isOpen={isContactOpen} 
+      onClose={() => setIsContactOpen(false)} 
+      onSuccess={handleFormSuccess} 
+    />
 
       {/* --- COMING SOON MODAL --- */}
       <ComingSoonModal

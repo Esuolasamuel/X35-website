@@ -32,12 +32,12 @@ export default function Testimonials() {
         "
       >
         {/* Heading */}
-        <h2 className=" text-2xl md:text-4xl lg:text-[40px] leading-[1.1] font-heading font-bold text-dark-500 text-center">
+        <h2 className=" text-2xl md:text-4xl lg:text-[40px] leading-[1.1] font-heading font-bold text-dark-500 pb-14 text-center">
           What Our Clients Say
         </h2>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3.5 sm:gap-3.5 md:gap-7 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3.5 sm:gap-3.5 md:gap-5 lg:gap-6">
           {testimonials.map((t, i) => (
             <div
               key={i}

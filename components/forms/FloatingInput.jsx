@@ -2,22 +2,35 @@ export function FloatingInput({
   label,
   name,
   type = "text",
+  required = false,
 }) {
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-124.75 h-[46.5px]">
       <input
-        required
+        required={required}
         name={name}
         type={type}
-        className="peer max-w-125 px-4 pt-6 pb-2 border border-gray-300 font-body text-sm md:text-base lg:text-[17px] text-dark-500 rounded-lg focus:ring-2 focus:ring-yellow-700 outline-none"
+        placeholder=" "
+        className="
+          peer
+          w-full h-full
+          px-4 py-3.5
+          border border-[#BDBDBD]
+          rounded-md
+          font-body text-base text-dark-500
+          outline-none
+          focus:ring-2 focus:ring-yellow-400/50
+        "
       />
+
       <label
         className="
-          absolute left-4 top-4 text-dark-500 text-sm
+          absolute left-4 top-1/2 -translate-y-1/2
+          text-sm text-dark-500
           transition-all
-          font-body
-          peer-focus:top-2 peer-focus:text-xs peer-focus:text-yellow-400
-          peer-valid:top-2 peer-valid:text-xs
+          peer-focus:top-2 peer-focus:text-xs
+          peer-placeholder-shown:top-1/2
+          peer-placeholder-shown:-translate-y-1/2
         "
       >
         {label}
