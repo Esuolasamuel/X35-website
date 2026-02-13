@@ -1,11 +1,13 @@
 import Image from "next/image";
 
-export default function ImageGrid({ images, backgroundColor }) {
+export default function ImageGrid({ images, backgroundColor, reverse }) {
+  const orderedImages = reverse ? [...images].reverse() : images;
+
   return (
     <section
       className={`w-full ${backgroundColor}
         px-6 md:px-30
-        py-20`} 
+        py-20`}
     >
       {/* GRID CONTAINER */}
       <div
@@ -17,7 +19,7 @@ export default function ImageGrid({ images, backgroundColor }) {
           gap-4
         "
       >
-        {images.map((img, index) => (
+        {orderedImages.map((img, index) => (
           <div
             key={index}
             className="

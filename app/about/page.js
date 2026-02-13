@@ -21,14 +21,18 @@ export default function AboutPage() {
         <WhoWeAre />
         {/* First Image Grid */}
         <ImageGrid
-          imageA={aboutImg1}
-          imageB={aboutImg2}
+          images={[
+            { imageSrc: aboutImg1, alt: "About Image 1" },
+            { imageSrc: aboutImg2, alt: "About Image 2" },
+          ]}
         />
         <VisionMission />
         {/* Second Image Grid */}
         <ImageGrid
-          imageA={aboutImg3}
-          imageB={aboutImg4}
+          images={[
+            { imageSrc: aboutImg3, alt: "About Image 3" },
+            { imageSrc: aboutImg4, alt: "About Image 4" },
+          ]}
           reverse="true"
         />
         {/* Values Section */}
