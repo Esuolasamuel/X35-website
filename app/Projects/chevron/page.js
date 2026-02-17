@@ -26,7 +26,7 @@ export default function ChevronPage() {
 
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
-    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "robs-place", title: "Rob’s Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
@@ -39,7 +39,7 @@ export default function ChevronPage() {
         <Meta
           title="Chevron Deep Waters Workspace Redesign"
           description={[
-            { paragraph: "X35 Projects was commissioned to transform the office interior into a contemporary, efficient, and performance-driven work environment. The objective was to rethink how the space functioned and elevate it into a more connected, productive, and visually polished workplace." },
+            { paragraph: "X35 Projects was engaged to redesign the interior space of the Deep Waters Department at Chevron’s Lagos office into a modern, high-performing workspace. Our goal was to reimagine the existing environment and deliver a more efficient, collaborative, and visually refined office experience." },
             { paragraph: "The project featured a complete upgrade of the department’s open workstation area, where we introduced a refreshed spatial layout that improves movement, communication, and ergonomic comfort. Custom acoustic partitions, integrated cable-management systems, and contemporary workstation modules were designed to support daily operations while maintaining a clean, organized aesthetic." },
           ]}
           infoItem={[
@@ -62,6 +62,7 @@ export default function ChevronPage() {
             { paragraph: "The project also included the creation of a new 11-man conference room, designed with advanced AV infrastructure, custom joinery, optimal sightlines, and a modern material palette." },
           ]}
           imageSrc={chevronNarrative}
+          imagePosition="object-[80%_50%]"
           textColor = "text-white/80"
           headerColor = "text-white"
         />

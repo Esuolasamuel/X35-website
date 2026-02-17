@@ -1,6 +1,15 @@
 import Image from "next/image";
 
-const Narrative = ({description, imageSrc, title, backgroundColor, textColor = " text-dark-500/80"}) => {
+const Narrative = ({description, imageSrc, title, backgroundColor, textColor = " text-dark-500/80",  // ✅ NEW PROP
+  imagePosition = "center"}) => {
+   // ✅ Position map
+    const positionMap = {
+        left: "object-left",
+        center: "object-center",
+        right: "object-right",
+        top: "object-top",
+        bottom: "object-bottom"
+    };
   return (
     /* Added 'group' to trigger the hover state for the entire section */
     <section className={` ${backgroundColor} group transition-colors duration-500`}>
@@ -36,7 +45,7 @@ const Narrative = ({description, imageSrc, title, backgroundColor, textColor = "
                 fill
                 sizes="(max-width: 576px) 100vw, (max-width: 768px) 100vw, (max-width: 992px) 100vw, (max-width: 1200px) 100vw, (max-width: 1400px) 100vw, 60vw"
                 /* Added transition-transform and group-hover:scale-110 */
-                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                className={`object-cover transition-transform  ${imagePosition} duration-700 ease-in-out group-hover:scale-110`}
                 priority
               />
             )}

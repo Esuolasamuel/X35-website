@@ -26,7 +26,7 @@ import ImageGrid from "@/components/section/ImageGrid";
 export default function AdrinoPage() {
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
-    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "robs-place", title: "Rob’s Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brook", title: "The Brook Finance Ltd", image: projectBrook },

@@ -28,7 +28,7 @@ export default function RobPlacePage() {
 
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
-    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "robs-place", title: "Rob’s Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
@@ -59,7 +59,8 @@ export default function RobPlacePage() {
           imageSrc={feature1}
           title="Understanding the Client’s Fears and Challenges"
           description={[
-            { paragraph: "During early consultations, it became clear that the client had deep concerns about renovation risks, particularly demolition. He feared that touching structural elements might weaken the building or cause collapse — a concern many homeowners share." },
+            { paragraph: "During early consultations, it became clear that the client had deep concerns about renovation risks, particularly demolition" },
+            { paragraph: "He feared that touching structural elements might weaken the building or cause collapse — a concern many homeowners share" },
             { paragraph: "Our role was not only technical but also reassurance-driven. Through structural assessments, transparent communication, and detailed planning, we helped the client understand exactly which elements were safe to modify and how the integrity of the building would be preserved." },
           ]}
           backgroundColor="bg-indigo-700"
@@ -71,7 +72,7 @@ export default function RobPlacePage() {
           imageSrc={feature2}
           title="The Transformation Strategy: Minimalist Modern Living"
           description="The design direction centered on simplicity, clean lines, improved lighting, and functional layouts. Key interventions included:"
-          summary="Every design choice balanced aesthetics with practicality, ensuring the home felt both contemporary and comfortable."
+          summaries={[{text:"Every design choice balanced aesthetics with practicality, ensuring the home felt both contemporary and comfortable."}]}
           backgroundColor="bg-[#d1ebe8]"
           aspect="aspect-615/803"
           lists={[
@@ -86,7 +87,9 @@ export default function RobPlacePage() {
           imageSrc={feature3}
           title="Systematic Demolition and Execution"
           description="With a structural plan in place, demolition was executed safely and strategically:"
-          summary="Every phase followed strict safety and engineering protocols. This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."
+          summaries={[ {text:"Every phase followed strict safety and engineering protocols."},
+          {text:"This process restored the client’s confidence, showing that renovation can be controlled, clean, and structurally safe."},
+          ]}
           backgroundColor="bg-[#dfc0ab]"
           flex="lg:flex-row-reverse"
           aspect="aspect-615/722"

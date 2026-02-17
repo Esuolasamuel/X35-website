@@ -43,7 +43,7 @@ export default function ProjectDemo({ projects }) {
                 <h3 className="font-base font-body font-semibold text-dark-500">
                   {p.title}
                 </h3>
-                <p className="pt-1 lg:pt-2.5 text-xs md:text-xs lg:text-xs font-body font-normal text-dark-500">
+                <p className=" text-xs md:text-xs lg:text-xs font-body font-normal text-dark-500">
                   {p.type}
                 </p>
               </div>

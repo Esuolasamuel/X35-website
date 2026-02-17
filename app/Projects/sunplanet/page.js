@@ -26,7 +26,7 @@ import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 export default function SunplanetPage() {
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
-    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "robs-place", title: "Rob’s Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
@@ -80,7 +80,7 @@ export default function SunplanetPage() {
           images={[
             { imageSrc: gallery1, type: "small" },
             { imageSrc: gallery2, type: "large" },
-            { imageSrc: gallery2, type: "large" },
+            { imageSrc: gallery3, type: "large" },
             { imageSrc: gallery4, type: "small" },
           ]}
         />

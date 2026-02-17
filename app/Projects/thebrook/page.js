@@ -34,7 +34,7 @@ import projectOgaDentist from "@/assets/images/ogadentist.jpg";
 export default function thebrookPage() {
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
-    { id: "rob", title: "Rob's Place", image: projectRob },
+    { id: "robs-place", title: "Rob's Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
@@ -95,6 +95,7 @@ export default function thebrookPage() {
           title="Unified Workspace Design Enhancing Collaboration, Productivity, and Brand Identity for The Brook Finance"
           aspect=" aspect-[615/594] lg:aspect-[615/910]"
           height="910"
+          imagePosition="object-[80%_50%]"
           backgroundColor="bg-indigo-700"
           textColor = "text-white/80"
           headerColor = "text-white"

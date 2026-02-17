@@ -28,7 +28,7 @@ export default function OgaDentistPage() {
 
   const projects = [
     { id: "chevron", title: "Chevron", image: projectChevron },
-    { id: "rob", title: "Rob’s Place", image: projectRob },
+    { id: "robs-place", title: "Rob’s Place", image: projectRob },
     { id: "adino", title: "Adrino HQ", image: projectAdino },
     { id: "sunplant", title: "Sun Planet Co", image: projectSunplant },
     { id: "brook", title: "The Brook Finance Ltd", image: projectbrook },
@@ -76,6 +76,7 @@ export default function OgaDentistPage() {
           description="The facility features a wide range of carefully curated spaces, each designed with intention and precision:"
           backgroundColor="bg-[#d1ebe8]"
           aspect="aspect-[615/796]"
+          imagePosition= "object-[70%_50%]"
           lists={[
             { paragraph: "A welcoming reception that immediately sets the tone of professionalism" },
             { paragraph: "A comfortable waiting lounge with zoning that reduces patient anxiety" },
@@ -110,6 +111,7 @@ export default function OgaDentistPage() {
           title="Execution Excellence"
           description="Throughout the project, we worked closely with the Oga Dentist team—reviewing concepts, refining details, and ensuring that every decision aligned with their expectations."
           backgroundColor="bg-[#e3cede]"
+          imagePosition="object-[20%_50%]"
           lists={[
             { paragraph: "Enhances patient experience" },
             { paragraph: "Boosts staff productivity and workflow" },

@@ -41,7 +41,7 @@ export default function Clients() {
                             height={60}
                             className="
                                 w-25 sm:w-27.5 md:w-32.5 lg:w-35 
-                                h-auto object-contain
+                                h-auto object-cover
                                 hover:scale-105 
                                 transition-all duration-300 ease-in-out 
                                 cursor-pointer

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import ContactForm from "../forms/ContactForm";
+import ContactModal from "../forms/ContactForm";
 
 import bgPattern from "@/assets/icons/image-9.svg";
 import handdrawn from "@/assets/icons/Fill-4.svg";
@@ -29,6 +29,18 @@ export default function CTA({
     right: "items-end text-right",
   };
 
+  const handleFormSuccess = () => {
+    // 1. Close the contact form modal immediately
+    setIsContactOpen(false);
+    // 2. Show the success notification at the top
+    setShowSuccess(true);
+    
+    // 3. Automatically hide the notification after 5 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 5000);
+  };
+
   /* ================= LAYOUT VARIANTS ================= */
   const sectionClasses = backgroundImage
     ? "min-h-[540px] px-6 md:px-12 lg:px-[120px]"
@@ -52,15 +64,15 @@ export default function CTA({
             aria-hidden
             className="
               absolute
-              w-434.75 h-434.75
-              -top-67 -left-37.5
+              w-full
+              left-0 right-0
+              h-full
               opacity-90
               mix-blend-luminosity
               pointer-events-none
             "
             style={{
               backgroundImage: `url(${bgPattern.src})`,
-              backgroundRepeat: "repeat",
               backgroundSize: "640px",
             }}
           />
@@ -117,10 +129,10 @@ export default function CTA({
           )}
 
           {/* ================= CTA BUTTON ================= */}
-          {button ? (
+          {button && (
             <button
               onClick={() => setIsContactOpen(true)}
-              className="
+              className=" mt-8
                 inline-flex items-center justify-center
                 h-12 px-8
                 rounded-full
@@ -134,29 +146,16 @@ export default function CTA({
             >
               {text}
             </button>
-          ):("")}
+          )}
         </div>
       </section>
 
-      {/* ================= MODAL ================= */}
-      {isContactOpen && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="relative w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
-            <button
-              onClick={() => setIsContactOpen(false)}
-              className="absolute right-5 top-5 rounded-full p-2 text-gray-400 hover:bg-gray-100 hover:text-black"
-            >
-              <X size={20} />
-            </button>
-
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">
-              Contact Us
-            </h2>
-
-            <ContactForm onSuccess={() => setIsContactOpen(false)} />
-          </div>
-        </div>
-      )}
+       {/* --- CONTACT FORM MODAL --- */}
+          <ContactModal 
+            isOpen={isContactOpen} 
+            onClose={() => setIsContactOpen(false)} 
+            onSuccess={handleFormSuccess} 
+          />
     </>
   );
 }

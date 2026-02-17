@@ -9,6 +9,7 @@ export default function Feature({
   headerColor = "text-[#1A1A1A]",
   aspect = "aspect-[615/594]",
   reverse = false,
+  imagePosition = "center",
 }) {
   return (
     <section className={`${backgroundColor}  px-6 sm:px-10 lg:px-24
@@ -68,7 +69,7 @@ export default function Feature({
                 alt={title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className={`${imagePosition} object-cover`}
                 priority
               />
             )}
