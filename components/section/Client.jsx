@@ -5,15 +5,15 @@ import chevron from "@/assets/icons/chevron.svg";
 import oga from "@/assets/icons/ogadentist.svg";
 import nolt from "@/assets/icons/nolt-1.svg";
 import sun from "@/assets/icons/sun-planet-co.svg";
-import randomsoft from "@/assets/icons/randomsoft.svg";
+import randomsoft from "@/assets/icons/randomsoft.png";
 
 const logos = [
-    { src: brook, alt: "The Brook Finance" },
-    { src: chevron, alt: "Chevron" },
-    { src: oga, alt: "Oga Dentist" },
-    { src: sun, alt: "Sun Planet Co" },  
-    { src: nolt, alt: "Nolt" },
-    { src: randomsoft, alt: "Randomsoft" }
+    { src: brook, alt: "The Brook Finance", width:"110", height: "24"},
+    { src: chevron, alt: "Chevron", width:"121", height: "48" },
+    { src: oga, alt: "Oga Dentist", width:"110", height: "32.2" },
+    { src: sun, alt: "Sun Planet Co", width:"110", height: "38" },  
+    { src: nolt, alt: "Nolt", width:"200", height: "26.92" },
+    { src: randomsoft, alt: "Randomsoft", width:"180", height: "38" }
 ];
 
 export default function Clients() {
@@ -37,8 +37,8 @@ export default function Clients() {
                             /* FIX: Use responsive width/height logic. 
                                The 'h-auto' ensures the aspect ratio of the SVG is maintained.
                             */
-                            width={140}
-                            height={60}
+                            width={logo.width}
+                            height={logo.height}
                             className="
                                 w-25 sm:w-27.5 md:w-32.5 lg:w-35 
                                 h-auto object-cover

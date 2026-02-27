@@ -13,6 +13,7 @@ import WhatsAppWidget from "./WhatsAppWidget";
 export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef(null);
 
   /* Start carousel AFTER LCP */
@@ -25,14 +26,14 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   }, []);
 
   useEffect(() => {
-    if (!ready || images.length <= 1) return;
+    if (!ready || images.length <= 1 || isPaused) return;
 
     timerRef.current = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, interval);
 
     return () => clearInterval(timerRef.current);
-  }, [ready, interval, images.length]);
+  }, [ready, interval, images.length, isPaused]);
 
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) % images.length);
@@ -43,7 +44,13 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
   };
 
   return (
-    <section className="relative min-h-[50vh] sm:min-h-[55vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-210.5 2xl:min-h-210.5 w-screen overflow-hidden" style={{ contain: "paint layout size" }}>
+    <section
+      className="relative min-h-[50vh] sm:min-h-[55vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-210.5 2xl:min-h-210.5 w-screen overflow-hidden"
+      style={{ contain: "paint layout size" }}
+      onMouseDown={() => setIsPaused(true)}
+      onMouseUp={() => setIsPaused(false)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* --------------------------------
          LCP IMAGE (STATIC, EAGER)
        -------------------------------- */}
@@ -99,14 +106,14 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
             className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Previous slide"
           >
-            <ChevronLeft size={50} strokeWidth={1} className="text-white font-extralight h-14 w-14 " />
+            <ChevronLeft size={50} strokeWidth={1} className="text-white font-extralight cursor-pointer " />
           </button>
           <button
             onClick={nextSlide}
             className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 "
             aria-label="Next slide"
           >
-            <ChevronRight size={50} strokeWidth={1} className="text-white font-normal" />
+            <ChevronRight size={50} strokeWidth={1} className="text-white font-extralight cursor-pointer" />
           </button>
         </>
       )}
@@ -114,39 +121,28 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
       {/* --------------------------------
            HERO CONTENT (IMMEDIATE)
        -------------------------------- */}
-      <div className="absolute z-20 bottom-6 sm:bottom-8 md:bottom-12 lg:bottom-16 xl:bottom-24 2xl:bottom-28 left-3 sm:left-6 md:left-12 lg:left-16 xl:left-20 2xl:left-30 ">
+      <div className="absolute max-w-216.25 min-h-[46.5] z-20 bottom-8 sm:bottom-16 md:bottom-20 lg:bottom-24  left-8 sm:left-16 md:left-24 lg:left-30 ">
         <div className="text-white text-left">
           <h1
             className="
-              font-heading  drop-shadow-lg
+              font-mont drop-shadow-lg
               tracking-[-0.01em]
               leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
-              font-bold
+              font-black
               text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
               px-0 py-1
             "
             style={{ leadingTrim: 'cap-height' }}
           >
-            We shape ideas <br />
-            into quality{" "}
-            <span className="relative inline-block">
-              spaces
-              <span
-                className="
-                  absolute -left-1 sm:-left-2 md:-left-3 lg:-left-4 -bottom-1 sm:-bottom-1.5 md:-bottom-2 lg:-bottom-2
-                  h-12 w-28 sm:h-16 sm:w-40 md:h-20 md:w-48 lg:h-24 lg:w-60
-                  bg-[url(@/assets/icons/Fill-4.svg)]
-                  bg-cover bg-no-repeat
-                  -z-10
-                "
-              />
+            We deliver structured, <br />
+            <span className="relative inline-block text-yellow-400">
+             high-quality projects <br />
             </span>
-            .
+            without compromise
           </h1>
         </div>
       </div>
       <WhatsAppWidget />
     </section>
   );
-   
 }

@@ -6,7 +6,7 @@ import handdrawn from "@/assets/icons/Fill-4.svg";
 export default function AboutHero() {
   return (
     <div className="w-full flex flex-col bg-white -z-20">
-        <div className="z-30 pt-42 pb-20">
+        <div className="z-30 pt-42 pb-20 max-w-208.5 mx-auto text-center">
           <h1 className="
             font-heading
             font-bold
@@ -18,8 +18,9 @@ export default function AboutHero() {
             [leading-trim:cap-height]
             z-20 pb-2 sm:pb-3 md:pb-4 lg:pb-5
           ">
-            Building trust, vision,<br />
-            and lasting{" "}
+            Where vision meets <br />
+            structure, and structure 
+            protects{" "}
             <span className="relative inline-block">
               value.
                <span

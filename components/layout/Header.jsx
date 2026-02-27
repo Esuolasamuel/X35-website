@@ -66,6 +66,7 @@ export default function Header() {
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
+            <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
             <Link href="/Projects">Our Projects</Link>
             <Link href="/#services">Services</Link>
@@ -75,9 +76,9 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex rounded-full bg-yellow-400 hover:bg-yellow-700 transition-colors px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 xxl:px-6 xxxl:px-6 py-2.5 sm:py-3 md:py-3.5 lg:py-3.5 xl:py-3.5 xxl:py-3.5 xxxl:py-3.5 font-body font-semibold text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500 cursor-pointer"
+            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-bold text-xs sm:text-sm md:text-md lg:text-[20px] xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500 cursor-pointer"
           >
-            Contact Us
+            Start your Project
           </button>
 
           {/* Mobile Toggle */}
