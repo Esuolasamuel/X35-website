@@ -76,7 +76,7 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-bold text-xs sm:text-sm md:text-md lg:text-[20px] xl:text-sm xxl:text-sm xxxl:text-sm text-dark-500 cursor-pointer"
+            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-lg  text-dark-500 cursor-pointer"
           >
             Start your Project
           </button>

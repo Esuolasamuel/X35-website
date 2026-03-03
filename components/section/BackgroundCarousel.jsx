@@ -142,7 +142,6 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
           </h1>
         </div>
       </div>
-      <WhatsAppWidget />
     </section>
   );
 }

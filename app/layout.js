@@ -2,6 +2,7 @@ import localFont from "next/font/local"
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import WhatsAppWidget from "../components/section/WhatsAppWidget";
 
 const montserrat = localFont({
   src: [
@@ -120,6 +121,7 @@ export default function RootLayout({
           <Header/>
           {children}
           <Footer/>
+          <WhatsAppWidget/>
         </body>
     </html>
   );

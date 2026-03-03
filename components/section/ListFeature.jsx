@@ -87,7 +87,7 @@ const ListFeature = ({
                         relative w-full ${aspect}
                         rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl
                         overflow-hidden bg-[#1A1A2E]
-                        shadow-2xl ring-1 ring-white/10
+                        ring-1 ring-white/10
                     `}>
                         {imageSrc && (
                             <Image

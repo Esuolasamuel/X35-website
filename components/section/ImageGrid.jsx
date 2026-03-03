@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ImageGrid({ images, backgroundColor, reverse }) {
+export default function ImageGrid({ images, backgroundColor = '', reverse = false }) {
   const orderedImages = reverse ? [...images].reverse() : images;
 
   return (

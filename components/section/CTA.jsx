@@ -11,7 +11,7 @@ export default function CTA({
   id,
   title,
   paragraph,
-  text = "Contact us",
+  text = "Start your Project",
   align = "center",
   button = false,
   headline = false,
@@ -130,22 +130,12 @@ export default function CTA({
 
           {/* ================= CTA BUTTON ================= */}
           {button && (
-            <button
-              onClick={() => setIsContactOpen(true)}
-              className=" mt-8
-                inline-flex items-center justify-center
-                h-12 px-8
-                rounded-full
-                bg-[#FFD700]
-                text-[#1A1A1A]
-                font-bold
-                tracking-[0.02em]
-                shadow-lg
-                transition hover:bg-[#F0C800]
-              "
-            >
-              {text}
-            </button>
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-lg  text-dark-500 cursor-pointer"
+          >
+            Start your Project
+          </button>
           )}
         </div>
       </section>

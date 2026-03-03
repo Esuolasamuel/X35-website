@@ -25,7 +25,7 @@ export default function AboutPage() {
             { imageSrc: aboutImg1, alt: "About Image 1" },
             { imageSrc: aboutImg2, alt: "About Image 2" },
           ]}
-          backgroundColor='bg-[fff]'
+          backgroundColor='bg-white'
         />
         <VisionMission />
         {/* Second Image Grid */}
@@ -35,7 +35,7 @@ export default function AboutPage() {
             { imageSrc: aboutImg4, alt: "About Image 4" },
           ]}
           reverse="true"
-          backgroundColor='bg-[fff]'
+          backgroundColor='bg-white'
         />
         {/* Values Section */}
         <Values

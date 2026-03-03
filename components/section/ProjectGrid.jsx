@@ -58,7 +58,7 @@ const ProjectGrid = () => {
             className="relative aspect-720/497 
             group
             bg-white
-            shadow-2xl overflow-hidden"
+             overflow-hidden"
           >
             <Link href={p.href} className="block">
               <Image

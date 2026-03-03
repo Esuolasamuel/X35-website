@@ -11,14 +11,15 @@ const logos = [
     { src: brook, alt: "The Brook Finance", width:"110", height: "24"},
     { src: chevron, alt: "Chevron", width:"121", height: "48" },
     { src: oga, alt: "Oga Dentist", width:"110", height: "32.2" },
-    { src: sun, alt: "Sun Planet Co", width:"110", height: "38" },  
     { src: nolt, alt: "Nolt", width:"200", height: "26.92" },
+    { src: sun, alt: "Sun Planet Co", width:"110", height: "38" },  
     { src: randomsoft, alt: "Randomsoft", width:"180", height: "38" }
 ];
 
 export default function Clients() {
     return (
-        <section className="bg-white px-5 sm:px-10 lg:px-20 py-5 md:py-10">
+        <section className="bg-white px-5 sm:px-10 lg:px-20 py-5 md:py-8">
+            <h3 className="font-bold font-mont text-xl text-center">Trusted By</h3>
             <div className="
                 /* Grid Logic: 
                    - 2 cols for 375px (default)
@@ -27,7 +28,7 @@ export default function Clients() {
                 */
                 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 
                 gap-4 sm:gap-6 md:gap-8 
-                max-w-7xl mx-auto place-items-center
+                max-w-7xl mx-auto place-items-center py-5 md:py-8
             ">
                 {logos.map((logo, index) => (
                     <div key={index} className="w-full flex justify-center items-center">
