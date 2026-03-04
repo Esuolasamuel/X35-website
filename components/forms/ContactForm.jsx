@@ -93,19 +93,19 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
      =============================== */
 
   const inputBase =
-    "peer w-full h-[46.5px] px-4 pt-4 border border-[#BDBDBD] rounded-[6px] bg-transparent text-[15px] font-medium text-[#0C0C1C] outline-none focus:ring-2 focus:ring-yellow-400/50";
+    "peer w-full h-[46.5px] px-4 pt-4 border border-[#BDBDBD] font-mont rounded-[6px] bg-transparent text-[15px] font-medium text-[#0C0C1C] outline-none focus:ring-2 focus:ring-yellow-400/50";
 
   const textareaBase =
-    "peer w-full h-[150px] resize-none px-4 pt-4 border border-[#BDBDBD] rounded-[6px] bg-transparent text-[15px] font-medium text-[#0C0C1C] outline-none focus:ring-2 focus:ring-yellow-400/50";
+    "peer w-full h-[150px] resize-none font-mont px-4 pt-4 border border-[#BDBDBD] rounded-[6px] bg-transparent text-[15px] font-medium text-[#0C0C1C] outline-none focus:ring-2 focus:ring-yellow-400/50";
 
   const labelBase =
-    "absolute left-3 px-1 bg-white text-[13px] text-[#0C0C1C] pointer-events-none transition-all \
+    "absolute left-3 px-1 bg-white text-[15px] text-[#0C0C1C] font-mont pointer-events-none transition-all \
      top-1/2 -translate-y-1/2 \
      peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-xs \
      peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:-translate-y-1/2 peer-[:not(:placeholder-shown)]:text-xs";
 
   const labelBasetxa =
-    "absolute left-3 px-1 bg-white text-[13px] text-[#0C0C1C] pointer-events-none transition-all \
+    "absolute left-3 px-1 bg-white text-[15px] text-[#0C0C1C] pointer-events-none transition-all \
      top-1/8 -translate-y-1/2 \
      peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-xs \
      peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:-translate-y-1/2 peer-[:not(:placeholder-shown)]:text-xs";
@@ -174,7 +174,7 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute z-20 mt-1 w-full rounded-[10px] border border-[#1524430D] bg-white p-2 shadow-[0px_16px_32px_0px_#BDBDBD4D]">
+                <div className="absolute z-20 mt-1 w-full rounded-[10px] border border-[#1524430D] text-[#0C0C1C] bg-white p-2 shadow-[0px_16px_32px_0px_#BDBDBD4D]">
                   {PROJECT_TYPES.map((type) => (
                     <button
                       key={type}
@@ -183,7 +183,7 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
                         setProjectType(type);
                         setDropdownOpen(false);
                       }}
-                      className="flex h-10.75 w-full items-center rounded-[5px] px-4 text-left text-[15px] hover:bg-[#F2F4F5]"
+                      className="flex h-10.75 w-full items-center rounded-[5px] px-4 text-left text-[#0C0C1C] text-[15px] hover:bg-[#F2F4F5]"
                     >
                       {type}
                     </button>
@@ -204,6 +204,14 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
                 <span className="mr-1">₦</span>Estimated budget range
               </label>
             </div>
+
+            <input
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+            />
 
             {/* Timeline */}
             <div className="relative">

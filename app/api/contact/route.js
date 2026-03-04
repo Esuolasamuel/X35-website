@@ -1,25 +1,74 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+/* ---------------- SMTP ---------------- */
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
 });
 
+/* ---------------- Rate Limit ---------------- */
+// Simple in-memory rate limit (per server instance)
+const RATE_LIMIT = {
+  windowMs: 60_000, // 1 minute
+  max: 5,           // 5 requests per IP per minute
+};
+
+const ipRequests = new Map();
+
+function rateLimit(ip) {
+  const now = Date.now();
+  const record = ipRequests.get(ip) || { count: 0, start: now };
+
+  if (now - record.start > RATE_LIMIT.windowMs) {
+    ipRequests.set(ip, { count: 1, start: now });
+    return false;
+  }
+
+  record.count += 1;
+  ipRequests.set(ip, record);
+
+  return record.count > RATE_LIMIT.max;
+}
+
+/* ---------------- Handler ---------------- */
 export async function POST(request) {
   try {
+    const ip =
+      request.headers.get("x-forwarded-for") ||
+      request.headers.get("x-real-ip") ||
+      "unknown";
+
+    /* Rate limit */
+    if (rateLimit(ip)) {  
+      return NextResponse.json(
+        { success: false, message: "Too many requests" },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
-    
-    // Server-side sanitization (defense in depth)
-    const sanitize = (value) => {
-      if (typeof value !== "string") return "";
-      return value
-        .trim()
-        .replace(/[<>]/g, "")
-    };
+
+    /* Honeypot check */
+    if (body.company) {
+      return NextResponse.json({ success: true }); // silently succeed
+    }
+
+    /* Payload size protection */
+    if (JSON.stringify(body).length > 10_000) {
+      return NextResponse.json(
+        { success: false, message: "Payload too large" },
+        { status: 413 }
+      );
+    }
+
+    const sanitize = (v) =>
+      typeof v === "string" ? v.trim().replace(/[<>]/g, "") : "";
 
     const name = sanitize(body.name);
     const email = sanitize(body.email);
@@ -28,16 +77,21 @@ export async function POST(request) {
     const timeline = sanitize(body.timeline);
     const description = sanitize(body.description);
 
-    // Validate required fields
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!name || !email || !description || !emailRegex.test(email)) {
+    if (!name || !email || !description) {
       return NextResponse.json(
-        { success: false, message: "Invalid or missing required fields" },
+        { success: false, message: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    // Escape HTML to prevent XSS in email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { success: false, message: "Invalid email" },
+        { status: 400 }
+      );
+    }
+
     const escapeHtml = (str) =>
       str
         .replace(/&/g, "&amp;")
@@ -46,55 +100,28 @@ export async function POST(request) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 
-    const htmlContent = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #0C0C1C;">New Project Inquiry</h2>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Name:</strong></td>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;">${escapeHtml(name)}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Email:</strong></td>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;">${escapeHtml(email)}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Project Type:</strong></td>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;">${projectType ? escapeHtml(projectType) : "Not specified"}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Budget:</strong></td>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;">${budget ? escapeHtml(budget) : "Not specified"}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Timeline:</strong></td>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;">${timeline ? escapeHtml(timeline) : "Not specified"}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Description:</strong></td>
-            <td style="padding: 10px; border-bottom: 1px solid #ddd;">${escapeHtml(description)}</td>
-          </tr>
-        </table>
-      </div>
+    const html = `
+      <h2>New Project Inquiry</h2>
+      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Project Type:</strong> ${escapeHtml(projectType || "N/A")}</p>
+      <p><strong>Budget:</strong> ${escapeHtml(budget || "N/A")}</p>
+      <p><strong>Timeline:</strong> ${escapeHtml(timeline || "N/A")}</p>
+      <p><strong>Description:</strong><br/>${escapeHtml(description)}</p>
     `;
 
-    const mailDetails = {
-      from: process.env.SMTP_FROM || "X35 Projects <your-email@gmail.com>",
-      to: process.env.CONTACT_EMAIL || "odixcityconsulting@gmail.com",
-      subject: `New Project Inquiry - ${projectType || "General"} - ${name}`,
-      html: htmlContent,
-    };
-
-    await transporter.sendMail(mailDetails);
-
-    return NextResponse.json({
-      success: true,
-      message: "Email sent successfully!",
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM,
+      to: process.env.CONTACT_EMAIL,
+      subject: `New Project Inquiry — ${name}`,
+      html,
     });
+
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Email error:", error);
     return NextResponse.json(
-      { success: false, message: "Failed to send email. Please try again." },
+      { success: false, message: "Email failed" },
       { status: 500 }
     );
   }

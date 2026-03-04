@@ -19,7 +19,7 @@ const logos = [
 export default function Clients() {
     return (
         <section className="bg-white px-5 sm:px-10 lg:px-20 py-5 md:py-8">
-            <h3 className="font-bold font-mont text-xl text-center">Trusted By</h3>
+            <h3 className="font-bold font-mont text-xl text-center ">Trusted By</h3>
             <div className="
                 /* Grid Logic: 
                    - 2 cols for 375px (default)
