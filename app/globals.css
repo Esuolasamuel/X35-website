@@ -11,7 +11,7 @@
   --color-foreground: var(--foreground);
   --font-heading: var(--font-fraunces), "sans-serif";
   --font-body:  var(--font-montserrat), "inter";
-  --color-dark-500: oklch(16.41% 0.0333 282.1);
+  --color-dark-500: oklch(0.1641 0.0333 282.1 / 78.04%);
   --color-yellow-400: rgb(255, 215, 0);
   --color-yellow-600: oklch(0.7928 0.1349 86.71);
   --color-yellow-700: rgb(226, 192, 7);

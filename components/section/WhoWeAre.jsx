@@ -16,7 +16,7 @@ export default function WhoWeAre() {
                     </div>
                 </div>
             </div>
-            <WhatsAppWidget />
+
         </section>
     );
 }

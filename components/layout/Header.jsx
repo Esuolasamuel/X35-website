@@ -70,6 +70,7 @@ export default function Header() {
             <Link href="/about">About Us</Link>
             <Link href="/Projects">Our Projects</Link>
             <Link href="/#services">Services</Link>
+            <Link href="/blog">Blog</Link>
             <button onClick={() => setIsComingSoonOpen(true)}>Products</button>
           </nav>
 
