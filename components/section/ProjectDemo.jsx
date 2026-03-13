@@ -15,7 +15,7 @@ export default function ProjectDemo({ projects }) {
     <section className="bg-white p-6 sm:p-7.5 md:p-15 lg:p-30 xl:p-30 2xl:p-30">
       <div className="flex flex-col mx-auto">
 
-        <h1 className="text-2xl md:text-3xl lg:text-[40px] text-center mb-5 sm:mb-5 md:mb-7 lg:mb-14 font-bold text-dark-500 font-heading">
+        <h1 className="text-2xl md:text-3xl lg:text-[40px] text-center mb-5 sm:mb-5 md:mb-7 lg:mb-14 font-bold text-[#0C0C1C] font-heading">
           Our Latest Projects
         </h1>
 
@@ -34,16 +34,16 @@ export default function ProjectDemo({ projects }) {
                   sizes="(max-width: 375px) 100vw, (max-width: 576px) 50vw, (max-width: 768px) 50vw, (max-width: 992px) 33vw, (max-width: 1200px) 33vw, (max-width: 1400px) 33vw, 33vw"
                   className="
                     object-cover transition-transform duration-500
-                    group-hover:scale-105  text-dark-500 w-full
+                    group-hover:scale-105  text-[#0C0C1C] w-full
                   "
                 />
               </div>
 
               <div className="mt-2 sm:mt-3 md:mt-4 lg:mt-6">
-                <h3 className="font-base font-body font-semibold text-dark-500">
+                <h3 className="font-base font-body font-semibold text-[#0C0C1C]">
                   {p.title}
                 </h3>
-                <p className=" text-xs md:text-xs lg:text-xs font-body font-normal text-dark-500">
+                <p className=" text-xs md:text-xs lg:text-xs font-body font-normal text-[#0C0C1C]">
                   {p.type}
                 </p>
               </div>
@@ -62,7 +62,7 @@ export default function ProjectDemo({ projects }) {
             pl-6 pr-2 pt-2 pb-2
             border border-dark-300
             rounded-[60px]
-            text-dark-500
+            text-[#0C0C1C]
             font-body font-bold text-[15px]
             hover:bg-yellow-400 hover:border-yellow-400
             transition

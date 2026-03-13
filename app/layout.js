@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import WhatsAppWidget from "../components/section/WhatsAppWidget";
+import { HeaderStyleProvider } from "@/components/context/HeaderStyleConntext";
 
 const montserrat = localFont({
   src: [
@@ -118,10 +119,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${fraunces.variable} antialiased`}>
         <body>
+          <HeaderStyleProvider>
           <Header/>
           {children}
           <Footer/>
           <WhatsAppWidget/>
+          </HeaderStyleProvider>
         </body>
     </html>
   );

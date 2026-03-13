@@ -9,8 +9,8 @@ const MiniHero = ({ title, imageSrc, description }) => {
                 {/* TEXT SECTION */}
                 <div className="max-w-126 mb-16">
                     <div className="w-full">
-                        <h3 className="font-heading font-bold text-dark-500 sm:text-xl md:text-2xl lg:text-[32px] mb-4">{title}</h3>
-                        <p className="md:text-sm lg:text-base leading-[1.8] last:mb-0 font-body text-dark-500 font-normal tracking-wide">
+                        <h3 className="font-heading font-bold text-[#0C0C1C] sm:text-xl md:text-2xl lg:text-[32px] mb-4">{title}</h3>
+                        <p className="md:text-sm lg:text-base leading-[1.8] last:mb-0 font-body text-[#0C0C1C] font-normal tracking-wide">
                             {description}
                         </p>
                     </div>

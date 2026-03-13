@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Narrative = ({description, imageSrc, title, backgroundColor, textColor = " text-dark-500/80",  // ✅ NEW PROP
+const Narrative = ({description, imageSrc, title, backgroundColor, textColor = " text-[#0C0C1C]/80",  // ✅ NEW PROP
   imagePosition = "center"}) => {
    // ✅ Position map
     const positionMap = {
@@ -21,7 +21,7 @@ const Narrative = ({description, imageSrc, title, backgroundColor, textColor = "
         
         {/* LEFT TEXT SECTION */}
         <div className="w-full lg:w-126" >
-          <div className="font-body text-dark-500 font-normal text-[16px] items-center justify-center sm:text-[17px]">
+          <div className="font-body text-[#0C0C1C] font-normal text-[16px] items-center justify-center sm:text-[17px]">
             {description.map((desc, index) => (
               <p
                 key={index}

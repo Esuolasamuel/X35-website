@@ -63,7 +63,7 @@ export default function Testimonials() {
         "
       >
         {/* Heading */}
-        <h2 className=" text-2xl md:text-4xl lg:text-[40px] leading-[1.1] font-heading font-bold text-dark-500 pb-14 text-center">
+        <h2 className=" text-2xl md:text-4xl lg:text-[40px] leading-[1.1] font-heading font-bold text-[#0C0C1C] pb-14 text-center">
           What Our Clients Say
         </h2>
 
@@ -87,7 +87,7 @@ export default function Testimonials() {
                   justify-between
                 "
               >
-                <p className="text-base leading-7 font-body font-medium text-dark-500">
+                <p className="text-base leading-7 font-body font-medium text-[#0C0C1C]">
                   “{t.text}”
                 </p>
 
@@ -118,7 +118,7 @@ export default function Testimonials() {
                     </div>
                   )}
 
-                  <span className="text-sm font-body font-medium text-dark-500">
+                  <span className="text-sm font-body font-medium text-[#0C0C1C]">
                     {t.author}
                   </span>
                 </div>

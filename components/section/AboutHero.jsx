@@ -11,7 +11,7 @@ export default function AboutHero() {
             font-heading
             font-bold
             text-center
-            text-dark-500
+            text-[#0C0C1C]
             text-4xl sm:text-5xl md:text-6xl lg:text-[64px]
             leading-tight sm:leading-16
             tracking-tight sm:tracking-[-0.03em]
@@ -56,7 +56,7 @@ export default function AboutHero() {
             text-base sm:text-lg md:text-[17px]
             leading-relaxed sm:leading-[28.5px]
             tracking-tight sm:tracking-[-0.03em]
-            [leading-trim:cap-height] text-dark-500
+            [leading-trim:cap-height] text-[#0C0C1C]
           ">
             At X35 Projects, we deliver fully managed design and build solutions for clients who expect clarity, control, and exceptional <br/> results.
           </p>

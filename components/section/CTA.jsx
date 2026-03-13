@@ -52,6 +52,7 @@ export default function CTA({
         id={id}
         className={`
           relative mx-auto
+          h-full
           bg-[#C9C9DC]
           overflow-hidden
           flex items-center justify-center
@@ -89,7 +90,7 @@ export default function CTA({
         >
           {/* ================= HEADLINE ================= */}
           {headline ? (
-            <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-13">
+            <h2 className="font-heading font-bold text-[#0C0C1C] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-13">
               <span className="block">Your vision deserves an</span>
               <span className="block">architect with purpose.</span>
 
@@ -116,14 +117,14 @@ export default function CTA({
               </span>
             </h2>
           ) : (
-            <h2 className="font-heading font-bold text-[#1A1A1A] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-4">
+            <h2 className="font-heading font-bold text-[#0C0C1C] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-4">
               {title}
             </h2>
           )}
 
           {/* ================= PARAGRAPH ================= */}
           {paragraph && (
-            <p className="text-lg md:text-xl leading-relaxed font-body text-[#1A1A1A]/80 max-w-180">
+            <p className="text-lg md:text-xl leading-relaxed font-body text-[#0C0C1C]/80 max-w-180">
               {paragraph}
             </p>
           )}
@@ -132,7 +133,7 @@ export default function CTA({
           {button && (
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-lg  text-dark-500 cursor-pointer"
+            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-lg  text-[#0C0C1C] cursor-pointer"
           >
             Start your Project
           </button>

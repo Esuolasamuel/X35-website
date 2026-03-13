@@ -1,16 +1,22 @@
+"use client";
+
+import { useEffect } from "react";
 import Clients from "@/components/section/Client";
 import CTA from "@/components/section/CTA";
 import LandingHero from "@/components/section/LandingHero";
 import ProjectDemo from "@/components/section/ProjectDemo";
 import Services from "@/components/section/Services";
 import Testimonials from "@/components/section/Testimonials";
+import { useHeaderStyle } from "@/components/context/HeaderStyleConntext";
 
 // Import images statically from the assets folder
 import brookImg from "@/assets/images/ourProject-1.png";
 import robImg from "@/assets/images/ourProject-2.jpg";
 import chevronImg from "@/assets/images/ourProject-3.png"
 
-const x35Content = () => {
+
+
+const X35Content = () => {
   // Define projects outside JSX
   const projects =
   [
@@ -61,4 +67,4 @@ const x35Content = () => {
   );
 };
 
-export default x35Content;
+export default X35Content;

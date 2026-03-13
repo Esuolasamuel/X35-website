@@ -5,10 +5,8 @@ import {
   clientConfirmationEmail,
 } from "@/lib/emailTemplates";
 
-/* Zoho SMTP configuration */
-
 const transporter = nodemailer.createTransport({
-  host: "smtp.zoho.com",
+  host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
@@ -47,7 +45,7 @@ export async function POST(request) {
     const adminEmail = adminNotificationEmail(data);
     const clientEmail = clientConfirmationEmail(name);
 
-    /* Send notification to site owner */
+    /* Send admin notification */
 
     await transporter.sendMail({
       from: `"X35 Projects" <${process.env.SMTP_FROM}>`,
@@ -58,7 +56,7 @@ export async function POST(request) {
       text: adminEmail.text,
     });
 
-    /* Send confirmation to client */
+    /* Send client confirmation */
 
     await transporter.sendMail({
       from: `"X35 Projects" <${process.env.SMTP_FROM}>`,
@@ -69,7 +67,6 @@ export async function POST(request) {
     });
 
     return NextResponse.json({ success: true });
-
   } catch (error) {
     console.error(error);
 

@@ -17,7 +17,7 @@ export function FloatingInput({
           px-4 py-3.5
           border border-[#BDBDBD]
           rounded-md
-          font-body text-base text-dark-500
+          font-body text-base text-[#0C0C1C]
           outline-none
           focus:ring-2 focus:ring-yellow-400/50
         "
@@ -26,7 +26,7 @@ export function FloatingInput({
       <label
         className="
           absolute left-4 top-1/2 -translate-y-1/2
-          text-sm text-dark-500
+          text-sm text-[#0C0C1C]
           transition-all
           peer-focus:top-2 peer-focus:text-xs
           peer-placeholder-shown:top-1/2

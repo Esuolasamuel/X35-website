@@ -28,14 +28,14 @@ export default function Modal({ isOpen, onClose, children }) {
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 sm:top-6 sm:right-6 text-dark-500 hover:opacity-70"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 text-[#0C0C1C] hover:opacity-70"
         >
           <X size={20} strokeWidth={2.5} />
         </button>
 
         {/* Title */}
         <div className="max-w-111.75">
-          <h2 className="text-xl sm:text-2xl font-heading font-bold text-dark-500 leading-tight">
+          <h2 className="text-xl sm:text-2xl font-heading font-bold text-[#0C0C1C] leading-tight">
             We’d love to hear from you!
           </h2>
         </div>

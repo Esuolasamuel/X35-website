@@ -6,7 +6,7 @@ export default function SuccessNotification({ isOpen, onClose }) {
 
   return (
     <div className="relative bg-white rounded-[20px] p-0 md:p-6 max-w-125 shadow-xl border border-gray-100 flex flex-col items-center text-center">
-      <button onClick={onClose} className="absolute top-3 right-3  text-dark-500">
+      <button onClick={onClose} className="absolute top-3 right-3  text-[#0C0C1C]">
         <X size={18} />
       </button>
       
@@ -15,7 +15,7 @@ export default function SuccessNotification({ isOpen, onClose }) {
       </div>
 
       <h3 className="font-bold text-lg mb-1">Thank you!</h3>
-      <p className="text-sm  text-dark-500leading-tight">
+      <p className="text-sm  text-[#0C0C1C]leading-tight">
         Your message has been received. Our team will review it and get back to you shortly.
       </p>
     </div>

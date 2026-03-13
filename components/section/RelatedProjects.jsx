@@ -16,13 +16,13 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
 
         {/* HEADER: Responsive layout matching Frame 115 (1).jpg */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 sm:mb-5 md:mb-10 gap-6">
-          <h3 className="font-heading font-bold text-2xl md:text-3xl lg:text-[32px] text-dark-500 leading-tight">
+          <h3 className="font-heading font-bold text-2xl md:text-3xl lg:text-[32px] text-[#0C0C1C] leading-tight">
             See more of our Projects
           </h3>
 
           <Link
             href="/Projects"
-            className=" w-32.5 px-2 sm:px-4 py-1.5 border rounded-[30px] border-[#1A1A1A] hover:border-yellow-400 text-[6.5px] sm:text-[13px] font-semibold text-dark-500 hover:bg-yellow-400 hover:text-dark-500 transition-colors duration-300 "
+            className=" w-32.5 px-2 sm:px-4 py-1.5 border rounded-[30px] border-[#1A1A1A] hover:border-yellow-400 text-[6.5px] sm:text-[13px] font-semibold text-[#0C0C1C] hover:bg-yellow-400 hover:text-[#0C0C1C] transition-colors duration-300 "
           >
             View all project
           </Link>

@@ -122,7 +122,7 @@ export default function Services() {
             w-113.25
           "
         >
-          <h2 className="text-2xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-dark mb-2 text-white">
+          <h2 className="text-2xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-[#0C0C1C] mb-2 text-white">
             Our Services
           </h2>
 
@@ -197,7 +197,7 @@ export default function Services() {
       {/* MOBILE VIEW */}
       <div className="lg:hidden space-y-6 p-3 sm:p-4 md:p-6 lg:p-10">
         <div className="p-2">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-15 font-heading text-dark mb-4 text-white">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-15 font-heading text-[#0C0C1C] mb-4 text-white">
             Our Services
           </h2>
 

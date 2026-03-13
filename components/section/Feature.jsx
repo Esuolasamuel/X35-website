@@ -5,8 +5,8 @@ export default function Feature({
   description,
   imageSrc,
   backgroundColor = "bg-[#D9EFEA]", // light mint like screenshot
-  textColor = "text-[#1A1A1A]/80",
-  headerColor = "text-[#1A1A1A]",
+  textColor = "text-[#0C0C1C]/80",
+  headerColor = "text-[#0C0C1C]",
   aspect = "aspect-[615/594]",
   reverse = false,
   imagePosition = "center",

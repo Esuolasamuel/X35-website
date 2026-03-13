@@ -12,7 +12,7 @@ const ProjectHero = () => {
           tracking-[-0.01em] font-bold
           leading-10 sm:leading-12.5 md:leading-15 lg:leading-[70.4px]
           text-4xl sm:text-5xl md:text-6xl lg:text-[72px]
-          text-dark-500
+          text-[#0C0C1C]
         "
       >
         The Work That<br/>{" "}
@@ -43,7 +43,7 @@ const ProjectHero = () => {
         {" "}Us
       </h1>
 
-      <p className="mt-6 max-w-sm mx-auto font-body text-dark-500">
+      <p className="mt-6 max-w-sm mx-auto font-body text-[#0C0C1C]">
         A bold showcase of our projects transforming ideas into iconic spaces.
       </p>
     </section>
