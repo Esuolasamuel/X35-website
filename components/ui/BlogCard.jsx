@@ -1,21 +1,37 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { blogCards } from  "@/data/blogcard";
 
-
-const BlogCard = ({title, date, excerpt, src}) => {
+export default function BlogCard({ blog }) {
   return (
-    <div className='w-90.67 h-115 flex flex-col bg-white'>
-            <div key={title} className='blog-card'>
-                <Image src={src} alt={title} width={300} height={200} className='w-full rounded-[10px]' />
-                <div className='p-4'>
-                    <p className='text-sm text-gray-400'>{date}</p>
-                    <h3 className='text-lg font-semibold text-white mt-2'>{title}</h3>
-                    <p className='text-sm text-gray-300 mt-2'>{excerpt}</p>
-                </div>
-            </div>
-        
-    </div>
-  )
-}
+    <Link
+      href={`/blogpost/${blog.slug}`}
+      className="flex flex-col bg-white"
+    >
+      <Image
+        src={blog.image}
+        alt={blog.title}
+        width={400}
+        height={300}
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="rounded-[10px]"
+      />
 
-export default BlogCard
+      <div className="mt-6">
+
+        <p className="text-sm text-[#0C0C1C]/60 font-body leading-6">
+          {blog.date} 
+        </p>
+
+        <h3 className="text-xl font-body font-semibold mt-2">
+          {blog.title}
+        </h3>
+
+        <p className="mt-4 font-body text-base leading-6 text-[#0C0C1C]">
+          {blog.excerpt}
+        </p>
+
+      </div>
+    </Link>
+  );
+}
