@@ -23,7 +23,7 @@ export default function BlogCard({ blog }) {
           {blog.date} 
         </p>
 
-        <h3 className="text-xl font-body font-semibold mt-2">
+        <h3 className="text-xl font-body text-[#0C0C1CC7] font-semibold mt-2">
           {blog.title}
         </h3>
 

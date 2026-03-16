@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col items-start font-body">
-            <h4 className="text-white/50 text-sm sm:text-sm md:text-sm lg:text-sm font-bold mb-8 tracking-wider">Quick Links</h4>
+            <h4 className="text-white/50 text-sm sm:text-sm md:text-sm lg:text-base font-bold mb-8 tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
               <li>
                 <Link href="/about" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">Home</Link>
@@ -53,7 +53,7 @@ export default function Footer() {
           {/* Contact Us */}
           <div className="flex flex-col items-start font-body">
             <h4 className="text-white/50 text-sm font-bold mb-8 tracking-wider">Contact Us</h4>
-            <div className="flex flex-col space-y-3 text-sm">
+            <div className="flex flex-col space-y-3 text-base">
               <a href="mailto:hello@x35projects.com" className="text-white hover:text-yellow-400 transition-colors">
                 hello@x35projects.com
               </a>

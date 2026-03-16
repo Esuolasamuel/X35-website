@@ -14,7 +14,7 @@ const BlogHero = ({ blog }) => {
             {blog.date} • {blog.readTime}
           </p>
 
-          <h1 className="text-[56px] max-w-135 font-bold font-heading leading-14 mb-12">
+          <h1 className="text-[56px] max-w-135 font-bold font-heading text-[#0C0C1CC7] leading-14 mb-12">
             {blog.title}
           </h1>
 

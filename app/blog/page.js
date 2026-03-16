@@ -10,7 +10,7 @@ export default function BlogPage() {
   const otherBlogs = blogCards.slice(1,4); // remaining articles
 
   return (
-    <main className="flex-1">
+    <main className="flex-1 bg-white">
 
       {/* HERO ARTICLE */}
       <BlogHero blog={heroBlog} />

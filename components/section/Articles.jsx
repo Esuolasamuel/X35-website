@@ -4,7 +4,7 @@ const Articles = ({ blogs }) => {
   return (
     <section className="max-w-360 mx-auto xl:p-30 bg-white">
 
-      <h2 className="mb-10 font-heading text-[40px] font-bold">
+      <h2 className="mb-10 font-heading text-[#0C0C1CC7] text-[40px] font-bold">
         More Articles
       </h2>
 

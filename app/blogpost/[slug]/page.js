@@ -24,7 +24,7 @@ export default async function BlogPost({ params }) {
   }
 
   return (
-    <main>
+    <main className="w-full min-h-screen bg-white">
 
       {/* HERO */}
 

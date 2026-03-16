@@ -195,10 +195,19 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
             {/* Budget */}
             <div className="relative">
               <input 
+                type="number"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 placeholder=" " 
                 required 
                 name="budget"
-                className={inputBase} 
+                min="0"
+                onKeyDown={(e) => {
+                  if (['e', 'E', '+', '-', '.', ','].includes(e.key)) {
+                    e.preventDefault();
+                  }
+                }}
+                className={`${inputBase} [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`} 
               />
               <label className={labelBase}>
                 <span className="mr-1">₦</span>Estimated budget range
