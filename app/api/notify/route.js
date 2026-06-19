@@ -1,15 +1,4 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.SMTP_USERN,
-    pass: process.env.SMTP_PASSN,
-  },
-});
 
 export async function POST(request) {
   try {
@@ -40,27 +29,29 @@ export async function POST(request) {
       );
     }
 
-    /* Send admin notification about new subscriber */
-
-    await transporter.sendMail({
-      from: `"X35 Projects" <${process.env.SMTP_FROMN}>`,
-      to: process.env.CONTACT_EMAILN,
-      replyTo: email,
-      subject: "New Website Subscriber",
-      html: `
-        <h2>New Subscriber</h2>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
-      `,
-      text: `New Subscriber - Email: ${email}`,
+    const response = await fetch("https://app.loops.so/api/v1/contacts/create", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.LOOPS_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, source: "notify-modal" }),
     });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      console.error("Loops error:", err);
+      return NextResponse.json(
+        { success: false, message: "Failed to subscribe" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
-
     return NextResponse.json(
-      { success: false, message: "Email failed" },
+      { success: false, message: "Subscription failed" },
       { status: 500 }
     );
   }

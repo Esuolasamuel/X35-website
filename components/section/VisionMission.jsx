@@ -21,11 +21,11 @@ export default function VisionMission() {
           <div
             className="
               flex-1
-              min-w-147
+              w-full
               min-h-70.75
               bg-[#0F0F3A]
               rounded-[15px]
-              p-10 md:p-14 lg:p-20
+              p-8 md:p-12 lg:p-14 xl:p-20
               transition-all duration-300 ease-out
               hover:-translate-y-3
               hover:shadow-[0_20px_40px_rgba(11,11,42,0.3)]
@@ -45,11 +45,11 @@ export default function VisionMission() {
           <div
             className="
               flex-1
-              max-w-147
+              w-full
               min-h-70.75
               bg-[#0F0F3A]
               rounded-[15px]
-              p-10 md:p-14 lg:p-20
+              p-8 md:p-12 lg:p-14 xl:p-20
               transition-all duration-300 ease-out
               hover:-translate-y-3
               hover:shadow-[0_20px_40px_rgba(11,11,42,0.3)]

@@ -14,7 +14,6 @@ export default function ImageGrid({ images, backgroundColor = '', reverse = fals
         className="
           mx-auto
           max-w-311.5
-          h-148.5
           grid grid-cols-1 md:grid-cols-2
           gap-4
         "
@@ -25,7 +24,7 @@ export default function ImageGrid({ images, backgroundColor = '', reverse = fals
             className="
               relative
               w-full
-              h-148.5
+              h-72 sm:h-96 md:h-148.5
               overflow-hidden
               rounded-[15px]
             "

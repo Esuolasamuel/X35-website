@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { useState } from "react";
 import ContactModal from "../forms/ContactForm";
 
 import bgPattern from "@/assets/icons/image-9.svg";
@@ -19,10 +18,6 @@ export default function CTA({
 }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
-  useEffect(() => {
-    document.body.style.overflow = isContactOpen ? "hidden" : "unset";
-  }, [isContactOpen]);
-
   const alignmentMap = {
     left: "items-start text-left",
     center: "items-center text-center",
@@ -30,15 +25,7 @@ export default function CTA({
   };
 
   const handleFormSuccess = () => {
-    // 1. Close the contact form modal immediately
     setIsContactOpen(false);
-    // 2. Show the success notification at the top
-    setShowSuccess(true);
-    
-    // 3. Automatically hide the notification after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
   };
 
   /* ================= LAYOUT VARIANTS ================= */
@@ -133,7 +120,7 @@ export default function CTA({
           {button && (
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9  py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-lg  text-[#0C0C1C] cursor-pointer"
+            className="inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-6 py-3 md:px-8 md:py-4 lg:px-9 lg:py-5 font-body font-semibold text-sm md:text-base lg:text-lg text-[#0C0C1C] cursor-pointer"
           >
             Start your Project
           </button>

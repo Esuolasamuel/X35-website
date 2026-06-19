@@ -1,7 +1,8 @@
-// "use client";
+"use client";
 
+import { useRef, useEffect, useState } from "react";
 import { X, ChevronDown } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 
 const PROJECT_TYPES = [
   "Architecture",
@@ -17,8 +18,12 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [projectType, setProjectType] = useState("");
+  const [error, setError] = useState("");
 
   const dropdownRef = useRef(null);
+  const modalRef = useRef(null);
+
+  useFocusTrap(modalRef, isOpen);
 
   /* Lock body scroll */
   useEffect(() => {
@@ -41,18 +46,15 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setError("");
     setLoading(true);
 
-    // Use FormData for industry-standard form handling
     const form = e.target;
     const formData = new FormData(form);
-    
-    // Extract and sanitize form data
+
     const sanitize = (value) => {
       if (typeof value !== "string") return "";
-      return value
-        .trim()
-        .replace(/[<>]/g, "") // Remove potential XSS characters;e
+      return value.trim().replace(/[<>]/g, "");
     };
 
     const data = {
@@ -64,9 +66,9 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
       description: sanitize(formData.get("description")),
     };
 
-    // Basic validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!data.name || !data.email || !data.description || !emailRegex.test(data.email)) {
+      setError("Please fill in all required fields with a valid email.");
       setLoading(false);
       return;
     }
@@ -79,12 +81,14 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
       });
       const result = await response.json();
       setLoading(false);
-      if (result.success) {
-        onSuccess?.();
+      if (!response.ok || !result.success) {
+        setError("Something went wrong. Please try again.");
+        return;
       }
-    } catch (error) {
+      onSuccess?.();
+    } catch {
       setLoading(false);
-      console.error("Error submitting form:", error);
+      setError("Something went wrong. Please try again.");
     }
   }
 
@@ -116,10 +120,14 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
       <div className="absolute inset-0" onClick={onClose} />
 
       {/* Modal */}
-      <div className="relative z-10 w-full max-w-133 rounded-[15px] bg-white p-10 shadow-[0px_16px_36px_0px_#1B21360D]">
+      <div
+        ref={modalRef}
+        className="relative z-10 w-full max-w-133 rounded-[15px] bg-white p-6 sm:p-8 md:p-10 shadow-[0px_16px_36px_0px_#1B21360D] max-h-[90vh] overflow-y-auto"
+      >
         {/* Close button */}
         <button
           onClick={onClose}
+          aria-label="Close"
           className="absolute right-6 top-6 text-[#0C0C1C] hover:opacity-70"
         >
           <X size={20} />
@@ -140,25 +148,31 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
           <div className="flex flex-col gap-4">
             {/* Full name */}
             <div className="relative">
-              <input 
-                placeholder=" " 
-                required 
+              <input
+                id="contact-name"
+                placeholder=" "
+                required
                 name="name"
-                className={inputBase} 
+                className={inputBase}
               />
-              <label className={labelBase}>Enter your full name</label>
+              <label htmlFor="contact-name" className={labelBase}>
+                Enter your full name
+              </label>
             </div>
 
             {/* Email */}
             <div className="relative">
-              <input 
-                placeholder=" " 
-                required 
+              <input
+                id="contact-email"
+                placeholder=" "
+                required
                 type="email"
                 name="email"
-                className={inputBase} 
+                className={inputBase}
               />
-              <label className={labelBase}>Enter your email address</label>
+              <label htmlFor="contact-email" className={labelBase}>
+                Enter your email address
+              </label>
             </div>
 
             {/* Project type dropdown */}
@@ -166,6 +180,8 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
               <input type="hidden" name="projectType" value={projectType} />
               <button
                 type="button"
+                aria-haspopup="listbox"
+                aria-expanded={dropdownOpen}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="flex h-[46.5px] w-full items-center justify-between rounded-md border border-[#BDBDBD] px-4 text-[15px] text-[#0C0C1C]"
               >
@@ -174,42 +190,48 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute z-20 mt-1 w-full rounded-[10px] border border-[#1524430D] text-[#0C0C1C] bg-white p-2 shadow-[0px_16px_32px_0px_#BDBDBD4D]">
+                <ul
+                  role="listbox"
+                  aria-label="Project type"
+                  className="absolute z-20 mt-1 w-full rounded-[10px] border border-[#1524430D] text-[#0C0C1C] bg-white p-2 shadow-[0px_16px_32px_0px_#BDBDBD4D]"
+                >
                   {PROJECT_TYPES.map((type) => (
-                    <button
-                      key={type}
-                      type="button"
-                      onClick={() => {
-                        setProjectType(type);
-                        setDropdownOpen(false);
-                      }}
-                      className="flex h-10.75 w-full items-center rounded-[5px] px-4 text-left text-[#0C0C1C] text-[15px] hover:bg-[#F2F4F5]"
-                    >
-                      {type}
-                    </button>
+                    <li key={type} role="option" aria-selected={projectType === type}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setProjectType(type);
+                          setDropdownOpen(false);
+                        }}
+                        className="flex h-10.75 w-full items-center rounded-[5px] px-4 text-left text-[#0C0C1C] text-[15px] hover:bg-[#F2F4F5]"
+                      >
+                        {type}
+                      </button>
+                    </li>
                   ))}
-                </div>
+                </ul>
               )}
             </div>
 
             {/* Budget */}
             <div className="relative">
-              <input 
+              <input
+                id="contact-budget"
                 type="number"
                 inputMode="numeric"
                 pattern="[0-9]*"
-                placeholder=" " 
-                required 
+                placeholder=" "
+                required
                 name="budget"
                 min="0"
                 onKeyDown={(e) => {
-                  if (['e', 'E', '+', '-', '.', ','].includes(e.key)) {
+                  if (["e", "E", "+", "-", ".", ","].includes(e.key)) {
                     e.preventDefault();
                   }
                 }}
-                className={`${inputBase} [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`} 
+                className={`${inputBase} [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
               />
-              <label className={labelBase}>
+              <label htmlFor="contact-budget" className={labelBase}>
                 <span className="mr-1">₦</span>Estimated budget range
               </label>
             </div>
@@ -224,26 +246,39 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
 
             {/* Timeline */}
             <div className="relative">
-              <input 
-                placeholder=" " 
-                required 
+              <input
+                id="contact-timeline"
+                placeholder=" "
+                required
                 name="timeline"
-                className={inputBase} 
+                className={inputBase}
               />
-              <label className={labelBase}>Enter your timeline</label>
+              <label htmlFor="contact-timeline" className={labelBase}>
+                Enter your timeline
+              </label>
             </div>
 
             {/* Description */}
             <div className="relative">
-              <textarea 
-                placeholder=" " 
-                required 
+              <textarea
+                id="contact-description"
+                placeholder=" "
+                required
                 name="description"
-                className={textareaBase} 
+                className={textareaBase}
               />
-              <label className={labelBasetxa}>Describe your project</label>
+              <label htmlFor="contact-description" className={labelBasetxa}>
+                Describe your project
+              </label>
             </div>
           </div>
+
+          {/* Error message */}
+          {error && (
+            <p role="alert" className="text-sm text-red-600 font-body -mt-6">
+              {error}
+            </p>
+          )}
 
           {/* Submit */}
           <button
