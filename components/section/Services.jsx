@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 /* ------------------------------------------------
    STATIC IMAGE IMPORTS
@@ -12,6 +12,9 @@ import renovationImg from "@/assets/images/renovation.jpg";
 import constructionImg from "@/assets/images/construction.png";
 import projectMgtImg from "@/assets/images/project-management.png";
 import turnkeyImg from "@/assets/images/turnkey-project-consultant.png";
+
+const INTERVAL = 5000;
+const STEP_TIME = 50;
 
 /* ------------------------------------------------
    SERVICES DATA
@@ -26,9 +29,6 @@ const items = [
 ];
 
 export default function Services() {
-  const INTERVAL = 5000;
-  const STEP_TIME = 50;
-
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -92,7 +92,7 @@ export default function Services() {
     triggerFade();
   }
 
-  const item = useMemo(() => items[index], [index]);
+  const item = items[index];
 
   return (
 <section
@@ -119,7 +119,7 @@ export default function Services() {
           className="
             hidden lg:flex
             flex-col
-            w-113.25
+            w-full
           "
         >
           <h2 className="text-2xl md:text-4xl lg:text-[40px] leading-15 font-bold font-heading text-[#0C0C1C] mb-2 text-white">
@@ -131,12 +131,12 @@ export default function Services() {
             transform your space into a high-performing asset you can truly enjoy.
           </p>
 
-         <ul className="w-110 space-y-6 mt-8">
+         <ul className="w-full space-y-6 mt-8">
             {items.map((it, i) => (
               <li key={it.title} className="pb-0">
                 <button
                   onClick={() => handleSelect(i)}
-                  aria-current={i === index}
+                  aria-pressed={i === index}
                   className={`w-full text-left transition ${
                     i === index ? "text-white" : "text-white/80 cursor-pointer"
                   }`}
@@ -197,7 +197,7 @@ export default function Services() {
       {/* MOBILE VIEW */}
       <div className="lg:hidden space-y-6 p-3 sm:p-4 md:p-6 lg:p-10">
         <div className="p-2">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl leading-15 font-heading text-[#0C0C1C] mb-4 text-white">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-15 font-heading text-white mb-4">
             Our Services
           </h2>
 
@@ -206,15 +206,15 @@ export default function Services() {
             transform your space into a high-performing asset you can truly enjoy.
           </p>
         </div>
-        {items.map((item) => (
-          <div key={item.title}>
+        {items.map((svc) => (
+          <div key={svc.title}>
             <div
               className="overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl"
             >
               <div className="relative aspect-4/3">
                 <Image
-                  src={item.img}
-                  alt={item.title}
+                  src={svc.img}
+                  alt={svc.title}
                   fill
                   className="object-cover"
                 />
@@ -222,7 +222,7 @@ export default function Services() {
             </div>
               <div className="py-4">
                 <h3 className="text-lg font-semibold text-white">
-                  {item.title}
+                  {svc.title}
                 </h3>
               </div>
             </div>

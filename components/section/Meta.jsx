@@ -1,6 +1,3 @@
-import React from "react";
-import WhatsAppWidget from "./WhatsAppWidget";
-
 const Meta = ({
   title,
   description = [],
@@ -29,12 +26,12 @@ const Meta = ({
           flex
           flex-col
           lg:flex-row
-          gap-8 lg:gap-16
+          gap-8 lg:gap-10 xl:gap-16
           items-start
         "
       >
         {/* LEFT CONTENT: Title and Description paragraphs */}
-        <div className="w-full lg:w-146 lg:min-h-117">
+        <div className="w-full lg:flex-1 lg:min-w-0 xl:w-146">
           <h2 className="
             font-heading 
             font-extrabold
@@ -68,7 +65,7 @@ const Meta = ({
         </div>
 
         {/* RIGHT CONTENT: Metadata List */}
-        <div className="lg:w-138 min-h-96.5">
+        <div className="lg:flex-1 lg:min-w-0 xl:w-138 min-h-96.5">
           <ul className="w-full">
             {infoItem.map((info, index) => (
               <li
@@ -112,11 +109,6 @@ const Meta = ({
             ))}
           </ul>
         </div>
-      </div>
-      
-      {/* Floating Widget */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <WhatsAppWidget />
       </div>
     </section>
   );

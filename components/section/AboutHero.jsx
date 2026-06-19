@@ -1,12 +1,11 @@
 import Image from "next/image";
-import React from "react";
-import aboutHero from "@/assets/images/aboutHero.png"; // Adjust the path as needed
+import aboutHero from "@/assets/images/aboutHero.png";
 import handdrawn from "@/assets/icons/Fill-4.svg";
 
 export default function AboutHero() {
   return (
     <div className="w-full flex flex-col bg-white -z-20">
-        <div className="z-30 pt-42 pb-20 max-w-208.5 mx-auto text-center">
+        <div className="z-30 pt-28 sm:pt-32 md:pt-36 lg:pt-42 pb-10 sm:pb-14 md:pb-16 lg:pb-20 max-w-208.5 mx-auto px-6 sm:px-8 md:px-12 text-center">
           <h1 className="
             font-heading
             font-bold
@@ -58,12 +57,12 @@ export default function AboutHero() {
             tracking-tight sm:tracking-[-0.03em]
             [leading-trim:cap-height] text-[#0C0C1C]
           ">
-            At X35 Projects, we deliver fully managed design and build solutions for clients who expect clarity, control, and exceptional <br/> results.
+            At X35 Projects, we deliver fully managed design and build solutions for clients who expect clarity, control, and exceptional results.
           </p>
         </div>
 
 
-      <div className="aspect-1440/750 min-h-100 relative px-6 sm:px-7.5 md:px-15 lg:px-30">
+      <div className="aspect-1440/750 min-h-56 sm:min-h-72 md:min-h-100 relative">
         <Image
           src={aboutHero}
           alt="X35 Projects - Building trust, vision, and lasting value"

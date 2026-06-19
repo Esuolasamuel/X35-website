@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import Articles from "@/components/section/Articles";
 import { blogCards } from "@/data/blogcard";
 import { blogPosts } from "@/data/blogpost";
@@ -19,16 +20,14 @@ export default async function BlogPost({ params }) {
     (blog) => blog.slug === slug
   );
 
-  if (!card || !post) {
-    return <div className="p-20">Article not found</div>;
-  }
+  if (!card || !post) notFound();
 
   return (
     <main className="w-full min-h-screen bg-white">
 
       {/* HERO */}
 
-      <section className="w-full h-155 relative">
+      <section className="w-full h-72 sm:h-96 md:h-120 lg:h-155 relative">
         <Image
           src={post.heroImage}
           alt={card.title}
@@ -41,7 +40,7 @@ export default async function BlogPost({ params }) {
 
       {/* ARTICLE */}
 
-      <section className="max-w-233 mx-auto px-6 mt-5 flex flex-col gap-12">
+      <section className="max-w-233 mx-auto px-6 mt-8 sm:mt-10 flex flex-col gap-12">
 
         <div className="text-center flex flex-col items-center gap-6">
 
@@ -49,7 +48,7 @@ export default async function BlogPost({ params }) {
             {card.date} • {card.readTime}
           </p>
 
-          <h1 className="text-[56px] font-heading leading-14 font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-heading leading-tight lg:leading-14 font-bold">
             {card.title}
           </h1>
 
@@ -96,11 +95,11 @@ export default async function BlogPost({ params }) {
               return (
                 <div
                   key={index}
-                  className="relative w-full h-126.5 rounded-[10px] overflow-hidden"
+                  className="relative w-full h-56 sm:h-80 md:h-96 lg:h-126.5 rounded-[10px] overflow-hidden"
                 >
                   <Image
                     src={block.src}
-                    alt=""
+                    alt={block.alt ?? ""}
                     fill
                     className="object-cover"
                   />

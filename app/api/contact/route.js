@@ -1,21 +1,12 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import {
   adminNotificationEmail,
   clientConfirmationEmail,
 } from "@/lib/emailTemplates";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.SMTP_FROM,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
 export async function POST(request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await request.json();
 
@@ -33,43 +24,34 @@ export async function POST(request) {
       );
     }
 
-    const data = {
-      name,
-      email,
-      projectType,
-      budget,
-      timeline,
-      description,
-    };
+    const data = { name, email, projectType, budget, timeline, description };
 
     const adminEmail = adminNotificationEmail(data);
     const clientEmail = clientConfirmationEmail(name);
 
-    /* Send admin notification */
-
-    await transporter.sendMail({
-      from: `"X35 Projects" <${process.env.SMTP_FROM}>`,
-      to: process.env.CONTACT_EMAIL,
-      replyTo: email,
-      subject: adminEmail.subject,
-      html: adminEmail.html,
-      text: adminEmail.text,
-    });
-
-    /* Send client confirmation */
-
-    await transporter.sendMail({
-      from: `"X35 Projects" <${process.env.SMTP_FROM}>`,
-      to: email,
-      subject: clientEmail.subject,
-      html: clientEmail.html,
-      text: clientEmail.text,
-    });
+    await Promise.all([
+      /* Admin notification */
+      resend.emails.send({
+        from: "X35 Projects <hello@x35projects.com>",
+        to: process.env.CONTACT_EMAIL,
+        reply_to: email,
+        subject: adminEmail.subject,
+        html: adminEmail.html,
+        text: adminEmail.text,
+      }),
+      /* Client confirmation */
+      resend.emails.send({
+        from: "X35 Projects <hello@x35projects.com>",
+        to: email,
+        subject: clientEmail.subject,
+        html: clientEmail.html,
+        text: clientEmail.text,
+      }),
+    ]);
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
-
     return NextResponse.json(
       { success: false, message: "Email failed" },
       { status: 500 }

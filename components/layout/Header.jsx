@@ -85,7 +85,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav
-            className={`hidden lg:flex items-center gap-6 sm:gap-8 md:gap-9 lg:gap-10 text-xs sm:text-sm md:text-base lg:text-base font-semibold font-body cursor-pointer ${
+            className={`hidden lg:flex items-center gap-4 sm:gap-6 md:gap-7 lg:gap-6 xl:gap-10 text-xs sm:text-sm md:text-base lg:text-sm xl:text-base font-semibold font-body cursor-pointer ${
               isTransparent ? "text-white" : "text-gray-900"
             }`}
           >
@@ -102,7 +102,7 @@ export default function Header() {
           {/* CTA */}
           <button
             onClick={() => setIsContactOpen(true)}
-            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-9 py-2.5 sm:py-3 md:py-3.5 lg:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-lg text-dark-500 cursor-pointer"
+            className="hidden lg:inline-flex bg-yellow-400 hover:bg-yellow-700 rounded-[60px] transition-colors px-4 sm:px-6 md:px-6 lg:px-6 xl:px-9 py-2.5 sm:py-3 md:py-3.5 lg:py-3 xl:py-5 font-body font-semibold text-xs sm:text-sm md:text-md lg:text-sm xl:text-lg text-dark-500 cursor-pointer"
           >
             Start your Project
           </button>

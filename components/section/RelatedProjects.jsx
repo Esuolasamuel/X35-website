@@ -22,7 +22,7 @@ const RelatedProjects = ({ projects = [], currentProjectId, limit = 2 }) => {
 
           <Link
             href="/Projects"
-            className=" w-32.5 px-2 sm:px-4 py-1.5 border rounded-[30px] border-[#1A1A1A] hover:border-yellow-400 text-[6.5px] sm:text-[13px] font-semibold text-[#0C0C1C] hover:bg-yellow-400 hover:text-[#0C0C1C] transition-colors duration-300 "
+            className="px-4 py-1.5 border rounded-[30px] border-[#1A1A1A] hover:border-yellow-400 text-xs sm:text-[13px] font-semibold text-[#0C0C1C] hover:bg-yellow-400 hover:text-[#0C0C1C] transition-colors duration-300"
           >
             View all project
           </Link>

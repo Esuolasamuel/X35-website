@@ -1,22 +1,28 @@
 "use client";
 
+import { useRef } from "react";
 import { X } from "lucide-react";
 import Image from "next/image";
 import partypopper from "@/assets/icons/Party-Popper.svg";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 
 export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
+  const modalRef = useRef(null);
+  useFocusTrap(modalRef, isOpen);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/20 backdrop-blur-sm">
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/20 backdrop-blur-sm px-4">
       {/* MODAL CARD */}
       <div
+        ref={modalRef}
         className="
           relative
-          w-102 h-85.5
+          w-full max-w-102 h-auto
           rounded-[20px]
           bg-white
-          p-8
+          p-6 sm:p-8
           shadow-xl
           animate-in fade-in zoom-in-95 duration-300
         "
@@ -24,6 +30,7 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
         {/* CLOSE ICON */}
         <button
           onClick={onClose}
+          aria-label="Close"
           className="
             absolute top-6 right-6
             text-[#0F172A]
@@ -39,7 +46,7 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
           className="
             flex flex-col items-center
             gap-6
-            w-86
+            w-full
             mx-auto
           "
         >
@@ -57,7 +64,7 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
             className="
               flex flex-col items-center text-center
               gap-4
-              w-86 h-22
+              w-full
             "
           >
             <h2 className="text-[18px] leading-tight font-bold font-body text-[#0F172A]">
@@ -65,7 +72,7 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
             </h2>
 
             <p className="text-sm leading-[1.6] font-body text-[#0F172A]/90">
-              We’re crafting something exciting. Join our community to be first
+              We're crafting something exciting. Join our community to be first
               to know when it launches.
             </p>
           </div>
@@ -74,7 +81,7 @@ export default function ComingSoonModal({ isOpen, onClose, onNotify }) {
           <button
             onClick={onNotify}
             className="
-              w-86 h-14.5
+              w-full h-14.5
               rounded-[60px]
               bg-[#FFD700]
               px-6 py-5

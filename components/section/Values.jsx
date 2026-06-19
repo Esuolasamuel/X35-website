@@ -5,13 +5,13 @@ export default function Values({ values }) {
   return (
     <section className="bg-white">
       <Container>
-        <h2 className="text-2xl md:text-3xl lg:text-[48px] font-bold font-heading text-center text-[#0C0C1C] md-4 lg:mb-14">Our Values</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-[48px] font-bold font-heading text-center text-[#0C0C1C] mb-4 lg:mb-14">Our Values</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {values?.map((v) => (
             /* Added 'group' class to the card container */
             <div
               key={v.title}
-              className="group bg-yellow-600 font-body max-w-384 max-h-246 font-normal text-[#0C0C1C] rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl py-6.5 md:py-12 px-6 md:px-10 transition-all duration-500 hover:shadow-lg"
+              className="group bg-yellow-600 font-body font-normal text-[#0C0C1C] rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl py-6.5 md:py-12 px-6 md:px-10 transition-all duration-500 hover:shadow-lg"
             >
               <div className="w-full mb-4">
                 <Image

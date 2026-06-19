@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { blogCards } from  "@/data/blogcard";
 
 export default function BlogCard({ blog }) {
   return (
@@ -13,8 +12,8 @@ export default function BlogCard({ blog }) {
         alt={blog.title}
         width={400}
         height={300}
-        sizes="(max-width: 768px) 100vw, 33vw"
-        className="rounded-[10px]"
+        sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"
+        className="rounded-[10px] w-full h-auto"
       />
 
       <div className="mt-6">

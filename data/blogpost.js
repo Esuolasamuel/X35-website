@@ -13,6 +13,7 @@ export const blogPosts = [
       {
         type: "image",
         src: img1,
+        alt: "Speculative architectural space with generous circulation and ambiguous thresholds",
       },
 
       {
@@ -36,6 +37,7 @@ export const blogPosts = [
       {
         type: "image",
         src: img2,
+        alt: "Open-plan interior showing flexible floor layout designed for adaptability",
       },
 
       {
@@ -47,6 +49,7 @@ export const blogPosts = [
       {
         type: "image",
         src: img3,
+        alt: "Architectural atmosphere conveying a narrative of possible ways of living",
       },
 
       {
