@@ -14,37 +14,37 @@ const projects = [
     name: "The Brook Finance Ltd",
     type: "COMMERCIAL",
     img: brookImg,
-    href: "/Projects/thebrook",
+    href: "/projects/thebrook",
   },
   {
     name: "Oga Dentist",
     type: "HEALTHCARE",
     img: ogaDentistImg,
-    href: "/Projects/ogadentist",
+    href: "/projects/ogadentist",
   },
   {
     name: "Rob’s Place",
     type: "RESIDENTIAL",
     img: robsPlaceImg,
-    href: "/Projects/robs-place",
+    href: "/projects/robs-place",
   },
   {
     name: "Chevron",
     type: "COMMERCIAL",
     img: chevronImg,
-    href: "/Projects/chevron",
+    href: "/projects/chevron",
   },
   {
     name: "Sun Planet Co",
     type: "COMMERCIAL",
     img: sunplanetImg,
-    href: "/Projects/sunplanet",
+    href: "/projects/sunplanet",
   },
   {
     name: "Adino Capital",
     type: "COMMERCIAL",
     img: adinoImg,
-    href: "/Projects/adino",
+    href: "/projects/adino",
   },
 ];
 
