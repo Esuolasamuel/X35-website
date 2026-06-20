@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "The Brook Finance Ltd – Corporate Office Transformation",
+  description:
+    "X35 delivered a 1,609m² turnkey corporate headquarters in Lagos for The Brook Finance Ltd — converting a residential building across 3 floors into a modern office, covering architecture, interior design, MEP, ELV, and landscaping.",
+  alternates: { canonical: "/Projects/thebrook" },
+  openGraph: {
+    title: "The Brook Finance Corporate HQ Lagos – X35 Projects",
+    description:
+      "Turnkey corporate office transformation in Lagos by X35 — 1,609m² across 3 floors for The Brook Finance Ltd, covering architecture, interiors, MEP, and landscaping.",
+    url: "/Projects/thebrook",
+    type: "website",
+  },
+};
+
 import Image from "next/image";
 import Hero from "@/components/section/Hero";
 import Meta from "@/components/section/Meta";

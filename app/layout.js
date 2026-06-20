@@ -31,10 +31,8 @@ const fraunces = localFont({
 
 
 export const metadata = {
-   metadataBase: new URL(
-      process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000"
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
 
   title: {
@@ -43,15 +41,17 @@ export const metadata = {
   },
 
   description:
-    "X35 is an architecture and construction company delivering modern design, interior solutions, and turnkey projects.",
+    "X35 Projects is a Lagos-based architecture, interior design, and construction company — delivering commercial office fit-outs, residential renovations, and turnkey builds across Nigeria.",
 
   keywords: [
-    "architecture company",
-    "interior design",
-    "construction company",
-    "turnkey projects",
-    "modern architecture",
-    "X35",
+    "architecture firm Lagos",
+    "interior design company Lagos",
+    "commercial office fit-out Nigeria",
+    "construction company Nigeria",
+    "interior design Lagos Nigeria",
+    "turnkey construction Nigeria",
+    "residential renovation Lagos",
+    "X35 Projects",
   ],
 
   authors: [{ name: "X35" }],
@@ -82,17 +82,17 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "X35 – Architecture, Interior Design & Construction",
+    title: "X35 – Architecture & Interior Design Company in Lagos, Nigeria",
     description:
-      "Designing and building modern architectural and interior spaces.",
+      "Lagos-based architecture and interior design firm delivering commercial office fit-outs, residential builds, and turnkey construction projects across Nigeria.",
     url: "/",
     siteName: "X35",
     images: [
       {
-        url: "/favicon-16x16.png", // 1200x630
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "X35 Architecture Projects",
+        alt: "X35 Architecture & Construction Projects",
       },
     ],
     locale: "en_US",
@@ -104,7 +104,7 @@ export const metadata = {
     title: "X35 – Architecture & Construction",
     description:
       "Modern architecture, interior design, and construction services.",
-    images: ["/favicon-16x16.png"],
+    images: ["/og-image.png"],
   },
 
   alternates: {
@@ -113,12 +113,35 @@ export const metadata = {
 };
 
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  name: "X35 Projects",
+  description:
+    "X35 is an architecture, interior design, and construction company delivering modern spaces and turnkey projects.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/x%2035.svg`,
+  sameAs: [
+    "https://www.instagram.com/x35projects/",
+    "https://www.linkedin.com/company/x35-projects-ltd",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    availableLanguage: "English",
+  },
+};
+
 export default function RootLayout({
   children
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${fraunces.variable} antialiased`}>
         <body>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          />
           <HeaderStyleProvider>
           <Header/>
           {children}

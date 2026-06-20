@@ -6,6 +6,23 @@ import Image from "next/image";
 import linkedin from "@/assets/icons/link.svg";
 import instagram from "@/assets/icons/instra.svg";
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const card = blogCards.find((blog) => blog.slug === slug);
+  if (!card) return { title: "Post Not Found" };
+  return {
+    title: card.title,
+    description: card.excerpt,
+    alternates: { canonical: `/blogpost/${slug}` },
+    openGraph: {
+      title: card.title,
+      description: card.excerpt,
+      url: `/blogpost/${slug}`,
+      type: "article",
+    },
+  };
+}
+
 export default async function BlogPost({ params }) {
 
   const moreblogs = [blogCards[4], ...blogCards.slice(2, 4)]; // last item first, rest in order
@@ -22,8 +39,29 @@ export default async function BlogPost({ params }) {
 
   if (!card || !post) notFound();
 
+  const base = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: card.title,
+    description: card.excerpt,
+    url: `${base}/blogpost/${slug}`,
+    publisher: {
+      "@type": "Organization",
+      name: "X35 Projects",
+      url: base,
+    },
+  };
+
   return (
     <main className="w-full min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
 
       {/* HERO */}
 
