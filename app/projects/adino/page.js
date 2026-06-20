@@ -52,8 +52,23 @@ export default function AdrinoPage() {
     { imageSrc: adinoSplit2, alt: "kitchen area Interior 2" },
  ]
 
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${base}/` },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${base}/projects` },
+      { "@type": "ListItem", position: 3, name: "Adino Capital Ltd", item: `${base}/projects/adino` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Hero imageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" />
         <Meta
           title="The Commissioning"
