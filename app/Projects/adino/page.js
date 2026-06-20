@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Adino Capital Ltd – Office Interior Design",
+  description:
+    "X35 delivered a commercial office fit-out for Adino Capital Ltd in Lagos — transforming a 70m² workspace with reconfigured open-plan zones, ergonomic workstations, cable management, and a refreshed cafeteria.",
+  alternates: { canonical: "/Projects/adino" },
+  openGraph: {
+    title: "Adino Capital Office Fit-Out Lagos – X35 Projects",
+    description:
+      "Commercial office interior fit-out in Lagos by X35 — a performance-driven 70m² workspace redesign for Adino Capital Ltd.",
+    url: "/Projects/adino",
+    type: "website",
+  },
+};
+
 import Image from "next/image";
 import Hero from "@/components/section/Hero";
 import Meta from "@/components/section/Meta";

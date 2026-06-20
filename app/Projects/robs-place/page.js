@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Rob's Place – Minimalist Home Renovation",
+  description:
+    "X35 delivered a full design-and-build residential renovation in Nigeria — transforming Rob's Place, a 500m² family home across 2 floors, into a minimalist modern residence with solar energy integration.",
+  alternates: { canonical: "/Projects/robs-place" },
+  openGraph: {
+    title: "Rob's Place Residential Renovation Nigeria – X35 Projects",
+    description:
+      "Residential renovation in Nigeria by X35 — a 500m² minimalist home redesign with structural works and solar energy, delivered turnkey.",
+    url: "/Projects/robs-place",
+    type: "website",
+  },
+};
+
 import Hero from "@/components/section/Hero";
 import Meta from "@/components/section/Meta";
 import FullImageSection from "@/components/section/FullImageSection";
