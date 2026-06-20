@@ -21,21 +21,21 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import local images from public
-import heroImg from "@/assets/images/sunplanetHero.jpg";
-import fullImg from "@/assets/images/sunplanetFullImage.jpg";
-import featureImg from "@/assets/images/sunplanetFeature.jpg";
-import gallery1 from "@/assets/images/sunplanetImageSplit-1.jpg";
-import gallery2 from "@/assets/images/sunplanetImageSplit-2.jpg";
-import gallery3 from "@/assets/images/sunplanetImageSplit-3.jpg";
-import gallery4 from "@/assets/images/sunplanetImageSplit-4.jpg";
-import miniHeroImg from "@/assets/images/sunplanetMiniHero.jpg"
+import heroImg from "@/assets/images/sunplanet-co-residential-development-hero-nigeria.jpg";
+import fullImg from "@/assets/images/sunplanet-co-modern-apartment-interior-nigeria.jpg";
+import featureImg from "@/assets/images/sunplanet-co-architectural-design-consultancy-nigeria.jpg";
+import gallery1 from "@/assets/images/sunplanet-co-apartment-gallery-1-nigeria.jpg";
+import gallery2 from "@/assets/images/sunplanet-co-apartment-gallery-2-nigeria.jpg";
+import gallery3 from "@/assets/images/sunplanet-co-apartment-gallery-3-nigeria.jpg";
+import gallery4 from "@/assets/images/sunplanet-co-apartment-gallery-4-nigeria.jpg";
+import miniHeroImg from "@/assets/images/sunplanet-co-residential-building-exterior-nigeria.jpg"
 
-import projectChevron from "@/assets/images/chevron.png";
-import projectRob from "@/assets/images/robsplace.jpg";
-import projectAdino from "@/assets/images/adino.png";
-import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectbrook from "@/assets/images/brook.jpg";
-import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import projectChevron from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import projectRob from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import projectAdino from "@/assets/images/adino-capital-office-interior-lagos.png";
+import projectSunplant from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import projectbrook from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import projectOgaDentist from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
 
 export default function SunplanetPage() {
   const projects = [
@@ -64,7 +64,7 @@ export default function SunplanetPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Hero imageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" />
+      <Hero imageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" altText="Sun Planet Co residential development in Nigeria — 580m² modern apartment architecture consultancy by X35 Projects" />
         <Meta
           title="The Brief"
           description={[
@@ -90,7 +90,7 @@ export default function SunplanetPage() {
           ]}
           backgroundColor="bg-[#EAF1FF]"
         />
-        <FullImageSection imageSrc={fullImg} title="sun planet interior" />
+        <FullImageSection imageSrc={fullImg} title="Sun Planet Co modern apartment interior — residential development consultancy in Nigeria by X35 Projects" />
         <Feature
           imageSrc={featureImg}
           backgroundColor="bg-indigo-700"
@@ -107,10 +107,10 @@ export default function SunplanetPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { imageSrc: gallery1, type: "small" },
-            { imageSrc: gallery2, type: "large" },
-            { imageSrc: gallery3, type: "large" },
-            { imageSrc: gallery4, type: "small" },
+            { imageSrc: gallery1, type: "small", alt: "Sun Planet Co residential apartment — modern living space interior Nigeria" },
+            { imageSrc: gallery2, type: "large", alt: "Sun Planet Co residential development — apartment layout and spatial planning Nigeria" },
+            { imageSrc: gallery3, type: "large", alt: "Sun Planet Co modern apartment design — kitchen and living area Nigeria" },
+            { imageSrc: gallery4, type: "small", alt: "Sun Planet Co residential development — bedroom and interior detail Nigeria" },
           ]}
         />
         <MiniHero

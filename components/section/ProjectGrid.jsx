@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 // ✅ Static image imports
-import brookImg from "@/assets/images/brook.jpg";
-import ogaDentistImg from "@/assets/images/ogadentist.jpg";
-import robsPlaceImg from "@/assets/images/robsplace.jpg";
-import chevronImg from "@/assets/images/chevron.png";
-import sunplanetImg from "@/assets/images/sunplanetco.jpg";
-import adinoImg from "@/assets/images/adino.png";
+import brookImg from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import ogaDentistImg from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
+import robsPlaceImg from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import chevronImg from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import sunplanetImg from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import adinoImg from "@/assets/images/adino-capital-office-interior-lagos.png";
 
 const projects = [
   {
@@ -15,36 +15,42 @@ const projects = [
     type: "COMMERCIAL",
     img: brookImg,
     href: "/projects/thebrook",
+    alt: "The Brook Finance corporate headquarters — 1,609m² turnkey office transformation in Lagos by X35 Projects",
   },
   {
     name: "Oga Dentist",
     type: "HEALTHCARE",
     img: ogaDentistImg,
     href: "/projects/ogadentist",
+    alt: "Oga Dentist modern dental clinic interior design in Lagos — patient-centred healthcare environment by X35 Projects",
   },
   {
     name: "Rob’s Place",
     type: "RESIDENTIAL",
     img: robsPlaceImg,
     href: "/projects/robs-place",
+    alt: "Rob’s Place minimalist residential renovation in Nigeria — 500m² modern family home redesign by X35 Projects",
   },
   {
     name: "Chevron",
     type: "COMMERCIAL",
     img: chevronImg,
     href: "/projects/chevron",
+    alt: "Chevron Deep Waters Department office fit-out in Lagos — 145m² commercial workspace interior design by X35 Projects",
   },
   {
     name: "Sun Planet Co",
     type: "COMMERCIAL",
     img: sunplanetImg,
     href: "/projects/sunplanet",
+    alt: "Sun Planet Co residential development in Nigeria — 580m² modern apartment architecture consultancy by X35 Projects",
   },
   {
     name: "Adino Capital",
     type: "COMMERCIAL",
     img: adinoImg,
     href: "/projects/adino",
+    alt: "Adino Capital commercial office interior fit-out in Lagos — 70m² modern workspace transformation by X35 Projects",
   },
 ];
 

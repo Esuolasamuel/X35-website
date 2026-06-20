@@ -3,9 +3,11 @@ import Image from "next/image";
 export default function Hero({
   imageSrc = "",
   title = "",
+  altText = "",
 }) {
   const heroimageSrc = imageSrc || "/images/hero-placeholder.jpg";
   const heroTitle = title || "X35 Projects";
+  const imageAlt = altText || heroTitle;
 
   return (
     <section
@@ -20,7 +22,7 @@ export default function Hero({
       {/* Background Image */}
       <Image
         src={heroimageSrc}
-        alt={heroTitle}
+        alt={imageAlt}
         fill
         priority
         sizes="100vw"

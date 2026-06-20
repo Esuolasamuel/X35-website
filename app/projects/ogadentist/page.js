@@ -20,23 +20,23 @@ import CTA from "@/components/section/CTA";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import images
-import heroImg from "@/assets/images/ogadentistHero.jpg";
-import full1 from "@/assets/images/ogadentistFullImage-1.png";
-import full2 from "@/assets/images/ogadentistFullImage-2.png";
-import full3 from "@/assets/images/ogadentistFullImage-3.jpg";
-import full4 from "@/assets/images/ogadentistFullImage-4.png";
+import heroImg from "@/assets/images/oga-dentist-dental-clinic-interior-hero-lagos.jpg";
+import full1 from "@/assets/images/oga-dentist-reception-interior-design-lagos.png";
+import full2 from "@/assets/images/oga-dentist-waiting-lounge-interior-lagos.png";
+import full3 from "@/assets/images/oga-dentist-treatment-room-interior-lagos.jpg";
+import full4 from "@/assets/images/oga-dentist-clinic-detail-interior-lagos.png";
 
-import feature1 from "@/assets/images/ogadentistFeature-1.png";
-import feature2 from "@/assets/images/ogadentistFeature-2.jpg";
-import feature3 from "@/assets/images/ogadentistFeature-3.jpg";
-import feature4 from "@/assets/images/ogadentistFeature-4.jpg";
+import feature1 from "@/assets/images/oga-dentist-clinic-vision-design-lagos.png";
+import feature2 from "@/assets/images/oga-dentist-operating-treatment-room-lagos.jpg";
+import feature3 from "@/assets/images/oga-dentist-calming-design-approach-lagos.jpg";
+import feature4 from "@/assets/images/oga-dentist-clinic-execution-excellence-lagos.jpg";
 
-import projectChevron from "@/assets/images/chevron.png";
-import projectRob from "@/assets/images/robsplace.jpg";
-import projectAdino from "@/assets/images/adino.png";
-import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectbrook from "@/assets/images/brook.jpg";
-import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import projectChevron from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import projectRob from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import projectAdino from "@/assets/images/adino-capital-office-interior-lagos.png";
+import projectSunplant from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import projectbrook from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import projectOgaDentist from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
 
 export default function OgaDentistPage() {
 
@@ -66,7 +66,7 @@ export default function OgaDentistPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Hero imageSrc={heroImg} title="Oga Dentist" height="h-[90vh]" />
+      <Hero imageSrc={heroImg} title="Oga Dentist" height="h-[90vh]" altText="Oga Dentist modern dental clinic interior design in Lagos — patient-centred healthcare environment by X35 Projects" />
         <Meta
           title="Redefining Patient-Centered Dentistry with Oga Dentist"
           description={[
@@ -83,7 +83,7 @@ export default function OgaDentistPage() {
           ]}
           backgroundColor="bg-[#EAF1FF]"
         />
-        <FullImageSection imageSrc={full1} title="ogadentist interior" />
+        <FullImageSection imageSrc={full1} title="Oga Dentist modern dental clinic interior — healthcare interior design in Lagos by X35 Projects" />
         <ListFeature
           imageSrc={feature1}
           title="Understanding the Vision"
@@ -98,7 +98,7 @@ export default function OgaDentistPage() {
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <FullImageSection imageSrc={full2} title="ogadentist interior" />
+        <FullImageSection imageSrc={full2} title="Oga Dentist modern dental clinic interior — healthcare interior design in Lagos by X35 Projects" />
         <ListFeature
           imageSrc={feature2}
           title="Scope of Spaces Designed"
@@ -118,7 +118,7 @@ export default function OgaDentistPage() {
             { paragraph: "Modern, hygienic restrooms designed for accessibility and durability" },
           ]}
         />
-        <FullImageSection imageSrc={full3} title="ogadentist interior" />
+        <FullImageSection imageSrc={full3} title="Oga Dentist modern dental clinic interior — healthcare interior design in Lagos by X35 Projects" />
         <ListFeature
           imageSrc={feature3}
           title="Design Approach"
@@ -134,7 +134,7 @@ export default function OgaDentistPage() {
             { paragraph: "Lighting strategies that create clarity, focus, and warmth" },
           ]}
         />
-        <FullImageSection imageSrc={full4} title="ogadentist interior" />
+        <FullImageSection imageSrc={full4} title="Oga Dentist modern dental clinic interior — healthcare interior design in Lagos by X35 Projects" />
         <ListFeature
           imageSrc={feature4}
           title="Execution Excellence"

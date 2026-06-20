@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState, useCallback } from "react";
 
 /* ------------------------------------------------
    STATIC IMAGE IMPORTS
 ------------------------------------------------ */
-import architectureImg from "@/assets/images/architecture.png";
-import interiorImg from "@/assets/images/interior-design.jpg";
-import renovationImg from "@/assets/images/renovation.jpg";
-import constructionImg from "@/assets/images/construction.png";
-import projectMgtImg from "@/assets/images/project-management.png";
-import turnkeyImg from "@/assets/images/turnkey-project-consultant.png";
+import architectureImg from "@/assets/images/x35-architecture-services-lagos-nigeria.png";
+import interiorImg from "@/assets/images/interior-design-services-x35-lagos-nigeria.jpg";
+import renovationImg from "@/assets/images/renovation-services-x35-lagos-nigeria.jpg";
+import constructionImg from "@/assets/images/construction-services-x35-lagos-nigeria.png";
+import projectMgtImg from "@/assets/images/project-management-services-x35-lagos.png";
+import turnkeyImg from "@/assets/images/turnkey-construction-consultant-x35-lagos.png";
 
 const INTERVAL = 5000;
 const STEP_TIME = 50;
@@ -20,12 +21,12 @@ const STEP_TIME = 50;
    SERVICES DATA
 ------------------------------------------------ */
 const items = [
-  { title: "Architecture", desc: "Peaceful mountain view", img: architectureImg },
-  { title: "Interior Design", desc: "Green forest landscape", img: interiorImg },
-  { title: "Renovation", desc: "Sunny beach vibes", img: renovationImg },
-  { title: "Construction", desc: "Construction excellence", img: constructionImg },
-  { title: "Project Management", desc: "Efficient project delivery", img: projectMgtImg },
-  { title: "Turnkey Project", desc: "End-to-end solutions", img: turnkeyImg },
+  { title: "Architecture", img: architectureImg, href: null },
+  { title: "Interior Design", img: interiorImg, href: "/services/interior-design" },
+  { title: "Renovation", img: renovationImg, href: "/services/renovation" },
+  { title: "Construction", img: constructionImg, href: "/services/construction" },
+  { title: "Project Management", img: projectMgtImg, href: null },
+  { title: "Turnkey Project", img: turnkeyImg, href: "/services/office-fit-out" },
 ];
 
 export default function Services() {
@@ -141,9 +142,15 @@ export default function Services() {
                     i === index ? "text-white" : "text-white/80 cursor-pointer"
                   }`}
                 >
-                  <span className="text-[17px] font-semibold font-body">
-                    {it.title}
-                  </span>
+                  {it.href ? (
+                    <Link href={it.href} className="text-[17px] font-semibold font-body hover:underline underline-offset-4">
+                      {it.title}
+                    </Link>
+                  ) : (
+                    <span className="text-[17px] font-semibold font-body">
+                      {it.title}
+                    </span>
+                  )}
                 </button>
 
                 {/* Border + Progress Container */}
@@ -179,7 +186,7 @@ export default function Services() {
           <Image
             key={item.title}
             src={item.img}
-            alt={item.title}
+            alt={`${item.title} services by X35 Projects in Lagos, Nigeria`}
             fill
             priority
             className="
@@ -190,6 +197,14 @@ export default function Services() {
             "
             style={{ opacity: visible ? 1 : 0 }}
           />
+          {item.href && (
+            <Link
+              href={item.href}
+              className="absolute bottom-5 right-5 z-10 bg-yellow-400 hover:bg-yellow-700 transition-colors text-[#0C0C1C] font-body font-semibold text-sm rounded-full px-5 py-2.5"
+            >
+              Learn more →
+            </Link>
+          )}
 
         </div>
       </div>
@@ -208,24 +223,38 @@ export default function Services() {
         </div>
         {items.map((svc) => (
           <div key={svc.title}>
-            <div
-              className="overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl"
-            >
+            <div className="overflow-hidden rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl">
               <div className="relative aspect-4/3">
-                <Image
-                  src={svc.img}
-                  alt={svc.title}
-                  fill
-                  className="object-cover"
-                />
+                {svc.href ? (
+                  <Link href={svc.href} className="block w-full h-full">
+                    <Image
+                      src={svc.img}
+                      alt={`${svc.title} services by X35 Projects in Lagos, Nigeria`}
+                      fill
+                      className="object-cover"
+                    />
+                  </Link>
+                ) : (
+                  <Image
+                    src={svc.img}
+                    alt={`${svc.title} services by X35 Projects in Lagos, Nigeria`}
+                    fill
+                    className="object-cover"
+                  />
+                )}
               </div>
             </div>
-              <div className="py-4">
-                <h3 className="text-lg font-semibold text-white">
-                  {svc.title}
-                </h3>
-              </div>
+            <div className="py-4 flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-white">
+                {svc.title}
+              </h3>
+              {svc.href && (
+                <Link href={svc.href} className="text-yellow-400 font-body font-semibold text-sm hover:text-yellow-300 transition-colors">
+                  Learn more →
+                </Link>
+              )}
             </div>
+          </div>
         ))}
       </div>
     </section>

@@ -14,6 +14,10 @@ export default function sitemap() {
     { url: `${base}/projects/thebrook`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/projects/ogadentist`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/services/interior-design`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/services/office-fit-out`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/services/construction`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/services/renovation`, changeFrequency: "monthly", priority: 0.9 },
   ].map((route) => ({ ...route, lastModified: new Date() }));
 
   const blogRoutes = blogCards.map((card) => ({

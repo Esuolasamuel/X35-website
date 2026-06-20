@@ -20,23 +20,23 @@ import ListFeature from "@/components/section/ListFeature";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import local images from public
-import heroImg from "@/assets/images/robplaceHero.png";
-import full1 from "@/assets/images/robplaceFullImage-1.png";
-import full2 from "@/assets/images/robplaceFullImage-2.png";
-import full3 from "@/assets/images/robplaceFullImage-3.png";
-import full4 from "@/assets/images/robplaceFullImage-4.png";
+import heroImg from "@/assets/images/robs-place-residential-renovation-hero-nigeria.png";
+import full1 from "@/assets/images/robs-place-minimalist-interior-renovation-1-nigeria.png";
+import full2 from "@/assets/images/robs-place-minimalist-interior-renovation-2-nigeria.png";
+import full3 from "@/assets/images/robs-place-minimalist-interior-renovation-3-nigeria.png";
+import full4 from "@/assets/images/robs-place-minimalist-interior-renovation-4-nigeria.png";
 
-import feature1 from "@/assets/images/robplaceFeature-1.png";
-import feature2 from "@/assets/images/robplaceFeature-2.png";
-import feature3 from "@/assets/images/robplaceFeature-3.png";
-import feature4 from "@/assets/images/robplaceFeature-4.png";
+import feature1 from "@/assets/images/robs-place-structural-renovation-consultation-nigeria.png";
+import feature2 from "@/assets/images/robs-place-minimalist-design-transformation-nigeria.png";
+import feature3 from "@/assets/images/robs-place-systematic-demolition-execution-nigeria.png";
+import feature4 from "@/assets/images/robs-place-completed-modern-family-home-nigeria.png";
 
-import projectChevron from "@/assets/images/chevron.png";
-import projectRob from "@/assets/images/robsplace.jpg";
-import projectAdino from "@/assets/images/adino.png";
-import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectbrook from "@/assets/images/brook.jpg";
-import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import projectChevron from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import projectRob from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import projectAdino from "@/assets/images/adino-capital-office-interior-lagos.png";
+import projectSunplant from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import projectbrook from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import projectOgaDentist from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
 
 export default function RobPlacePage() {
 
@@ -66,7 +66,7 @@ export default function RobPlacePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Hero imageSrc={heroImg} title="Rob’s Place" height="h-[90vh]" />
+      <Hero imageSrc={heroImg} title="Rob’s Place" height="h-[90vh]" altText="Rob’s Place minimalist residential renovation in Nigeria — 500m² modern family home redesign by X35 Projects" />
         <Meta
           title="Inception"
           description={[
@@ -83,7 +83,7 @@ export default function RobPlacePage() {
           ]}
           backgroundColor="bg-[#e5f1e7]"
         />
-        <FullImageSection imageSrc={full1} title="rob's place interior" />
+        <FullImageSection imageSrc={full1} title="Rob's Place minimalist interior before transformation — residential renovation Nigeria" />
         <Feature
           imageSrc={feature1}
           title="Understanding the Client’s Fears and Challenges"
@@ -96,7 +96,7 @@ export default function RobPlacePage() {
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <FullImageSection imageSrc={full2} title="rob place interior" />
+        <FullImageSection imageSrc={full2} title="Rob's Place minimalist interior renovation — modern residential redesign in Nigeria by X35 Projects" />
         <ListFeature
           imageSrc={feature2}
           title="The Transformation Strategy: Minimalist Modern Living"
@@ -111,7 +111,7 @@ export default function RobPlacePage() {
             { paragraph: "Upgrading flooring, ceilings, and wall treatments for a cohesive minimalist feel." },
           ]}
         />
-        <FullImageSection imageSrc={full3} title="rob place interior" />
+        <FullImageSection imageSrc={full3} title="Rob's Place minimalist interior renovation — modern residential redesign in Nigeria by X35 Projects" />
         <ListFeature
           imageSrc={feature3}
           title="Systematic Demolition and Execution"
@@ -127,7 +127,7 @@ export default function RobPlacePage() {
             { paragraph: "Reinforcement was applied where needed" },
           ]}
         />
-        <FullImageSection imageSrc={full4} title="rob place interior" />
+        <FullImageSection imageSrc={full4} title="Rob's Place minimalist interior renovation — modern residential redesign in Nigeria by X35 Projects" />
         <Feature
           imageSrc={feature4}
           title="Final Outcome: A Peaceful, Modern Family Home"

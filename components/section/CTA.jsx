@@ -30,8 +30,8 @@ export default function CTA({
 
   /* ================= LAYOUT VARIANTS ================= */
   const sectionClasses = backgroundImage
-    ? "min-h-[540px] px-6 md:px-12 lg:px-[120px]"
-    : "h-[516px] px-6 md:px-12";
+    ? "min-h-[540px] px-6 md:px-12 lg:px-[120px] py-20 md:py-28 lg:py-36"
+    : "min-h-[516px] px-6 md:px-12 py-16 sm:py-20 lg:py-28";
 
   return (
     <>
@@ -39,7 +39,6 @@ export default function CTA({
         id={id}
         className={`
           relative mx-auto
-          h-full
           bg-[#C9C9DC]
           overflow-hidden
           flex items-center justify-center
@@ -71,6 +70,7 @@ export default function CTA({
           className={`
             relative z-10
             flex flex-col
+            gap-6
             max-w-240
             ${alignmentMap[align]}
           `}
@@ -104,7 +104,7 @@ export default function CTA({
               </span>
             </h2>
           ) : (
-            <h2 className="font-heading font-bold text-[#0C0C1C] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl pb-4">
+            <h2 className="font-heading font-bold text-[#0C0C1C] tracking-[-0.03em] leading-[1.05] text-3xl md:text-4xl lg:text-5xl">
               {title}
             </h2>
           )}

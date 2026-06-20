@@ -22,19 +22,19 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import images from public folder (optional, safer)
-import adinoHero from "@/assets/images/adinoHero.png";
-import adinoFull1 from "@/assets/images/adinoFullImage-1.png";
-import adinoFull2 from "@/assets/images/adinoFullImage-2.png";
-import adinoNarrative from "@/assets/images/adinoNarrative.png";
-import adinoFeature from "@/assets/images/adinoFeature.png";
-import adinoSplit1 from "@/assets/images/adinoImageSplit-1.png";
-import adinoSplit2 from "@/assets/images/adinoImageSplit-2.png";
-import projectChevron from "@/assets/images/chevron.png";
-import projectRob from "@/assets/images/robsplace.jpg";
-import projectAdino from "@/assets/images/adino.png";
-import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectBrook from "@/assets/images/brook.jpg";
-import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import adinoHero from "@/assets/images/adino-capital-office-fitout-hero-lagos.png";
+import adinoFull1 from "@/assets/images/adino-capital-open-plan-workspace-lagos-1.png";
+import adinoFull2 from "@/assets/images/adino-capital-open-plan-workspace-lagos-2.png";
+import adinoNarrative from "@/assets/images/adino-capital-suspended-ceiling-renovation-lagos.png";
+import adinoFeature from "@/assets/images/adino-capital-cafeteria-interior-design-lagos.png";
+import adinoSplit1 from "@/assets/images/adino-capital-break-area-interior-lagos-1.png";
+import adinoSplit2 from "@/assets/images/adino-capital-break-area-interior-lagos-2.png";
+import projectChevron from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import projectRob from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import projectAdino from "@/assets/images/adino-capital-office-interior-lagos.png";
+import projectSunplant from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import projectBrook from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import projectOgaDentist from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
 import ImageGrid from "@/components/section/ImageGrid";
 
 export default function AdrinoPage() {
@@ -48,8 +48,8 @@ export default function AdrinoPage() {
   ];
 
  const images = [
-    { imageSrc: adinoSplit1, alt: "kitchen area Interior 1" },
-    { imageSrc: adinoSplit2, alt: "kitchen area Interior 2" },
+    { imageSrc: adinoSplit1, alt: "Adino Capital office kitchen and break area — commercial interior fit-out Lagos" },
+    { imageSrc: adinoSplit2, alt: "Adino Capital staff cafeteria redesign — modern workplace amenity Lagos" },
  ]
 
   const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -69,7 +69,7 @@ export default function AdrinoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Hero imageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" />
+      <Hero imageSrc={adinoHero} title="Adino Capital Ltd" height="h-[90vh]" altText="Adino Capital Ltd office interior fit-out in Lagos — 70m² commercial workspace redesign by X35 Projects" />
         <Meta
           title="The Commissioning"
           description={[
@@ -91,11 +91,11 @@ export default function AdrinoPage() {
           ]}
           backgroundColor="bg-[#E5F1E7]"
         />
-        <FullImageSection imageSrc={adinoFull1} title="adino interior" />
+        <FullImageSection imageSrc={adinoFull1} title="Adino Capital open-plan office interior — commercial workspace fit-out in Lagos by X35 Projects" />
         <Narrative
           backgroundColor="bg-indigo-700"
           TextColor="text-white"
-          title="adino narrative image"
+          title="Adino Capital suspended grid ceiling and cafeteria renovation — office interior design in Lagos"
           description={[
             {
               paragraph:
@@ -110,7 +110,7 @@ export default function AdrinoPage() {
           textColor = "text-white/80"
           headerColor = "text-white"
         />
-        <FullImageSection imageSrc={adinoFull2} title="adino interior" />
+        <FullImageSection imageSrc={adinoFull2} title="Adino Capital open-plan office interior — commercial workspace fit-out in Lagos by X35 Projects" />
         <Feature
           imageSrc={adinoFeature}
           title="Delivered a Balanced and Innovative Workspace"

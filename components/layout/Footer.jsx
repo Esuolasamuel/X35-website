@@ -68,10 +68,10 @@ export default function Footer() {
             <h4 className="text-white/50 text-sm font-bold mb-8 tracking-wider">Follow Us</h4>
             <div className="flex items-center gap-5 text-xs sm:text-sm md:text-sm lg:text-sm">
               <a href="https://www.linkedin.com/company/x35-projects-ltd" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                <Image src={linkedin} alt="linkedin" width={28} height={28} />
+                <Image src={linkedin} alt="X35 Projects on LinkedIn" width={28} height={28} />
               </a>
               <a href="https://www.instagram.com/x35projects/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-sm lg:text-sm">
-                <Image src={instagram} alt="instagram" width={28} height={28} />
+                <Image src={instagram} alt="X35 Projects on Instagram" width={28} height={28} />
               </a>
             </div>
           </div>
