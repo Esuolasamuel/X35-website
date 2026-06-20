@@ -2,12 +2,12 @@ export const metadata = {
   title: "Oga Dentist – Healthcare Interior Design",
   description:
     "X35 delivered a 220m² dental clinic interior design in Lagos for Oga Dentist — healthcare-grade treatment rooms, patient reception, waiting lounges, and staff offices with full brand integration.",
-  alternates: { canonical: "/Projects/ogadentist" },
+  alternates: { canonical: "/projects/ogadentist" },
   openGraph: {
     title: "Oga Dentist Clinic Interior Design Lagos – X35 Projects",
     description:
       "Healthcare interior design in Lagos by X35 — a modern, patient-centred dental clinic for Oga Dentist with brand-led design across 220m².",
-    url: "/Projects/ogadentist",
+    url: "/projects/ogadentist",
     type: "website",
   },
 };

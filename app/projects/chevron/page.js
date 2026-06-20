@@ -2,12 +2,12 @@ export const metadata = {
   title: "Chevron Deep Waters – Office Interior Redesign",
   description:
     "X35 delivered a premium commercial office fit-out for Chevron's Deep Waters Department in Lagos — 145m² with custom acoustic partitions, bespoke geometric ceiling, upgraded flooring, and an 11-seat conference room.",
-  alternates: { canonical: "/Projects/chevron" },
+  alternates: { canonical: "/projects/chevron" },
   openGraph: {
     title: "Chevron Lagos Office Fit-Out – X35 Projects",
     description:
       "Commercial office interior fit-out in Lagos by X35 — acoustic design, bespoke ceilings, and space planning for Chevron's Deep Waters Department.",
-    url: "/Projects/chevron",
+    url: "/projects/chevron",
     type: "website",
   },
 };

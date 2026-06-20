@@ -23,7 +23,7 @@ export default function ProjectDemo({ projects }) {
           {projects.map((p) => (
             <Link
               key={p.slug}
-              href={`/Projects/${p.slug}`}
+              href={`/projects/${p.slug}`}
               className="group block py-3 "
             >
               <div className="relative aspect-381/275 rounded-lg sm:rounded-lg md:rounded-xl lg:rounded-2xl overflow-hidden">
@@ -54,7 +54,7 @@ export default function ProjectDemo({ projects }) {
         {/* CTA */}
         <div className="text-center">
         <Link
-          href="/Projects"
+          href="/projects"
           className="
             inline-flex items-center
             w-53 h-12.5

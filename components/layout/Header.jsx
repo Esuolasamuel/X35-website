@@ -32,8 +32,8 @@ export default function Header() {
 
   /* ---------------- ROUTE DETECTION (REFACTORED) ---------------- */
 
-  const ALWAYS_WHITE_ROUTES = ["/about"];
-  const WHITE_TO_TRANSPARENT_ROUTES = ["/Projects", "/blog"];
+  const ALWAYS_WHITE_ROUTES = ["/about", "/projects", "/blog"];
+  const WHITE_TO_TRANSPARENT_ROUTES = [];
 
   const isBlogPost = pathname.startsWith("/blog/") && pathname !== "/blog";
 
