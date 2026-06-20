@@ -91,7 +91,7 @@ export default function Header() {
           >
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/Projects">Our Projects</Link>
+            <Link href="/projects">Our Projects</Link>
             <Link href="/#services">Services</Link>
             <Link href="/blog">Blog</Link>
             <button onClick={() => setIsComingSoonOpen(true)}>
@@ -134,7 +134,7 @@ export default function Header() {
               <Link href="/about" onClick={() => setMenuOpen(false)}>
                 About Us
               </Link>
-              <Link href="/Projects" onClick={() => setMenuOpen(false)}>
+              <Link href="/projects" onClick={() => setMenuOpen(false)}>
                 Our Projects
               </Link>
               <Link href="/#services" onClick={() => setMenuOpen(false)}>
