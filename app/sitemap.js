@@ -6,13 +6,13 @@ export default function sitemap() {
   const staticRoutes = [
     { url: base, changeFrequency: "monthly", priority: 1 },
     { url: `${base}/about`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/Projects`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/Projects/adino`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/Projects/chevron`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/Projects/robs-place`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/Projects/sunplanet`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/Projects/thebrook`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/Projects/ogadentist`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/projects`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/projects/adino`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/projects/chevron`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/projects/robs-place`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/projects/sunplanet`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/projects/thebrook`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/projects/ogadentist`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.8 },
   ].map((route) => ({ ...route, lastModified: new Date() }));
 

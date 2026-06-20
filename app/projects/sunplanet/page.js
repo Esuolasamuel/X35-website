@@ -2,12 +2,12 @@ export const metadata = {
   title: "Sun Planet Co – Residential Development Consultancy",
   description:
     "X35 provided full architecture consultancy for Sun Planet Co's 580m² residential development in Nigeria — feasibility studies, space planning, massing, façade design, and construction-ready drawings.",
-  alternates: { canonical: "/Projects/sunplanet" },
+  alternates: { canonical: "/projects/sunplanet" },
   openGraph: {
     title: "Sun Planet Co Residential Development Nigeria – X35 Projects",
     description:
       "Residential architecture consultancy in Nigeria by X35 — space planning, massing, and façade design for Sun Planet Co's 580m² joint-venture development.",
-    url: "/Projects/sunplanet",
+    url: "/projects/sunplanet",
     type: "website",
   },
 };

@@ -13,20 +13,20 @@ export const PROJECTS = [
     title: 'Oga Dentist',
     category: 'Healthcare',
     image: '/projects/oga-dentist/cover.jpg',
-    href: '/projects/oga-dentist',
+    href: '/projects/ogadentist',
   },
   {
     id: 'adino-capital',
     title: 'Adino Capital',
     category: 'Commercial',
     image: '/projects/adino-capital/cover.jpg',
-    href: '/projects/adino-capital',
+    href: '/projects/adino',
   },
   {
     id: 'the-brook',
     title: 'The Brook Finance',
     category: 'Commercial',
     image: '/projects/the-brook/cover.jpg',
-    href: '/projects/the-brook',
+    href: '/projects/thebrook',
   },
 ];
