@@ -1,5 +1,3 @@
-"use client";
-
 import BlogHero from "@/components/section/BlogHero";
 import Articles from "@/components/section/Articles";
 import { blogCards } from "@/data/blogcard";

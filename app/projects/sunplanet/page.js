@@ -47,8 +47,23 @@ export default function SunplanetPage() {
     { id: "ogedentist", title: "Oga Dentist", image: projectOgaDentist },
   ];
 
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${base}/` },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${base}/projects` },
+      { "@type": "ListItem", position: 3, name: "Sun Planet Co", item: `${base}/projects/sunplanet` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Hero imageSrc={heroImg} title="Sun Planet Co" height="h-[90vh]" />
         <Meta
           title="The Brief"

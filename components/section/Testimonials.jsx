@@ -44,25 +44,48 @@ const testimonials = [
     img: null,
   },
   {
+    text: "Arc. Feyi and his team took my dream of a modern home and made it a reality. They transformed an old 2 bedroom block into a stunning 4-bedroom duplex with all rooms en-suite, on time and budget. The X35 team was professional, dependable, and truly collaborative.",
+    author: "Mr. Akinola Akinwole",
+    img: null,
+  },
+  {
     text: "A wonderful architectural design was delivered for one of our projects.. the project becomes one of our best!",
     author: "Sun Planet Co (Real Estate)",
     img: null,
   },
-   {
+  {
     text: "Their attention to detail and ability to understand our needs made the entire process smooth and enjoyable.",
     author: "The Brook Finance Ltd",
-    img: null,
-  },
-  {
-    text: "Arc. Feyi and his team took my dream of a modern home and made it a reality. They transformed an old 2 bedroom block into a stunning 4-bedroom duplex with all rooms en-suite, on time and budget. The X35 team was professional, dependable, and truly collaborative.",
-    author: "Mr. Akinola Akinwole",
     img: null,
   }
 ];
 
+const testimonialsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "X35 Projects",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: String(testimonials.length),
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: testimonials.map((t) => ({
+    "@type": "Review",
+    author: { "@type": "Organization", name: t.author },
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    reviewBody: t.text,
+  })),
+};
+
 export default function Testimonials() {
   return (
     <section className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
+      />
       <div
         className="
           max-w-360

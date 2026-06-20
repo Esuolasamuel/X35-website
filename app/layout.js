@@ -1,4 +1,5 @@
 import localFont from "next/font/local"
+import Script from "next/script"
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
@@ -121,12 +122,33 @@ const organizationSchema = {
     "X35 is an architecture, interior design, and construction company delivering modern spaces and turnkey projects.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   logo: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/x%2035.svg`,
+  telephone: "+2348144694380",
+  email: "hello@x35projects.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "Nigeria",
+  },
   sameAs: [
     "https://www.instagram.com/x35projects/",
     "https://www.linkedin.com/company/x35-projects-ltd",
   ],
   contactPoint: {
     "@type": "ContactPoint",
+    telephone: "+2348144694380",
+    email: "hello@x35projects.com",
     contactType: "customer service",
     availableLanguage: "English",
   },
@@ -142,6 +164,20 @@ export default function RootLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
           />
+          {process.env.NEXT_PUBLIC_GA_ID && (
+            <>
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script id="google-analytics" strategy="afterInteractive">
+                {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`}
+              </Script>
+            </>
+          )}
           <HeaderStyleProvider>
           <Header/>
           {children}
