@@ -42,7 +42,7 @@ export default function Footer() {
                 <Link href="/about" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/Projects" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">Our Projects</Link>
+                <Link href="/projects" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">Our Projects</Link>
               </li>
               <li>
                 <Link href="/#services" className="text-white text-xs sm:text-sm md:text-sm lg:text-sm hover:text-yellow-400 transition-colors">Our Services</Link>
