@@ -3,6 +3,7 @@ import Articles from "@/components/section/Articles";
 import { blogCards } from "@/data/blogcard";
 import { blogPosts } from "@/data/blogpost";
 import Image from "next/image";
+import Link from "next/link";
 import linkedin from "@/assets/icons/link.svg";
 import instagram from "@/assets/icons/instra.svg";
 
@@ -19,6 +20,15 @@ export async function generateMetadata({ params }) {
       description: card.excerpt,
       url: `/blogpost/${slug}`,
       type: "article",
+      publishedTime: card.dateISO,
+      images: [
+        {
+          url: card.image.src,
+          width: card.image.width,
+          height: card.image.height,
+          alt: card.title,
+        },
+      ],
     },
   };
 }
@@ -46,13 +56,34 @@ export default async function BlogPost({ params }) {
   const blogPostingSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${base}/blogpost/${slug}`,
+    },
     headline: card.title,
     description: card.excerpt,
+    datePublished: card.dateISO,
+    dateModified: card.dateISO,
     url: `${base}/blogpost/${slug}`,
+    image: {
+      "@type": "ImageObject",
+      url: `${base}${card.image.src}`,
+      width: card.image.width,
+      height: card.image.height,
+    },
+    author: {
+      "@type": "Organization",
+      name: "X35 Projects",
+      url: base,
+    },
     publisher: {
       "@type": "Organization",
       name: "X35 Projects",
       url: base,
+      logo: {
+        "@type": "ImageObject",
+        url: `${base}/x%2035.svg`,
+      },
     },
   };
 
@@ -106,15 +137,23 @@ export default async function BlogPost({ params }) {
             >
               <Image
                 src={instagram}
-                alt="instagram"
+                alt="X35 Projects on Instagram"
                 width={23}
                 height={22}
               />
             </a>
             <a href="https://www.linkedin.com/company/x35-projects-ltd" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity rounded-full bg-[#007EBB] w-10 h-10 items-center justify-center flex">
-              <Image src={linkedin} alt="linkedin" width={23} height={22} />
+              <Image src={linkedin} alt="X35 Projects on LinkedIn" width={23} height={22} />
             </a>
           </div>
+
+          <p className="text-sm font-body text-[#0C0C1C]/60">
+            Written by{" "}
+            <Link href="/about" className="text-[#0C0C1C] font-medium hover:text-yellow-500 transition-colors">
+              X35 Projects Editorial Team
+            </Link>{" "}
+            — Architecture &amp; Design, Lagos, Nigeria
+          </p>
 
           <p className="max-w-200.5 font-body text-[#0C0C1C] text-[18px] leading-6.75">
             {card.excerpt}

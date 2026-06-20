@@ -10,9 +10,9 @@ import Testimonials from "@/components/section/Testimonials";
 import { useHeaderStyle } from "@/components/context/HeaderStyleConntext";
 
 // Import images statically from the assets folder
-import brookImg from "@/assets/images/ourProject-1.png";
-import robImg from "@/assets/images/ourProject-2.jpg";
-import chevronImg from "@/assets/images/ourProject-3.png"
+import brookImg from "@/assets/images/brook-finance-corporate-hq-project-demo.png";
+import robImg from "@/assets/images/robs-place-residential-renovation-project-demo.jpg";
+import chevronImg from "@/assets/images/chevron-deep-waters-office-project-demo.png"
 
 
 

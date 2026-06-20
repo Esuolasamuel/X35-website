@@ -21,20 +21,20 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import local images from public folder
-import chevronHero from "@/assets/images/chevronHero.png";
-import chevronFull from "@/assets/images/chevronFullImage.png";
-import chevronNarrative from "@/assets/images/chevronNarrative.jpg";
-import chevronFeature from "@/assets/images/chevronFeature.png";
-import chevronSplit1 from "@/assets/images/chevronImageSplit-1.jpg";
-import chevronSplit2 from "@/assets/images/chevronImageSplit-2.png";
-import chevronSplit3 from "@/assets/images/chevronImageSplit-3.png";
-import chevronSplit4 from "@/assets/images/chevronImageSplit-4.png";
-import projectChevron from "@/assets/images/chevron.png";
-import projectRob from "@/assets/images/robsplace.jpg";
-import projectAdino from "@/assets/images/adino.png";
-import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectbrook from "@/assets/images/brook.jpg";
-import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import chevronHero from "@/assets/images/chevron-deep-waters-office-fitout-hero-lagos.png";
+import chevronFull from "@/assets/images/chevron-deep-waters-open-workstation-redesign-lagos.png";
+import chevronNarrative from "@/assets/images/chevron-deep-waters-geometric-ceiling-design-lagos.jpg";
+import chevronFeature from "@/assets/images/chevron-deep-waters-conference-room-design-lagos.png";
+import chevronSplit1 from "@/assets/images/chevron-deep-waters-office-gallery-1-lagos.jpg";
+import chevronSplit2 from "@/assets/images/chevron-deep-waters-office-gallery-2-lagos.png";
+import chevronSplit3 from "@/assets/images/chevron-deep-waters-office-gallery-3-lagos.png";
+import chevronSplit4 from "@/assets/images/chevron-deep-waters-office-gallery-4-lagos.png";
+import projectChevron from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import projectRob from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import projectAdino from "@/assets/images/adino-capital-office-interior-lagos.png";
+import projectSunplant from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import projectbrook from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import projectOgaDentist from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
 
 export default function ChevronPage() {
 
@@ -64,7 +64,7 @@ export default function ChevronPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Hero imageSrc={chevronHero} title="Chevron" height="h-[90vh]" />
+      <Hero imageSrc={chevronHero} title="Chevron" height="h-[90vh]" altText="Chevron Deep Waters Department office fit-out in Lagos — 145m² commercial interior design by X35 Projects" />
         <Meta
           title="Chevron Deep Waters Workspace Redesign"
           description={[
@@ -80,11 +80,11 @@ export default function ChevronPage() {
           ]}
           backgroundColor="bg-[#DFC0AB]"
         />
-        <FullImageSection imageSrc={chevronFull} title="chevron deep interior" />
+        <FullImageSection imageSrc={chevronFull} title="Chevron Deep Waters open workstation area — commercial office fit-out in Lagos by X35 Projects" />
         <Narrative
           backgroundColor="bg-indigo-700"
           TextColor="text-white"
-          title="chevron narrative image"
+          title="Chevron Deep Waters bespoke geometric ceiling and commercial-grade flooring upgrade in Lagos"
           description={[
             { paragraph: "A standout element of the redesign is the bespoke modern ceiling system, created with bold geometric forms and energy-efficient lighting. Concealed linear LED fixtures and coordinated MEP integration allowed us to achieve a polished, uncluttered look that enhances the overall ambience of the space." },
             { paragraph: "Flooring was upgraded using durable, commercial-grade materials, selected for their long-term performance and seamless compatibility with the department’s new design language. These materials contribute to a cohesive visual identity while withstanding the demands of a busy corporate environment." },
@@ -98,10 +98,10 @@ export default function ChevronPage() {
         <ImageGallery
           backgroundColor="bg-white"
           images={[
-            { imageSrc: chevronSplit1, type: "small" },
-            { imageSrc: chevronSplit2, type: "large" },
-            { imageSrc: chevronSplit3, type: "large" },
-            { imageSrc: chevronSplit4, type: "small" },
+            { imageSrc: chevronSplit1, type: "small", alt: "Chevron Deep Waters office workstation detail — acoustic partitions and cable management Lagos" },
+            { imageSrc: chevronSplit2, type: "large", alt: "Chevron Deep Waters contemporary office interior renovation by X35 Projects Lagos" },
+            { imageSrc: chevronSplit3, type: "large", alt: "Chevron Deep Waters geometric ceiling and energy-efficient LED lighting design Lagos" },
+            { imageSrc: chevronSplit4, type: "small", alt: "Chevron Deep Waters commercial flooring and material finishes — office fit-out Lagos" },
           ]}
         />
           <Feature

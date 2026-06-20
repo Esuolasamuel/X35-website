@@ -22,28 +22,28 @@ import ImageGallery from "@/components/gallery/ImageGallery";
 import RelatedProjects from "@/components/section/RelatedProjects";
 
 // Import images from public folder (optional, safer)
-import thebrookHero from "@/assets/images/brookHero.png";
-import brookFull1 from "@/assets/images/bg-3.png";
-import brookFull2 from "@/assets/images/brookFullImage-2.jpg";
-// import brookNarrative from "@/assets/images/brookFeature-1.jpg";
-import brookFeature1 from "@/assets/images/brookFeature-1.jpg";
-import brookFeature2 from "@/assets/images/brookFeature-2.jpg";
-import brookFeature3 from "@/assets/images/brookFeature-3.jpg";
-import brookFeature4 from "@/assets/images/brookFeature-4.jpg";
-import brookSplit1 from "@/assets/images/brookImageSplit-1.jpg";
-import brookSplit2 from "@/assets/images/brookImageSplit-2.jpg";
-import brookSplit3 from "@/assets/images/brookImageSplit-3.jpg";
-import brookSplit4 from "@/assets/images/brookImageSplit-4.jpg";
-import brookSplit5 from "@/assets/images/brookImageSplit-5.jpg";
-import brookSplit6 from "@/assets/images/brookImageSplit-6.jpg";
-import brookSplit7 from "@/assets/images/brookImageSplit-7.jpg";
-import brookSplit8 from "@/assets/images/brookImageSplit-8.jpg";
-import projectChevron from "@/assets/images/chevron.png";
-import projectRob from "@/assets/images/robsplace.jpg";
-import projectAdino from "@/assets/images/adino.png";
-import projectSunplant from "@/assets/images/sunplanetco.jpg";
-import projectbrook from "@/assets/images/brook.jpg";
-import projectOgaDentist from "@/assets/images/ogadentist.jpg";
+import thebrookHero from "@/assets/images/brook-finance-corporate-hq-hero-lagos.png";
+import brookFull1 from "@/assets/images/brook-finance-office-interior-full-view-lagos.png";
+import brookFull2 from "@/assets/images/brook-finance-office-interior-staircase-lagos.jpg";
+// import brookNarrative from "@/assets/images/brook-finance-open-plan-workspace-design-lagos.jpg";
+import brookFeature1 from "@/assets/images/brook-finance-open-plan-workspace-design-lagos.jpg";
+import brookFeature2 from "@/assets/images/brook-finance-material-strategy-timber-accents-lagos.jpg";
+import brookFeature3 from "@/assets/images/brook-finance-ergonomic-collaborative-workspace-lagos.jpg";
+import brookFeature4 from "@/assets/images/brook-finance-professional-office-interior-lagos.jpg";
+import brookSplit1 from "@/assets/images/brook-finance-office-gallery-1-lagos.jpg";
+import brookSplit2 from "@/assets/images/brook-finance-office-gallery-2-lagos.jpg";
+import brookSplit3 from "@/assets/images/brook-finance-office-gallery-3-lagos.jpg";
+import brookSplit4 from "@/assets/images/brook-finance-office-gallery-4-lagos.jpg";
+import brookSplit5 from "@/assets/images/brook-finance-office-gallery-5-lagos.jpg";
+import brookSplit6 from "@/assets/images/brook-finance-office-gallery-6-lagos.jpg";
+import brookSplit7 from "@/assets/images/brook-finance-office-gallery-7-lagos.jpg";
+import brookSplit8 from "@/assets/images/brook-finance-office-gallery-8-lagos.jpg";
+import projectChevron from "@/assets/images/chevron-deep-waters-office-interior-lagos.png";
+import projectRob from "@/assets/images/robs-place-minimalist-home-renovation-nigeria.jpg";
+import projectAdino from "@/assets/images/adino-capital-office-interior-lagos.png";
+import projectSunplant from "@/assets/images/sunplanet-co-residential-development-nigeria.jpg";
+import projectbrook from "@/assets/images/brook-finance-corporate-headquarters-lagos.jpg";
+import projectOgaDentist from "@/assets/images/oga-dentist-clinic-interior-design-lagos.jpg";
 
 export default function thebrookPage() {
   const projects = [
@@ -72,7 +72,7 @@ export default function thebrookPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Hero imageSrc={thebrookHero} title="The Brook Finance Ltd" height="h-[90vh]" />
+      <Hero imageSrc={thebrookHero} title="The Brook Finance Ltd" height="h-[90vh]" altText="The Brook Finance Ltd corporate headquarters in Lagos — 1,609m² turnkey office transformation by X35 Projects" />
         <Meta
           title="Transforming a Financial Workplace into a Modern, Human-Centric Environment"
           description={[
@@ -100,7 +100,7 @@ export default function thebrookPage() {
           backgroundColor="bg-[#E9F3E9]"
         />
       
-        <FullImageSection imageSrc={brookFull1} title="brook interior" />
+        <FullImageSection imageSrc={brookFull1} title="The Brook Finance open-plan workspace interior — 1,609m² corporate office transformation in Lagos" />
         <Feature
           imageSrc={brookFeature1}
           description={[
@@ -132,10 +132,10 @@ export default function thebrookPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { imageSrc: brookSplit1, type: "small" },
-            { imageSrc: brookSplit2, type: "large" },
-            { imageSrc: brookSplit3, type: "large" },
-            { imageSrc: brookSplit4, type: "smal" },
+            { imageSrc: brookSplit1, type: "small", alt: "The Brook Finance reception and entrance interior design — corporate office Lagos" },
+            { imageSrc: brookSplit2, type: "large", alt: "The Brook Finance open-plan workspace with neutral tones and timber accents — Lagos" },
+            { imageSrc: brookSplit3, type: "large", alt: "The Brook Finance private offices and collaboration zones — corporate interior Lagos" },
+            { imageSrc: brookSplit4, type: "smal", alt: "The Brook Finance joinery and material finish detail — commercial office Lagos" },
           ]}
         />
         <Feature
@@ -156,10 +156,10 @@ export default function thebrookPage() {
         <ImageGallery
           backgroundColor="bg-[#EAF1FF]"
           images={[
-            { imageSrc: brookSplit5, type: "small" },
-            { imageSrc: brookSplit6, type: "large" },
-            { imageSrc: brookSplit7, type: "large" },
-            { imageSrc: brookSplit8, type: "smal" },
+            { imageSrc: brookSplit5, type: "small", alt: "The Brook Finance lounge and breakout area interior design — Lagos" },
+            { imageSrc: brookSplit6, type: "large", alt: "The Brook Finance meeting room with glass partitions and contemporary finishes — Lagos" },
+            { imageSrc: brookSplit7, type: "large", alt: "The Brook Finance conference room and board room spaces — Lagos" },
+            { imageSrc: brookSplit8, type: "smal", alt: "The Brook Finance ergonomic workspace and staff offices — Lagos" },
           ]}
         />  
         <Feature
@@ -179,7 +179,7 @@ export default function thebrookPage() {
           reverse={true}
           backgroundColor="bg-[#DFC0AB]"
         />
-        <FullImageSection imageSrc={brookFull2} title="brook full view" backgroundColor="#E3CEDE" />
+        <FullImageSection imageSrc={brookFull2} title="The Brook Finance corporate headquarters full view — turnkey office design and build in Lagos" backgroundColor="#E3CEDE" />
         <Feature
           imageSrc={brookFeature4}
           backgroundColor="bg-[#E3CEDE]"

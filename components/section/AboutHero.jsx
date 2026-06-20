@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutHero from "@/assets/images/aboutHero.png";
+import aboutHero from "@/assets/images/x35-architecture-firm-about-hero-lagos.png";
 import handdrawn from "@/assets/icons/Fill-4.svg";
 
 export default function AboutHero() {

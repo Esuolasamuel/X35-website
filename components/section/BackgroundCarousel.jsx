@@ -10,7 +10,7 @@ import WhatsAppWidget from "./WhatsAppWidget";
    LCP-FIRST HERO
  --------------------------------------- */
 
-export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
+export default function BackgroundCarousel({ images = [], interval = 4000 }) {
   const [index, setIndex] = useState(0);
   const [ready, setReady] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -56,8 +56,8 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
        -------------------------------- */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={images[0]}
-          alt="Hero background"
+          src={images[0].src}
+          alt={images[0].alt}
           fill
           priority
           loading="eager"
@@ -84,8 +84,8 @@ export default function BackgroundCarousel({ images = [ ], interval = 4000 }) {
               `}
             >
               <Image
-                src={img}
-                alt=""
+                src={img.src}
+                alt={img.alt}
                 fill
                 loading="lazy"
                 sizes="100vw"
